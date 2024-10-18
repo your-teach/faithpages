@@ -16,7 +16,7 @@ parts:
     chapters:
       - file: pages/lua-tasks-table
         sections:
-        - file: tasks-python/in-out
+        - file: tasks-lua/in-out
 
 
 # Or you organize the TOC by parts
