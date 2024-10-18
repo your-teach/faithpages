@@ -8,6 +8,16 @@ parts:
     chapters:
       - file: book/python-tasks
       - file: book/lua-tasks
+  - caption: Упражнения и задачи v2
+    chapters:
+      - file: pages/py-tasks-table
+        sections:
+        - file: pages/python/in-out
+    chapters:
+      - file: pages/lua-tasks-table
+        sections:
+        - file: pages/lua/in-out
+
 
 # Or you organize the TOC by parts
 
