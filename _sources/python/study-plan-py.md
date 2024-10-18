@@ -1,4 +1,4 @@
-# План обучения Python
+# План обучения `py`
 ## Установка Vs Code + Python.
     1. https://code.visualstudio.com/download
     2. https://www.python.org/downloads/
@@ -43,13 +43,17 @@
     -Внизу нажать на utf-8 -> Сохранить в кодировке -> Cyrillic (CP 866)
 
 ## При запуске выдает "Python".
-    -Лучшее решение:
+    1.Лучшее решение:
         Прописать в windows в PATH переменных окружения ссылки на python и pip:
-    -В settings.json вписать следующее:
-        "code-runner.executorMap": {
-            "python": "---" 
-        }
-    "---" -> "& C:/Users/ErgoDeath/AppData/Local/Programs/Python/Python312/python.exe"
+        Поиск -> Изм.Сис.Переменных Среды -> Переменные среды -> Path -> Изменить -> Добавить:
+            - C:\Users\ErgoDeath\AppData\Local\Programs\Python\Python310\Scripts\
+            - C:\Users\ErgoDeath\AppData\Local\Programs\Python\Python310\
+    2. Второе решени:
+        В settings.json вписать следующее:
+            "code-runner.executorMap": {
+                "python": "---" 
+            }
+        "---" -> "& C:/Users/ErgoDeath/AppData/Local/Programs/Python/Python312/python.exe"
 
 ## Введение.
     print("Hello World")
@@ -470,39 +474,15 @@
 
     -Условия и циклы внутри функций.
     -Что такое *args и **kwargs
-    -Рекурсивные функции
-
-    -Callback-Функции
-        https://clck.ru/339CnB
-    -Элементы функционального подхода к программированию.
-        https://clck.ru/333qU6
 
 ## Введение в Модули.
     -Что такое модули/библиотеки/пакеты
     -Как установить (на примере cowsay)
     -Как импортировать (только import)
     -Как создать свой
-    -Далее модуль turtle
 
-## Обработка ошибок и исключений.
-    - try, except
-    - else - выполняется, когда не произошло никаких ошибок
-    - finally - выполняется всегда после блока try, вне зависимости произошла ошибка или нет
-    - except BaseException
-    - assert - утверждение, которое можно вложить внутрь try. (assert True == False), в случае False создается псевдо-ошибка
-    - assert len(var) < 6, 'message' - Можно вместо 'message' создать текст для псевдо-ошибки
-    - assert работает не только в try, его можно вложить в любую часть кода
-    -Пример:
-        try:
-            res = x / y
-        except:
-            print("Произошло исключение")
-        except BaseException as err:
-            print("Сообщение ошибки: " + err)
-        else:
-            print("Исключений не произошло")
-        finally:
-            print("Блок finally выполняется всегда")
+## Модуль Turtle
+    -Дополнить
 
 ## Анонимная-функция\Лямбда-функция.
     -Пример.
@@ -549,6 +529,59 @@
             p = lambda: "hello python"
             p()
 
+## Еще о функциях
+    -Рекурсивные функции
+    -Callback-Функции
+        https://clck.ru/339CnB
+    -Элементы функционального подхода к программированию.
+        https://clck.ru/333qU6
+
+## Разное
+    -reversed()
+    -isinstance(10, int) - Позволяет проверить принадлежность экземпляра к классу (является ли 10 типом данных int).
+        ! isinstance(True, int) -> True !
+    -exec() - исполнение кода из строки
+    -eval() - исполнение кода из строки (только функции, команды или выражения)
+    -Оператор "моржа"/ Моржовый оператор -> walrus в Python -> :=
+    -Глубокое копирование элемента, подходит для кортежей -> copy.deepcopy(tuple)
+    -Обычное копирование -> copy.copy
+
+## Обработка ошибок и исключений.
+    - try, except
+    - else - выполняется, когда не произошло никаких ошибок
+    - finally - выполняется всегда после блока try, вне зависимости произошла ошибка или нет
+    - assert - утверждение, которое можно вложить внутрь try. (assert True == False), в случае False вызывается ошибка
+    - assert len(var) < 6, 'message' - Можно вместо 'message' создать текст для псевдо-ошибки
+    - assert работает не только в try, его можно вложить в любую часть кода
+    - raise - возбуждает указанное исключение -> raise BaseException('Мы вызвали ошибку')
+        https://sky.pro/wiki/python/ponimanie-i-ispolzovanie-klyuchevogo-slova-raise-v-python/
+    -Пример:
+        try:
+            res = x / y
+        except:
+            print("Произошло исключение")
+        except BaseException as err:
+            print("Сообщение ошибки: " + err)
+        else:
+            print("Исключений не произошло")
+        finally:
+            print("Блок finally выполняется всегда")
+
+## Функция map.
+    -https://proproprogs.ru/python_base/python3-funkciya-map-primery-ee-ispolzovaniya
+
+## Функция filter для отбора значений итерируемых объектов.
+    -https://proproprogs.ru/python_base/python3-funkciya-filter-dlya-otbora-znacheniy-iteriruemyh-obektov
+
+## Функция zip.(Редко используется)
+    https://proproprogs.ru/python_base/python3-funkciya-zip-primery-ispolzovaniya
+
+## Функция-генератор. Оператор yield.
+    -https://proproprogs.ru/python_base/python3-funkciya-generator-operator-yield
+
+## Особенности сортировки через sort() и sorted().
+    https://proproprogs.ru/python_base/python3-osobennosti-sortirovki-cherez-sort-i-sorted
+
 ## Итераторы и выражения-генераторы.
     -Генератор ? это итератор, элементы которого можно перебирать (итерировать) только один раз.
     -Итератор ? это объект, который поддерживает функцию next() для перехода к следующему элементу коллекции.
@@ -571,21 +604,6 @@
             print(i, end="")
             if i > 100: break
 
-## Функция-генератор. Оператор yield.
-    -https://proproprogs.ru/python_base/python3-funkciya-generator-operator-yield
-
-## Функция map.
-    -https://proproprogs.ru/python_base/python3-funkciya-map-primery-ee-ispolzovaniya
-
-## Функция filter для отбора значений итерируемых объектов.
-    -https://proproprogs.ru/python_base/python3-funkciya-filter-dlya-otbora-znacheniy-iteriruemyh-obektov
-
-## Функция zip.(Редко используется)
-    https://proproprogs.ru/python_base/python3-funkciya-zip-primery-ispolzovaniya
-
-## Особенности сортировки через sort() и sorted().
-    https://proproprogs.ru/python_base/python3-osobennosti-sortirovki-cherez-sort-i-sorted
-
 ## Работа с файлами.
     file = open('text.txt, 'w')
     file.write('hey')
@@ -598,6 +616,7 @@
         for line in file:
             print(line)
     fili.close() # закрытие файла
+    -Зачастую надо дописывать в open -> encoding='utf-8'
     -Обозначения:
         r - чтение
         w - запись/перезапись (создается файл, если не существует)
@@ -606,6 +625,8 @@
         a+ - дозапись и чтение (создается файл, если не существует)
         + - запись/чтение (r+, w+)
         x - вызывает ошибку, если файл существует, иначе создает файл
+    - with file open('name.txt', 'w', encoding='utf-8'):
+        file.write('hello world')
     -Задача на эту тему: Создать "Регистрацию" и "Вход" через терминал с помощью базы, которая лежит в txt.
     https://metanit.com/python/tutorial/4.1.php
     https://docs-python.ru/tutorial/vstroennye-funktsii-interpretatora-python/funktsija-open/
@@ -639,118 +660,48 @@
     def test(a, b):
         print(a / b)
 
-    test(2,0)
+    test(2,0)    
 
-## Модули и Библиотеки. 
-    -pip install name_module - установка
-    -pip uninstall package-name - удаление
-    -pip install -r requirements.txt - установить список зависимостей из файла
-    -импорт модулей (import __ as _; from __ import * (all); from __ import <attr>; from __ import <attr> as __)
-    -создание модулей
-    -загрузка модулей
+## Tkinter
+    -Где-то здесь надо пройти Tkinter, или Pyqt5/Pyqt6
 
-    -random
-    -cowsay
-    -turtle
-    -tkinter
-    -PyQt ? набор расширений графического фреймворка, вроде tkinter
-    -time
-    -datatime
-    -calendar
-    -os
-    -io
-        -path
-    -sys
-    -pygame
-    -csv
-    -math
-    -PIL # предназначен для работы с растровой графикой
-    -winreg # позволяет работать с реестром Windows
-    -auto-py-to-exe # компиляция / преобразование .py файла в .exe
-    -tendo # (from tendo import singleton) при повторном запуске программы вылетит ошибка (Запрещает два раза запускать прогу)
-    -webbrowser # открытие ссылок в браузере
-    -OpenCV # алгоритм обработки изображений
-    -PyAudio 
-    -openpyxl -> load_workbook # Прочтение эксель (xlsx) файлов 
-    -PyAudio # аудио ввод-вывод
-    -itertools
-    -pyautogui # програмное управление мышью и клавиатурой
-    -python-for-android # упаковка в android apk
-    -Buildozer # упаковка в android apk
-
-    -threading # многопоточность
-    -queue # очереди
-    -accessify
-    -socket
-    -selectors
-    -asyncio  # https://habr.com/ru/post/667630/
-    -numpy # поддержка больших многомерных массивов и матриц
-    -mypy # инструмент для контроля типа переменной
-    -typing | typing.cast() # во время выполнения намеренно ничего не проверяется, чтобы старт программы был как можно быстрее.
-    -ursina # 3d
-    -Requests - http запросы
-    -requests-html - Http запросы, а так же парсинг, в том числе с javascript
-    -selenium webdriver - Тоже парсинг, что и выше
-    -shutil - скопировать содержимое одного файлового объекта в другой - shutil.copyfileobj()
-    -MRjob - выполнение задач связанных с BigData, в том числе Hadoop                
-
-## ООП. (((notrdy)))
+## ООП 
     -Инкапсуляция, наследование, полиморфизм.
-    -Классы, Объекты/экземпляры
-    -Свойства/атрибуты, методы
-    -self
+    -Инкапсуляция - это принцип, согласно которому внутреннее устройство сущностей нужно объединять в специальной
+    «оболочке» и скрывать от вмешательств извне. Доступ к объектам возможен через специальные открытые методы, а
+    напрямую обратиться к их содержимому нельзя.
+    -Наследование - это механизм, при котором один класс приобретает свойство другого класса
+    -Полиморфизм - возможность работы с совершенно разными объектами (языка Python) единым образом. Пример:
+    Курсор может принимать различные формы, такие как стрелка, линия, крест или другие фигуры.
+
+    -Классы
+        Объекты / экземпляры
+            Свойства / атрибуты
+            Методы
+    -Что такое self
     -Магические методы.
         - __dict__
         - __init__ (Показать как будет работать инициализация с помощью обычного созданного вручную метода, а потом просто подставить __init__)
         - __del__
     ...
 
-## Термины, сленг, выражения
-    -Что значит "функция возвращает значение", разве она нам что-то должна?
-    -Sequence: последовательность, list, tuple, range, str/unicode, array.array
+## Аннотации
+    https://clck.ru/339CnS
 
-## other
-    -reversed()
-    -is
-    -isinstance(10, int) - Позволяет проверить принадлежность экземпляра к классу (является ли 10 типом данных int)
-    -eval() - исполнение кода из строки (только функции, команды или выражения)
-    -exec() - исполнение кода из строки
-    -Оператор "моржа"/ Моржовый оператор -> walrus в Python -> :=
-    -Глубокое копирование элемента, подходит для кортежей -> copy.deepcopy(tuple)
-    -Обычное копирование -> copy.copy
+## Асинхронное программирование async/await
+    1. https://habr.com/ru/articles/667630
+    2. https://habr.com/ru/articles/671798/
 
-## new
-    -Callback-функции
-    -Аннотации 
-        https://clck.ru/339CnS
-    -async/await
+## Создание телеграм бота
+    https://github.com/python-telegram-bot/python-telegram-bot
+    Просто начать с echo-бота, а там как пойдет
 
-## Команды pip
-    pip list - список установленных модулей
-    python --version
-    pip show <package> - посмотреть версию пакета
-    pip install <package> --upgrade - обновить конкретный пакет
-    pip install <package> -U - обновить конкретный пакет
-    -Как установить модуль на конкретную версию python(неск. вариантов):
-        C:/Users/ErgoDeath/AppData/Local/Programs/Python/Python312/python.exe -m pip install pyglet
-        /usr/local/bin/python3.8 -m pip install pip
-        py -3.8 -m pip install package
-    -Запуск разных версий python:
-        C:/Users/ErgoDeath/AppData/Local/Programs/Python/Python312/python.exe script.py
-        py -3.8 script.py
-        
-## Ссылки:
-    https://docs.python.org/3/library/re.html#module-re - Операции с регулярными выражениями 're'
+## Регулярные выражения `'re'`
+    https://docs.python.org/3/library/re.html#module-re
 
 ## Решение проблем:
     -https://otvet.mail.ru/question/218478491 - Visual Studio Code не понимает русский язык в пути к файлу
     -https://ru.stackoverflow.com/questions/1095365/%d0%9a%d0%b0%d0%ba-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d1%82%d1%8c-pip-%d0%b4%d0%bb%d1%8f-%d1%80%d0%b0%d0%b7%d0%bd%d1%8b%d1%85-%d0%b2%d0%b5%d1%80%d1%81%d0%b8%d0%b9-python - Как использовать pip для разных версий python?
 
 ## Дополнить план обучения следующим:
-    -аннотации к функциям
-    -assert (вызывает ошибку)
-    -raise (возбуждает указанное исключение)
-    -isinstance
-
-    -with open (после работы с файлами) https://docs-python.ru/tutorial/vstroennye-funktsii-interpretatora-python/funktsija-open/
-    -lambda - лямбда-функция
+    - чем? чем-то

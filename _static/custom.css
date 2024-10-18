@@ -3,6 +3,6 @@ blockquote {
     padding: 0.5em;
 }
 pre {
-    overflow: hidden;
+    /* overflow: hidden; */
     white-space: pre-wrap;
 }

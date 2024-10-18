@@ -1,0 +1,3 @@
+# Упражнения `py`
+```{tableofcontents}
+```
