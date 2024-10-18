@@ -4,13 +4,10 @@
 format: jb-book
 root: index
 parts:
-  - caption: Теория
+  - caption: Python
     chapters:
-      - file: book/study-plan-py
-      - file: book/study-plan-lua
-  - caption: Упражнения и задачи
-    chapters:
-      - file: pages/py-tasks-table
+      - file: python/study-plan-py
+      - file: python/py-tasks-table
         sections:
         - file: tasks-python/1.in-out
         - file: tasks-python/2.strings
@@ -23,7 +20,10 @@ parts:
         - file: tasks-python/9.sets
         - file: tasks-python/10.functions
         - file: tasks-python/11.file-handling
-      - file: pages/lua-tasks-table
+  - caption: Lua
+    chapters:
+      - file: lua/study-plan-lua
+      - file: lua/lua-tasks-table
         sections:
         - file: tasks-lua/1.in-out
         - file: tasks-lua/2.string
@@ -33,10 +33,10 @@ parts:
         - file: tasks-lua/6.cycles
         - file: tasks-lua/7.functions
         - file: tasks-lua/8.file-handling
-  - caption: Упражнения и задачи
-    chapters:
-      - file: book/python-tasks
-      - file: book/lua-tasks
+  # - caption: Упражнения и задачи
+  #   chapters:
+  #     - file: book/python-tasks
+  #     - file: book/lua-tasks
 
 
 # Or you organize the TOC by parts
