@@ -147,6 +147,13 @@ https://ru.wikibooks.org/wiki/Lua/Типы_данных
     s = 'one\ntwo' -- Экранирование, перевод строки на новую
     s = 'abc' == 'abc' -- Сравнение строк
     s = 'a' < 'b' -- true
+    Срезы строк.
+        text = 'my string variable'
+        result = text:sub(4,9) -- находим символы с 4 по 9, 'string'
+        result = text:sub(1,1) -- находим первый символ строки, 'm'
+    Методы строк.
+        string.find(var, 'кс') - возвращает индекс первого найденного 'кс', иначе nil
+        Остальные методы строк https://quikluacsharp.ru/2015/03/21/funktsii-raboty-so-strokami-v-qlua-lua/
 
 ## Срезы строк.
     text = 'my string variable'

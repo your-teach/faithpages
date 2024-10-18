@@ -13,7 +13,6 @@ parts:
       - file: pages/py-tasks-table
         sections:
         - file: tasks-python/in-out
-    chapters:
       - file: pages/lua-tasks-table
         sections:
         - file: tasks-lua/in-out
