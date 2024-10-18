@@ -1,4 +1,4 @@
-# Study plan lua
+# План обучения Lua
 ## Установка Vs Code + Lua 
 https://www.youtube.com/watch?v=X6BqMZyzAs4
 

@@ -1,4 +1,4 @@
-# Study plan python
+# План обучения Python
 ## Установка Vs Code + Python.
     1. https://code.visualstudio.com/download
     2. https://www.python.org/downloads/
