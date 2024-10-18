@@ -7,6 +7,7 @@ parts:
   - caption: Python
     chapters:
       - file: python/study-plan-py
+      - file: python/other
       - file: python/py-tasks-table
         sections:
         - file: tasks-python/1.in-out
