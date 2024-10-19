@@ -34,10 +34,10 @@ parts:
         - file: tasks-lua/6.cycles
         - file: tasks-lua/7.functions
         - file: tasks-lua/8.file-handling
-  # - caption: Упражнения и задачи
-  #   chapters:
-  #     - file: book/python-tasks
-  #     - file: book/lua-tasks
+  - caption: Упражнения и задачи
+    chapters:
+      - file: book/python-tasks
+      - file: book/lua-tasks
 
 
 # Or you organize the TOC by parts
