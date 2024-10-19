@@ -178,7 +178,8 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">План обучения <code class="docutils literal notranslate"><span class="pre">py</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="other.html">Разное <code class="docutils literal notranslate"><span class="pre">py</span></code></a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="py-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">py</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1"><a class="reference internal" href="turtle.html">Turtle</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../other/py-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">py</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tasks-python/1.in-out.html">Ввод и вывод</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tasks-python/2.strings.html">Строки</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tasks-python/3.boolean.html">Логика</a></li>
@@ -196,7 +197,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lua</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../lua/study-plan-lua.html">План обучения <code class="docutils literal notranslate"><span class="pre">lua</span></code></a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../lua/lua-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">lua</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../other/lua-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">lua</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tasks-lua/1.in-out.html">Ввод и вывод</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tasks-lua/2.string.html">Строки</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tasks-lua/3.boolean.html">Логика</a></li>
@@ -208,12 +209,12 @@
 </ul>
 </details></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Упражнения и задачи</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">new</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../book/python-tasks.html">Python</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="../book/lua-tasks.html">Lua</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="../NEW/codeforces.html">Задачи codeforces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NEW/one.html">one</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NEW/two.html">two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NEW/blacknote.html">Blacknote</a></li>
 </ul>
 
     </div>
@@ -433,45 +434,54 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">При запуске выдает “Python”.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Введение.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Переменные.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Типы данных.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Ввод/Вывод.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Арифметические операторы и операции.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Условные и логические операторы.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Логические операторы.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Строки.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Условия.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Списки.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Циклы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Ввод/Вывод.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Арифметические операторы и операции.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Условные и логические операторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Логические операторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Строки.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Условия.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Списки.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Циклы.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-comprehensions">Генераторы списков. list comprehensions.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Алгоритмы обработки списков.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Алгоритмы обработки списков.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notrdy">Кортежи. (((notrdy)))</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Словари.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Множества.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Функции.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Введение в Модули.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Словари.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Множества.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Функции.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Введение в Модули.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time">Модуль time</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#datetime">Моудль datetime</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#turtle">Модуль Turtle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Анонимная-функция\Лямбда-функция.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Еще о функциях</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Разное</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Обработка ошибок и исключений.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Анонимная-функция\Лямбда-функция.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Еще о функциях</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Разное</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Обработка ошибок и исключений.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#map">Функция map.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">Функция filter для отбора значений итерируемых объектов.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zip">Функция zip.(Редко используется)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yield">Функция-генератор. Оператор yield.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-sorted">Особенности сортировки через sort() и sorted().</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Итераторы и выражения-генераторы.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Работа с файлами.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Работа с папками.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Перемещение файлов.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Декораторы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Итераторы и выражения-генераторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Работа с файлами.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Работа с папками.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Перемещение файлов.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Декораторы</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tkinter">Tkinter</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">ООП</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Аннотации</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyqt">Pyqt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requests">Модуль Requests</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requests-html">Модуль requests-html</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#selenium">Selenium</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">ООП</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Аннотации</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#async-await">Асинхронное программирование async/await</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Создание телеграм бота</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Создание телеграм бота</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pygame">Pygame</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ursina">Ursina</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re">Регулярные выражения <code class="docutils literal notranslate"><span class="pre">'re'</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Решение проблем:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Дополнить план обучения следующим:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Решение проблем:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Дополнить план обучения следующим:</a></li>
 </ul>
             </nav>
         </div>
@@ -598,12 +608,9 @@ document.write(`
 -Каскадное присваивание: x=y=z=0
 -Множественное присваивание: x, y, z = 1, 2, 3
 -Как обозначается ничего: None
-</pre></div>
-</div>
-</section>
-<section id="id4">
-<h2>Типы данных.<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Типы данных или Типы переменных.
+
+
+-Типы данных или Типы переменных.
 - str - СТРОКИ - определяются кавычками &quot;_&quot; или &#39;_&#39;
 - int - ЧИСЛА - только цифры, без пробелов и кавычек.
 - bool - ЛОГИКА -  логическое значение, может содержать True/False (обязательно писать с большой буквы)
@@ -620,15 +627,15 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="id5">
-<h2>Ввод/Вывод.<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<section id="id4">
+<h2>Ввод/Вывод.<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-input(&#39;text&#39;)
 -print(end=, sep=)
 </pre></div>
 </div>
 </section>
-<section id="id6">
-<h2>Арифметические операторы и операции.<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<section id="id5">
+<h2>Арифметические операторы и операции.<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- (+ - * / // % **)
 - Приоритет действий и операций - https://letpy.com/handbook/operator-priorities/
 - Бинарный и унарный операторы.
@@ -667,8 +674,8 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="id7">
-<h2>Условные и логические операторы.<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<section id="id6">
+<h2>Условные и логические операторы.<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- &gt; &lt; &gt;= &lt;= == !=
 - in
 - not in
@@ -679,8 +686,8 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="id8">
-<h2>Логические операторы.<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<section id="id7">
+<h2>Логические операторы.<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- and, or. 
 - not
 - and имеет больший приоритет чем or
@@ -690,8 +697,8 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="id9">
-<h2>Строки.<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<section id="id8">
+<h2>Строки.<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Есть два вида кавычек &quot;text&quot; и &#39;text&#39;
 -&quot;&quot;&quot;Многострочные строки&quot;&quot;&quot;, &#39;&#39;&#39;Многострочные строки, пример 2&#39;&#39;&#39;
 -Перевод строки \n: &#39;hello\nworld&#39;
@@ -728,7 +735,7 @@ document.write(`
     str.split() - разбивает строку в местах где есть пробелы, на выходе получаем список.
     str.split(&#39;-&#39;) - аналогично. разбивает строку в местах где есть символ &#39;-&#39;. Вместо &#39;-&#39; можно использовать любой другой символ. 
     str.strip() - удаляет пробелы и переносы строк в начале и конце строки.
-    
+
     &#39;...&#39;.join(list) - соединяет все элементы списка в строку, между элементами ставится &quot;...&quot; (важно, чтобы в list были только элементы с типом str)
 
     str.isupper() - возрващает True, если все буквы в строке верхнего регистра.
@@ -736,8 +743,8 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="id10">
-<h2>Условия.<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<section id="id9">
+<h2>Условия.<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Что такое табуирование? Это отступы, которые ставятся с помощью клавиши TAB.
 -Что такое заголовок/тело
 -if (заголовок, тело условия)
@@ -779,8 +786,8 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="id11">
-<h2>Списки.<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<section id="id10">
+<h2>Списки.<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-пример списка
 -тип list
 -вывести весь список
@@ -830,8 +837,8 @@ del list[0] - удаление элемента по индексу
 </pre></div>
 </div>
 </section>
-<section id="id12">
-<h2>Циклы.<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<section id="id11">
+<h2>Циклы.<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-ВАЖНО! Показывать работу циклов примера с мельницей. Расписывать полностью поэтапность действий цикла!
 -Итерация - это одно повторение цикла.
 -while (заголовок, тело цикла)
@@ -889,8 +896,8 @@ del list[0] - удаление элемента по индексу
 </pre></div>
 </div>
 </section>
-<section id="id13">
-<h2>Алгоритмы обработки списков.<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<section id="id12">
+<h2>Алгоритмы обработки списков.<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Видео https://youtu.be/gMM7632kTkI?t=267 (4:27)
 </pre></div>
 </div>
@@ -921,8 +928,8 @@ del list[0] - удаление элемента по индексу
 </pre></div>
 </div>
 </section>
-<section id="id14">
-<h2>Словари.<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<section id="id13">
+<h2>Словари.<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Тип dict.
 -Похожи на списки, только нужно самостоятельно создавать индексы для элементов. Это называется ключ:значение. В списках мы находили значение по индексу, а здесь по самостоятельно созданному ключу.
 -{Ключ:значение}
@@ -959,15 +966,15 @@ del list[0] - удаление элемента по индексу
     dict.values() - Возвращает коллекцию из значений словаря (Удобно использовать в цикле for)
     dict.items() - Возвращает записи в виде кортежей: ключ, значение (Удобно использовать в цикле for)
     dict.update({key:value}) - Позволяет дополнить словарь новыми значениями, или обновить существующие ключи с новыми значениями
-    
+
     dict.fromkeys() - Возвращает словарь, сформированный из указанной последовательности(например, из списка)
         a = dict.fromkeys([&quot;+7&quot;, &quot;+6&quot;, &quot;+5&quot;, &quot;+4&quot;])
         a = dict.fromkeys([&quot;+7&quot;, &quot;+6&quot;, &quot;+5&quot;, &quot;+4&quot;], &quot;value&quot;)
 </pre></div>
 </div>
 </section>
-<section id="id15">
-<h2>Множества.<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<section id="id14">
+<h2>Множества.<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Тип set
 -Множество ? это неупорядоченная коллекция уникальных элементов.
 -Пример: a = {1, 2, 3, &quot;hello&quot;}
@@ -1001,8 +1008,8 @@ del list[0] - удаление элемента по индексу
 </pre></div>
 </div>
 </section>
-<section id="id16">
-<h2>Функции.<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
+<section id="id15">
+<h2>Функции.<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Команда которая имеет в конце скобки называется функцией, она выполняет заранее подготовленный список действий в тот
 момент, когда мы ее вызовем.
 Функции могут иметь аргументы, они вводятся в скобки, через запятую. В Python есть готовые функции, такие как print().
@@ -1027,14 +1034,39 @@ del list[0] - удаление элемента по индексу
 </pre></div>
 </div>
 </section>
-<section id="id17">
-<h2>Введение в Модули.<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
+<section id="id16">
+<h2>Введение в Модули.<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Что такое модули/библиотеки/пакеты
 -Как установить (на примере cowsay)
 -Как импортировать (только import)
 -Как создать свой
 </pre></div>
 </div>
+<section id="time">
+<h3>Модуль time<a class="headerlink" href="#time" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="kn">import</span> <span class="nn">time</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">years</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">/</span> <span class="mi">60</span> <span class="o">/</span> <span class="mi">60</span> <span class="o">/</span> <span class="mi">24</span> <span class="o">/</span> <span class="mi">365</span>
+    <span class="n">time_now</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">(</span><span class="n">time</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+<section id="datetime">
+<h3>Моудль datetime<a class="headerlink" href="#datetime" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="kn">import</span> <span class="nn">datetime</span>
+    <span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+    <span class="n">zero</span> <span class="o">=</span> <span class="n">now</span> <span class="o">-</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">fixdate</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">now</span> <span class="o">&lt;</span> <span class="n">fixdate</span>
+    <span class="c1"># форматируем в удобную строку</span>
+    <span class="n">iso</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
+    <span class="c1"># форматируем в строку, с гибкими настройками</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">now</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%d</span><span class="s2">.%m.%Y - %H:%M:%S&quot;</span><span class="p">)</span>
+    <span class="c1"># форматируем строку обратно в объект datetime</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%d</span><span class="s2">.%m.%Y - %H:%M:%S&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="turtle">
 <h2>Модуль Turtle<a class="headerlink" href="#turtle" title="Link to this heading">#</a></h2>
@@ -1042,8 +1074,8 @@ del list[0] - удаление элемента по индексу
 </pre></div>
 </div>
 </section>
-<section id="id18">
-<h2>Анонимная-функция\Лямбда-функция.<a class="headerlink" href="#id18" title="Link to this heading">#</a></h2>
+<section id="id17">
+<h2>Анонимная-функция\Лямбда-функция.<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Пример.
     s = lambda a, b: a + b
     s(1,2)
@@ -1056,12 +1088,12 @@ del list[0] - удаление элемента по индексу
     def get_filter(a, filter=None):
         if filter is None:
             return a
-    
+
         res = []
         for x in a:
             if filter(x):
                 res.append(x)
-    
+
         return res
     -Если вызвать ее только с первым аргументом:
         lst = [5, 3, 0, -6, 8, 10, 1]
@@ -1090,8 +1122,8 @@ del list[0] - удаление элемента по индексу
 </pre></div>
 </div>
 </section>
-<section id="id19">
-<h2>Еще о функциях<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
+<section id="id18">
+<h2>Еще о функциях<a class="headerlink" href="#id18" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Рекурсивные функции
 -Callback-Функции
     https://clck.ru/339CnB
@@ -1100,8 +1132,8 @@ del list[0] - удаление элемента по индексу
 </pre></div>
 </div>
 </section>
-<section id="id20">
-<h2>Разное<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
+<section id="id19">
+<h2>Разное<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-reversed()
 -isinstance(10, int) - Позволяет проверить принадлежность экземпляра к классу (является ли 10 типом данных int).
     ! isinstance(True, int) -&gt; True !
@@ -1113,8 +1145,8 @@ del list[0] - удаление элемента по индексу
 </pre></div>
 </div>
 </section>
-<section id="id21">
-<h2>Обработка ошибок и исключений.<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
+<section id="id20">
+<h2>Обработка ошибок и исключений.<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- try, except
 - else - выполняется, когда не произошло никаких ошибок
 - finally - выполняется всегда после блока try, вне зависимости произошла ошибка или нет
@@ -1167,8 +1199,8 @@ del list[0] - удаление элемента по индексу
 </pre></div>
 </div>
 </section>
-<section id="id22">
-<h2>Итераторы и выражения-генераторы.<a class="headerlink" href="#id22" title="Link to this heading">#</a></h2>
+<section id="id21">
+<h2>Итераторы и выражения-генераторы.<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Генератор ? это итератор, элементы которого можно перебирать (итерировать) только один раз.
 -Итератор ? это объект, который поддерживает функцию next() для перехода к следующему элементу коллекции.
 -Итерируемый объект ? это объект, который позволяет поочередно обойти свои элементы и может быть преобразован к итератору.
@@ -1192,8 +1224,8 @@ del list[0] - удаление элемента по индексу
 </pre></div>
 </div>
 </section>
-<section id="id23">
-<h2>Работа с файлами.<a class="headerlink" href="#id23" title="Link to this heading">#</a></h2>
+<section id="id22">
+<h2>Работа с файлами.<a class="headerlink" href="#id22" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>file = open(&#39;text.txt, &#39;w&#39;)
 file.write(&#39;hey&#39;)
 file.writelines([&#39;hey&#39;,&#39;hey2]) # heyhey2
@@ -1223,8 +1255,8 @@ https://letpy.com/handbook/builtins/open/
 </pre></div>
 </div>
 </section>
-<section id="id24">
-<h2>Работа с папками.<a class="headerlink" href="#id24" title="Link to this heading">#</a></h2>
+<section id="id23">
+<h2>Работа с папками.<a class="headerlink" href="#id23" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import os
 -Посмотреть все файлы, каталоги и подкаталоги по пути path (более удобно)
     result = os.walk(path)
@@ -1233,15 +1265,15 @@ https://letpy.com/handbook/builtins/open/
 </pre></div>
 </div>
 </section>
-<section id="id25">
-<h2>Перемещение файлов.<a class="headerlink" href="#id25" title="Link to this heading">#</a></h2>
+<section id="id24">
+<h2>Перемещение файлов.<a class="headerlink" href="#id24" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import shutil
 shutil.move(&quot;path/to/current/file.foo&quot;, &quot;path/to/new/destination/for/file.foo&quot;)
 </pre></div>
 </div>
 </section>
-<section id="id26">
-<h2>Декораторы<a class="headerlink" href="#id26" title="Link to this heading">#</a></h2>
+<section id="id25">
+<h2>Декораторы<a class="headerlink" href="#id25" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span># from functools import wraps
 
 def detect(func):
@@ -1264,12 +1296,37 @@ test(2,0)
 </section>
 <section id="tkinter">
 <h2>Tkinter<a class="headerlink" href="#tkinter" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Где-то здесь надо пройти Tkinter, или Pyqt5/Pyqt6
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Где-то здесь надо пройти Tkinter
 </pre></div>
 </div>
 </section>
-<section id="id27">
-<h2>ООП<a class="headerlink" href="#id27" title="Link to this heading">#</a></h2>
+<section id="pyqt">
+<h2>Pyqt<a class="headerlink" href="#pyqt" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Или даже Pyqt6 или Pyqt5
+</pre></div>
+</div>
+</section>
+<section id="requests">
+<h2>Модуль Requests<a class="headerlink" href="#requests" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Модуль requests и http запросы
+</pre></div>
+</div>
+</section>
+<section id="requests-html">
+<h2>Модуль requests-html<a class="headerlink" href="#requests-html" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Моудль requests-html и http запросы
+Парсинг страниц, в том числе с javascript
+</pre></div>
+</div>
+</section>
+<section id="selenium">
+<h2>Selenium<a class="headerlink" href="#selenium" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Продвинутый парсинг
+</pre></div>
+</div>
+</section>
+<section id="id26">
+<h2>ООП<a class="headerlink" href="#id26" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Инкапсуляция, наследование, полиморфизм.
 -Инкапсуляция - это принцип, согласно которому внутреннее устройство сущностей нужно объединять в специальной
 «оболочке» и скрывать от вмешательств извне. Доступ к объектам возможен через специальные открытые методы, а
@@ -1291,8 +1348,8 @@ test(2,0)
 </pre></div>
 </div>
 </section>
-<section id="id28">
-<h2>Аннотации<a class="headerlink" href="#id28" title="Link to this heading">#</a></h2>
+<section id="id27">
+<h2>Аннотации<a class="headerlink" href="#id27" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>https://clck.ru/339CnS
 </pre></div>
 </div>
@@ -1304,10 +1361,22 @@ test(2,0)
 </pre></div>
 </div>
 </section>
-<section id="id29">
-<h2>Создание телеграм бота<a class="headerlink" href="#id29" title="Link to this heading">#</a></h2>
+<section id="id28">
+<h2>Создание телеграм бота<a class="headerlink" href="#id28" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>https://github.com/python-telegram-bot/python-telegram-bot
 Просто начать с echo-бота, а там как пойдет
+</pre></div>
+</div>
+</section>
+<section id="pygame">
+<h2>Pygame<a class="headerlink" href="#pygame" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Изучение pygame
+</pre></div>
+</div>
+</section>
+<section id="ursina">
+<h2>Ursina<a class="headerlink" href="#ursina" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Изучение ursina
 </pre></div>
 </div>
 </section>
@@ -1317,15 +1386,15 @@ test(2,0)
 </pre></div>
 </div>
 </section>
-<section id="id30">
-<h2>Решение проблем:<a class="headerlink" href="#id30" title="Link to this heading">#</a></h2>
+<section id="id29">
+<h2>Решение проблем:<a class="headerlink" href="#id29" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-https://otvet.mail.ru/question/218478491 - Visual Studio Code не понимает русский язык в пути к файлу
 -https://ru.stackoverflow.com/questions/1095365/%d0%9a%d0%b0%d0%ba-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d1%82%d1%8c-pip-%d0%b4%d0%bb%d1%8f-%d1%80%d0%b0%d0%b7%d0%bd%d1%8b%d1%85-%d0%b2%d0%b5%d1%80%d1%81%d0%b8%d0%b9-python - Как использовать pip для разных версий python?
 </pre></div>
 </div>
 </section>
-<section id="id31">
-<h2>Дополнить план обучения следующим:<a class="headerlink" href="#id31" title="Link to this heading">#</a></h2>
+<section id="id30">
+<h2>Дополнить план обучения следующим:<a class="headerlink" href="#id30" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- чем? чем-то
 </pre></div>
 </div>
@@ -1403,45 +1472,54 @@ test(2,0)
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">При запуске выдает “Python”.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Введение.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Переменные.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Типы данных.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Ввод/Вывод.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Арифметические операторы и операции.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Условные и логические операторы.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Логические операторы.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Строки.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Условия.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Списки.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Циклы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Ввод/Вывод.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Арифметические операторы и операции.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Условные и логические операторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Логические операторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Строки.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Условия.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Списки.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Циклы.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-comprehensions">Генераторы списков. list comprehensions.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Алгоритмы обработки списков.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Алгоритмы обработки списков.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notrdy">Кортежи. (((notrdy)))</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Словари.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Множества.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Функции.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Введение в Модули.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Словари.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Множества.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Функции.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Введение в Модули.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time">Модуль time</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#datetime">Моудль datetime</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#turtle">Модуль Turtle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Анонимная-функция\Лямбда-функция.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Еще о функциях</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Разное</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Обработка ошибок и исключений.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Анонимная-функция\Лямбда-функция.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Еще о функциях</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Разное</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Обработка ошибок и исключений.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#map">Функция map.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">Функция filter для отбора значений итерируемых объектов.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zip">Функция zip.(Редко используется)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yield">Функция-генератор. Оператор yield.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-sorted">Особенности сортировки через sort() и sorted().</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Итераторы и выражения-генераторы.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Работа с файлами.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Работа с папками.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Перемещение файлов.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Декораторы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Итераторы и выражения-генераторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Работа с файлами.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Работа с папками.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Перемещение файлов.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Декораторы</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tkinter">Tkinter</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">ООП</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Аннотации</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyqt">Pyqt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requests">Модуль Requests</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requests-html">Модуль requests-html</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#selenium">Selenium</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">ООП</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Аннотации</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#async-await">Асинхронное программирование async/await</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Создание телеграм бота</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Создание телеграм бота</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pygame">Pygame</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ursina">Ursina</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re">Регулярные выражения <code class="docutils literal notranslate"><span class="pre">'re'</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Решение проблем:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Дополнить план обучения следующим:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Решение проблем:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Дополнить план обучения следующим:</a></li>
 </ul>
   </nav></div>
 

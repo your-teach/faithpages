@@ -63,7 +63,7 @@
     <link rel="icon" href="../_static/fav.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Упражнения lua" href="lua-tasks-table.html" />
+    <link rel="next" title="Упражнения lua" href="../other/lua-tasks-table.html" />
     <link rel="prev" title="Работа с файлами" href="../tasks-python/11.file-handling.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -178,7 +178,8 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../python/study-plan-py.html">План обучения <code class="docutils literal notranslate"><span class="pre">py</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/other.html">Разное <code class="docutils literal notranslate"><span class="pre">py</span></code></a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../python/py-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">py</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1"><a class="reference internal" href="../python/turtle.html">Turtle</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../other/py-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">py</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tasks-python/1.in-out.html">Ввод и вывод</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tasks-python/2.strings.html">Строки</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tasks-python/3.boolean.html">Логика</a></li>
@@ -196,7 +197,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lua</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">План обучения <code class="docutils literal notranslate"><span class="pre">lua</span></code></a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="lua-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">lua</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../other/lua-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">lua</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tasks-lua/1.in-out.html">Ввод и вывод</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tasks-lua/2.string.html">Строки</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tasks-lua/3.boolean.html">Логика</a></li>
@@ -208,12 +209,12 @@
 </ul>
 </details></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Упражнения и задачи</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">new</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../book/python-tasks.html">Python</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="../book/lua-tasks.html">Lua</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="../NEW/codeforces.html">Задачи codeforces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NEW/one.html">one</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NEW/two.html">two</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NEW/blacknote.html">Blacknote</a></li>
 </ul>
 
     </div>
@@ -500,46 +501,46 @@ document.write(`
 </section>
 <section id="id2">
 <h2>Переменные.<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Зачем они нужны, как мы бы жили без них.
--Представляем, что переменная это коробка в которую мы можем поместить только одно значение.
--Оператор присваивания:
-    name = &#39;Ivan&#39;
--Как можно и как нельзя называть переменные:
-    -Название переменной желательно должно соответствовать ее содержанию.
-    -Можно: 
-        isName = nil
-        my_name = nil
-        number1 = nil
-        k0l0b0k = nil
-        KEK = nil
-    -Нельзя: 
-        1var
-        использовать название команд
-        спец символы !@#
--Одна и та же переменная может иметь разные значения в разных частях кода:
-    a = &#39;one&#39;
-    print(a)
-    a = &#39;two&#39;
-    print(a)
-    -это обозначает, что Lua читает строки поочереди следуя их нумерации.
--Чувствительность к верхнему и нижнему регистру:
-    a = &#39;one&#39;
-    A = &#39;two&#39;
--Как поместить значение переменной в другую переменную:
-    a = 42
-    b = a
-    -Сперва читаем то что справа от равно, а потом слева от равно.
--Поменять значения переменных:
-    a = 0
-    b = 1
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span>    <span class="o">-</span><span class="err">Зачем</span> <span class="err">они</span> <span class="err">нужны</span><span class="p">,</span> <span class="err">как</span> <span class="err">мы</span> <span class="err">бы</span> <span class="err">жили</span> <span class="err">без</span> <span class="err">них</span><span class="p">.</span>
+    <span class="o">-</span><span class="err">Представляем</span><span class="p">,</span> <span class="err">что</span> <span class="err">переменная</span> <span class="err">это</span> <span class="err">коробка</span> <span class="err">в</span> <span class="err">которую</span> <span class="err">мы</span> <span class="err">можем</span> <span class="err">поместить</span> <span class="err">только</span> <span class="err">одно</span> <span class="err">значение</span><span class="p">.</span>
+    <span class="o">-</span><span class="err">Оператор</span> <span class="err">присваивания</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Ivan&#39;</span>
+    <span class="o">-</span><span class="err">Как</span> <span class="err">можно</span> <span class="err">и</span> <span class="err">как</span> <span class="err">нельзя</span> <span class="err">называть</span> <span class="err">переменные</span><span class="p">:</span>
+        <span class="o">-</span><span class="err">Название</span> <span class="err">переменной</span> <span class="err">желательно</span> <span class="err">должно</span> <span class="err">соответствовать</span> <span class="err">ее</span> <span class="err">содержанию</span><span class="p">.</span>
+        <span class="o">-</span><span class="err">Можно</span><span class="p">:</span> 
+            <span class="n">isName</span> <span class="o">=</span> <span class="kc">nil</span>
+            <span class="n">my_name</span> <span class="o">=</span> <span class="kc">nil</span>
+            <span class="n">number1</span> <span class="o">=</span> <span class="kc">nil</span>
+            <span class="n">k0l0b0k</span> <span class="o">=</span> <span class="kc">nil</span>
+            <span class="n">KEK</span> <span class="o">=</span> <span class="kc">nil</span>
+        <span class="o">-</span><span class="err">Нельзя</span><span class="p">:</span> 
+            <span class="mi">1</span><span class="n">var</span>
+            <span class="err">использовать</span> <span class="err">название</span> <span class="err">команд</span>
+            <span class="err">спец</span> <span class="err">символы</span> <span class="err">!@</span><span class="o">#</span>
+    <span class="o">-</span><span class="err">Одна</span> <span class="err">и</span> <span class="err">та</span> <span class="err">же</span> <span class="err">переменная</span> <span class="err">может</span> <span class="err">иметь</span> <span class="err">разные</span> <span class="err">значения</span> <span class="err">в</span> <span class="err">разных</span> <span class="err">частях</span> <span class="err">кода</span><span class="p">:</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;one&#39;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;two&#39;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+        <span class="o">-</span><span class="err">это</span> <span class="err">обозначает</span><span class="p">,</span> <span class="err">что</span> <span class="n">Lua</span> <span class="err">читает</span> <span class="err">строки</span> <span class="err">поочереди</span> <span class="err">следуя</span> <span class="err">их</span> <span class="err">нумерации</span><span class="p">.</span>
+    <span class="o">-</span><span class="err">Чувствительность</span> <span class="err">к</span> <span class="err">верхнему</span> <span class="err">и</span> <span class="err">нижнему</span> <span class="err">регистру</span><span class="p">:</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;one&#39;</span>
+        <span class="n">A</span> <span class="o">=</span> <span class="s1">&#39;two&#39;</span>
+    <span class="o">-</span><span class="err">Как</span> <span class="err">поместить</span> <span class="err">значение</span> <span class="err">переменной</span> <span class="err">в</span> <span class="err">другую</span> <span class="err">переменную</span><span class="p">:</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="mi">42</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+        <span class="o">-</span><span class="err">Сперва</span> <span class="err">читаем</span> <span class="err">то</span> <span class="err">что</span> <span class="err">справа</span> <span class="err">от</span> <span class="err">равно</span><span class="p">,</span> <span class="err">а</span> <span class="err">потом</span> <span class="err">слева</span> <span class="err">от</span> <span class="err">равно</span><span class="p">.</span>
+    <span class="o">-</span><span class="err">Поменять</span> <span class="err">значения</span> <span class="err">переменных</span><span class="p">:</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
 
-    c = a
-    a = b
-    b = a
--Поменять значения переменных: a, b = b, a
--Множественное присваивание: x, y, z = 1, 2, 3
--Как обозначается ничего: nil
--При выводе несуществующей переменной результат будет nil
+        <span class="n">c</span> <span class="o">=</span> <span class="n">a</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+    <span class="o">-</span><span class="err">Поменять</span> <span class="err">значения</span> <span class="err">переменных</span><span class="p">:</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span>
+    <span class="o">-</span><span class="err">Множественное</span> <span class="err">присваивание</span><span class="p">:</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
+    <span class="o">-</span><span class="err">Как</span> <span class="err">обозначается</span> <span class="err">ничего</span><span class="p">:</span> <span class="kc">nil</span>
+    <span class="o">-</span><span class="err">При</span> <span class="err">выводе</span> <span class="err">несуществующей</span> <span class="err">переменной</span> <span class="err">результат</span> <span class="err">будет</span> <span class="kc">nil</span>
 </pre></div>
 </div>
 </section>
@@ -1013,7 +1014,7 @@ end
       </div>
     </a>
     <a class="right-next"
-       href="lua-tasks-table.html"
+       href="../other/lua-tasks-table.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
