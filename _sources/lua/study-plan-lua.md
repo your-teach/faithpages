@@ -404,15 +404,48 @@ https://ru.wikibooks.org/wiki/Lua/Типы_данных
 ## Запись и чтение файла.
     -https://oojoo.ru/11-zapis-i-chtieniie-iz-faila/
 
+## Модули
+### Импорт модуля
+```lua
+local socket = require 'socket'
+socket.sleep(3)
+```
+
+### Создание модуля
+Файл модуля
+```lua
+local items = {name = 'Storm', health = 790, mana = 540}
+
+items.name = 'Storm'
+items.health = 790
+items.mana = 540
+
+function items.congrats()
+    print("Congratulations!!!")
+end
+
+return items
+```
+Файл импорта
+```lua
+local items = require 'a'
+print(items.name)
+```
+
+### Старый способ создания модуля
+Файл модуля
+```lua
+module("mymodule", package.seeall)
+
+function foo() -- create it as if it's a global function
+    print("Hello World!")
+end
+```
+Файл импорта
+```
+require "mymodule"
+mymodule.foo()
+```
+
 ## Разное.
-    Пауза.
-        local socket = require 'socket'
-        socket.sleep(3)
-    Импортировать файл lua (можно только в виде таблицы).
-        -a.lua
-            items = {name = 'Storm', health = 790, mana = 540}
-            return items
-        -b.lua
-            local items = require 'a'
-            print(items.name)
     Рекурсивные функции?

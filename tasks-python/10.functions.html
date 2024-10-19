@@ -208,6 +208,13 @@
 </ul>
 </details></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Упражнения и задачи</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../book/python-tasks.html">Python</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../book/lua-tasks.html">Lua</a></li>
+
+</ul>
 
     </div>
 </nav></div>
@@ -426,8 +433,9 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Уникальные элементы списка</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Простые числа списка</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Четные числа списка</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Замена символа по индексу</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Преобразование строки со словами</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Количество букв регистров</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Замена символа по индексу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Преобразование строки со словами</a></li>
 </ul>
             </nav>
         </div>
@@ -481,14 +489,23 @@ document.write(`
 </section>
 <section id="id8">
 <h2>Четные числа списка<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
-<p>Напишите функцию, которая принимает в качестве аргумента список, а возвращает список с четными числами из изначально заданного списка.</p>
+<p>Напишите функцию, которая принимает в качестве аргумента список, а возвращает список с четными числами из изначально заданного списка. Пример:</p>
 <blockquote>
 <div><p>Образец списка: <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8,</span> <span class="pre">9]</span></code><br />
 Ожидаемый результат: <code class="docutils literal notranslate"><span class="pre">[2, 4, 6, 8]</span></code></p>
 </div></blockquote>
 </section>
 <section id="id9">
-<h2>Замена символа по индексу<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<h2>Количество букв регистров<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>Напишите функцию, которая принимает строку и рассчитывает количество букв верхнего и нижнего регистра. Пример:</p>
+<blockquote>
+<div><p>Пример строки: <code class="docutils literal notranslate"><span class="pre">'Быстрая</span> <span class="pre">Лиса</span> <span class="pre">Бровей'</span></code><br />
+Ожидаемый результат:
+<code class="docutils literal notranslate"><span class="pre">Количество</span> <span class="pre">символов</span> <span class="pre">в</span> <span class="pre">верхнем</span> <span class="pre">регистре:</span> <span class="pre">3</span>&#160; <span class="pre">Количество</span> <span class="pre">строчных</span> <span class="pre">букв:</span> <span class="pre">12</span></code></p>
+</div></blockquote>
+</section>
+<section id="id10">
+<h2>Замена символа по индексу<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
 <p>Напишите функцию, которая меняет по индексу символ строки на новый символ. И возвращает измененную строку. Примеры:</p>
 <blockquote>
 <div><p>Образец запуска функции: <code class="docutils literal notranslate"><span class="pre">func('Word',</span> <span class="pre">0,</span> <span class="pre">'L')</span></code><br />
@@ -499,8 +516,8 @@ document.write(`
 Ожидаемый результат: <code class="docutils literal notranslate"><span class="pre">'Лемонгласс'</span></code></p>
 </div></blockquote>
 </section>
-<section id="id10">
-<h2>Преобразование строки со словами<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<section id="id11">
+<h2>Преобразование строки со словами<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
 <p>Напишите функцию <code class="docutils literal notranslate"><span class="pre">capitalize()</span></code>, которая принимает строку, форматирует и возвращает ее, меняя первую букву на большую, а остальные буквы на маленькие.</p>
 <blockquote>
 <div><p>Например, <code class="docutils literal notranslate"><span class="pre">print(capitalize('word'))</span></code> должно напечатать слово <code class="docutils literal notranslate"><span class="pre">'Word'</span></code>.
@@ -602,8 +619,9 @@ print(finish)
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Уникальные элементы списка</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Простые числа списка</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Четные числа списка</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Замена символа по индексу</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Преобразование строки со словами</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Количество букв регистров</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Замена символа по индексу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Преобразование строки со словами</a></li>
 </ul>
   </nav></div>
 

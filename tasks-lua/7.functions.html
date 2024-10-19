@@ -208,6 +208,13 @@
 </ul>
 </details></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Упражнения и задачи</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../book/python-tasks.html">Python</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../book/lua-tasks.html">Lua</a></li>
+
+</ul>
 
     </div>
 </nav></div>
@@ -423,12 +430,13 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Степень</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Сумма чисел таблицы</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Две таблицы</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Уникальные элементы таблицы</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Простые числа таблицы</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Четные числа таблицы</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Замена символов</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Количество символов</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Замена символа по индексу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Количество букв регистров</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Уникальные элементы таблицы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Простые числа таблицы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Четные числа таблицы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Замена символов</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Количество символов</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Замена символа по индексу</a></li>
 </ul>
             </nav>
         </div>
@@ -474,31 +482,40 @@ document.write(`
 Результат вывести в консоль.</p>
 </section>
 <section id="id6">
-<h2>Уникальные элементы таблицы<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<h2>Количество букв регистров<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>Напишите функцию, которая принимает строку и рассчитывает количество букв верхнего и нижнего регистра. Пример:</p>
+<blockquote>
+<div><p>Пример строки: <code class="docutils literal notranslate"><span class="pre">'Быстрая</span> <span class="pre">Лиса</span> <span class="pre">Бровей'</span></code><br />
+Ожидаемый результат:
+<code class="docutils literal notranslate"><span class="pre">Количество</span> <span class="pre">символов</span> <span class="pre">в</span> <span class="pre">верхнем</span> <span class="pre">регистре:</span> <span class="pre">3</span>&#160; <span class="pre">Количество</span> <span class="pre">строчных</span> <span class="pre">букв:</span> <span class="pre">12</span></code></p>
+</div></blockquote>
+</section>
+<section id="id7">
+<h2>Уникальные элементы таблицы<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
 <p>Напишите функцию, которая принимает в качестве аргумента таблицу и возвращает новую таблицу с уникальными элементами первой таблицы. Пример:</p>
 <blockquote>
 <div><p>Входная таблица: <code class="docutils literal notranslate"><span class="pre">{1,2,3,3,3,3,4,5}</span></code><br />
 Выходная уникальная таблица: <code class="docutils literal notranslate"><span class="pre">{1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5}</span></code></p>
 </div></blockquote>
 </section>
-<section id="id7">
-<h2>Простые числа таблицы<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<section id="id8">
+<h2>Простые числа таблицы<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
 <p>Напишите функцию, которая принимает в качестве аргумента таблицу, считает количество простых чисел в этой таблице, и возвращает ответ. (Простое число делится только на себя и на единицу). Пример:</p>
 <blockquote>
 <div><p>Образец таблицы: <code class="docutils literal notranslate"><span class="pre">{4,7,20,3,11,37}</span></code><br />
 Количество простых чисел в последовательности: <code class="docutils literal notranslate"><span class="pre">4</span></code></p>
 </div></blockquote>
 </section>
-<section id="id8">
-<h2>Четные числа таблицы<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<section id="id9">
+<h2>Четные числа таблицы<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
 <p>Напишите функцию, которая принимает в качестве аргумента таблицу, а и возвращаеет таблицу с четными числами из изначально заданной таблицы. Пример:</p>
 <blockquote>
 <div><p>Образец таблицы: <code class="docutils literal notranslate"><span class="pre">{1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8,</span> <span class="pre">9}</span></code><br />
 Ожидаемый результат: <code class="docutils literal notranslate"><span class="pre">{2, 4, 6, 8}</span></code></p>
 </div></blockquote>
 </section>
-<section id="id9">
-<h2>Замена символов<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<section id="id10">
+<h2>Замена символов<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
 <p>Напишите функцию, которая принимает в качестве трех аргументов строку и два символа. А возвращает измененную строку, в которой были заменены все символы указанные во втором аргументе на символы указанные в третьем аргументе. Примеры:</p>
 <blockquote>
 <div><p>Образец запуска функции: <code class="docutils literal notranslate"><span class="pre">func('Иголки</span> <span class="pre">падающие</span> <span class="pre">с</span> <span class="pre">ёлки',</span> <span class="pre">'</span> <span class="pre">',</span> <span class="pre">'_')</span></code><br />
@@ -509,8 +526,8 @@ document.write(`
 Ожидаемый результат: <code class="docutils literal notranslate"><span class="pre">'В</span> <span class="pre">этъй</span> <span class="pre">стръке</span> <span class="pre">пръпадут</span> <span class="pre">все</span> <span class="pre">ъ?'</span></code></p>
 </div></blockquote>
 </section>
-<section id="id10">
-<h2>Количество символов<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<section id="id11">
+<h2>Количество символов<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
 <p>Напишите функцию, которая принимает в качестве аргумента строку. А возвращает таблицу, где в качестве ключей будут символы строки, а значениями - числа, которые соответствуют количеству данного символа в строке. Примеры:</p>
 <blockquote>
 <div><p>Образец строки: <code class="docutils literal notranslate"><span class="pre">'text'</span></code><br />
@@ -521,8 +538,8 @@ document.write(`
 Ожидаемый результат: <code class="docutils literal notranslate"><span class="pre">{'О'=1,</span> <span class="pre">'c'=2,</span> <span class="pre">'т'=2,</span> <span class="pre">'е'=4,</span> <span class="pre">'р'=1,</span> <span class="pre">'г'=1,</span> <span class="pre">'а'=1,</span> <span class="pre">'й'=2,</span> <span class="pre">'ь'=1,</span> <span class="pre">'</span> <span class="pre">'=1,</span> <span class="pre">'о'=2,</span> <span class="pre">'п'=1,</span> <span class="pre">'л'=1,</span> <span class="pre">'з'=1,</span> <span class="pre">'н'=1,</span> <span class="pre">'!'=1}</span></code></p>
 </div></blockquote>
 </section>
-<section id="id11">
-<h2>Замена символа по индексу<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<section id="id12">
+<h2>Замена символа по индексу<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
 <p>Напишите функцию, которая по индексу меняет символ строки на новый символ. И возвращает измененную строку. Примеры:</p>
 <blockquote>
 <div><p>Образец запуска функции: <code class="docutils literal notranslate"><span class="pre">func('Word',</span> <span class="pre">1,</span> <span class="pre">'L')</span></code><br />
@@ -603,12 +620,13 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Степень</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Сумма чисел таблицы</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Две таблицы</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Уникальные элементы таблицы</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Простые числа таблицы</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Четные числа таблицы</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Замена символов</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Количество символов</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Замена символа по индексу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Количество букв регистров</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Уникальные элементы таблицы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Простые числа таблицы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Четные числа таблицы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Замена символов</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Количество символов</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Замена символа по индексу</a></li>
 </ul>
   </nav></div>
 

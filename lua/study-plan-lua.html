@@ -208,6 +208,13 @@
 </ul>
 </details></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Упражнения и задачи</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../book/python-tasks.html">Python</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../book/lua-tasks.html">Lua</a></li>
+
+</ul>
 
     </div>
 </nav></div>
@@ -436,7 +443,13 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Циклы.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Функции.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Запись и чтение файла.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Разное.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Модули</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Импорт модуля</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Создание модуля</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Старый способ создания модуля</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Разное.</a></li>
 </ul>
             </nav>
         </div>
@@ -905,18 +918,56 @@ end
 </div>
 </section>
 <section id="id17">
-<h2>Разное.<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Пауза.
-    local socket = require &#39;socket&#39;
-    socket.sleep(3)
-Импортировать файл lua (можно только в виде таблицы).
-    -a.lua
-        items = {name = &#39;Storm&#39;, health = 790, mana = 540}
-        return items
-    -b.lua
-        local items = require &#39;a&#39;
-        print(items.name)
-Рекурсивные функции?
+<h2>Модули<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
+<section id="id18">
+<h3>Импорт модуля<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span> <span class="n">socket</span> <span class="o">=</span> <span class="nb">require</span> <span class="s1">&#39;socket&#39;</span>
+<span class="n">socket</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id19">
+<h3>Создание модуля<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
+<p>Файл модуля</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span> <span class="n">items</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Storm&#39;</span><span class="p">,</span> <span class="n">health</span> <span class="o">=</span> <span class="mi">790</span><span class="p">,</span> <span class="n">mana</span> <span class="o">=</span> <span class="mi">540</span><span class="p">}</span>
+
+<span class="n">items</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Storm&#39;</span>
+<span class="n">items</span><span class="p">.</span><span class="n">health</span> <span class="o">=</span> <span class="mi">790</span>
+<span class="n">items</span><span class="p">.</span><span class="n">mana</span> <span class="o">=</span> <span class="mi">540</span>
+
+<span class="kr">function</span> <span class="nc">items</span><span class="p">.</span><span class="nf">congrats</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Congratulations!!!&quot;</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="kr">return</span> <span class="n">items</span>
+</pre></div>
+</div>
+<p>Файл импорта</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span> <span class="n">items</span> <span class="o">=</span> <span class="nb">require</span> <span class="s1">&#39;a&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">items</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id20">
+<h3>Старый способ создания модуля<a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
+<p>Файл модуля</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">module</span><span class="p">(</span><span class="s2">&quot;mymodule&quot;</span><span class="p">,</span> <span class="n">package</span><span class="p">.</span><span class="n">seeall</span><span class="p">)</span>
+
+<span class="kr">function</span> <span class="nf">foo</span><span class="p">()</span> <span class="c1">-- create it as if it&#39;s a global function</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
+<p>Файл импорта</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">require</span> <span class="s2">&quot;mymodule&quot;</span>
+<span class="n">mymodule</span><span class="o">.</span><span class="n">foo</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id21">
+<h2>Разное.<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Рекурсивные функции?
 </pre></div>
 </div>
 </section>
@@ -1003,7 +1054,13 @@ end
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Циклы.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Функции.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Запись и чтение файла.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Разное.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Модули</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Импорт модуля</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Создание модуля</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Старый способ создания модуля</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Разное.</a></li>
 </ul>
   </nav></div>
 
