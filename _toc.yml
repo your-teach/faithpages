@@ -8,7 +8,8 @@ parts:
     chapters:
       - file: python/study-plan-py
       - file: python/other
-      - file: python/py-tasks-table
+      - file: python/turtle
+      - file: other/py-tasks-table
         sections:
         - file: tasks-python/1.in-out
         - file: tasks-python/2.strings
@@ -24,7 +25,7 @@ parts:
   - caption: Lua
     chapters:
       - file: lua/study-plan-lua
-      - file: lua/lua-tasks-table
+      - file: other/lua-tasks-table
         sections:
         - file: tasks-lua/1.in-out
         - file: tasks-lua/2.string
@@ -34,10 +35,16 @@ parts:
         - file: tasks-lua/6.cycles
         - file: tasks-lua/7.functions
         - file: tasks-lua/8.file-handling
-  - caption: Упражнения и задачи
-    chapters:
-      - file: book/python-tasks
-      - file: book/lua-tasks
+  - caption: new
+    chapters: 
+      - file: NEW/codeforces
+      - file: NEW/one
+      - file: NEW/two
+      - file: NEW/blacknote
+  # - caption: Упражнения и задачи
+  #   chapters:
+  #     - file: other/python-tasks
+  #     - file: other/lua-tasks
 
 
 # Or you organize the TOC by parts
