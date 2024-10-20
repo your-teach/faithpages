@@ -512,7 +512,7 @@
     time_now = time.ctime(time())
 ```
 
-### Моудль datetime
+### Модуль datetime
 ```python
     import datetime
     now = datetime.datetime.now()

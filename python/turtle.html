@@ -432,7 +432,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Квадрат, треугольник и круг</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Солнце</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Солнце-мандала</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Солнец-мандала 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Солнце-мандала 2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Спираль</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Мячик и след</a></li>
 </ul>
@@ -481,6 +481,10 @@ document.write(`
 <p><code class="docutils literal notranslate"><span class="pre">turtle.bgcolor('black')</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">turtle.color('orange',</span> <span class="pre">'yellow')</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">turtle.setpos(x,</span> <span class="pre">y)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">turtle.sety(y)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">turtle.setx(x)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">turtle.ycor()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">turtle.xcor()</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">turtle.begin_fill()</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">turtle.end_fill()</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">turtle.tracer(1)</span></code></p>
@@ -555,7 +559,7 @@ document.write(`
 </div>
 </section>
 <section id="id6">
-<h2>Солнец-мандала 2<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<h2>Солнце-мандала 2<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
 <p><img alt="" src="../_images/sun-mandala2.png" /></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>
 <span class="n">turtle</span><span class="o">.</span><span class="n">bgcolor</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
@@ -590,6 +594,40 @@ document.write(`
 <section id="id8">
 <h2>Мячик и след<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
 <p><img alt="" src="../_images/ball-line.png" /></p>
+<details><summary>Решение</summary>
+<pre>
+<code lang="python">
+<p>import turtle
+import time
+gravity = -0.005  # pixels/(time of iteration)^2
+y_velocity = 1  # pixels/(time of iteration)
+x_velocity = 0.25  # pixels/(time of iteration)
+energy_loss = 0.95</p>
+<p>width = 600
+height = 800</p>
+<p>window = turtle.Screen()
+window.setup(width, height)
+window.tracer(0)</p>
+<p>ball = turtle.Turtle()
+ball.penup()
+ball.setx(-600)
+ball.sety(-300)
+ball.color(“green”)
+ball.shape(“circle”)
+ball.sety(ball.ycor() + y_velocity)
+ball.pendown()
+while True:
+ball.sety(ball.ycor() + y_velocity)
+ball.setx(ball.xcor() + x_velocity)
+ball.circle(1, 360)
+print(ball.ycor(), ball.xcor())
+y_velocity += gravity
+if ball.ycor() &lt; -height / 2:
+y_velocity = -y_velocity * energy_loss
+window.update()</p>
+</code>
+</pre>
+</details>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="n">gravity</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.005</span>  <span class="c1"># pixels/(time of iteration)^2</span>
@@ -696,7 +734,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Квадрат, треугольник и круг</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Солнце</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Солнце-мандала</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Солнец-мандала 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Солнце-мандала 2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Спираль</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Мячик и след</a></li>
 </ul>

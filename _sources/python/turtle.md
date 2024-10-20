@@ -45,6 +45,14 @@ turtle.mainloop() # зацикливает окно программы, чтоб
 
 `turtle.setpos(x, y)`
 
+`turtle.sety(y)`
+
+`turtle.setx(x)`
+
+`turtle.ycor()`
+
+`turtle.xcor()`
+
 `turtle.begin_fill()`
 
 `turtle.end_fill()`
@@ -123,7 +131,7 @@ while True:
     t.left(170)
 ```
 
-## Солнец-мандала 2
+## Солнце-мандала 2
 ![](../images/turtle/sun-mandala2.png)
 ```python
 import turtle
@@ -157,6 +165,46 @@ mainloop()
 ## Мячик и след
 
 ![](../images/turtle/ball-line.png)
+
+<details><summary>Решение</summary>
+<pre>
+<code lang="python">
+
+import turtle
+import time
+gravity = -0.005  # pixels/(time of iteration)^2
+y_velocity = 1  # pixels/(time of iteration)
+x_velocity = 0.25  # pixels/(time of iteration)
+energy_loss = 0.95
+
+width = 600
+height = 800
+
+window = turtle.Screen()
+window.setup(width, height)
+window.tracer(0)
+
+ball = turtle.Turtle()
+ball.penup()
+ball.setx(-600)
+ball.sety(-300)
+ball.color("green")
+ball.shape("circle")
+ball.sety(ball.ycor() + y_velocity)
+ball.pendown()
+while True:
+    ball.sety(ball.ycor() + y_velocity)
+    ball.setx(ball.xcor() + x_velocity)
+    ball.circle(1, 360)
+    print(ball.ycor(), ball.xcor())
+    y_velocity += gravity
+    if ball.ycor() < -height / 2:
+        y_velocity = -y_velocity * energy_loss
+    window.update()
+
+</code>
+</pre>
+</details>
 
 ```python
 import turtle
