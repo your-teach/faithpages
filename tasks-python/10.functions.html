@@ -59,6 +59,7 @@
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tasks-python/10.functions';</script>
+    <script src="../_static/script.js?v=5bc9876b"></script>
     <link rel="canonical" href="https://your-teach.github.io/faithpages/tasks-python/10.functions.html" />
     <link rel="icon" href="../_static/fav.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -209,12 +210,12 @@
 </ul>
 </details></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">new</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">some</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../NEW/codeforces.html">Задачи codeforces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../NEW/one.html">one</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../NEW/two.html">two</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../NEW/blacknote.html">Blacknote</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NEW/Roblox.html">Roblox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NEW/selenium-vps.html">Selenium на Vps</a></li>
 </ul>
 
     </div>
@@ -519,23 +520,26 @@ document.write(`
 </section>
 <section id="id11">
 <h2>Преобразование строки со словами<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
-<p>Напишите функцию <code class="docutils literal notranslate"><span class="pre">capitalize()</span></code>, которая принимает строку, форматирует и возвращает ее, меняя первую букву на большую, а остальные буквы на маленькие.</p>
+<ol class="arabic">
+<li><p>Напишите функцию <code class="docutils literal notranslate"><span class="pre">capitalize()</span></code>, которая принимает строку, форматирует и возвращает ее, меняя первую букву на большую, а остальные буквы на маленькие.</p>
 <blockquote>
-<div><p>Например, <code class="docutils literal notranslate"><span class="pre">print(capitalize('word'))</span></code> должно напечатать слово <code class="docutils literal notranslate"><span class="pre">'Word'</span></code>.
+<div><p>Например, <code class="docutils literal notranslate"><span class="pre">print(capitalize('word'))</span></code> должно напечатать слово <code class="docutils literal notranslate"><span class="pre">'Word'</span></code>.<br />
 Или, <code class="docutils literal notranslate"><span class="pre">print(capitalize('arrOw'))</span></code> должно напечатать слово <code class="docutils literal notranslate"><span class="pre">'Arrow'</span></code>.</p>
 </div></blockquote>
-<p>На вход подаётся строка, состоящая из слов, разделённых одним пробелом. Напечатайте исходную строку, сделав так, чтобы каждое слово начиналось с большой буквы. При этом используйте вашу функцию <code class="docutils literal notranslate"><span class="pre">capitalize()</span></code>.</p>
+</li>
+<li><p>На вход подаётся строка, состоящая из слов, разделённых одним пробелом. Напечатайте исходную строку, сделав так, чтобы каждое слово начиналось с большой буквы, а последующие были маленькие. При этом используйте вашу функцию <code class="docutils literal notranslate"><span class="pre">capitalize()</span></code>.</p>
 <blockquote>
 <div><p>Образец строки: <code class="docutils literal notranslate"><span class="pre">'стрОка</span> <span class="pre">для</span> <span class="pre">тЕстированиЯ</span> <span class="pre">ФункцИи</span> <span class="pre">capItaliZe'</span></code><br />
 Ожидаемый результат: <code class="docutils literal notranslate"><span class="pre">'Строка</span> <span class="pre">Для</span> <span class="pre">Тестирования</span> <span class="pre">Функции</span> <span class="pre">Capitalize'</span></code></p>
 </div></blockquote>
-<details><summary>Решение</summary>
-<pre>
-def capitalize(word):
-    result = word[0].upper()
-    for letteral in word[1:]:
-        result += letteral.lower()
-    return result
+</li>
+</ol>
+<details><summary>Решение</summary><pre><code>
+<p>def capitalize(word):
+result = word[0].upper()
+for letter in word[1:]:
+result += letter.lower()
+return result</p>
 <p>raw = ‘стрОка для тЕстированиЯ ФункцИи capItaliZe’
 raw = raw.split()
 res = []
@@ -543,9 +547,8 @@ for w in raw:
 refact = capitalize(w)
 res.append(refact)
 finish = ‘ ‘.join(res)
-print(finish)
-</pre></p>
-</details>
+print(finish)</p>
+<p></code></pre></details></p>
 </section>
 </section>
 
