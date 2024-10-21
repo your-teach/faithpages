@@ -35,12 +35,13 @@ parts:
         - file: tasks-lua/6.cycles
         - file: tasks-lua/7.functions
         - file: tasks-lua/8.file-handling
-  - caption: new
+  - caption: some
     chapters: 
       - file: NEW/codeforces
-      - file: NEW/one
-      - file: NEW/two
       - file: NEW/blacknote
+      - file: NEW/Roblox
+      - file: NEW/selenium-vps
+      - file: NEW/vs_code-settings
   # - caption: Упражнения и задачи
   #   chapters:
   #     - file: other/python-tasks
