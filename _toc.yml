@@ -6,9 +6,9 @@ root: index
 parts:
   - caption: Python
     chapters:
-      - file: python/study-plan-py
-      - file: python/other
-      - file: python/turtle
+      - file: Python/study-plan-py
+      - file: Python/turtle
+      - file: Python/other
       - file: other/py-tasks-table
         sections:
         - file: tasks-python/1.in-out
@@ -24,28 +24,31 @@ parts:
         - file: tasks-python/11.file-handling
   - caption: Lua
     chapters:
-      - file: lua/study-plan-lua
+      - file: Lua/study-plan-lua
       - file: other/lua-tasks-table
         sections:
         - file: tasks-lua/1.in-out
         - file: tasks-lua/2.string
         - file: tasks-lua/3.boolean
-        - file: tasks-lua/4.tables
-        - file: tasks-lua/5.conditions
+        - file: tasks-lua/4.conditions
+        - file: tasks-lua/5.tables
         - file: tasks-lua/6.cycles
         - file: tasks-lua/7.functions
         - file: tasks-lua/8.file-handling
   - caption: some
-    chapters: 
+    chapters:
+      - file: other/roblox-table
+        sections:
+        - file: Roblox/notes
+        - file: Roblox/scripts
+        - file: Roblox/door-script
+      - file: other/ubuntu-table
+        sections:
+        - file: Ubuntu/selenium-vps
       - file: NEW/codeforces
+      - file: NEW/vs-code-settings
       - file: NEW/blacknote
-      - file: NEW/Roblox
-      - file: NEW/selenium-vps
-      - file: NEW/vs_code-settings
-  # - caption: Упражнения и задачи
-  #   chapters:
-  #     - file: other/python-tasks
-  #     - file: other/lua-tasks
+
 
 
 # Or you organize the TOC by parts

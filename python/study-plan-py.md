@@ -34,10 +34,12 @@
 
 ## Исправление проблемы ввода заглавных букв в Powershell
 
-    -https://danshin.ms/PSReadLine-problem/
+[Источник](https://danshin.ms/PSReadLine-problem/)
+
     -Открываем Powershell от имени администратора, вводим команду: Remove-Module PSReadLine
-    -Закрываем Powershell
-    -Затем удаляем или переименовываем папку в C:\Program Files\WindowsPowerShell\Modules\PSReadLine
+    -Закрываем Powershell и Редактор кода Visual Studio code
+    -Затем удаляем или переименовываем папку в 
+    C:\Program Files\WindowsPowerShell\Modules\PSReadLine под названием "2.0.0"
     -Запускаем Powershell от имени администратора
     -Устанавливаем модуль, который удалили: Install-Module PSReadLine
     -Разрешить remotesigned: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned 

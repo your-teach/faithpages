@@ -100,6 +100,10 @@ pen.hideturtle()
 turtle.mainloop()
 ```
 
+## Pacman
+
+![](../images/turtle/pacman.png)
+
 ## Солнце
 ![](../images/turtle/sun.png)
 
@@ -162,13 +166,35 @@ while radius < 100:
 mainloop()
 ```
 
+## Треугольная спираль
+
+![](../images/turtle/spiral-triangle.png)
+
+```python
+
+import turtle
+
+turtle.setup(700,700)
+turtle.title("Spiral")
+turtle.speed(0)
+turtle.hideturtle()
+n=200
+s=2
+for i in range(n):
+    turtle.fd(s)
+    turtle.left(119)
+    s += 2
+turtle.mainloop()
+
+```
+
 ## Мячик и след
 
 ![](../images/turtle/ball-line.png)
 
 <details><summary>Решение</summary>
 <pre>
-<code lang="python">
+<code class="language-python">
 
 import turtle
 import time
@@ -240,3 +266,4 @@ while True:
     window.update()
 
 ```
+
