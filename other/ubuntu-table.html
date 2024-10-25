@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Разное py &#8212; Faith Pages</title>
+    <title>Ubuntu &#8212; Faith Pages</title>
   
   
   
@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,10 +39,11 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fe3c39de" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -58,16 +61,17 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'python/other';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'other/ubuntu-table';</script>
     <script src="../_static/script.js?v=5bc9876b"></script>
-    <link rel="canonical" href="https://your-teach.github.io/faithpages/python/other.html" />
+    <link rel="canonical" href="https://your-teach.github.io/faithpages/other/ubuntu-table.html" />
     <link rel="icon" href="../_static/fav.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Turtle" href="turtle.html" />
-    <link rel="prev" title="План обучения py" href="study-plan-py.html" />
+    <link rel="next" title="Selenium на Vps" href="../Ubuntu/selenium-vps.html" />
+    <link rel="prev" title="Плавная дверь" href="../Roblox/door-script.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -158,29 +151,22 @@
     
     
     <img src="../_static/logo.png" class="logo__image only-light" alt="Faith Pages - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Faith Pages - Home"/>`);</script>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Faith Pages - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="study-plan-py.html">План обучения <code class="docutils literal notranslate"><span class="pre">py</span></code></a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Разное <code class="docutils literal notranslate"><span class="pre">py</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="turtle.html">Turtle</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../other/py-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">py</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="py-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">py</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tasks-python/1.in-out.html">Ввод и вывод</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tasks-python/2.strings.html">Строки</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tasks-python/3.boolean.html">Логика</a></li>
@@ -197,13 +183,12 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lua</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../lua/study-plan-lua.html">План обучения <code class="docutils literal notranslate"><span class="pre">lua</span></code></a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../other/lua-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">lua</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="lua-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">lua</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tasks-lua/1.in-out.html">Ввод и вывод</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tasks-lua/2.string.html">Строки</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tasks-lua/3.boolean.html">Логика</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tasks-lua/4.tables.html">Таблицы</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tasks-lua/5.conditions.html">Условия</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tasks-lua/4.conditions.html">Условия</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tasks-lua/5.tables.html">Таблицы</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tasks-lua/6.cycles.html">Циклы</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tasks-lua/7.functions.html">Функции</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tasks-lua/8.file-handling.html">Работа с файлами</a></li>
@@ -211,11 +196,20 @@
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">some</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="roblox-table.html">Roblox</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Roblox/notes.html">Наброски</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Roblox/scripts.html">Скрипты <code class="docutils literal notranslate"><span class="pre">rblx</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Roblox/door-script.html">Плавная дверь</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Ubuntu</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ubuntu/selenium-vps.html">Selenium на Vps</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../NEW/codeforces.html">Задачи codeforces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../NEW/vs-code-settings.html">Настройки VsCode</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../NEW/blacknote.html">Blacknote</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../NEW/Roblox.html">Roblox</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../NEW/selenium-vps.html">Selenium на Vps</a></li>
 </ul>
 
     </div>
@@ -287,7 +281,7 @@
       
       
       
-      <li><a href="https://github.com/your-teach/faithpages/edit/main/python/other.md" target="_blank"
+      <li><a href="https://github.com/your-teach/faithpages/edit/main/other/ubuntu-table.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -304,7 +298,7 @@
       
       
       
-      <li><a href="https://github.com/your-teach/faithpages/issues/new?title=Issue%20on%20page%20%2Fpython/other.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/your-teach/faithpages/issues/new?title=Issue%20on%20page%20%2Fother/ubuntu-table.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -334,7 +328,7 @@
       
       
       
-      <li><a href="../_sources/python/other.md" target="_blank"
+      <li><a href="../_sources/other/ubuntu-table.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -387,27 +381,17 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
-
-
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
 </button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
 </div></div>
       
     </div>
@@ -418,21 +402,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Разное py</h1>
+    <h1>Ubuntu</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pip">Команды pip</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Библиотеки и модули</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Термины, сленг, выражения</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -442,90 +416,13 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="py">
-<h1>Разное <code class="docutils literal notranslate"><span class="pre">py</span></code><a class="headerlink" href="#py" title="Link to this heading">#</a></h1>
-<section id="pip">
-<h2>Команды pip<a class="headerlink" href="#pip" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-способы импорта:
-    `import module as md`
-    `from module import *`
-    `from module import &lt;attribute&gt;`
-    `from module import &lt;attribute&gt; as attr`
--python --version - посмотреть версию пайтон
--pip install name_module - установка
--pip uninstall package-name - удаление
--pip install -r requirements.txt - установить список зависимостей из файла
--pip list - список установленных модулей
--pip show &lt;package&gt; - посмотреть версию пакета
--pip install &lt;package&gt; --upgrade - обновить конкретный пакет
--pip install &lt;package&gt; -U - обновить конкретный пакет
-
-Если pip недоступен:
--Как установить модуль на конкретную версию python, варианты:
-    - C:/Users/ErgoDeath/AppData/Local/Programs/Python/Python312/python.exe -m pip install pyglet
-    - /usr/local/bin/python3.8 -m pip install pip
-    - py -3.8 -m pip install package
--Запуск скрипта:
-    - C:/Users/ErgoDeath/AppData/Local/Programs/Python/Python312/python.exe script.py
-    - py -3.8 script.py
-</pre></div>
+  <section class="tex2jax_ignore mathjax_ignore" id="ubuntu">
+<h1>Ubuntu<a class="headerlink" href="#ubuntu" title="Link to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Ubuntu/selenium-vps.html">Selenium на Vps</a></li>
+</ul>
 </div>
-</section>
-<section id="id1">
-<h2>Библиотеки и модули<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-random
--cowsay
--turtle
--tkinter
--PyQt ? набор расширений графического фреймворка, вроде tkinter
--time
--datatime
--calendar
--os
--io
-    -path
--sys
--pygame
--csv
--math
--PIL # предназначен для работы с растровой графикой
--winreg # позволяет работать с реестром Windows
--auto-py-to-exe # компиляция / преобразование .py файла в .exe
--tendo # (from tendo import singleton) при повторном запуске программы вылетит ошибка (Запрещает два раза запускать прогу)
--webbrowser # открытие ссылок в браузере
--OpenCV # алгоритм обработки изображений
--PyAudio 
--openpyxl -&gt; load_workbook # Прочтение эксель (xlsx) файлов 
--PyAudio # аудио ввод-вывод
--itertools
--pyautogui # програмное управление мышью и клавиатурой
--python-for-android # упаковка в android apk
--Buildozer # упаковка в android apk
-
--threading # многопоточность
--queue # очереди
--accessify
--socket
--selectors
--asyncio  # https://habr.com/ru/post/667630/
--numpy # поддержка больших многомерных массивов и матриц
--mypy # инструмент для контроля типа переменной
--typing | typing.cast() # во время выполнения намеренно ничего не проверяется, чтобы старт программы был как можно быстрее.
--ursina # 3d
--Requests - http запросы
--requests-html - Http запросы, а так же парсинг, в том числе с javascript
--selenium webdriver - Тоже парсинг, что и выше
--shutil - скопировать содержимое одного файлового объекта в другой - shutil.copyfileobj()
--MRjob - выполнение задач связанных с BigData, в том числе Hadoop  
-</pre></div>
-</div>
-</section>
-<section id="id2">
-<h2>Термины, сленг, выражения<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Sequence: последовательность, list, tuple, range, str/unicode, array.array
-</pre></div>
-</div>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -541,7 +438,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./python"
+            path: "./other"
         },
         predefinedOutput: true
     }
@@ -559,20 +456,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="study-plan-py.html"
+       href="../Roblox/door-script.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">План обучения <code class="docutils literal notranslate"><span class="pre">py</span></code></p>
+        <p class="prev-next-title">Плавная дверь</p>
       </div>
     </a>
     <a class="right-next"
-       href="turtle.html"
+       href="../Ubuntu/selenium-vps.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Turtle</p>
+        <p class="prev-next-title">Selenium на Vps</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -582,23 +479,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pip">Команды pip</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Библиотеки и модули</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Термины, сленг, выражения</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
@@ -643,8 +523,8 @@ By your-teach
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>
