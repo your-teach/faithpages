@@ -420,6 +420,9 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Скрипты</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Выдержки</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clickdetector">ClickDetector</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remoteevent">RemoteEvent</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gui">Кнопка Gui</a></li>
 </ul>
             </nav>
         </div>
@@ -436,30 +439,42 @@
 <section id="id2">
 <h2>Скрипты<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">BrickColor</span> <span class="o">=</span> <span class="n">BrickColor</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Pastel Blue&quot;</span><span class="p">)</span>
-<span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">BrickColor</span> <span class="o">=</span> <span class="n">BrickColor</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>	    <span class="c1">-- https://create.roblox.com/docs/reference/engine/datatypes/BrickColor</span>
+<span class="c1">-- https://create.roblox.com/docs/reference/engine/datatypes/BrickColor</span>
+<span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">BrickColor</span> <span class="o">=</span> <span class="n">BrickColor</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>	    
 <span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">BrickColor</span> <span class="o">=</span> <span class="n">BrickColor</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">187</span><span class="p">,</span> <span class="mi">219</span><span class="p">)</span>
-<span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">Color</span> <span class="o">=</span> <span class="n">Color3</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>                  <span class="c1">-- https://create.roblox.com/docs/reference/engine/datatypes/Color3</span>
+<span class="c1">-- https://create.roblox.com/docs/reference/engine/datatypes/Color3</span>
+<span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">Color</span> <span class="o">=</span> <span class="n">Color3</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>                  
 <span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">Size</span> <span class="o">=</span> <span class="n">Vector3</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">Size</span> <span class="o">=</span> <span class="n">Vector3</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="c1">-- Изменить размеры на x,y,z в 2 раза</span>
-<span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">CFrame</span> <span class="o">=</span> <span class="n">CFrame</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> 				<span class="c1">-- https://create.roblox.com/docs/workspace/cframes teleport part</span>
-<span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">Material</span> <span class="o">=</span> <span class="n">Enum</span><span class="p">.</span><span class="n">Material</span><span class="p">.</span><span class="n">Plastic</span>           <span class="c1">-- https://create.roblox.com/docs/reference/engine/enums/Material</span>
-<span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">CFrame</span> <span class="o">=</span> <span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">CFrame</span> <span class="o">*</span> <span class="n">CFrame</span><span class="p">.</span><span class="n">Angles</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">math.rad</span><span class="p">(</span><span class="mi">90</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span> <span class="c1">-- вращение на 90 градусов</span>
-<span class="n">proximityPrompt</span><span class="p">.</span><span class="n">Triggered</span><span class="p">:</span><span class="n">Connect</span><span class="p">(</span><span class="kr">function</span><span class="err">)</span> <span class="c1">-- кнопка у объекта (нужно добавить сначалак парту proximityPrompt)</span>
+<span class="c1">-- Изменить размеры на x,y,z в 2 раза</span>
+<span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">Size</span> <span class="o">=</span> <span class="n">Vector3</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> 
+<span class="c1">-- https://create.roblox.com/docs/workspace/cframes teleport part</span>
+<span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">CFrame</span> <span class="o">=</span> <span class="n">CFrame</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> 				
+<span class="c1">-- https://create.roblox.com/docs/reference/engine/enums/Material</span>
+<span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">Material</span> <span class="o">=</span> <span class="n">Enum</span><span class="p">.</span><span class="n">Material</span><span class="p">.</span><span class="n">Plastic</span>    
+<span class="c1">-- вращение на 90 градусов       </span>
+<span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">CFrame</span> <span class="o">=</span> <span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">CFrame</span> <span class="o">*</span> <span class="n">CFrame</span><span class="p">.</span><span class="n">Angles</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">math.rad</span><span class="p">(</span><span class="mi">90</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span> 
+<span class="c1">-- кнопка у объекта (нужно добавить сначала к парту proximityPrompt)</span>
+<span class="n">proximityPrompt</span><span class="p">.</span><span class="n">Triggered</span><span class="p">:</span><span class="n">Connect</span><span class="p">(</span><span class="kr">function</span><span class="err">)</span> 
+<span class="c1">-- Создание парта</span>
+<span class="nf">local</span> <span class="n">part</span> <span class="o">=</span> <span class="n">Instance</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Part&quot;</span><span class="p">)</span>
+<span class="n">part</span><span class="p">.</span><span class="n">Parent</span> <span class="o">=</span> <span class="n">workspace</span>
+<span class="c1">-- Найти gui игрока (через LocalScript):</span>
+<span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s1">&#39;Players&#39;</span><span class="p">).</span><span class="n">LocalPlayer</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s1">&#39;PlayerGui&#39;</span><span class="p">)</span> 
+<span class="c1">-- Найти игрока (через LocalScript)</span>
+<span class="n">game</span><span class="p">.</span><span class="n">Players</span><span class="p">.</span><span class="n">LocalPlayer</span> 
 
-
-<span class="nc">game</span><span class="p">:</span><span class="nf">GetService</span><span class="p">(</span><span class="s1">&#39;Players&#39;</span><span class="p">).</span><span class="n">LocalPlayer</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s1">&#39;PlayerGui&#39;</span><span class="p">)</span> <span class="c1">-- Найти gui игрока (через LocalScript)</span>
-<span class="n">game</span><span class="p">.</span><span class="n">Players</span><span class="p">.</span><span class="n">LocalPlayer</span> <span class="c1">-- Найти игрока (через LocalScript)</span>
 <span class="n">game</span><span class="p">.</span><span class="n">Players</span><span class="p">.</span><span class="n">LocalPlayer</span><span class="p">.</span><span class="n">Character</span> <span class="ow">or</span> <span class="n">game</span><span class="p">.</span><span class="n">Players</span><span class="p">.</span><span class="n">LocalPlayer</span><span class="p">.</span><span class="n">CharacterAdded</span><span class="p">:</span><span class="n">Wait</span><span class="p">()</span> 
 <span class="n">game</span><span class="p">.</span><span class="n">Players</span><span class="p">.</span><span class="n">LocalPlayer</span><span class="p">.</span><span class="n">Character</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;HumanoidRootPart&quot;</span><span class="p">)</span>
 <span class="n">game</span><span class="p">.</span><span class="n">Players</span><span class="p">.</span><span class="n">LocalPlayer</span><span class="p">.</span><span class="n">Character</span><span class="p">:</span><span class="n">FindFirstChild</span><span class="p">(</span><span class="s2">&quot;RightWrist&quot;</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
 
-<span class="n">game</span><span class="p">.</span><span class="n">Players</span><span class="p">:</span><span class="n">GetChildren</span><span class="p">()</span> <span class="c1">-- Найти всех игроков через server script (далее можно сделать поиск через цикл for)</span>
+<span class="c1">-- Найти всех игроков через server script (далее можно сделать поиск через цикл for)</span>
+<span class="n">game</span><span class="p">.</span><span class="n">Players</span><span class="p">:</span><span class="n">GetChildren</span><span class="p">()</span> 
 <span class="n">game</span><span class="p">.</span><span class="n">Players</span><span class="p">:</span><span class="n">GetPlayers</span><span class="p">()</span>  <span class="c1">-- Тоже самое что выше</span>
 <span class="kd">local</span> <span class="n">players</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;Players&quot;</span><span class="p">)</span>
-<span class="n">players</span><span class="p">.</span><span class="n">FallenTheo</span> <span class="err">или</span> <span class="n">players</span><span class="p">[</span><span class="s1">&#39;FallenTheo&#39;</span><span class="p">]</span> <span class="c1">-- Найти конкретного игрока через server script</span>
+<span class="c1">-- Найти конкретного игрока через server script</span>
+<span class="n">players</span><span class="p">.</span><span class="n">FallenTheo</span> <span class="err">или</span> <span class="n">players</span><span class="p">[</span><span class="s1">&#39;FallenTheo&#39;</span><span class="p">]</span> 
 
 <span class="n">game</span><span class="p">.</span><span class="n">Workspace</span><span class="p">[</span><span class="n">NamePlayer</span><span class="p">].</span><span class="n">HumanoidRootPart</span>
-
 
 <span class="n">object</span><span class="p">:</span><span class="n">GetChildren</span><span class="p">()</span> <span class="c1">-- Получить все объекты, которые лежат в object</span>
 
@@ -489,6 +504,54 @@ ServerScriptService для связи между серверными скрип
 Remote functions - это функции, которые можно вызывать из одного скрипта и выполнять в другом скрипте. Они позволяют вам отправлять данные из одного скрипта в другой и получать результат выполнения этой функции. Например, вы можете использовать remote functions для того, чтобы синхронизировать данные между игроками или между разными частями игры.</p>
 <p><strong>Remote events</strong> - это события, которые можно вызывать из одного скрипта и обрабатывать в другом скрипте. Они позволяют вам отправлять уведомления из одного скрипта в другой, не ожидая никакого результата. Например, вы можете использовать remote events для того, чтобы уведомить другие скрипты о том, что произошло какое-то событие</p>
 <p><a class="reference external" href="https://create.roblox.com/docs/scripting/events/remote">https://create.roblox.com/docs/scripting/events/remote</a> - Server &lt;=&gt; Client</p>
+</section>
+<section id="clickdetector">
+<h2>ClickDetector<a class="headerlink" href="#clickdetector" title="Link to this heading">#</a></h2>
+<p>Server Script</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span> <span class="n">click_detector</span> <span class="o">=</span> <span class="n">script</span><span class="p">.</span><span class="n">Parent</span><span class="p">.</span><span class="n">ClickDetector</span>
+<span class="kd">local</span> <span class="n">part</span> <span class="o">=</span> <span class="n">script</span><span class="p">.</span><span class="n">Parent</span>
+
+<span class="kr">function</span> <span class="nf">click</span><span class="p">()</span>
+	<span class="n">part</span><span class="p">.</span><span class="n">BrickColor</span> <span class="o">=</span> <span class="n">BrickColor</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;Black&#39;</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="n">click_detector</span><span class="p">.</span><span class="n">MouseClick</span><span class="p">:</span><span class="n">Connect</span><span class="p">(</span><span class="n">click</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="remoteevent">
+<h2>RemoteEvent<a class="headerlink" href="#remoteevent" title="Link to this heading">#</a></h2>
+<p>Server Script</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span> <span class="n">ReplicatedStorage</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">remoteEvent</span> <span class="o">=</span> <span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">FindFirstChildOfClass</span><span class="p">(</span><span class="s2">&quot;RemoteEvent&quot;</span><span class="p">)</span>
+
+<span class="kd">local</span> <span class="kr">function</span> <span class="nf">something</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="n">info</span><span class="p">)</span>
+	<span class="nb">print</span><span class="p">(</span><span class="n">info</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="n">remoteEvent</span><span class="p">.</span><span class="n">OnServerEvent</span><span class="p">:</span><span class="n">Connect</span><span class="p">(</span><span class="n">something</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Local Script</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span> <span class="n">ReplicatedStorage</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">remoteEvent</span> <span class="o">=</span> <span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">FindFirstChildOfClass</span><span class="p">(</span><span class="s2">&quot;RemoteEvent&quot;</span><span class="p">)</span>
+
+<span class="n">wait</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">remoteEvent</span><span class="p">:</span><span class="n">FireServer</span><span class="p">(</span><span class="s2">&quot;Прошло 10 секунд в local script&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="gui">
+<h2>Кнопка Gui<a class="headerlink" href="#gui" title="Link to this heading">#</a></h2>
+<p>StarterGui -&gt; ScreenGui -&gt; TextButton -&gt; LocalScript:</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span> <span class="n">button</span> <span class="o">=</span> <span class="n">script</span><span class="p">.</span><span class="n">Parent</span>
+
+<span class="kd">local</span> <span class="kr">function</span> <span class="nf">onButtonActivated</span><span class="p">()</span>
+	<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Мы нажали на кнопку&#39;</span><span class="p">)</span>
+<span class="kr">end</span>
+<span class="n">button</span><span class="p">.</span><span class="n">Activated</span><span class="p">:</span><span class="n">Connect</span><span class="p">(</span><span class="n">onButtonActivated</span><span class="p">)</span>
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -559,6 +622,9 @@ Remote functions - это функции, которые можно вызыва
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Скрипты</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Выдержки</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clickdetector">ClickDetector</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remoteevent">RemoteEvent</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gui">Кнопка Gui</a></li>
 </ul>
   </nav></div>
 

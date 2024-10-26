@@ -370,6 +370,10 @@
         cities = ["Москва", "Тверь", "Рязань", "Ярославль", "Владимир"]
         A = [city for city in cities if len(city) < 7]
         print(A)
+    -Вложенные генераторы списков
+        M, N = 3, 4
+        matrix = [[a for a in range(M)] for b in range(N)]
+        print(matrix)
 
 ## Алгоритмы обработки списков.
 

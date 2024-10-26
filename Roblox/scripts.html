@@ -419,6 +419,7 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Один цвет на всех</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Бесконечные мячики</a></li>
 </ul>
             </nav>
         </div>
@@ -444,6 +445,29 @@
 <span class="kr">end</span>
 </pre></div>
 </div>
+</section>
+<section id="id2">
+<h2>Бесконечные мячики<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<ul>
+<li><p>Создать парт Ball</p></li>
+<li><p>Включить у него Anchored</p></li>
+<li><p>Создать в нем скрипт с содержимым:</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span> <span class="n">ball</span> <span class="o">=</span> <span class="n">script</span><span class="p">.</span><span class="n">Parent</span>
+
+<span class="n">count</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="kr">while</span> <span class="kc">true</span> <span class="kr">do</span>
+	<span class="n">wait</span><span class="p">(</span><span class="mf">0.3</span><span class="p">)</span>
+	<span class="kd">local</span> <span class="n">clone</span> <span class="o">=</span> <span class="n">ball</span><span class="p">:</span><span class="n">Clone</span><span class="p">()</span>
+	<span class="n">clone</span><span class="p">.</span><span class="n">Anchored</span> <span class="o">=</span> <span class="kc">false</span>
+	<span class="n">clone</span><span class="p">.</span><span class="n">Parent</span> <span class="o">=</span> <span class="n">workspace</span>
+	<span class="n">clone</span><span class="p">.</span><span class="n">Transparency</span> <span class="o">=</span> <span class="mi">0</span>
+	<span class="n">clone</span><span class="p">.</span><span class="n">BrickColor</span> <span class="o">=</span> <span class="n">BrickColor</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+	<span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
+</li>
+</ul>
 </section>
 </section>
 
@@ -513,6 +537,7 @@
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Один цвет на всех</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Бесконечные мячики</a></li>
 </ul>
   </nav></div>
 
