@@ -676,6 +676,39 @@ print(day - 1)
 <div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">'&amp;'</span></code><br />
 Выходные данные: <code class="docutils literal notranslate"><span class="pre">'Символ</span> <span class="pre">не</span> <span class="pre">входит</span> <span class="pre">в</span> <span class="pre">рус/англ</span> <span class="pre">алфавиты'</span></code></p>
 </div></blockquote>
+<details><summary>Решение #1</summary>
+<pre>
+<p>languages = {}
+languages.rus = {“й”, “ц”, “у”, “к”, “е”, “н”, “г”, “ш”, “щ”, “з”, “х”, “ъ”,
+“ф”, “ы”, “в”, “а”, “п”, “р”, “о”, “л”, “д”, “ж”, “э”, “я”,
+“ч”, “с”, “м”, “и”, “т”, “ь”, “б”, “ю”, “ё”}
+languages.eng = {“q”, “w”, “e”, “r”, “t”, “y”, “u”, “i”, “o”, “p”, “a”, “s”,
+“d”, “f”, “g”, “h”, “j”, “k”, “l”, “z”, “x”, “c”, “v”, “b”, “n”, “m”}
+letter = ‘п’
+for lang, letters in pairs(languages) do
+for k, v in ipairs(letters) do
+if letter == v then
+print(lang)
+run = true
+break
+end
+end
+if run then
+break
+end
+end</p>
+</pre>
+</details>
+<details><summary>Решение #2</summary>
+<pre>
+letter = 't'
+<p>if letter &gt;= ‘а’ and letter &lt;= ‘я’ then
+print(‘rus’)
+elseif letter &gt;= ‘a’ and letter &lt;= ‘z’ then
+print(‘eng’)
+end
+</pre></p>
+</details>
 </section>
 <section id="id11">
 <h2>Собираемся в поход<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
