@@ -7,10 +7,11 @@ https://www.youtube.com/watch?v=X6BqMZyzAs4
     3. RuLang: Шестерёнка -> Command Pallete -> Вводим 'lang' -> Configure Display Language -> 'Русский'
     4. Расширение Lua (sumneko)
     5. Расширение Code Runner
-    6. Параметры расширения 'Code Runner':
-        - Code-runner: Run in terminal [галочка стоит]
+    6. Параметры:
+        - Установить стандартное автосохрание -> Файл -> Автосохранение
+        - Изменить шрифт -> editor.fontSize -> 16
         - Code-runner: Save file before run [галочка стоит]
-        - Еще можно поставить автосохрание -> Файл -> Автосохранение
+        - Code-runner: Run in terminal [галочка стоит]
     7. Settings.json
         -Открывать в кодировке cp866:
             "[lua]": {
