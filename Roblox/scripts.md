@@ -12,3 +12,24 @@ for i, obj in pairs(objects) do
 	end
 end
 ```
+
+## Бесконечные мячики
+
+- Создать парт Ball 
+- Включить у него Anchored
+- Создать в нем скрипт с содержимым:
+	```lua
+	local ball = script.Parent
+
+	count = 1
+	while true do
+		wait(0.3)
+		local clone = ball:Clone()
+		clone.Anchored = false
+		clone.Parent = workspace
+		clone.Transparency = 0
+		clone.BrickColor = BrickColor.new(count)
+		count = count + 1
+	end
+	```
+
