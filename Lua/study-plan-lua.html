@@ -441,7 +441,10 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Старый способ создания модуля</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Разное.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Разное.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Сортировка по убыванию</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -963,6 +966,25 @@ end
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Рекурсивные функции?
 </pre></div>
 </div>
+<section id="id22">
+<h3>Сортировка по убыванию<a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
+<div class="toggle docutils container">
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- сортировка по убыванию</span>
+<span class="kd">local</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span><span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">}</span>
+<span class="n">log</span> <span class="p">(</span><span class="s2">&quot;clear&quot;</span><span class="p">)</span> <span class="n">log</span> <span class="p">(</span><span class="s2">&quot;mode compact&quot;</span><span class="p">)</span>
+<span class="n">log</span> <span class="p">(</span><span class="s2">&quot;Массив до сортировки:&quot;</span><span class="p">)</span>
+<span class="kr">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="o">#</span><span class="n">arr</span> <span class="kr">do</span>
+    <span class="n">log</span> <span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="kr">end</span>
+<span class="nb">table.sort</span> <span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="kr">function</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="kr">return</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="kr">end</span><span class="p">)</span>
+<span class="n">log</span> <span class="p">(</span><span class="s2">&quot;Массив после сортировки:&quot;</span><span class="p">)</span>
+<span class="kr">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="o">#</span><span class="n">arr</span> <span class="kr">do</span>
+    <span class="n">log</span> <span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -1054,7 +1076,10 @@ end
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Старый способ создания модуля</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Разное.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Разное.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Сортировка по убыванию</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
