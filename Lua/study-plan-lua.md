@@ -457,3 +457,21 @@ mymodule.foo()
 
 ## Разное.
     Рекурсивные функции?
+
+### Сортировка по убыванию
+````{toggle}
+```lua
+-- сортировка по убыванию
+local arr = {20, 30, 10, 50}
+log ("clear") log ("mode compact")
+log ("Массив до сортировки:")
+for i = 1, #arr do
+    log (arr[i])
+end
+table.sort (arr, function (a, b) return (a > b) end)
+log ("Массив после сортировки:")
+for i = 1, #arr do
+    log (arr[i])
+end
+```
+````
