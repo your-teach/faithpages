@@ -104,6 +104,26 @@ turtle.mainloop()
 
 ![](../images/turtle/pacman.png)
 
+````{toggle}
+```python
+from turtle import *
+color('black', 'yellow')
+speed(0)
+up()
+backward(100)
+down()
+begin_fill()
+right(60)
+circle(100, 300)
+left(90)
+forward(100)
+right(120)
+forward(100)
+end_fill()
+mainloop()
+```
+````
+
 ## Солнце
 ![](../images/turtle/sun.png)
 

@@ -721,12 +721,20 @@
                 print(f'Ошибка в функции {func.__name__}: {err}')
                 return
         return updatefunc
-    
-    @detect
+
+    @detect # новый вариант декорирования
     def test(a, b):
         print(a / b)
     
-    test(2,0)    
+    # test = detect(test) # старый вариант декорирования
+
+    @detect
+    def test2(text):
+        res = text.upper()
+        print(res)
+
+    test(1, 0) # Ошибка
+    test2('privet')
 
 ## Tkinter
     Где-то здесь надо пройти Tkinter
