@@ -750,13 +750,55 @@
 </div></blockquote>
 <p>Этапы решения данного упражнения:</p>
 <ol class="arabic simple">
-<li><p>Создать таблицу в которой будут лежать числа из таблицы things. Пример: <code class="docutils literal notranslate"><span class="pre">{20,</span> <span class="pre">100,</span> <span class="pre">500,</span> <span class="pre">...}</span></code></p></li>
-<li><p>Отсортировать  новую таблицу с числами, по убыванию. Пример: <code class="docutils literal notranslate"><span class="pre">{5500,</span> <span class="pre">2250,</span> <span class="pre">1000,</span> <span class="pre">...}</span></code></p></li>
-<li><p>Поменять местами ключи и значения первоначальной таблицы things. Пример: <code class="docutils literal notranslate"><span class="pre">{20='зажигалка',</span> <span class="pre">100='компас',</span> <span class="pre">500='фрукты'...}</span></code></p></li>
+<li><p>Создать таблицу в которой будут лежать числа из таблицы things. Пример:
+<code class="docutils literal notranslate"><span class="pre">{20,</span> <span class="pre">100,</span> <span class="pre">500,</span> <span class="pre">...}</span></code></p></li>
+<li><p>Отсортировать  новую таблицу с числами, по убыванию. Пример:
+<code class="docutils literal notranslate"><span class="pre">{5500,</span> <span class="pre">2250,</span> <span class="pre">1000,</span> <span class="pre">...}</span></code></p></li>
+<li><p>Поменять местами ключи и значения первоначальной таблицы things. Пример:
+<code class="docutils literal notranslate"><span class="pre">{20='зажигалка',</span> <span class="pre">100='компас',</span> <span class="pre">500='фрукты'...}</span></code></p></li>
 <li><p>Итоговый цикл, который перебирает вещи и выводит те, которые вмещаются в рюкзак.</p></li>
 </ol>
 <div class="toggle docutils container">
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">CODE</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">things</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">[</span><span class="s1">&#39;зажигалка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;компас&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;фрукты&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;рубашка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+    <span class="p">[</span><span class="s1">&#39;термос&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;аптечка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;куртка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;бинокль&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
+    <span class="p">[</span><span class="s1">&#39;удочка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">1200</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;салфетки&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;бутерброды&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">820</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;палатка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">5500</span><span class="p">,</span>
+    <span class="p">[</span><span class="s1">&#39;спальный мешок&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">2250</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;жвачка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">10</span>
+<span class="p">}</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="c1">-- 1. Создаем таблицу только цифр из таблицы things</span>
+<span class="n">step_sorted</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="kr">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">things</span><span class="p">)</span> <span class="kr">do</span>
+    <span class="nb">table.insert</span><span class="p">(</span><span class="n">step_sorted</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="c1">-- 2. Сортируем таблицу с числами по возрастанию</span>
+<span class="nb">table.sort</span><span class="p">(</span><span class="n">step_sorted</span><span class="p">)</span> 
+<span class="c1">-- Сортируем таблицу с числами по убыванию</span>
+<span class="n">things_sorted</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="kr">for</span> <span class="n">x</span> <span class="o">=</span> <span class="o">#</span><span class="n">step_sorted</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span> <span class="kr">do</span>
+    <span class="nb">table.insert</span><span class="p">(</span><span class="n">things_sorted</span><span class="p">,</span> <span class="n">step_sorted</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+<span class="kr">end</span>
+
+<span class="c1">-- 3. Cделаем свап таблицы things, чтобы мы находили, например по ключу 5500 -&gt; &#39;палатку&#39;</span>
+<span class="n">things_swap</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="kr">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">things</span><span class="p">)</span> <span class="kr">do</span>
+    <span class="n">things_swap</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">k</span>
+<span class="kr">end</span>
+
+<span class="c1">-- Здесь итоговый цикл, который перебирает отсортированную таблицу, проводит вычисление, и выводит нужные вещи</span>
+<span class="n">sm</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="kr">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">things_sorted</span><span class="p">)</span> <span class="kr">do</span>
+    <span class="kr">if</span> <span class="n">sm</span> <span class="o">+</span> <span class="n">v</span> <span class="o">&lt;=</span> <span class="n">N</span> <span class="kr">then</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">things_swap</span><span class="p">[</span><span class="n">v</span><span class="p">])</span>
+        <span class="n">sm</span> <span class="o">=</span> <span class="n">sm</span> <span class="o">+</span> <span class="n">v</span>
+    <span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="c1">-- Вывод всех элементов таблицы</span>
+<span class="c1">-- for k,v in pairs(things_sorted) do</span>
+<span class="c1">--     print(k, v)</span>
+<span class="c1">-- end</span>
 </pre></div>
 </div>
 </div>
