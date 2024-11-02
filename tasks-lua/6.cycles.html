@@ -750,12 +750,12 @@
 </div></blockquote>
 <p>Этапы решения данного упражнения:</p>
 <ol class="arabic simple">
-<li><p>Создать таблицу в которой будут лежать числа из таблицы things. Пример:
+<li><p>Создать таблицу в которой будут лежать числа из таблицы things. Пример:<br />
 <code class="docutils literal notranslate"><span class="pre">{20,</span> <span class="pre">100,</span> <span class="pre">500,</span> <span class="pre">...}</span></code></p></li>
-<li><p>Отсортировать  новую таблицу с числами, по убыванию. Пример:
+<li><p>Отсортировать  новую таблицу с числами, по убыванию. Пример:<br />
 <code class="docutils literal notranslate"><span class="pre">{5500,</span> <span class="pre">2250,</span> <span class="pre">1000,</span> <span class="pre">...}</span></code></p></li>
-<li><p>Поменять местами ключи и значения первоначальной таблицы things. Пример:
-<code class="docutils literal notranslate"><span class="pre">{20='зажигалка',</span> <span class="pre">100='компас',</span> <span class="pre">500='фрукты'...}</span></code></p></li>
+<li><p>Поменять местами ключи и значения первоначальной таблицы things. Пример:<br />
+<code class="docutils literal notranslate"><span class="pre">{20='зажигалка',</span> <span class="pre">100='компас',</span> <span class="pre">500='фрукты',</span> <span class="pre">...}</span></code></p></li>
 <li><p>Итоговый цикл, который перебирает вещи и выводит те, которые вмещаются в рюкзак.</p></li>
 </ol>
 <div class="toggle docutils container">
@@ -765,7 +765,7 @@
     <span class="p">[</span><span class="s1">&#39;удочка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">1200</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;салфетки&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;бутерброды&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">820</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;палатка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">5500</span><span class="p">,</span>
     <span class="p">[</span><span class="s1">&#39;спальный мешок&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">2250</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;жвачка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">10</span>
 <span class="p">}</span>
-<span class="n">N</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">N</span> <span class="o">=</span> <span class="nb">io.read</span><span class="p">()</span> <span class="o">*</span> <span class="mi">1000</span>
 <span class="c1">-- 1. Создаем таблицу только цифр из таблицы things</span>
 <span class="n">step_sorted</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="kr">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">things</span><span class="p">)</span> <span class="kr">do</span>
