@@ -14,9 +14,9 @@ end
 -- 2. Сортируем таблицу с числами по возрастанию
 table.sort(step_sorted) 
 -- Сортируем таблицу с числами по убыванию
-fin_sorted = {}
+things_sorted = {}
 for x = #step_sorted, 1, -1 do
-    table.insert(fin_sorted, step_sorted[x])
+    table.insert(things_sorted, step_sorted[x])
 end
 
 -- 3. Cделаем свап таблицы things, чтобы мы находили, например по ключу 5500 -> 'палатку'
@@ -26,9 +26,15 @@ for k,v in pairs(things) do
 end
 
 -- Здесь итоговый цикл, который перебирает отсортированную таблицу, проводит вычисление, и выводит нужные вещи
---
+sm = 0
+for k, v in pairs(things_sorted) do
+    if sm + v <= N then
+        print(things_swap[v])
+        sm = sm + v
+    end
+end
 
 -- Вывод всех элементов таблицы
-for k,v in pairs(fin_sorted) do
-    print(k, v)
-end
+-- for k,v in pairs(things_sorted) do
+--     print(k, v)
+-- end
