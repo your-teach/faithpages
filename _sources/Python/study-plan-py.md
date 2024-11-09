@@ -316,7 +316,7 @@
     '-'.join(list) - тоже самое, только между элементами ставится "-"
     del list[0] - удаление элемента по индексу
 
-## Циклы.
+## Циклы.   
 
     -ВАЖНО! Показывать работу циклов примера с мельницей. Расписывать полностью поэтапность действий цикла!
     -Итерация - это одно повторение цикла.
@@ -411,7 +411,8 @@
     -Создание словаря: d = {'key1':'value1', 'key2':'value2', 'key3':'value3'}  
     -Найти значение по ключу: d['key1']
     -Добавить новый ключ: d['new_key'] = 'new_value'
-    -Удалить ключ: del d['key']
+    -Заменить значение по ключу: d['key2'] = 'Cyan'
+    -Удалить ключ: del d['key3']
     
     -Названия ключей могут быть: int, str, bool, tuple или любой другой неизменяемый тип данных; (например, list - изменяемый). У значений нет орграничений.
     -Названия ключей уникальны, если создать два одинаковых ключа, то будет работать последний.
@@ -513,24 +514,51 @@
 ### Модуль time
 ```python
     import time
+
+    # Остановка скрипта на 3 секунды
     time.sleep(3)
-    years = time.time() / 60 / 60 / 24 / 365
-    time_now = time.ctime(time())
+
+    # Количество секунд с начала цифрового века (1970)
+    seconds = time.time()
+
+    # Количество лет с начала цифр. века
+    years = seconds / 60 / 60 / 24 / 365
+
+    time_now = time.ctime(seconds)
 ```
 
 ### Модуль datetime
 ```python
     import datetime
+
+    # Время сейчас
     now = datetime.datetime.now()
-    zero = now - datetime.timedelta(hours=3)
+
+    # Получить из объекта времени только часы и минуты 
+    print(now.hour, now.minute) 
+
+    # Создать объект времени, в котором будет храниться 3 часа
+    three_hour = datetime.timedelta(hours=3)
+
+    # Вычитаем из объекта времени "now" 3 часа
+    edit_time = now - three_hour
+
+    # Создать фиксированную дату 
     fixdate = datetime.datetime(year=1, month=1, day=1)
-    res = now < fixdate
-    # форматируем в удобную строку
-    iso = now.isoformat()
-    # форматируем в строку, с гибкими настройками
-    s = datetime.datetime.strftime(now, "%d.%m.%Y - %H:%M:%S")
-    # форматируем строку обратно в объект datetime
-    t = datetime.datetime.strptime(s, "%d.%m.%Y - %H:%M:%S")
+
+    a = now - fixdate # тоже можем вычитать или суммировать
+
+    # Форматируем объект даты в строку, с гибкими настройками
+    s = datetime.datetime.strftime(
+            now, "%d.%m.%Y | %H:%M:%S")
+
+    # Форматируем строку в объект datetime
+    t = datetime.datetime.strptime(
+            s, "%d.%m.%Y | %H:%M:%S")
+```
+
+```{toggle}
+![](../images/python/time-format.png)
 ```
 
 ## Модуль Turtle

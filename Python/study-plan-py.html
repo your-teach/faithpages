@@ -932,7 +932,8 @@ del list[0] - удаление элемента по индексу
 -Создание словаря: d = {&#39;key1&#39;:&#39;value1&#39;, &#39;key2&#39;:&#39;value2&#39;, &#39;key3&#39;:&#39;value3&#39;}  
 -Найти значение по ключу: d[&#39;key1&#39;]
 -Добавить новый ключ: d[&#39;new_key&#39;] = &#39;new_value&#39;
--Удалить ключ: del d[&#39;key&#39;]
+-Заменить значение по ключу: d[&#39;key2&#39;] = &#39;Cyan&#39;
+-Удалить ключ: del d[&#39;key3&#39;]
 
 -Названия ключей могут быть: int, str, bool, tuple или любой другой неизменяемый тип данных; (например, list - изменяемый). У значений нет орграничений.
 -Названия ключей уникальны, если создать два одинаковых ключа, то будет работать последний.
@@ -1041,26 +1042,52 @@ del list[0] - удаление элемента по индексу
 <section id="time">
 <h3>Модуль time<a class="headerlink" href="#time" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="kn">import</span> <span class="nn">time</span>
+
+    <span class="c1"># Остановка скрипта на 3 секунды</span>
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-    <span class="n">years</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">/</span> <span class="mi">60</span> <span class="o">/</span> <span class="mi">60</span> <span class="o">/</span> <span class="mi">24</span> <span class="o">/</span> <span class="mi">365</span>
-    <span class="n">time_now</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">(</span><span class="n">time</span><span class="p">())</span>
+
+    <span class="c1"># Количество секунд с начала цифрового века (1970)</span>
+    <span class="n">seconds</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+    <span class="c1"># Количество лет с начала цифр. века</span>
+    <span class="n">years</span> <span class="o">=</span> <span class="n">seconds</span> <span class="o">/</span> <span class="mi">60</span> <span class="o">/</span> <span class="mi">60</span> <span class="o">/</span> <span class="mi">24</span> <span class="o">/</span> <span class="mi">365</span>
+
+    <span class="n">time_now</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="datetime">
 <h3>Модуль datetime<a class="headerlink" href="#datetime" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="kn">import</span> <span class="nn">datetime</span>
+
+    <span class="c1"># Время сейчас</span>
     <span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-    <span class="n">zero</span> <span class="o">=</span> <span class="n">now</span> <span class="o">-</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+    <span class="c1"># Получить из объекта времени только часы и минуты </span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">now</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="n">now</span><span class="o">.</span><span class="n">minute</span><span class="p">)</span> 
+
+    <span class="c1"># Создать объект времени, в котором будет храниться 3 часа</span>
+    <span class="n">three_hour</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+    <span class="c1"># Вычитаем из объекта времени &quot;now&quot; 3 часа</span>
+    <span class="n">edit_time</span> <span class="o">=</span> <span class="n">now</span> <span class="o">-</span> <span class="n">three_hour</span>
+
+    <span class="c1"># Создать фиксированную дату </span>
     <span class="n">fixdate</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">res</span> <span class="o">=</span> <span class="n">now</span> <span class="o">&lt;</span> <span class="n">fixdate</span>
-    <span class="c1"># форматируем в удобную строку</span>
-    <span class="n">iso</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
-    <span class="c1"># форматируем в строку, с гибкими настройками</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">now</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%d</span><span class="s2">.%m.%Y - %H:%M:%S&quot;</span><span class="p">)</span>
-    <span class="c1"># форматируем строку обратно в объект datetime</span>
-    <span class="n">t</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%d</span><span class="s2">.%m.%Y - %H:%M:%S&quot;</span><span class="p">)</span>
+
+    <span class="n">a</span> <span class="o">=</span> <span class="n">now</span> <span class="o">-</span> <span class="n">fixdate</span> <span class="c1"># тоже можем вычитать или суммировать</span>
+
+    <span class="c1"># Форматируем объект даты в строку, с гибкими настройками</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span>
+            <span class="n">now</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%d</span><span class="s2">.%m.%Y | %H:%M:%S&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Форматируем строку в объект datetime</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span>
+            <span class="n">s</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%d</span><span class="s2">.%m.%Y | %H:%M:%S&quot;</span><span class="p">)</span>
 </pre></div>
+</div>
+<div class="toggle docutils container">
+<p><img alt="" src="../_images/time-format.png" /></p>
 </div>
 </section>
 </section>

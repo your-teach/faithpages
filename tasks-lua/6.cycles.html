@@ -418,22 +418,23 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Реверс слова</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Реверс, если есть ‘о’</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Палиндром</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Сумма последовательности</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Реверс слова</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Реверс, если есть ‘о’</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Палиндром</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#n">От нуля до n</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Пирамида</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Сортировка таблицы по убыванию</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Отбор ключей таблицы</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Отбор значений таблицы</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Первый-второй-первый</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Цифра 3 в таблице</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Количество четных чисел</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Пирамида</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Сортировка таблицы по убыванию</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Отбор ключей таблицы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Отбор значений таблицы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Первый-второй-первый</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Цифра 3 в таблице</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Количество четных чисел</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-1-n">Cумма от 1 до N</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Маша и телефон</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Буква алфавита</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Удаление дубликатов</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Собираемся в поход</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Маша и телефон</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Буква алфавита</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Удаление дубликатов</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Собираемся в поход</a></li>
 </ul>
             </nav>
         </div>
@@ -448,15 +449,40 @@
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>Циклы<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <section id="id2">
-<h2>Реверс слова<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<h2>Сумма последовательности<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Определите сумму всех элементов последовательности, завершающейся числом <code class="docutils literal notranslate"><span class="pre">0</span></code>. В этой и во всех следующих задачах числа, следующие за первым нулем, учитывать не нужно. Примеры:</p>
+<blockquote>
+<div><p>Входные данные:</p>
+<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>1
+7
+9
+0
+</pre></div>
+</div>
+<p>Выходные данные: <code class="docutils literal notranslate"><span class="pre">17</span></code></p>
+</div></blockquote>
+<blockquote>
+<div><p>Входные данные:</p>
+<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>1
+1
+1
+1
+0
+</pre></div>
+</div>
+<p>Выходные данные: <code class="docutils literal notranslate"><span class="pre">4</span></code></p>
+</div></blockquote>
+</section>
+<section id="id3">
+<h2>Реверс слова<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <p>Напишите программу, которая принимает слово от пользователя и переворачивает его. Пример:</p>
 <blockquote>
 <div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">'аллея'</span></code><br />
 Выходные данные: <code class="docutils literal notranslate"><span class="pre">'яелла'</span></code></p>
 </div></blockquote>
 </section>
-<section id="id3">
-<h2>Реверс, если есть ‘о’<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<section id="id4">
+<h2>Реверс, если есть ‘о’<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
 <p>Напишите программу, которая принимает строку и переворачивает ее в том случае, если в этой строке есть буква <code class="docutils literal notranslate"><span class="pre">o</span></code>. Иначе вывести значение <code class="docutils literal notranslate"><span class="pre">nil</span></code>. Примеры:</p>
 <blockquote>
 <div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">'остров'</span></code><br />
@@ -467,8 +493,8 @@
 Выходные данные: <code class="docutils literal notranslate"><span class="pre">nil</span></code></p>
 </div></blockquote>
 </section>
-<section id="id4">
-<h2>Палиндром<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<section id="id5">
+<h2>Палиндром<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
 <p>Напишите программу, которая проверяет, является ли строка палиндромом. (<code class="docutils literal notranslate"><span class="pre">Палиндром</span></code> - это слово или фраза, которые одинаково читаются слева направо и справа налево.)
 Примеры:</p>
 <blockquote>
@@ -503,8 +529,8 @@
 </div>
 </div>
 </section>
-<section id="id5">
-<h2>Пирамида<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<section id="id6">
+<h2>Пирамида<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
 <p>Напишите программу для построения следующего шаблона, используя циклы:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> 
 <span class="o">*</span> <span class="o">*</span> 
@@ -531,32 +557,32 @@
 </div>
 </div>
 </section>
-<section id="id6">
-<h2>Сортировка таблицы по убыванию<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<section id="id7">
+<h2>Сортировка таблицы по убыванию<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
 <p>Напишите программу, которая сортирует произвольную таблицу по убыванию. Пример:</p>
 <blockquote>
 <div><p>Входная таблица: <code class="docutils literal notranslate"><span class="pre">{39,</span> <span class="pre">5,</span> <span class="pre">1,</span> <span class="pre">-7,</span> <span class="pre">2,</span> <span class="pre">0,</span> <span class="pre">81,</span> <span class="pre">3}</span></code><br />
 Выходная таблица: <code class="docutils literal notranslate"><span class="pre">{81,</span> <span class="pre">39,</span> <span class="pre">5,</span> <span class="pre">3,</span> <span class="pre">2,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-7}</span></code></p>
 </div></blockquote>
 </section>
-<section id="id7">
-<h2>Отбор ключей таблицы<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<section id="id8">
+<h2>Отбор ключей таблицы<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
 <p>Напишите программу, которая отбирает из таблицы-словаря только ключи этой тыблицы. Результаты поместить в новую таблицу. Пример:</p>
 <blockquote>
 <div><p>Входная таблица: <code class="docutils literal notranslate"><span class="pre">{['life']='жизнь',</span> <span class="pre">['more']='больше',</span> <span class="pre">['permanent']='постоянный'}</span></code><br />
 Выходные данные: <code class="docutils literal notranslate"><span class="pre">{'life',</span> <span class="pre">'more',</span> <span class="pre">'permanent'}</span></code></p>
 </div></blockquote>
 </section>
-<section id="id8">
-<h2>Отбор значений таблицы<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<section id="id9">
+<h2>Отбор значений таблицы<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
 <p>Напишите программу, которая отбирает из таблицы-словаря только значения этой тыблицы. Результаты поместить в новую таблицу. Пример:</p>
 <blockquote>
 <div><p>Входная таблица: <code class="docutils literal notranslate"><span class="pre">{-1</span> <span class="pre">=</span> <span class="pre">'lower',</span> <span class="pre">0</span> <span class="pre">=</span> <span class="pre">'middle',</span> <span class="pre">1</span> <span class="pre">=</span> <span class="pre">'high'}</span></code><br />
 Выходные данные: <code class="docutils literal notranslate"><span class="pre">{'lower',</span> <span class="pre">'middle',</span> <span class="pre">'high'}</span></code></p>
 </div></blockquote>
 </section>
-<section id="id9">
-<h2>Первый-второй-первый<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<section id="id10">
+<h2>Первый-второй-первый<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
 <p>В классе <code class="docutils literal notranslate"><span class="pre">N</span></code> школьников. На уроке физкультуры тренер говорит «на первый-второй рассчитайтесь».
 Выведите, что скажут ученики.<br />
 <strong>Входные данные</strong>: Вводится одно целое число — количество человек в классе.<br />
@@ -586,8 +612,8 @@
 </div>
 </div>
 </section>
-<section id="id10">
-<h2>Цифра 3 в таблице<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<section id="id11">
+<h2>Цифра 3 в таблице<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
 <p>Дана произвольная таблица с числами.
 Напишите программу, которая выводит <code class="docutils literal notranslate"><span class="pre">'YES'</span></code>, если в таблице присутствует цифра <code class="docutils literal notranslate"><span class="pre">3</span></code>, иначе выводится <code class="docutils literal notranslate"><span class="pre">'NO'</span></code>. Примеры:</p>
 <blockquote>
@@ -599,19 +625,19 @@
 Ожидаемый результат: <code class="docutils literal notranslate"><span class="pre">NO</span></code></p>
 </div></blockquote>
 </section>
-<section id="id11">
-<h2>Количество четных чисел<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<section id="id12">
+<h2>Количество четных чисел<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
 <p>Вводятся <code class="docutils literal notranslate"><span class="pre">N</span></code> чисел. Посчитайте, сколько среди них четных.<br />
-<strong>Входные данные</strong>: На первой строке вводится одно число. Далее следуют строк по одному числу на каждой — заданные числа.<br />
+<strong>Входные данные</strong>: На первой строке вводится одно число <code class="docutils literal notranslate"><span class="pre">N</span></code>. Далее вводятся столько чисел, сколько вы написали в первой строке, числом <code class="docutils literal notranslate"><span class="pre">N</span></code>.<br />
 <strong>Входные данные</strong>: Выведите ответ на задачу.</p>
 <p>Пример:</p>
 <blockquote>
 <div><p>Входные данные:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span>
-<span class="mi">10</span>
-<span class="mi">11</span>
-<span class="mi">12</span>
-<span class="mi">13</span>
+<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>4
+10
+11
+12
+13
 </pre></div>
 </div>
 <p>Выходные данные: <code class="docutils literal notranslate"><span class="pre">2</span></code></p>
@@ -655,8 +681,8 @@
 </div>
 </div>
 </section>
-<section id="id12">
-<h2>Маша и телефон<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<section id="id13">
+<h2>Маша и телефон<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
 <p>Маша хочет накопить на новый телефон. Телефон стоит  рублей. Маша может откладывать рублей в день каждый день, за исключением воскресенья, когда она тратит деньги на поход в кино. Маша начинает копить в понедельник. За сколько дней она накопит нужную сумму?<br />
 <strong>Входные данные</strong>: Вводятся два числа <code class="docutils literal notranslate"><span class="pre">N</span></code> и <code class="docutils literal notranslate"><span class="pre">K</span></code>.<br />
 <strong>Входные данные</strong>: Выведите искомое количество дней</p>
@@ -688,8 +714,8 @@
 </div>
 </div>
 </section>
-<section id="id13">
-<h2>Буква алфавита<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<section id="id14">
+<h2>Буква алфавита<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
 <p>Пользователю предлагается ввести один символ. Нужно выяснить, входит ли символ в русский или английский алфавит, если да, то написать в какой. Примеры:</p>
 <blockquote>
 <div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">'П'</span></code><br />
@@ -737,16 +763,16 @@
 </div>
 </div>
 </section>
-<section id="id14">
-<h2>Удаление дубликатов<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<section id="id15">
+<h2>Удаление дубликатов<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
 <p>Пользователь вводит через пробел произвольные данные, необходимо удалить дубликаты этих данных. Пример:</p>
 <blockquote>
 <div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">лес</span> <span class="pre">огород</span> <span class="pre">солнце</span> <span class="pre">очки</span> <span class="pre">лес</span> <span class="pre">имя</span> <span class="pre">очки</span></code><br />
 Выходные данные: <code class="docutils literal notranslate"><span class="pre">лес</span> <span class="pre">огород</span> <span class="pre">солнце</span> <span class="pre">очки</span> <span class="pre">имя</span></code></p>
 </div></blockquote>
 </section>
-<section id="id15">
-<h2>Собираемся в поход<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<section id="id16">
+<h2>Собираемся в поход<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">things</span> <span class="o">=</span> <span class="p">{[</span><span class="s1">&#39;зажигалка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;компас&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;фрукты&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;рубашка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
           <span class="p">[</span><span class="s1">&#39;термос&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;аптечка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;куртка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;бинокль&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
         <span class="p">[</span><span class="s1">&#39;удочка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">1200</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;салфетки&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;бутерброды&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">820</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;палатка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">5500</span><span class="p">,</span>
@@ -888,22 +914,23 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Реверс слова</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Реверс, если есть ‘о’</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Палиндром</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Сумма последовательности</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Реверс слова</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Реверс, если есть ‘о’</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Палиндром</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#n">От нуля до n</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Пирамида</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Сортировка таблицы по убыванию</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Отбор ключей таблицы</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Отбор значений таблицы</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Первый-второй-первый</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Цифра 3 в таблице</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Количество четных чисел</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Пирамида</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Сортировка таблицы по убыванию</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Отбор ключей таблицы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Отбор значений таблицы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Первый-второй-первый</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Цифра 3 в таблице</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Количество четных чисел</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-1-n">Cумма от 1 до N</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Маша и телефон</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Буква алфавита</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Удаление дубликатов</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Собираемся в поход</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Маша и телефон</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Буква алфавита</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Удаление дубликатов</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Собираемся в поход</a></li>
 </ul>
   </nav></div>
 
