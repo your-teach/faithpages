@@ -472,6 +472,19 @@
 </div>
 <p>Выходные данные: <code class="docutils literal notranslate"><span class="pre">4</span></code></p>
 </div></blockquote>
+<div class="toggle docutils container">
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">summa</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="kr">while</span> <span class="kc">true</span> <span class="kr">do</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
+    <span class="n">summa</span> <span class="o">=</span> <span class="n">summa</span> <span class="o">+</span> <span class="n">number</span>
+    <span class="kr">if</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">0</span> <span class="kr">then</span>
+        <span class="kr">break</span>
+    <span class="kr">end</span>
+<span class="kr">end</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">summa</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </section>
 <section id="id3">
 <h2>Реверс слова<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
