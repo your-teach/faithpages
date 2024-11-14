@@ -511,7 +511,7 @@
     -Как импортировать (только import)
     -Как создать свой
 
-### Модуль time
+## Модуль time
 ```python
     import time
 
@@ -527,7 +527,7 @@
     time_now = time.ctime(seconds)
 ```
 
-### Модуль datetime
+## Модуль datetime
 ```python
     import datetime
 
