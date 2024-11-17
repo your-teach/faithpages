@@ -866,50 +866,65 @@ end
 </section>
 <section id="id15">
 <h2>Функции.<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Команда которая имеет в конце скобки называется функцией, она выполняет заранее подготовленный список действий в тот
-    момент, когда мы ее вызовем.
--Существует два вида фукнций: невозвращаемые и возвращаемые функции.
--Невозвращаемые.
-    a = 0
-    function name_func()
-        a = a + 1
-    end
-    name_func()
-    name_func()
-    name_func()
-    print(a)
--Возвращаемые.
-    b = 0
-    function two_func()
-        return b + 1
-    end
-    b = two_func()
-    print(b)
-    b = two_func()
-    print(b)
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```lua
+--Команда которая имеет в конце скобки называется функцией, она выполняет заранее подготовленный список действий в тот момент, когда мы ее вызовем.
+--Существует два вида фукнций: невозвращаемые и возвращаемые функции.
 
--Аргументы/параметры в функциях.
-    function one(text)
-        print(&#39;your argument: &#39;, text)
-    end
+-- Объявление функции:
+function robot()
+    print(&#39;Помахать&#39;)
+    print(&#39;Подойти и пожать руку&#39;)
+    print(&#39;Приветствие:&#39;)
+    print(&#39;Здравствуйте, человек!&#39;)
+end
 
-    function summa(a, b) -- невозвращаемая
-        print(a + b)
-    end
-    -- summa(2, 3)
+-- Запуск функции
+robot()
 
-    function summa2(a, b) -- возвращаемая
-        return a + b
-    end
-    result = summa2(10,90)
+-- Функции с аргументами
+function robot(name, lastname)
+    print(&#39;Помахать&#39;)
+    print(&#39;Подойти и пожать руку&#39;)
+    print(&#39;Приветствие:&#39;)
+    print(&#39;Здравствуйте, &#39; .. name ..&#39; &#39;.. lastname)
+end
 
--Функции могут хранится в таблицах.
-    t = {}
-    t.three = function() 
-        print(&#39;function in table&#39;) 
-    end
-    t.three()
-    -- t:three()
+robot(&#39;Федор&#39;, &#39;Морозов&#39;)
+robot(&#39;Кирилл&#39;, &#39;Варшавский&#39;)
+robot(&#39;Михаил&#39;, &#39;Мельников&#39;)
+
+
+-- Возвращаемые функции
+function summa(a, b)
+    res = a + b
+    return res
+end
+
+r = summa(2, 3)
+r2 = summa(10,20)
+print(r) -- 5
+print(r2) -- 30
+
+-- Функции, которые не имею return, возвращают nil, и называеются &quot;невозвращаемыми&quot;
+r3 = robot()
+print(r3) -- nil
+
+-- Альтернативный способ создания функции
+one = function()
+    print(&#39;Функция one&#39;)
+end
+one()
+
+-- Функции могут хранится в таблицах
+t = {}
+t.three = function()
+    print(&#39;functioin in table&#39;)
+end
+
+t.three()
+-- t:three()
+
+```
 </pre></div>
 </div>
 </section>

@@ -463,6 +463,31 @@
 </pre></div>
 </div>
 </div></blockquote>
+<div class="toggle docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">things</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;зажигалка&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;компас&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;фрукты&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span> <span class="s1">&#39;рубашка&#39;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+          <span class="s1">&#39;термос&#39;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s1">&#39;аптечка&#39;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;куртка&#39;</span><span class="p">:</span> <span class="mi">600</span><span class="p">,</span> <span class="s1">&#39;бинокль&#39;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+        <span class="s1">&#39;удочка&#39;</span><span class="p">:</span> <span class="mi">1200</span><span class="p">,</span> <span class="s1">&#39;салфетки&#39;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span> <span class="s1">&#39;бутерброды&#39;</span><span class="p">:</span> <span class="mi">820</span><span class="p">,</span> <span class="s1">&#39;палатка&#39;</span><span class="p">:</span> <span class="mi">5500</span><span class="p">,</span>
+        <span class="s1">&#39;спальный мешок&#39;</span><span class="p">:</span> <span class="mi">2250</span><span class="p">,</span> <span class="s1">&#39;жвачка&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">}</span>
+
+<span class="n">things_swap</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">things</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">things_swap</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">k</span>
+
+<span class="c1"># things_swap = {v:k for k,v in things.items()} # альтернативный свап</span>
+
+<span class="n">things_sorted</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">things_swap</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span> <span class="o">*</span> <span class="mi">1000</span>
+
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">things_sorted</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">key</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">:</span>
+        <span class="n">N</span> <span class="o">-=</span> <span class="n">key</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
 </section>
 </section>
 
