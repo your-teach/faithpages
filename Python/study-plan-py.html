@@ -1005,8 +1005,7 @@ del list[0] - удаление элемента по индексу
 </section>
 <section id="id15">
 <h2>Функции.<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Команда которая имеет в конце скобки называется функцией, она выполняет заранее подготовленный список действий в тот
-момент, когда мы ее вызовем.
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Команда которая имеет в конце скобки называется функцией, она выполняет заранее подготовленный список действий в тот момент, когда мы ее вызовем.
 Функции могут иметь аргументы, они вводятся в скобки, через запятую. В Python есть готовые функции, такие как print().
 Но так же мы можем создавать свои функции.
 -Функция без аргументов. Создание и вызов функции. Нельзя вызывать функции до создания.
@@ -1026,6 +1025,117 @@ del list[0] - удаление элемента по индексу
 
 -Условия и циклы внутри функций.
 -Что такое *args и **kwargs
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># func() # Нельзя вызывать функцию до её объявления.</span>
+<span class="c1"># Объявление функции.</span>
+<span class="k">def</span> <span class="nf">func</span><span class="p">():</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Помахать рукой&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Подойти к человеку&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Пожать руку&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Приветствие:&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Здравствуйте, человек!&#39;</span><span class="p">)</span>
+<span class="c1"># Конец функции.</span>
+
+<span class="n">func</span><span class="p">()</span> <span class="c1"># Запуск функции</span>
+<span class="n">func</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">func</span><span class="p">)</span> <span class="c1"># объект функции; не является запуском</span>
+
+<span class="c1"># Передаем ссылку на функцию другой переменной</span>
+<span class="n">new_name</span> <span class="o">=</span> <span class="n">func</span>
+<span class="n">new_name</span><span class="p">()</span>
+
+<span class="c1"># Функция с аргументами</span>
+<span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">name</span><span class="p">):</span> <span class="c1"># Можно создавать неограниченное кол-во аргументов</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Помахать рукой&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Подойти к &#39;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Пожать руку&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Приветствие:&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Здравствуйте, &#39;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+
+<span class="n">func</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Федор&#39;</span><span class="p">)</span>
+<span class="n">func</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Майя&#39;</span><span class="p">)</span>
+
+<span class="c1"># Невозвращаемая функция (вернет None)</span>
+<span class="k">def</span> <span class="nf">summa</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> 
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">summa</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> 
+
+<span class="c1"># Возвращаемая функция</span>
+<span class="k">def</span> <span class="nf">summa2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="k">return</span> <span class="n">res</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">summa2</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span> <span class="c1"># альтернативный вариант: c = summa(5, 2) </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="c1"># 35</span>
+
+
+<span class="c1"># Локальная и глобальная переменные</span>
+<span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;глобальная переменная&#39;</span> <span class="c1"># работает по всей площади скрипта</span>
+<span class="k">def</span> <span class="nf">example</span><span class="p">():</span>
+    <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;Text&#39;</span> <span class="c1"># локальная переменная, работает только внутри функции, где была создана</span>
+
+<span class="c1"># Вызвать глобальную переменную внутри функции</span>
+<span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;глобальная переменная&#39;</span>
+<span class="k">def</span> <span class="nf">example</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="c1"># глобальную переменную, функция спокойно видит</span>
+<span class="n">example</span><span class="p">()</span>
+
+<span class="c1"># Попытка вызвать переменную функции, вне её</span>
+<span class="k">def</span> <span class="nf">example</span><span class="p">():</span>
+    <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;переменная&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span>
+<span class="c1"># print(variable) # ошибка; не существует вне функции</span>
+
+<span class="c1"># У аргумента приоритет выше чем у глобальной переменной</span>
+<span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;глобальная переменная&#39;</span>
+<span class="k">def</span> <span class="nf">example</span><span class="p">(</span><span class="n">variable</span><span class="p">):</span> <span class="c1"># на этой строке variable - это аргумент, не путать с &#39;глобальной переменной&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="c1"># выведется аргумент</span>
+<span class="n">example</span><span class="p">(</span><span class="s1">&#39;содержимое аргумента&#39;</span><span class="p">)</span> <span class="c1"># &#39;содержимое аргумента&#39;</span>
+
+<span class="c1"># Попытка изменить глобальную переменную в функции</span>
+<span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;глобальная переменная&#39;</span>
+<span class="k">def</span> <span class="nf">example</span><span class="p">():</span>
+    <span class="c1"># print(variable) # ошибка; (!Не факт, что нужно показывать данную строчку как пример!) </span>
+    <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;новое значение&#39;</span> <span class="c1"># здесь variable - новая локальная переменная</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="c1"># &#39;новое значение&#39;</span>
+<span class="n">example</span><span class="p">()</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="c1"># &#39;глобальная переменная&#39;; изменение не сохранилось</span>
+
+
+<span class="c1"># Чтобы изменять глобальную переменную внутри функции, необходимо ее глобализировать</span>
+<span class="n">variable</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="k">def</span> <span class="nf">change</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">variable</span> <span class="c1"># можно сразу несколько global a,b,c</span>
+    <span class="n">variable</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="c1"># False</span>
+<span class="n">change</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="c1"># True</span>
+
+<span class="c1"># Создание новой глобальной переменной внутри функции</span>
+<span class="k">def</span> <span class="nf">newglobal</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
+
+<span class="n">newglobal</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="c1"># 1, 2, 3</span>
+
+<span class="c1"># Дефолтное значение для аргументов</span>
+<span class="k">def</span> <span class="nf">example2</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span>
+
+<span class="n">example</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="s1">&#39;Text&#39;</span><span class="p">)</span> <span class="c1"># &#39;Text&#39;</span>
+<span class="n">example</span><span class="p">()</span> <span class="c1"># None</span>
+
+<span class="c1"># Присвоить возвращаемые значения функции переменной:     a = func(x,y)</span>
+<span class="c1"># Несколько возвращаемых значений в виде кортежа:   a,b = func(x,y)</span>
+<span class="c1"># Можно использовать Условия и Циклы внутри функций.</span>
+<span class="c1"># *args и **kwargs</span>
+
 </pre></div>
 </div>
 </section>
