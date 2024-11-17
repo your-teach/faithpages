@@ -365,50 +365,66 @@ https://ru.wikibooks.org/wiki/Lua/Типы_данных
         -Что значит одно повторение цикла/один круг или другими словами "Итерация".
 
 ## Функции.
-    -Команда которая имеет в конце скобки называется функцией, она выполняет заранее подготовленный список действий в тот
-        момент, когда мы ее вызовем.
-    -Существует два вида фукнций: невозвращаемые и возвращаемые функции.
-    -Невозвращаемые.
-        a = 0
-        function name_func()
-            a = a + 1
-        end
-        name_func()
-        name_func()
-        name_func()
-        print(a)
-    -Возвращаемые.
-        b = 0
-        function two_func()
-            return b + 1
-        end
-        b = two_func()
-        print(b)
-        b = two_func()
-        print(b)
+    ```lua
+    --Команда которая имеет в конце скобки называется функцией, она выполняет заранее подготовленный список действий в тот момент, когда мы ее вызовем.
+    --Существует два вида фукнций: невозвращаемые и возвращаемые функции.
+    
+    -- Объявление функции:
+    function robot()
+        print('Помахать')
+        print('Подойти и пожать руку')
+        print('Приветствие:')
+        print('Здравствуйте, человек!')
+    end
 
-    -Аргументы/параметры в функциях.
-        function one(text)
-            print('your argument: ', text)
-        end
+    -- Запуск функции
+    robot()
 
-        function summa(a, b) -- невозвращаемая
-            print(a + b)
-        end
-        -- summa(2, 3)
+    -- Функции с аргументами
+    function robot(name, lastname)
+        print('Помахать')
+        print('Подойти и пожать руку')
+        print('Приветствие:')
+        print('Здравствуйте, ' .. name ..' '.. lastname)
+    end
 
-        function summa2(a, b) -- возвращаемая
-            return a + b
-        end
-        result = summa2(10,90)
+    robot('Федор', 'Морозов')
+    robot('Кирилл', 'Варшавский')
+    robot('Михаил', 'Мельников')
 
-    -Функции могут хранится в таблицах.
-        t = {}
-        t.three = function() 
-            print('function in table') 
-        end
-        t.three()
-        -- t:three()
+
+    -- Возвращаемые функции
+    function summa(a, b)
+        res = a + b
+        return res
+    end
+
+    r = summa(2, 3)
+    r2 = summa(10,20)
+    print(r) -- 5
+    print(r2) -- 30
+
+    -- Функции, которые не имею return, возвращают nil, и называеются "невозвращаемыми"
+    r3 = robot()
+    print(r3) -- nil
+
+    -- Альтернативный способ создания функции
+    one = function()
+        print('Функция one')
+    end
+    one()
+
+    -- Функции могут хранится в таблицах
+    t = {}
+    t.three = function()
+        print('functioin in table')
+    end
+
+    t.three()
+    -- t:three()
+
+    ```
+        
 
 ## Запись и чтение файла.
     -https://oojoo.ru/11-zapis-i-chtieniie-iz-faila/
