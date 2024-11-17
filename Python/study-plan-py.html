@@ -1027,9 +1027,7 @@ del list[0] - удаление элемента по индексу
 -Что такое *args и **kwargs
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
-<span class="c1"># func() # Нельзя вызывать функцию до её объявления.</span>
-<span class="c1"># Объявление функции.</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Объявление функции.</span>
 <span class="k">def</span> <span class="nf">func</span><span class="p">():</span> 
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Помахать рукой&#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Подойти к человеку&#39;</span><span class="p">)</span>
@@ -1042,10 +1040,6 @@ del list[0] - удаление элемента по индексу
 <span class="n">func</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">func</span><span class="p">)</span> <span class="c1"># объект функции; не является запуском</span>
 
-<span class="c1"># Передаем ссылку на функцию другой переменной</span>
-<span class="n">new_name</span> <span class="o">=</span> <span class="n">func</span>
-<span class="n">new_name</span><span class="p">()</span>
-
 <span class="c1"># Функция с аргументами</span>
 <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">name</span><span class="p">):</span> <span class="c1"># Можно создавать неограниченное кол-во аргументов</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Помахать рукой&#39;</span><span class="p">)</span>
@@ -1057,12 +1051,17 @@ del list[0] - удаление элемента по индексу
 <span class="n">func</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Федор&#39;</span><span class="p">)</span>
 <span class="n">func</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Майя&#39;</span><span class="p">)</span>
 
-<span class="c1"># Невозвращаемая функция (вернет None)</span>
+<span class="c1"># Пример функции, которая имеет два аргумента в виде чисел, и выводит их сумму</span>
+<span class="c1"># func() # Нельзя вызывать функцию до её объявления.</span>
 <span class="k">def</span> <span class="nf">summa</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="n">res</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> 
+<span class="n">summa</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
+<span class="c1"># Данная функция вернет None, и является</span>
+<span class="c1"># &quot;Невозвращаемой функцией&quot;</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">summa</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> 
+
 
 <span class="c1"># Возвращаемая функция</span>
 <span class="k">def</span> <span class="nf">summa2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
@@ -1071,7 +1070,6 @@ del list[0] - удаление элемента по индексу
 
 <span class="n">c</span> <span class="o">=</span> <span class="n">summa2</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span> <span class="c1"># альтернативный вариант: c = summa(5, 2) </span>
 <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="c1"># 35</span>
-
 
 <span class="c1"># Локальная и глобальная переменные</span>
 <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;глобальная переменная&#39;</span> <span class="c1"># работает по всей площади скрипта</span>
@@ -1096,7 +1094,7 @@ del list[0] - удаление элемента по индексу
     <span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="c1"># выведется аргумент</span>
 <span class="n">example</span><span class="p">(</span><span class="s1">&#39;содержимое аргумента&#39;</span><span class="p">)</span> <span class="c1"># &#39;содержимое аргумента&#39;</span>
 
-<span class="c1"># Попытка изменить глобальную переменную в функции</span>
+<span class="c1"># Попытка изменить глобальную переменную внутри функции</span>
 <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;глобальная переменная&#39;</span>
 <span class="k">def</span> <span class="nf">example</span><span class="p">():</span>
     <span class="c1"># print(variable) # ошибка; (!Не факт, что нужно показывать данную строчку как пример!) </span>
@@ -1125,11 +1123,16 @@ del list[0] - удаление элемента по индексу
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="c1"># 1, 2, 3</span>
 
 <span class="c1"># Дефолтное значение для аргументов</span>
-<span class="k">def</span> <span class="nf">example2</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">def_value</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span>
 
 <span class="n">example</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="s1">&#39;Text&#39;</span><span class="p">)</span> <span class="c1"># &#39;Text&#39;</span>
 <span class="n">example</span><span class="p">()</span> <span class="c1"># None</span>
+
+<span class="c1"># Передаем ссылку на функцию другой переменной</span>
+<span class="n">new_name</span> <span class="o">=</span> <span class="n">example2</span>
+<span class="n">new_name</span><span class="p">()</span>
+<span class="n">example2</span><span class="p">()</span>
 
 <span class="c1"># Присвоить возвращаемые значения функции переменной:     a = func(x,y)</span>
 <span class="c1"># Несколько возвращаемых значений в виде кортежа:   a,b = func(x,y)</span>
