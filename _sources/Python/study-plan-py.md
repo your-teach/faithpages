@@ -1,67 +1,21 @@
 # План обучения `py`
 
 ## Установка Vs Code + Python.
-
-    1. https://code.visualstudio.com/download
-    2. https://www.python.org/downloads/
-    3. RuLang: Шестерёнка -> Command Pallete -> Вводим 'lang' -> Configure Display Language -> 'Русский'
-    4. Расширение Python 
-    5. Расширение Code Runner 
-    6. Параметры:
-        - Установить стандартное автосохрание -> Файл -> Автосохранение
-        - Изменить шрифт -> editor.fontSize -> 16
-        - Code-runner: Save file before run [галочка стоит]
-        - Code-runner: Run in terminal [галочка стоит]
-    7. Settings.json
-        -Очистка консоли:
-            "code-runner.executorMap": {
-                "python": "clear; python -u" }
-    8. Создать папку на рабочем столе -> Открываем её в Vscode -> Далее создаем два файла -> main.lua/py theory.lua/py
-
-## Настройки Git+Vscode.
-
-    - Установка Git https://git-scm.com/
-    - Регистрация в GitHub 
-    - Авторизация (возможно не нужна), вводим GitHub данные:
-        - git config --global user.name "John Doe"
-        - git config --global user.email johndoe@example.com
-    - Проверяем "Система управления версиями"
-        - Если недоступно идем в расширения -> @builtin git -> Выключаем Git
-        - Если снова недоступно -> Включаем Git
-    - Клонировать репозиторий -> F1 -> Clone -> Вставить ссылку репозитория
-    - В какой-то момент нужно будет авторизоваться через браузер
-    - Чтобы выйти из git акканта -> Поиск по windows -> Диспетчер учетных записей -> Удалить уч. данные git
-
-## Исправление проблемы ввода заглавных букв в Powershell
-
-[Источник](https://danshin.ms/PSReadLine-problem/)
-
-    -Открываем Powershell от имени администратора, вводим команду: Remove-Module PSReadLine
-    -Закрываем Powershell и Редактор кода Visual Studio code
-    -Затем удаляем или переименовываем папку в 
-    C:\Program Files\WindowsPowerShell\Modules\PSReadLine под названием "2.0.0"
-    -Запускаем Powershell от имени администратора
-    -Устанавливаем модуль, который удалили: Install-Module PSReadLine
-    -Разрешить remotesigned: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned 
-        -ИЛИ Set-ExecutionPolicy AllSigned
-
-## Изменить кодировку.
-
-    -Внизу нажать на utf-8 -> Сохранить в кодировке -> Cyrillic (CP 866)
-
-## При запуске выдает "Python".
-
-    1.Лучшее решение:
-        Прописать в windows в PATH переменных окружения ссылки на python и pip:
-        Поиск -> Изм.Сис.Переменных Среды -> Переменные среды -> Path -> Изменить -> Добавить:
-            - C:\Users\ErgoDeath\AppData\Local\Programs\Python\Python310\Scripts\
-            - C:\Users\ErgoDeath\AppData\Local\Programs\Python\Python310\
-    2. Второе решени:
-        В settings.json вписать следующее:
-            "code-runner.executorMap": {
-                "python": "---" 
-            }
-        "---" -> "& C:/Users/ErgoDeath/AppData/Local/Programs/Python/Python312/python.exe"
+1. https://code.visualstudio.com/download
+2. https://www.python.org/downloads/
+3. RuLang: Шестерёнка -> Command Pallete -> Вводим 'lang' -> Configure Display Language -> 'Русский'
+4. Расширение Python 
+5. Расширение Code Runner 
+6. Параметры:
+    - Установить стандартное автосохрание -> Файл -> Автосохранение
+    - Изменить шрифт -> editor.fontSize -> 16
+    - Code-runner: Save file before run [галочка стоит]
+    - Code-runner: Run in terminal [галочка стоит]
+7. Settings.json
+    -Очистка консоли:
+        "code-runner.executorMap": {
+            "python": "clear; python -u" }
+8. Создать папку на рабочем столе -> Открываем её в Vscode -> Далее создаем два файла -> main.lua/py theory.lua/py
 
 ## Введение.
 
