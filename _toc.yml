@@ -7,47 +7,46 @@ parts:
   - caption: Python
     chapters:
       - file: Python/study-plan-py
+      - file: Tables/py-tasks-table
+        sections:
+        - file: Python/Tasks/1.in-out
+        - file: Python/Tasks/2.strings
+        - file: Python/Tasks/3.boolean
+        - file: Python/Tasks/4.conditions
+        - file: Python/Tasks/5.lists
+        - file: Python/Tasks/6.cycles
+        - file: Python/Tasks/7.tuples
+        - file: Python/Tasks/8.dictionaries
+        - file: Python/Tasks/9.sets
+        - file: Python/Tasks/10.functions
+        - file: Python/Tasks/11.file-handling
       - file: Python/turtle
       - file: Python/other
-      - file: other/py-tasks-table
-        sections:
-        - file: tasks-python/1.in-out
-        - file: tasks-python/2.strings
-        - file: tasks-python/3.boolean
-        - file: tasks-python/4.conditions
-        - file: tasks-python/5.lists
-        - file: tasks-python/6.cycles
-        - file: tasks-python/7.tuples
-        - file: tasks-python/8.dictionaries
-        - file: tasks-python/9.sets
-        - file: tasks-python/10.functions
-        - file: tasks-python/11.file-handling
   - caption: Lua
     chapters:
       - file: Lua/study-plan-lua
-      - file: other/lua-tasks-table
+      - file: Tables/lua-tasks-table
         sections:
-        - file: tasks-lua/1.in-out
-        - file: tasks-lua/2.string
-        - file: tasks-lua/3.boolean
-        - file: tasks-lua/4.conditions
-        - file: tasks-lua/5.tables
-        - file: tasks-lua/6.cycles
-        - file: tasks-lua/7.functions
-        - file: tasks-lua/8.file-handling
-  - caption: some
+        - file: Lua/Tasks/1.in-out
+        - file: Lua/Tasks/2.string
+        - file: Lua/Tasks/3.boolean
+        - file: Lua/Tasks/4.conditions
+        - file: Lua/Tasks/5.tables
+        - file: Lua/Tasks/6.cycles
+        - file: Lua/Tasks/7.functions
+        - file: Lua/Tasks/8.file-handling
+  - caption: Some
     chapters:
-      - file: other/roblox-table
+      - file: Tables/roblox-table
         sections:
-        - file: Roblox/notes
-        - file: Roblox/scripts
-        - file: Roblox/door-script
-      - file: other/ubuntu-table
+        - file: Some/Roblox/notes
+        - file: Some/Roblox/scripts
+        - file: Some/Roblox/door-script
+      - file: Tables/ubuntu-table
         sections:
-        - file: Ubuntu/selenium-vps
-      - file: NEW/codeforces
-      - file: NEW/vs-code-settings
-      - file: NEW/blacknote
+        - file: Some/Ubuntu/selenium-vps
+      - file: Some/codeforces
+      - file: Some/settings-system
 
 
 
