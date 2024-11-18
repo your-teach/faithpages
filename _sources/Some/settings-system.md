@@ -32,8 +32,8 @@
 1. Лучшее решение:\
     Прописать в windows в PATH переменных окружения ссылки на python и pip:\
     Поиск -> Изм.Сис.Переменных Среды -> Переменные среды -> Path -> Изменить -> Добавить:
-        - `C:\Users\ErgoDeath\AppData\Local\Programs\Python\Python310\Scripts\`
-        - `C:\Users\ErgoDeath\AppData\Local\Programs\Python\Python310\`
+        - `C:\Users\Username\AppData\Local\Programs\Python\Python310\Scripts\`
+        - `C:\Users\Username\AppData\Local\Programs\Python\Python310\`
 2. Второе решение:\
     В settings.json вписать следующее:
     ```json
@@ -41,7 +41,7 @@
         "python": "& PATH" 
     }
     // PATH:
-    // C:/Users/ErgoDeath/AppData/Local/Programs/Python/Python312/python.exe
+    // C:/Users/Username/AppData/Local/Programs/Python/Python312/python.exe
     ```
 
 ## VScode + Lua на MacOs
@@ -62,9 +62,9 @@
 
 ## Если pip недоступен
 - Как установить модуль на конкретную версию python, варианты:
-    - `C:/Users/ErgoDeath/AppData/Local/Programs/Python/Python312/python.exe -m pip install pyglet`
+    - `C:/Users/Username/AppData/Local/Programs/Python/Python312/python.exe -m pip install pyglet`
     - `/usr/local/bin/python3.8 -m pip install pip`
     - `py -3.8 -m pip install package`
 - Запуск скрипта:
-    - `C:/Users/ErgoDeath/AppData/Local/Programs/Python/Python312/python.exe script.py`
+    - `C:/Users/Username/AppData/Local/Programs/Python/Python312/python.exe script.py`
     - `py -3.8 script.py`
