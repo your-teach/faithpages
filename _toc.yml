@@ -14,7 +14,8 @@ parts:
         - file: Python/Tasks/3.boolean
         - file: Python/Tasks/4.conditions
         - file: Python/Tasks/5.lists
-        - file: Python/Tasks/6.cycles
+        - file: Python/Tasks/6.1.cycles
+        - file: Python/Tasks/6.2.list-comprehension
         - file: Python/Tasks/7.tuples
         - file: Python/Tasks/8.dictionaries
         - file: Python/Tasks/9.sets
