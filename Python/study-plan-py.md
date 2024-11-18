@@ -574,10 +574,16 @@ example2()
 
 ## Введение в Модули.
 
-    -Что такое модули/библиотеки/пакеты
-    -Как установить (на примере cowsay)
-    -Как импортировать (только import)
-    -Как создать свой
+- Что такое модули/библиотеки/пакеты
+- Как установить (на примере cowsay)
+- Как импортировать (только import)
+- Как создать свой
+
+- способы импорта:\
+    - `import module as md`
+    - `from module import *`
+    - `from module import <attribute>`
+    - `from module import <attribute> as attr`
 
 ## Модуль time
 ```python
