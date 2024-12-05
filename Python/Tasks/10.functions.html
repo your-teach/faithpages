@@ -498,8 +498,11 @@
 <p>Напишите функцию, которая принимает строку и рассчитывает количество букв верхнего и нижнего регистра. Пример:</p>
 <blockquote>
 <div><p>Пример строки: <code class="docutils literal notranslate"><span class="pre">'Быстрая</span> <span class="pre">Лиса</span> <span class="pre">Бровей'</span></code><br />
-Ожидаемый результат:
-<code class="docutils literal notranslate"><span class="pre">Количество</span> <span class="pre">символов</span> <span class="pre">в</span> <span class="pre">верхнем</span> <span class="pre">регистре:</span> <span class="pre">3</span>&#160; <span class="pre">Количество</span> <span class="pre">строчных</span> <span class="pre">букв:</span> <span class="pre">12</span></code></p>
+Ожидаемый результат:</p>
+<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>Количество символов в верхнем регистре: 3  
+Количество строчных букв: 12
+</pre></div>
+</div>
 </div></blockquote>
 </section>
 <section id="id10">
@@ -530,21 +533,25 @@
 </div></blockquote>
 </li>
 </ol>
-<details><summary>Решение</summary><pre><code>
-<p>def capitalize(word):
-result = word[0].upper()
-for letter in word[1:]:
-result += letter.lower()
-return result</p>
-<p>raw = ‘стрОка для тЕстированиЯ ФункцИи capItaliZe’
-raw = raw.split()
-res = []
-for w in raw:
-refact = capitalize(w)
-res.append(refact)
-finish = ‘ ‘.join(res)
-print(finish)</p>
-<p></code></pre></details></p>
+<div class="toggle docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">capitalize</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">word</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="n">letter</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="n">raw</span> <span class="o">=</span> <span class="s1">&#39;стрОка для тЕстированиЯ ФункцИи capItaliZe&#39;</span>
+<span class="n">raw</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">raw</span><span class="p">:</span>
+    <span class="n">refact</span> <span class="o">=</span> <span class="n">capitalize</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+    <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">refact</span><span class="p">)</span>
+<span class="n">finish</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">finish</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
 </section>
 </section>
 
