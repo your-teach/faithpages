@@ -427,7 +427,32 @@ t.three()
         
 
 ## Запись и чтение файла.
-    -https://oojoo.ru/11-zapis-i-chtieniie-iz-faila/
+```lua
+-- "r" - чтение
+-- "w" - перезапись
+-- "a" - дозапить
+
+local filepath = "C:\\HOME\\PROG\\text.txt"
+-- Чтение
+local fileread = io.open(filepath, "r")
+print(fileread:read()) -- прочитать первую строку
+print(fileread:read()) -- прочитать вторую строку
+-- Чтение всех строк файла через цикл
+for line in fileread:lines() do
+    print(line)
+end
+-- Перезапись
+local filewrite = io.open(filepath, "w")
+filewrite:write("new data")
+filewrite:close()
+-- Дозапись (перед записью, файл очищается)
+local filewrite2 = io.open(filepath, "a")
+filewrite2:write("\nadd in file")
+filewrite2:close()
+
+```
+
+https://oojoo.ru/11-zapis-i-chtieniie-iz-faila/
 
 ## Модули
 ### Импорт модуля
@@ -492,3 +517,19 @@ for i = 1, #arr do
 end
 ```
 ````
+
+### Тернарный оператор
+
+```lua
+n = -1
+-- Тернарный оператор
+step = n > 0 and 1 or -1
+-- Альтернатива через обычное условие
+if n > 0 then
+    step = 1
+else
+    step = -1
+end
+-- Вывод 1 или -1
+print(step)
+```
