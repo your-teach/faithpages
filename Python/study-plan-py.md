@@ -611,6 +611,15 @@ example2()
     # Получить из объекта времени только часы и минуты 
     print(now.hour, now.minute) 
 
+    # Количество секунд с начала цифрового века (1970)
+    datetime.datetime.timestamp(now)
+
+    # Количество дней с начала цифрового века 
+    datetime.datetime.toordinal(now)
+
+    # Изменить атрибуты datetime объекта в котором хранится дата
+    datetime.replace(day=1)
+
     # Создать объект времени, в котором будет храниться 3 часа
     three_hour = datetime.timedelta(hours=3)
 
