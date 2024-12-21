@@ -1135,40 +1135,40 @@ del list[0] - удаление элемента по индексу
 </section>
 <section id="datetime">
 <h2>Модуль datetime<a class="headerlink" href="#datetime" title="Link to this heading">#</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="kn">import</span> <span class="nn">datetime</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="o">*</span>
 
     <span class="c1"># Время сейчас</span>
-    <span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+    <span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
 
     <span class="c1"># Получить из объекта времени только часы и минуты </span>
     <span class="nb">print</span><span class="p">(</span><span class="n">now</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="n">now</span><span class="o">.</span><span class="n">minute</span><span class="p">)</span> 
 
     <span class="c1"># Количество секунд с начала цифрового века (1970)</span>
-    <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">timestamp</span><span class="p">(</span><span class="n">now</span><span class="p">)</span>
+    <span class="n">datetime</span><span class="o">.</span><span class="n">timestamp</span><span class="p">(</span><span class="n">now</span><span class="p">)</span>
 
     <span class="c1"># Количество дней с начала цифрового века </span>
-    <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">toordinal</span><span class="p">(</span><span class="n">now</span><span class="p">)</span>
+    <span class="n">datetime</span><span class="o">.</span><span class="n">toordinal</span><span class="p">(</span><span class="n">now</span><span class="p">)</span>
 
     <span class="c1"># Изменить атрибуты datetime объекта в котором хранится дата</span>
-    <span class="n">datetime</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">day</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">now</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">day</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
     <span class="c1"># Создать объект времени, в котором будет храниться 3 часа</span>
-    <span class="n">three_hour</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">three_hour</span> <span class="o">=</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 
     <span class="c1"># Вычитаем из объекта времени &quot;now&quot; 3 часа</span>
     <span class="n">edit_time</span> <span class="o">=</span> <span class="n">now</span> <span class="o">-</span> <span class="n">three_hour</span>
 
     <span class="c1"># Создать фиксированную дату </span>
-    <span class="n">fixdate</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">fixdate</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
     <span class="n">a</span> <span class="o">=</span> <span class="n">now</span> <span class="o">-</span> <span class="n">fixdate</span> <span class="c1"># тоже можем вычитать или суммировать</span>
 
     <span class="c1"># Форматируем объект даты в строку, с гибкими настройками</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span>
             <span class="n">now</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%d</span><span class="s2">.%m.%Y | %H:%M:%S&quot;</span><span class="p">)</span>
 
     <span class="c1"># Форматируем строку в объект datetime</span>
-    <span class="n">t</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span>
             <span class="n">s</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%d</span><span class="s2">.%m.%Y | %H:%M:%S&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1253,6 +1253,7 @@ del list[0] - удаление элемента по индексу
 <div class="toggle docutils container">
 <p><img alt="" src="../_images/time-format.png" /></p>
 </div>
+<p><a class="reference external" href="https://www.w3resource.com/python-exercises/date-time-exercise/index.php">Упражнения</a></p>
 </section>
 <section id="turtle">
 <h2>Модуль Turtle<a class="headerlink" href="#turtle" title="Link to this heading">#</a></h2>
