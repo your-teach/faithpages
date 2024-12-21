@@ -603,40 +603,40 @@ example2()
 
 ## Модуль datetime
 ```python
-    import datetime
+    from datetime import *
 
     # Время сейчас
-    now = datetime.datetime.now()
+    now = datetime.now()
 
     # Получить из объекта времени только часы и минуты 
     print(now.hour, now.minute) 
 
     # Количество секунд с начала цифрового века (1970)
-    datetime.datetime.timestamp(now)
+    datetime.timestamp(now)
 
     # Количество дней с начала цифрового века 
-    datetime.datetime.toordinal(now)
+    datetime.toordinal(now)
 
     # Изменить атрибуты datetime объекта в котором хранится дата
-    datetime.replace(day=1)
+    now = now.replace(day=1)
 
     # Создать объект времени, в котором будет храниться 3 часа
-    three_hour = datetime.timedelta(hours=3)
+    three_hour = timedelta(hours=3)
 
     # Вычитаем из объекта времени "now" 3 часа
     edit_time = now - three_hour
 
     # Создать фиксированную дату 
-    fixdate = datetime.datetime(year=1, month=1, day=1)
+    fixdate = datetime(year=1, month=1, day=1)
 
     a = now - fixdate # тоже можем вычитать или суммировать
 
     # Форматируем объект даты в строку, с гибкими настройками
-    s = datetime.datetime.strftime(
+    s = datetime.strftime(
             now, "%d.%m.%Y | %H:%M:%S")
 
     # Форматируем строку в объект datetime
-    t = datetime.datetime.strptime(
+    t = datetime.strptime(
             s, "%d.%m.%Y | %H:%M:%S")
 ```
 
@@ -670,6 +670,7 @@ example2()
 ![](../images/python/time-format.png)
 ```
 
+[Упражнения](https://www.w3resource.com/python-exercises/date-time-exercise/index.php)
 
 ## Модуль Turtle
 
