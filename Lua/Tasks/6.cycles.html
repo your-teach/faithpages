@@ -853,9 +853,11 @@
 </div>
 <div class="toggle docutils container">
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">letter</span> <span class="o">=</span> <span class="s1">&#39;t&#39;</span>
-<span class="kr">if</span> <span class="n">letter</span> <span class="o">&gt;=</span> <span class="s1">&#39;а&#39;</span> <span class="ow">and</span> <span class="n">letter</span> <span class="o">&lt;=</span> <span class="s1">&#39;я&#39;</span> <span class="kr">then</span>
+<span class="kr">if</span> <span class="p">(</span><span class="n">letter</span> <span class="o">&gt;=</span> <span class="s1">&#39;а&#39;</span> <span class="ow">and</span> <span class="n">letter</span> <span class="o">&lt;=</span> <span class="s1">&#39;я&#39;</span> <span class="ow">or</span>
+        <span class="n">letter</span> <span class="o">&gt;=</span> <span class="s1">&#39;А&#39;</span> <span class="ow">and</span> <span class="n">letter</span> <span class="o">&lt;=</span> <span class="s1">&#39;Я&#39;</span><span class="p">)</span> <span class="kr">then</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rus&#39;</span><span class="p">)</span>
-<span class="kr">elseif</span> <span class="n">letter</span> <span class="o">&gt;=</span> <span class="s1">&#39;a&#39;</span> <span class="ow">and</span> <span class="n">letter</span> <span class="o">&lt;=</span> <span class="s1">&#39;z&#39;</span> <span class="kr">then</span>
+<span class="kr">elseif</span> <span class="p">(</span><span class="n">letter</span> <span class="o">&gt;=</span> <span class="s1">&#39;a&#39;</span> <span class="ow">and</span> <span class="n">letter</span> <span class="o">&lt;=</span> <span class="s1">&#39;z&#39;</span> <span class="ow">or</span>
+            <span class="n">letter</span> <span class="o">&gt;=</span> <span class="s1">&#39;A&#39;</span> <span class="ow">and</span> <span class="n">letter</span> <span class="o">&lt;=</span> <span class="s1">&#39;Z&#39;</span><span class="p">)</span> <span class="kr">then</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;eng&#39;</span><span class="p">)</span>
 <span class="kr">end</span>
 </pre></div>
