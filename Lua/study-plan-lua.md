@@ -199,32 +199,32 @@ https://ru.wikibooks.org/wiki/Lua/Типы_данных
 ## Условия.
 -if    elseif     else
 -Комнаты
-    ```lua
-    key = 'blue'
-    if key == 'blue' then
-        print('Синия комната')
-    elseif key == 'red' then
-        print('Красная комната')
-    elseif key == 'green' then
-        print('Зеленая комната')
-    else
-        print('Запасная комната')
-    end
-    ```
+```lua
+key = 'blue'
+if key == 'blue' then
+    print('Синия комната')
+elseif key == 'red' then
+    print('Красная комната')
+elseif key == 'green' then
+    print('Зеленая комната')
+else
+    print('Запасная комната')
+end
+```
 -Температура на улице
-    ```lua
-    temp = tonumber(io.read())
-    if temp > 10 then
-        print('Погода супер, идем гулять')
-        print('.....')
-    elseif temp > 0 then
-        print('Идем гулять, но оденемся потеплее')
-    elseif temp < 0 then
-        print('Лучше остаться дома, посмотреть кино')
-    else
-        print('Ого, температура ровно ноль')
-    end
-    ```
+```lua
+temp = tonumber(io.read())
+if temp > 10 then
+    print('Погода супер, идем гулять')
+    print('.....')
+elseif temp > 0 then
+    print('Идем гулять, но оденемся потеплее')
+elseif temp < 0 then
+    print('Лучше остаться дома, посмотреть кино')
+else
+    print('Ого, температура ровно ноль')
+end
+```
 
 -Что такое заголовок/тело.
 -Что такое табуирование, и где находится кнопка TAB.
@@ -236,30 +236,30 @@ https://ru.wikibooks.org/wiki/Lua/Типы_данных
 -Вывести "yes", если число меньше 10, иначе "no"
 
 -Как найти четное число.
-    ```lua
-    n = int(input())
-    if n % 2 == 0:
-        print('четное')
-    else:
-        print('нечетное')
-    ```
+```lua
+n = int(input())
+if n % 2 == 0:
+    print('четное')
+else:
+    print('нечетное')
+```
 -Является ли переменная строкой:
-    ```lua
-    s = 'tick'
-    if type(s) == 'string' then
-        print('да')
-    else 
-        print('нет')
-    end
-    ```
+```lua
+s = 'tick'
+if type(s) == 'string' then
+    print('да')
+else 
+    print('нет')
+end
+```
 -Что такое локальный переменные (local a = 'hello')
-    ```lua
-    if true then
-        local c = true
-        print(c) -- true
-    end
-    print(c) -- nil, так как переменная локальная, и работает только в условии выше
-    ```
+```lua
+if true then
+    local c = true
+    print(c) -- true
+end
+print(c) -- nil, так как переменная локальная, и работает только в условии выше
+```
 
 ## Таблицы.
     -Если в переменную необходимо положить несколько значений, то здесь нам помогут таблицы.
