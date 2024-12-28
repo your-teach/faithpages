@@ -197,40 +197,43 @@ https://ru.wikibooks.org/wiki/Lua/Типы_данных
 
 ## Условия.
     -if    elseif     else
-    -Пример с одной комнатой. true - можно войти; false - нельзя.
-    key = 5
-    if key == 5 then -- заголовок условия 
-        --тело условия
-        print('Enter in room')
-    end
-    -Неплохой пример, показывающий поэтапность действий, и то что при первом срабатывании условия оно останавливается.
-        temp = tonumber(io.read())
-        if temp > 10 then 
-            print('pogoda super, idu gulyat')
-        elseif temp > 0 then
-            print('idu gulyat, no vozmu teplie veshi')
-        elseif temp < 0 then
-            print('ostaus' doma i davayte smotret kino')
+    -Комнаты
+        ```lua
+        key = 'blue'
+        if key == 'blue' then
+            print('Синия комната')
+        elseif key == 'red' then
+            print('Красная комната')
+        elseif key == 'green' then
+            print('Зеленая комната')
         else
-            print('ogo, pogoda nulevaya')
+            print('Запасная комната')
         end
+        ```
+    -Температура на улице
+        ```lua
+        temp = tonumber(io.read())
+        if temp > 10 then
+            print('Погода супер, идем гулять')
+            print('.....')
+        elseif temp > 0 then
+            print('Идем гулять, но оденемся потеплее')
+        elseif temp < 0 then
+            print('Лучше остаться дома, посмотреть кино')
+        else
+            print('Ого, температура ровно ноль')
+        end
+        ```
+
     -Что такое заголовок/тело.
     -Что такое табуирование, и где находится кнопка TAB.
-    -Когда тело заканчивается - перестаем использовать tab
-    -Температура на улице.(Создавать поэтапно, останавливаясь на каждом if и тестируя).
-        temp = 0
-        if temp > 0 then
-            print('im gonna go walk')
-        elseif temp < 0 then
-            print('i stay home')
-        else
-            print('wow, temp is zero')
-        end
+
+    -if может быть только один и только в начале
     -elseif может быть неограниченное количество
-    -Вывести "yes", если число больше нуля, иначе "no"
+    -else может быть только один и только в конце
+
     -Вывести "yes", если число меньше 10, иначе "no"
-    -Входит ли число в диапазон между 0 и 10.
-    -Одно число входит в диапазон, а другое не входит.
+
     -Как найти четное число.
         n = int(input())
         if n % 2 == 0:
@@ -245,6 +248,11 @@ https://ru.wikibooks.org/wiki/Lua/Типы_данных
             print('нет')
         end
     -Что такое локальный переменные (local a = 'hello')
+        if true then
+            local c = true
+            print(c) -- true
+        end
+        print(c) -- nil, так как переменная локальная, и работает только в условии выше
 
 ## Таблицы.
     -Если в переменную необходимо положить несколько значений, то здесь нам помогут таблицы.
