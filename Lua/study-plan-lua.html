@@ -700,40 +700,43 @@ or
 <section id="id12">
 <h2>Условия.<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-if    elseif     else
--Пример с одной комнатой. true - можно войти; false - нельзя.
-key = 5
-if key == 5 then -- заголовок условия 
-    --тело условия
-    print(&#39;Enter in room&#39;)
-end
--Неплохой пример, показывающий поэтапность действий, и то что при первом срабатывании условия оно останавливается.
-    temp = tonumber(io.read())
-    if temp &gt; 10 then 
-        print(&#39;pogoda super, idu gulyat&#39;)
-    elseif temp &gt; 0 then
-        print(&#39;idu gulyat, no vozmu teplie veshi&#39;)
-    elseif temp &lt; 0 then
-        print(&#39;ostaus&#39; doma i davayte smotret kino&#39;)
+-Комнаты
+    ```lua
+    key = &#39;blue&#39;
+    if key == &#39;blue&#39; then
+        print(&#39;Синия комната&#39;)
+    elseif key == &#39;red&#39; then
+        print(&#39;Красная комната&#39;)
+    elseif key == &#39;green&#39; then
+        print(&#39;Зеленая комната&#39;)
     else
-        print(&#39;ogo, pogoda nulevaya&#39;)
+        print(&#39;Запасная комната&#39;)
     end
+    ```
+-Температура на улице
+    ```lua
+    temp = tonumber(io.read())
+    if temp &gt; 10 then
+        print(&#39;Погода супер, идем гулять&#39;)
+        print(&#39;.....&#39;)
+    elseif temp &gt; 0 then
+        print(&#39;Идем гулять, но оденемся потеплее&#39;)
+    elseif temp &lt; 0 then
+        print(&#39;Лучше остаться дома, посмотреть кино&#39;)
+    else
+        print(&#39;Ого, температура ровно ноль&#39;)
+    end
+    ```
+
 -Что такое заголовок/тело.
 -Что такое табуирование, и где находится кнопка TAB.
--Когда тело заканчивается - перестаем использовать tab
--Температура на улице.(Создавать поэтапно, останавливаясь на каждом if и тестируя).
-    temp = 0
-    if temp &gt; 0 then
-        print(&#39;im gonna go walk&#39;)
-    elseif temp &lt; 0 then
-        print(&#39;i stay home&#39;)
-    else
-        print(&#39;wow, temp is zero&#39;)
-    end
+
+-if может быть только один и только в начале
 -elseif может быть неограниченное количество
--Вывести &quot;yes&quot;, если число больше нуля, иначе &quot;no&quot;
+-else может быть только один и только в конце
+
 -Вывести &quot;yes&quot;, если число меньше 10, иначе &quot;no&quot;
--Входит ли число в диапазон между 0 и 10.
--Одно число входит в диапазон, а другое не входит.
+
 -Как найти четное число.
     n = int(input())
     if n % 2 == 0:
@@ -748,6 +751,11 @@ end
         print(&#39;нет&#39;)
     end
 -Что такое локальный переменные (local a = &#39;hello&#39;)
+    if true then
+        local c = true
+        print(c) -- true
+    end
+    print(c) -- nil, так как переменная локальная, и работает только в условии выше
 </pre></div>
 </div>
 </section>
