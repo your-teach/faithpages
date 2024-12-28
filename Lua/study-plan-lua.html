@@ -701,22 +701,64 @@ or
 <section id="id12">
 <h2>Условия.<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
 <p>-if    elseif     else
--Комнаты
-<code class="docutils literal notranslate"><span class="pre">lua</span>&#160;&#160;&#160;&#160; <span class="pre">key</span> <span class="pre">=</span> <span class="pre">'blue'</span>&#160;&#160;&#160;&#160; <span class="pre">if</span> <span class="pre">key</span> <span class="pre">==</span> <span class="pre">'blue'</span> <span class="pre">then</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">print('Синия</span> <span class="pre">комната')</span>&#160;&#160;&#160;&#160; <span class="pre">elseif</span> <span class="pre">key</span> <span class="pre">==</span> <span class="pre">'red'</span> <span class="pre">then</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">print('Красная</span> <span class="pre">комната')</span>&#160;&#160;&#160;&#160; <span class="pre">elseif</span> <span class="pre">key</span> <span class="pre">==</span> <span class="pre">'green'</span> <span class="pre">then</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">print('Зеленая</span> <span class="pre">комната')</span>&#160;&#160;&#160;&#160; <span class="pre">else</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">print('Запасная</span> <span class="pre">комната')</span>&#160;&#160;&#160;&#160; <span class="pre">end</span>&#160;&#160;&#160;&#160; </code>
--Температура на улице
-<code class="docutils literal notranslate"><span class="pre">lua</span>&#160;&#160;&#160;&#160; <span class="pre">temp</span> <span class="pre">=</span> <span class="pre">tonumber(io.read())</span>&#160;&#160;&#160;&#160; <span class="pre">if</span> <span class="pre">temp</span> <span class="pre">&gt;</span> <span class="pre">10</span> <span class="pre">then</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">print('Погода</span> <span class="pre">супер,</span> <span class="pre">идем</span> <span class="pre">гулять')</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">print('.....')</span>&#160;&#160;&#160;&#160; <span class="pre">elseif</span> <span class="pre">temp</span> <span class="pre">&gt;</span> <span class="pre">0</span> <span class="pre">then</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">print('Идем</span> <span class="pre">гулять,</span> <span class="pre">но</span> <span class="pre">оденемся</span> <span class="pre">потеплее')</span>&#160;&#160;&#160;&#160; <span class="pre">elseif</span> <span class="pre">temp</span> <span class="pre">&lt;</span> <span class="pre">0</span> <span class="pre">then</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">print('Лучше</span> <span class="pre">остаться</span> <span class="pre">дома,</span> <span class="pre">посмотреть</span> <span class="pre">кино')</span>&#160;&#160;&#160;&#160; <span class="pre">else</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">print('Ого,</span> <span class="pre">температура</span> <span class="pre">ровно</span> <span class="pre">ноль')</span>&#160;&#160;&#160;&#160; <span class="pre">end</span>&#160;&#160;&#160;&#160; </code></p>
+-Комнаты</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">key</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span>
+<span class="kr">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;blue&#39;</span> <span class="kr">then</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Синия комната&#39;</span><span class="p">)</span>
+<span class="kr">elseif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;red&#39;</span> <span class="kr">then</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Красная комната&#39;</span><span class="p">)</span>
+<span class="kr">elseif</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;green&#39;</span> <span class="kr">then</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Зеленая комната&#39;</span><span class="p">)</span>
+<span class="kr">else</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Запасная комната&#39;</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
+<p>-Температура на улице</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
+<span class="kr">if</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mi">10</span> <span class="kr">then</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Погода супер, идем гулять&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;.....&#39;</span><span class="p">)</span>
+<span class="kr">elseif</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="kr">then</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Идем гулять, но оденемся потеплее&#39;</span><span class="p">)</span>
+<span class="kr">elseif</span> <span class="n">temp</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="kr">then</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Лучше остаться дома, посмотреть кино&#39;</span><span class="p">)</span>
+<span class="kr">else</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ого, температура ровно ноль&#39;</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
 <p>-Что такое заголовок/тело.
 -Что такое табуирование, и где находится кнопка TAB.</p>
 <p>-if может быть только один и только в начале
 -elseif может быть неограниченное количество
 -else может быть только один и только в конце</p>
 <p>-Вывести “yes”, если число меньше 10, иначе “no”</p>
-<p>-Как найти четное число.
-<code class="docutils literal notranslate"><span class="pre">lua</span>&#160;&#160;&#160;&#160; <span class="pre">n</span> <span class="pre">=</span> <span class="pre">int(input())</span>&#160;&#160;&#160;&#160; <span class="pre">if</span> <span class="pre">n</span> <span class="pre">%</span> <span class="pre">2</span> <span class="pre">==</span> <span class="pre">0:</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">print('четное')</span>&#160;&#160;&#160;&#160; <span class="pre">else:</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">print('нечетное')</span>&#160;&#160;&#160;&#160; </code>
--Является ли переменная строкой:
-<code class="docutils literal notranslate"><span class="pre">lua</span>&#160;&#160;&#160;&#160; <span class="pre">s</span> <span class="pre">=</span> <span class="pre">'tick'</span>&#160;&#160;&#160;&#160; <span class="pre">if</span> <span class="pre">type(s)</span> <span class="pre">==</span> <span class="pre">'string'</span> <span class="pre">then</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">print('да')</span>&#160;&#160;&#160;&#160; <span class="pre">else</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">print('нет')</span>&#160;&#160;&#160;&#160; <span class="pre">end</span>&#160;&#160;&#160;&#160; </code>
--Что такое локальный переменные (local a = ‘hello’)
-<code class="docutils literal notranslate"><span class="pre">lua</span>&#160;&#160;&#160;&#160; <span class="pre">if</span> <span class="pre">true</span> <span class="pre">then</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">local</span> <span class="pre">c</span> <span class="pre">=</span> <span class="pre">true</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">print(c)</span> <span class="pre">--</span> <span class="pre">true</span>&#160;&#160;&#160;&#160; <span class="pre">end</span>&#160;&#160;&#160;&#160; <span class="pre">print(c)</span> <span class="pre">--</span> <span class="pre">nil,</span> <span class="pre">так</span> <span class="pre">как</span> <span class="pre">переменная</span> <span class="pre">локальная,</span> <span class="pre">и</span> <span class="pre">работает</span> <span class="pre">только</span> <span class="pre">в</span> <span class="pre">условии</span> <span class="pre">выше</span>&#160;&#160;&#160;&#160; </code></p>
+<p>-Как найти четное число.</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">int</span><span class="p">(</span><span class="n">input</span><span class="p">())</span>
+<span class="kr">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;четное&#39;</span><span class="p">)</span>
+<span class="kr">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;нечетное&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>-Является ли переменная строкой:</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;tick&#39;</span>
+<span class="kr">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;string&#39;</span> <span class="kr">then</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;да&#39;</span><span class="p">)</span>
+<span class="kr">else</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;нет&#39;</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
+<p>-Что такое локальный переменные (local a = ‘hello’)</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kr">if</span> <span class="kc">true</span> <span class="kr">then</span>
+    <span class="kd">local</span> <span class="n">c</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="c1">-- true</span>
+<span class="kr">end</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="c1">-- nil, так как переменная локальная, и работает только в условии выше</span>
+</pre></div>
+</div>
 </section>
 <section id="id13">
 <h2>Таблицы.<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
