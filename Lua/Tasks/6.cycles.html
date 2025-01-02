@@ -774,6 +774,40 @@
 <div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">лес</span> <span class="pre">огород</span> <span class="pre">солнце</span> <span class="pre">очки</span> <span class="pre">лес</span> <span class="pre">имя</span> <span class="pre">очки</span></code><br />
 Выходные данные: <code class="docutils literal notranslate"><span class="pre">лес</span> <span class="pre">огород</span> <span class="pre">солнце</span> <span class="pre">очки</span> <span class="pre">имя</span></code></p>
 </div></blockquote>
+<div class="toggle docutils container">
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="s2">&quot;лес огород солнце очки лес имя очки&quot;</span>
+<span class="n">dict</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="nb">next</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="kr">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="o">#</span><span class="n">words</span><span class="o">+</span><span class="mi">1</span> <span class="kr">do</span>
+    <span class="n">letter</span> <span class="o">=</span> <span class="n">words</span><span class="p">:</span><span class="n">sub</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+    <span class="kr">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="s2">&quot; &quot;</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">==</span> <span class="o">#</span><span class="n">words</span><span class="o">+</span><span class="mi">1</span> <span class="kr">then</span>
+        <span class="nb">table.insert</span><span class="p">(</span><span class="n">dict</span><span class="p">,</span> <span class="nb">next</span><span class="p">)</span>
+        <span class="nb">next</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="kr">else</span>
+        <span class="nb">next</span> <span class="o">=</span> <span class="nb">next</span> <span class="o">..</span> <span class="n">letter</span>
+    <span class="kr">end</span>
+<span class="kr">end</span>
+<span class="c1">-- dict = {&#39;лес&#39;, &#39;огород&#39;, &#39;солнце&#39;, &#39;очки&#39;, &#39;лес&#39;, &#39;имя&#39;, &#39;очки&#39;}</span>
+<span class="n">dict_sorted</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="kr">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">dict</span><span class="p">)</span> <span class="kr">do</span>
+    <span class="n">can</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="kr">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">dict_sorted</span><span class="p">)</span> <span class="kr">do</span>
+        <span class="kr">if</span> <span class="n">value</span> <span class="o">==</span> <span class="n">v</span> <span class="kr">then</span>
+            <span class="n">can</span> <span class="o">=</span> <span class="kc">false</span>
+            <span class="kr">break</span>
+        <span class="kr">end</span>
+    <span class="kr">end</span>
+    <span class="kr">if</span> <span class="n">can</span> <span class="kr">then</span>
+        <span class="nb">table.insert</span><span class="p">(</span><span class="n">dict_sorted</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+    <span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="kr">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">dict_sorted</span><span class="p">)</span> <span class="kr">do</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
+</div>
 </section>
 <section id="id14">
 <h2>Цифра 3 в таблице<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
