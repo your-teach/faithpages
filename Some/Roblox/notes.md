@@ -124,3 +124,11 @@ end
 button.Activated:Connect(onButtonActivated)
 
 ```
+
+## Касание других партов
+
+```lua
+local touch_objects = clone.Trunk:GetTouchingParts()
+```
+
+(Не работает, когда нет CanCollide)
