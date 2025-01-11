@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -433,6 +433,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clickdetector">ClickDetector</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remoteevent">RemoteEvent</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gui">Кнопка Gui</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Касание других партов</a></li>
 </ul>
             </nav>
         </div>
@@ -448,55 +449,55 @@
 <h1>Наброски<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <section id="id2">
 <h2>Скрипты<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">BrickColor</span> <span class="o">=</span> <span class="n">BrickColor</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Pastel Blue&quot;</span><span class="p">)</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">workspace</span><span class="p">.</span><span class="py">Part</span><span class="p">.</span><span class="py">BrickColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">BrickColor</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">&quot;Pastel Blue&quot;</span><span class="p">)</span>
 <span class="c1">-- https://create.roblox.com/docs/reference/engine/datatypes/BrickColor</span>
-<span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">BrickColor</span> <span class="o">=</span> <span class="n">BrickColor</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>	    
-<span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">BrickColor</span> <span class="o">=</span> <span class="n">BrickColor</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">187</span><span class="p">,</span> <span class="mi">219</span><span class="p">)</span>
+<span class="nv">workspace</span><span class="p">.</span><span class="py">Part</span><span class="p">.</span><span class="py">BrickColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">BrickColor</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="w">	    </span>
+<span class="nv">workspace</span><span class="p">.</span><span class="py">Part</span><span class="p">.</span><span class="py">BrickColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">BrickColor</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span><span class="w"> </span><span class="mi">187</span><span class="p">,</span><span class="w"> </span><span class="mi">219</span><span class="p">)</span>
 <span class="c1">-- https://create.roblox.com/docs/reference/engine/datatypes/Color3</span>
-<span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">Color</span> <span class="o">=</span> <span class="n">Color3</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>                  
-<span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">Size</span> <span class="o">=</span> <span class="n">Vector3</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="nv">workspace</span><span class="p">.</span><span class="py">Part</span><span class="p">.</span><span class="py">Color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Color3</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w">                  </span>
+<span class="nv">workspace</span><span class="p">.</span><span class="py">Part</span><span class="p">.</span><span class="py">Size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Vector3</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
 <span class="c1">-- Изменить размеры на x,y,z в 2 раза</span>
-<span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">Size</span> <span class="o">=</span> <span class="n">Vector3</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> 
+<span class="nv">workspace</span><span class="p">.</span><span class="py">Part</span><span class="p">.</span><span class="py">Size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Vector3</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span>
 <span class="c1">-- https://create.roblox.com/docs/workspace/cframes teleport part</span>
-<span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">CFrame</span> <span class="o">=</span> <span class="n">CFrame</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> 				
+<span class="nv">workspace</span><span class="p">.</span><span class="py">Part</span><span class="p">.</span><span class="py">CFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">CFrame</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="w"> 				</span>
 <span class="c1">-- https://create.roblox.com/docs/reference/engine/enums/Material</span>
-<span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">Material</span> <span class="o">=</span> <span class="n">Enum</span><span class="p">.</span><span class="n">Material</span><span class="p">.</span><span class="n">Plastic</span>    
+<span class="nv">workspace</span><span class="p">.</span><span class="py">Part</span><span class="p">.</span><span class="py">Material</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Enum</span><span class="p">.</span><span class="py">Material</span><span class="p">.</span><span class="py">Plastic</span><span class="w">    </span>
 <span class="c1">-- вращение на 90 градусов       </span>
-<span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">CFrame</span> <span class="o">=</span> <span class="n">workspace</span><span class="p">.</span><span class="n">Part</span><span class="p">.</span><span class="n">CFrame</span> <span class="o">*</span> <span class="n">CFrame</span><span class="p">.</span><span class="n">Angles</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">math.rad</span><span class="p">(</span><span class="mi">90</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span> 
+<span class="nv">workspace</span><span class="p">.</span><span class="py">Part</span><span class="p">.</span><span class="py">CFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">workspace</span><span class="p">.</span><span class="py">Part</span><span class="p">.</span><span class="py">CFrame</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">CFrame</span><span class="p">.</span><span class="nf">Angles</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nb">math.rad</span><span class="p">(</span><span class="mi">90</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span>
 <span class="c1">-- кнопка у объекта (нужно добавить сначала к парту proximityPrompt)</span>
-<span class="n">proximityPrompt</span><span class="p">.</span><span class="n">Triggered</span><span class="p">:</span><span class="n">Connect</span><span class="p">(</span><span class="kr">function</span><span class="err">)</span> 
+<span class="nv">proximityPrompt</span><span class="p">.</span><span class="py">Triggered</span><span class="p">:</span><span class="nf">Connect</span><span class="p">(</span><span class="kr">function</span><span class="err">)</span><span class="w"> </span>
 <span class="c1">-- Создание парта</span>
-<span class="nf">local</span> <span class="n">part</span> <span class="o">=</span> <span class="n">Instance</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Part&quot;</span><span class="p">)</span>
-<span class="n">part</span><span class="p">.</span><span class="n">Parent</span> <span class="o">=</span> <span class="n">workspace</span>
+<span class="nf">local</span><span class="w"> </span><span class="nv">part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Instance</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">&quot;Part&quot;</span><span class="p">)</span>
+<span class="nv">part</span><span class="p">.</span><span class="py">Parent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">workspace</span>
 <span class="c1">-- Найти gui игрока (через LocalScript):</span>
-<span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s1">&#39;Players&#39;</span><span class="p">).</span><span class="n">LocalPlayer</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s1">&#39;PlayerGui&#39;</span><span class="p">)</span> 
+<span class="nv">game</span><span class="p">:</span><span class="nf">GetService</span><span class="p">(</span><span class="s1">&#39;Players&#39;</span><span class="p">).</span><span class="nv">LocalPlayer</span><span class="p">:</span><span class="nf">WaitForChild</span><span class="p">(</span><span class="s1">&#39;PlayerGui&#39;</span><span class="p">)</span><span class="w"> </span>
 <span class="c1">-- Найти игрока (через LocalScript)</span>
-<span class="n">game</span><span class="p">.</span><span class="n">Players</span><span class="p">.</span><span class="n">LocalPlayer</span> 
+<span class="nv">game</span><span class="p">.</span><span class="py">Players</span><span class="p">.</span><span class="py">LocalPlayer</span><span class="w"> </span>
 
-<span class="n">game</span><span class="p">.</span><span class="n">Players</span><span class="p">.</span><span class="n">LocalPlayer</span><span class="p">.</span><span class="n">Character</span> <span class="ow">or</span> <span class="n">game</span><span class="p">.</span><span class="n">Players</span><span class="p">.</span><span class="n">LocalPlayer</span><span class="p">.</span><span class="n">CharacterAdded</span><span class="p">:</span><span class="n">Wait</span><span class="p">()</span> 
-<span class="n">game</span><span class="p">.</span><span class="n">Players</span><span class="p">.</span><span class="n">LocalPlayer</span><span class="p">.</span><span class="n">Character</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;HumanoidRootPart&quot;</span><span class="p">)</span>
-<span class="n">game</span><span class="p">.</span><span class="n">Players</span><span class="p">.</span><span class="n">LocalPlayer</span><span class="p">.</span><span class="n">Character</span><span class="p">:</span><span class="n">FindFirstChild</span><span class="p">(</span><span class="s2">&quot;RightWrist&quot;</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+<span class="nv">game</span><span class="p">.</span><span class="py">Players</span><span class="p">.</span><span class="py">LocalPlayer</span><span class="p">.</span><span class="py">Character</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nv">game</span><span class="p">.</span><span class="py">Players</span><span class="p">.</span><span class="py">LocalPlayer</span><span class="p">.</span><span class="py">CharacterAdded</span><span class="p">:</span><span class="nf">Wait</span><span class="p">()</span><span class="w"> </span>
+<span class="nv">game</span><span class="p">.</span><span class="py">Players</span><span class="p">.</span><span class="py">LocalPlayer</span><span class="p">.</span><span class="py">Character</span><span class="p">:</span><span class="nf">WaitForChild</span><span class="p">(</span><span class="s2">&quot;HumanoidRootPart&quot;</span><span class="p">)</span>
+<span class="nv">game</span><span class="p">.</span><span class="py">Players</span><span class="p">.</span><span class="py">LocalPlayer</span><span class="p">.</span><span class="py">Character</span><span class="p">:</span><span class="nf">FindFirstChild</span><span class="p">(</span><span class="s2">&quot;RightWrist&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
 
 <span class="c1">-- Найти всех игроков через server script (далее можно сделать поиск через цикл for)</span>
-<span class="n">game</span><span class="p">.</span><span class="n">Players</span><span class="p">:</span><span class="n">GetChildren</span><span class="p">()</span> 
-<span class="n">game</span><span class="p">.</span><span class="n">Players</span><span class="p">:</span><span class="n">GetPlayers</span><span class="p">()</span>  <span class="c1">-- Тоже самое что выше</span>
-<span class="kd">local</span> <span class="n">players</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;Players&quot;</span><span class="p">)</span>
+<span class="nv">game</span><span class="p">.</span><span class="py">Players</span><span class="p">:</span><span class="nf">GetChildren</span><span class="p">()</span><span class="w"> </span>
+<span class="nv">game</span><span class="p">.</span><span class="py">Players</span><span class="p">:</span><span class="nf">GetPlayers</span><span class="p">()</span><span class="w">  </span><span class="c1">-- Тоже самое что выше</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">players</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">game</span><span class="p">:</span><span class="nf">GetService</span><span class="p">(</span><span class="s2">&quot;Players&quot;</span><span class="p">)</span>
 <span class="c1">-- Найти конкретного игрока через server script</span>
-<span class="n">players</span><span class="p">.</span><span class="n">FallenTheo</span> <span class="err">или</span> <span class="n">players</span><span class="p">[</span><span class="s1">&#39;FallenTheo&#39;</span><span class="p">]</span> 
+<span class="nv">players</span><span class="p">.</span><span class="py">FallenTheo</span><span class="w"> </span><span class="err">или</span><span class="w"> </span><span class="nv">players</span><span class="p">[</span><span class="s1">&#39;FallenTheo&#39;</span><span class="p">]</span><span class="w"> </span>
 
-<span class="n">game</span><span class="p">.</span><span class="n">Workspace</span><span class="p">[</span><span class="n">NamePlayer</span><span class="p">].</span><span class="n">HumanoidRootPart</span>
+<span class="nv">game</span><span class="p">.</span><span class="py">Workspace</span><span class="p">[</span><span class="nv">NamePlayer</span><span class="p">].</span><span class="nv">HumanoidRootPart</span>
 
-<span class="n">object</span><span class="p">:</span><span class="n">GetChildren</span><span class="p">()</span> <span class="c1">-- Получить все объекты, которые лежат в object</span>
+<span class="nv">object</span><span class="p">:</span><span class="nf">GetChildren</span><span class="p">()</span><span class="w"> </span><span class="c1">-- Получить все объекты, которые лежат в object</span>
 
-<span class="kr">for</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">300</span> <span class="kr">do</span>
-	<span class="n">wait</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-	<span class="n">workspace</span><span class="p">.</span><span class="n">oneblock</span><span class="p">.</span><span class="n">BrickColor</span> <span class="o">=</span> <span class="n">BrickColor</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-	<span class="n">workspace</span><span class="p">.</span><span class="n">oneblock</span><span class="p">.</span><span class="n">CFrame</span> <span class="o">=</span> <span class="n">CFrame</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">	</span><span class="nf">wait</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">	</span><span class="nv">workspace</span><span class="p">.</span><span class="py">oneblock</span><span class="p">.</span><span class="py">BrickColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">BrickColor</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="nv">n</span><span class="p">)</span>
+<span class="w">	</span><span class="nv">workspace</span><span class="p">.</span><span class="py">oneblock</span><span class="p">.</span><span class="py">CFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">CFrame</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
 <span class="kr">end</span>
 
 
-<span class="n">CframeValue</span><span class="p">:</span><span class="n">GetPropertyChangedSignal</span><span class="p">(</span><span class="s2">&quot;Value&quot;</span><span class="p">):</span><span class="n">Connect</span><span class="p">(</span><span class="kr">function</span><span class="p">()</span>
-	<span class="n">model</span><span class="p">:</span><span class="n">PivotTo</span><span class="p">(</span><span class="n">CframeValue</span><span class="p">.</span><span class="n">Value</span><span class="p">)</span>
+<span class="nv">CframeValue</span><span class="p">:</span><span class="nf">GetPropertyChangedSignal</span><span class="p">(</span><span class="s2">&quot;Value&quot;</span><span class="p">):</span><span class="nf">Connect</span><span class="p">(</span><span class="kr">function</span><span class="p">()</span>
+<span class="w">	</span><span class="nv">model</span><span class="p">:</span><span class="nf">PivotTo</span><span class="p">(</span><span class="nv">CframeValue</span><span class="p">.</span><span class="py">Value</span><span class="p">)</span>
 <span class="kr">end</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -518,50 +519,57 @@ Remote functions - это функции, которые можно вызыва
 <section id="clickdetector">
 <h2>ClickDetector<a class="headerlink" href="#clickdetector" title="Link to this heading">#</a></h2>
 <p>Server Script</p>
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span> <span class="n">click_detector</span> <span class="o">=</span> <span class="n">script</span><span class="p">.</span><span class="n">Parent</span><span class="p">.</span><span class="n">ClickDetector</span>
-<span class="kd">local</span> <span class="n">part</span> <span class="o">=</span> <span class="n">script</span><span class="p">.</span><span class="n">Parent</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span><span class="w"> </span><span class="nv">click_detector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">script</span><span class="p">.</span><span class="py">Parent</span><span class="p">.</span><span class="py">ClickDetector</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">script</span><span class="p">.</span><span class="py">Parent</span>
 
-<span class="kr">function</span> <span class="nf">click</span><span class="p">()</span>
-	<span class="n">part</span><span class="p">.</span><span class="n">BrickColor</span> <span class="o">=</span> <span class="n">BrickColor</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;Black&#39;</span><span class="p">)</span>
+<span class="kr">function</span><span class="w"> </span><span class="nf">click</span><span class="p">()</span>
+<span class="w">	</span><span class="nv">part</span><span class="p">.</span><span class="py">BrickColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">BrickColor</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s1">&#39;Black&#39;</span><span class="p">)</span>
 <span class="kr">end</span>
 
-<span class="n">click_detector</span><span class="p">.</span><span class="n">MouseClick</span><span class="p">:</span><span class="n">Connect</span><span class="p">(</span><span class="n">click</span><span class="p">)</span>
+<span class="nv">click_detector</span><span class="p">.</span><span class="py">MouseClick</span><span class="p">:</span><span class="nf">Connect</span><span class="p">(</span><span class="nv">click</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="remoteevent">
 <h2>RemoteEvent<a class="headerlink" href="#remoteevent" title="Link to this heading">#</a></h2>
 <p>Server Script</p>
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span> <span class="n">ReplicatedStorage</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">)</span>
-<span class="kd">local</span> <span class="n">remoteEvent</span> <span class="o">=</span> <span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">FindFirstChildOfClass</span><span class="p">(</span><span class="s2">&quot;RemoteEvent&quot;</span><span class="p">)</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span><span class="w"> </span><span class="nv">ReplicatedStorage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">game</span><span class="p">:</span><span class="nf">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">)</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">remoteEvent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">ReplicatedStorage</span><span class="p">:</span><span class="nf">FindFirstChildOfClass</span><span class="p">(</span><span class="s2">&quot;RemoteEvent&quot;</span><span class="p">)</span>
 
-<span class="kd">local</span> <span class="kr">function</span> <span class="nf">something</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="n">info</span><span class="p">)</span>
-	<span class="nb">print</span><span class="p">(</span><span class="n">info</span><span class="p">)</span>
+<span class="kd">local</span><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">something</span><span class="p">(</span><span class="nv">player</span><span class="p">,</span><span class="w"> </span><span class="nv">info</span><span class="p">)</span>
+<span class="w">	</span><span class="nb">print</span><span class="p">(</span><span class="nv">info</span><span class="p">)</span>
 <span class="kr">end</span>
 
-<span class="n">remoteEvent</span><span class="p">.</span><span class="n">OnServerEvent</span><span class="p">:</span><span class="n">Connect</span><span class="p">(</span><span class="n">something</span><span class="p">)</span>
+<span class="nv">remoteEvent</span><span class="p">.</span><span class="py">OnServerEvent</span><span class="p">:</span><span class="nf">Connect</span><span class="p">(</span><span class="nv">something</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Local Script</p>
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span> <span class="n">ReplicatedStorage</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">)</span>
-<span class="kd">local</span> <span class="n">remoteEvent</span> <span class="o">=</span> <span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">FindFirstChildOfClass</span><span class="p">(</span><span class="s2">&quot;RemoteEvent&quot;</span><span class="p">)</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span><span class="w"> </span><span class="nv">ReplicatedStorage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">game</span><span class="p">:</span><span class="nf">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">)</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">remoteEvent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">ReplicatedStorage</span><span class="p">:</span><span class="nf">FindFirstChildOfClass</span><span class="p">(</span><span class="s2">&quot;RemoteEvent&quot;</span><span class="p">)</span>
 
-<span class="n">wait</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">remoteEvent</span><span class="p">:</span><span class="n">FireServer</span><span class="p">(</span><span class="s2">&quot;Прошло 10 секунд в local script&quot;</span><span class="p">)</span>
+<span class="nf">wait</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="nv">remoteEvent</span><span class="p">:</span><span class="nf">FireServer</span><span class="p">(</span><span class="s2">&quot;Прошло 10 секунд в local script&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="gui">
 <h2>Кнопка Gui<a class="headerlink" href="#gui" title="Link to this heading">#</a></h2>
 <p>StarterGui -&gt; ScreenGui -&gt; TextButton -&gt; LocalScript:</p>
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span> <span class="n">button</span> <span class="o">=</span> <span class="n">script</span><span class="p">.</span><span class="n">Parent</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span><span class="w"> </span><span class="nv">button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">script</span><span class="p">.</span><span class="py">Parent</span>
 
-<span class="kd">local</span> <span class="kr">function</span> <span class="nf">onButtonActivated</span><span class="p">()</span>
-	<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Мы нажали на кнопку&#39;</span><span class="p">)</span>
+<span class="kd">local</span><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">onButtonActivated</span><span class="p">()</span>
+<span class="w">	</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Мы нажали на кнопку&#39;</span><span class="p">)</span>
 <span class="kr">end</span>
-<span class="n">button</span><span class="p">.</span><span class="n">Activated</span><span class="p">:</span><span class="n">Connect</span><span class="p">(</span><span class="n">onButtonActivated</span><span class="p">)</span>
+<span class="nv">button</span><span class="p">.</span><span class="py">Activated</span><span class="p">:</span><span class="nf">Connect</span><span class="p">(</span><span class="nv">onButtonActivated</span><span class="p">)</span>
 </pre></div>
 </div>
+</section>
+<section id="id4">
+<h2>Касание других партов<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span><span class="w"> </span><span class="nv">touch_objects</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">clone</span><span class="p">.</span><span class="py">Trunk</span><span class="p">:</span><span class="nf">GetTouchingParts</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(Не работает, когда нет CanCollide)</p>
 </section>
 </section>
 
@@ -635,6 +643,7 @@ Remote functions - это функции, которые можно вызыва
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clickdetector">ClickDetector</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remoteevent">RemoteEvent</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gui">Кнопка Gui</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Касание других партов</a></li>
 </ul>
   </nav></div>
 

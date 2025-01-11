@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -565,34 +565,34 @@ else:
 </div>
 <p>Выходные данные: <code class="docutils literal notranslate"><span class="pre">ac</span> <span class="pre">off</span></code></p>
 </div></blockquote>
-<details><summary>Решение</summary>
-<pre>
-1.
-t_in = int(input())
-t_out = int(input())
-if t_in <= t_out:
-    if t_in > 20:
-        print("ac on")
-    else:
-        print("ac off")
-else:
-    print("open window")
-2.
-t_in = int(input())
-t_out = int(input())
-if t_in > t_out:
-    print("open window")
-elif t_in > 20:
-    print("ac on")
-else:
-    print("ac off")
-</pre>
-</details>
+<div class="toggle docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">--</span> <span class="mf">1.</span>
+<span class="n">t_in</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="n">t_out</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="k">if</span> <span class="n">t_in</span> <span class="o">&lt;=</span> <span class="n">t_out</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">t_in</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ac on&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ac off&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;open window&quot;</span><span class="p">)</span>
+<span class="o">--</span> <span class="mf">2.</span>
+<span class="n">t_in</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="n">t_out</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="k">if</span> <span class="n">t_in</span> <span class="o">&gt;</span> <span class="n">t_out</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;open window&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">t_in</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ac on&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ac off&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </section>
 <section id="id10">
 <h2>Первые или второй<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
 <p>На уроке физкультуры тренер говорит «на первый-второй рассчитайтесь». Вася стоит
--ым по счету. Что он скажет, <code class="docutils literal notranslate"><span class="pre">«первый»</span></code> или <code class="docutils literal notranslate"><span class="pre">«второй»</span></code>?<br />
+<code class="docutils literal notranslate"><span class="pre">N</span></code>-ым по счету. Что он скажет, <code class="docutils literal notranslate"><span class="pre">«первый»</span></code> или <code class="docutils literal notranslate"><span class="pre">«второй»</span></code>?<br />
 <strong>Входные данные</strong>: На первой строке вводится одно число<br />
 <strong>Входные данные</strong>: Выведите строку <code class="docutils literal notranslate"><span class="pre">first</span></code>, если Вася скажет «первый», и <code class="docutils literal notranslate"><span class="pre">second</span></code>, если «второй».
 Пример:</p>

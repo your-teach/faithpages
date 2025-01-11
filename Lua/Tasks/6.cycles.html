@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -488,15 +488,15 @@
 <p>Выходные данные: <code class="docutils literal notranslate"><span class="pre">4</span></code></p>
 </div></blockquote>
 <div class="toggle docutils container">
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">summa</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="kr">while</span> <span class="kc">true</span> <span class="kr">do</span>
-    <span class="n">number</span> <span class="o">=</span> <span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
-    <span class="n">summa</span> <span class="o">=</span> <span class="n">summa</span> <span class="o">+</span> <span class="n">number</span>
-    <span class="kr">if</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">0</span> <span class="kr">then</span>
-        <span class="kr">break</span>
-    <span class="kr">end</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">summa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="kr">while</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nv">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
+<span class="w">    </span><span class="nv">summa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">summa</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">number</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">number</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="kr">break</span>
+<span class="w">    </span><span class="kr">end</span>
 <span class="kr">end</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">summa</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">summa</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -509,15 +509,15 @@
 Выходные данные: <code class="docutils literal notranslate"><span class="pre">'нисьлепа'</span></code></p>
 </div></blockquote>
 <div class="toggle docutils container">
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="nb">io.read</span><span class="p">()</span>
-<span class="n">i</span> <span class="o">=</span> <span class="o">#</span><span class="n">text</span>
-<span class="n">reverse</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-<span class="kr">while</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="kr">do</span>
-    <span class="n">letter</span> <span class="o">=</span> <span class="n">text</span><span class="p">:</span><span class="n">sub</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="n">reverse</span> <span class="o">=</span> <span class="n">reverse</span> <span class="o">..</span> <span class="n">letter</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.read</span><span class="p">()</span>
+<span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">#</span><span class="nv">text</span>
+<span class="nv">reverse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
+<span class="kr">while</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nv">letter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">text</span><span class="p">:</span><span class="nf">sub</span><span class="p">(</span><span class="nv">i</span><span class="p">,</span><span class="w"> </span><span class="nv">i</span><span class="p">)</span>
+<span class="w">    </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">reverse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">reverse</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nv">letter</span>
 <span class="kr">end</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">reverse</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">reverse</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -565,30 +565,30 @@
 <p>Выходные данные: <code class="docutils literal notranslate"><span class="pre">2</span></code></p>
 </div></blockquote>
 <div class="toggle docutils container">
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
-<span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">score</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="kr">while</span> <span class="n">score</span> <span class="o">&lt;=</span> <span class="n">n</span> <span class="kr">do</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
-    <span class="kr">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="kr">then</span>
-        <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="kr">end</span>
-    <span class="n">score</span> <span class="o">=</span> <span class="n">score</span> <span class="o">+</span> <span class="mi">1</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
+<span class="nv">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="nv">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="kr">while</span><span class="w"> </span><span class="nv">score</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="nv">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="kr">end</span>
+<span class="w">    </span><span class="nv">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">score</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
 <span class="kr">end</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">k</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="toggle docutils container">
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
-<span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="kr">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="kr">do</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
-    <span class="kr">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="kr">then</span>
-        <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="kr">end</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
+<span class="nv">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="nv">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="kr">end</span>
 <span class="kr">end</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">k</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -608,20 +608,20 @@
 Выходные данные: <code class="docutils literal notranslate"><span class="pre">11</span></code></p>
 </div></blockquote>
 <div class="toggle docutils container">
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">enter</span> <span class="o">=</span> <span class="nb">io.read</span><span class="p">()</span>
-<span class="n">i</span> <span class="o">=</span> <span class="nb">string.find</span><span class="p">(</span><span class="n">enter</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
-<span class="n">n</span> <span class="o">=</span> <span class="n">enter</span><span class="p">:</span><span class="n">sub</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">k</span> <span class="o">=</span> <span class="n">enter</span><span class="p">:</span><span class="n">sub</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">n</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="nb">tonumber</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="nb">tonumber</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
-<span class="n">day</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="kr">while</span> <span class="n">s</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="kr">do</span>
-    <span class="kr">if</span> <span class="n">day</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">~=</span> <span class="mi">0</span> <span class="kr">then</span>
-        <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="n">k</span>
-    <span class="kr">end</span>
-    <span class="n">day</span> <span class="o">=</span> <span class="n">day</span> <span class="o">+</span> <span class="mi">1</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">enter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.read</span><span class="p">()</span>
+<span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">string.find</span><span class="p">(</span><span class="nv">enter</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">enter</span><span class="p">:</span><span class="nf">sub</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="nv">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">enter</span><span class="p">:</span><span class="nf">sub</span><span class="p">(</span><span class="nv">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="nv">n</span><span class="p">,</span><span class="w"> </span><span class="nv">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nv">n</span><span class="p">),</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nv">k</span><span class="p">)</span>
+<span class="nv">day</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="nv">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="kr">while</span><span class="w"> </span><span class="nv">s</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">day</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="o">~=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="nv">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">k</span>
+<span class="w">    </span><span class="kr">end</span>
+<span class="w">    </span><span class="nv">day</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">day</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
 <span class="kr">end</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">day</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">day</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -648,27 +648,27 @@
 </div>
 </div></blockquote>
 <div class="toggle docutils container">
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
-<span class="kr">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="kr">do</span>
-    <span class="kr">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span> <span class="kr">then</span>
-        <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-    <span class="kr">else</span>
-        <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-    <span class="kr">end</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="kr">else</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
 </div>
 </div>
 <div class="toggle docutils container">
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
-<span class="n">score</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="kr">while</span> <span class="n">score</span> <span class="o">&lt;=</span> <span class="n">n</span> <span class="kr">do</span>
-    <span class="kr">if</span> <span class="n">score</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span> <span class="kr">then</span>
-        <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-    <span class="kr">else</span>
-        <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-    <span class="kr">end</span>
-    <span class="n">score</span> <span class="o">=</span> <span class="n">score</span> <span class="o">+</span> <span class="mi">1</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
+<span class="nv">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="kr">while</span><span class="w"> </span><span class="nv">score</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">score</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="kr">else</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="kr">end</span>
+<span class="w">    </span><span class="nv">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">score</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
 <span class="kr">end</span>
 </pre></div>
 </div>
@@ -687,16 +687,16 @@
 Выходные данные: <code class="docutils literal notranslate"><span class="pre">0,-1,-2,-3</span></code></p>
 </div></blockquote>
 <div class="toggle docutils container">
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span>
-<span class="kr">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="kr">then</span> <span class="n">step</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="kr">else</span> <span class="n">step</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="kr">end</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">10</span>
+<span class="kr">if</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kr">then</span><span class="w"> </span><span class="nv">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="kr">else</span><span class="w"> </span><span class="nv">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="kr">end</span>
 
-<span class="kr">for</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">step</span> <span class="kr">do</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nv">n</span><span class="p">,</span><span class="w"> </span><span class="nv">step</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">x</span><span class="p">)</span>
 <span class="kr">end</span>
 
 <span class="c1">-- альтернативное условие, с тернарным оператором:</span>
-<span class="n">step</span> <span class="o">=</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="mi">1</span> <span class="ow">or</span> <span class="o">-</span><span class="mi">1</span>
+<span class="nv">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span>
 </pre></div>
 </div>
 </div>
@@ -716,14 +716,14 @@
 </pre></div>
 </div>
 <div class="toggle docutils container">
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">stars</span> <span class="o">=</span> <span class="s1">&#39;*&#39;</span>
-<span class="kr">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span> <span class="kr">do</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">stars</span><span class="p">)</span>
-    <span class="kr">if</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">5</span> <span class="kr">then</span>
-        <span class="n">stars</span> <span class="o">=</span> <span class="n">stars</span> <span class="o">..</span> <span class="s1">&#39;*&#39;</span>
-    <span class="kr">else</span>
-        <span class="n">stars</span> <span class="o">=</span> <span class="n">stars</span><span class="p">:</span><span class="n">sub</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">string.len</span><span class="p">(</span><span class="n">stars</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="kr">end</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">stars</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;*&#39;</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">stars</span><span class="p">)</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="nv">stars</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">stars</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="s1">&#39;*&#39;</span>
+<span class="w">    </span><span class="kr">else</span>
+<span class="w">        </span><span class="nv">stars</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">stars</span><span class="p">:</span><span class="nf">sub</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nb">string.len</span><span class="p">(</span><span class="nv">stars</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
 </div>
@@ -737,15 +737,15 @@
 Выходная таблица: <code class="docutils literal notranslate"><span class="pre">{81,</span> <span class="pre">39,</span> <span class="pre">5,</span> <span class="pre">3,</span> <span class="pre">2,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-7}</span></code></p>
 </div></blockquote>
 <div class="toggle docutils container">
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">}</span>
-<span class="nb">table.sort</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-<span class="n">s2</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="kr">for</span> <span class="n">i</span> <span class="o">=</span> <span class="o">#</span><span class="n">s</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span> <span class="kr">do</span>
-    <span class="nb">table.insert</span><span class="p">(</span><span class="n">s2</span><span class="p">,</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">}</span>
+<span class="nb">table.sort</span><span class="p">(</span><span class="nv">s</span><span class="p">)</span>
+<span class="nv">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">#</span><span class="nv">s</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nb">table.insert</span><span class="p">(</span><span class="nv">s2</span><span class="p">,</span><span class="w"> </span><span class="nv">s</span><span class="p">[</span><span class="nv">i</span><span class="p">])</span>
 <span class="kr">end</span>
 
-<span class="kr">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span> <span class="kr">do</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">k</span><span class="p">,</span><span class="nv">v</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">ipairs</span><span class="p">(</span><span class="nv">s2</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">k</span><span class="p">,</span><span class="nv">v</span><span class="p">)</span>
 <span class="kr">end</span>
 </pre></div>
 </div>
@@ -775,35 +775,35 @@
 Выходные данные: <code class="docutils literal notranslate"><span class="pre">лес</span> <span class="pre">огород</span> <span class="pre">солнце</span> <span class="pre">очки</span> <span class="pre">имя</span></code></p>
 </div></blockquote>
 <div class="toggle docutils container">
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="s2">&quot;лес огород солнце очки лес имя очки&quot;</span>
-<span class="n">dict</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="nb">next</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-<span class="kr">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="o">#</span><span class="n">words</span><span class="o">+</span><span class="mi">1</span> <span class="kr">do</span>
-    <span class="n">letter</span> <span class="o">=</span> <span class="n">words</span><span class="p">:</span><span class="n">sub</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
-    <span class="kr">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="s2">&quot; &quot;</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">==</span> <span class="o">#</span><span class="n">words</span><span class="o">+</span><span class="mi">1</span> <span class="kr">then</span>
-        <span class="nb">table.insert</span><span class="p">(</span><span class="n">dict</span><span class="p">,</span> <span class="nb">next</span><span class="p">)</span>
-        <span class="nb">next</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-    <span class="kr">else</span>
-        <span class="nb">next</span> <span class="o">=</span> <span class="nb">next</span> <span class="o">..</span> <span class="n">letter</span>
-    <span class="kr">end</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">words</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;лес огород солнце очки лес имя очки&quot;</span>
+<span class="nv">dict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
+<span class="nb">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">#</span><span class="nv">words</span><span class="o">+</span><span class="mi">1</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nv">letter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">words</span><span class="p">:</span><span class="nf">sub</span><span class="p">(</span><span class="nv">i</span><span class="p">,</span><span class="w"> </span><span class="nv">i</span><span class="p">)</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">letter</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">#</span><span class="nv">words</span><span class="o">+</span><span class="mi">1</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="nb">table.insert</span><span class="p">(</span><span class="nv">dict</span><span class="p">,</span><span class="w"> </span><span class="nb">next</span><span class="p">)</span>
+<span class="w">        </span><span class="nb">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="w">    </span><span class="kr">else</span>
+<span class="w">        </span><span class="nb">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">next</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nv">letter</span>
+<span class="w">    </span><span class="kr">end</span>
 <span class="kr">end</span>
 <span class="c1">-- dict = {&#39;лес&#39;, &#39;огород&#39;, &#39;солнце&#39;, &#39;очки&#39;, &#39;лес&#39;, &#39;имя&#39;, &#39;очки&#39;}</span>
-<span class="n">dict_sorted</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="kr">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">dict</span><span class="p">)</span> <span class="kr">do</span>
-    <span class="n">can</span> <span class="o">=</span> <span class="kc">true</span>
-    <span class="kr">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">dict_sorted</span><span class="p">)</span> <span class="kr">do</span>
-        <span class="kr">if</span> <span class="n">value</span> <span class="o">==</span> <span class="n">v</span> <span class="kr">then</span>
-            <span class="n">can</span> <span class="o">=</span> <span class="kc">false</span>
-            <span class="kr">break</span>
-        <span class="kr">end</span>
-    <span class="kr">end</span>
-    <span class="kr">if</span> <span class="n">can</span> <span class="kr">then</span>
-        <span class="nb">table.insert</span><span class="p">(</span><span class="n">dict_sorted</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-    <span class="kr">end</span>
+<span class="nv">dict_sorted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">key</span><span class="p">,</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">ipairs</span><span class="p">(</span><span class="nv">dict</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nv">can</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="kr">for</span><span class="w"> </span><span class="nv">k</span><span class="p">,</span><span class="w"> </span><span class="nv">v</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">ipairs</span><span class="p">(</span><span class="nv">dict_sorted</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">        </span><span class="kr">if</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">v</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">            </span><span class="nv">can</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">            </span><span class="kr">break</span>
+<span class="w">        </span><span class="kr">end</span>
+<span class="w">    </span><span class="kr">end</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">can</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="nb">table.insert</span><span class="p">(</span><span class="nv">dict_sorted</span><span class="p">,</span><span class="w"> </span><span class="nv">value</span><span class="p">)</span>
+<span class="w">    </span><span class="kr">end</span>
 <span class="kr">end</span>
 
-<span class="kr">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">dict_sorted</span><span class="p">)</span> <span class="kr">do</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">k</span><span class="p">,</span><span class="nv">v</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">ipairs</span><span class="p">(</span><span class="nv">dict_sorted</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">v</span><span class="p">)</span>
 <span class="kr">end</span>
 </pre></div>
 </div>
@@ -837,12 +837,12 @@
 Выходные данные: <code class="docutils literal notranslate"><span class="pre">15</span></code></p>
 </div></blockquote>
 <div class="toggle docutils container">
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
-<span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="kr">for</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="kr">do</span>
-    <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="n">i</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
+<span class="nv">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nv">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">i</span>
 <span class="kr">end</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">k</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -863,36 +863,36 @@
 Выходные данные: <code class="docutils literal notranslate"><span class="pre">'Символ</span> <span class="pre">не</span> <span class="pre">входит</span> <span class="pre">в</span> <span class="pre">рус/англ</span> <span class="pre">алфавиты'</span></code></p>
 </div></blockquote>
 <div class="toggle docutils container">
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">languages</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">languages</span><span class="p">.</span><span class="n">rus</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;й&quot;</span><span class="p">,</span> <span class="s2">&quot;ц&quot;</span><span class="p">,</span> <span class="s2">&quot;у&quot;</span><span class="p">,</span> <span class="s2">&quot;к&quot;</span><span class="p">,</span> <span class="s2">&quot;е&quot;</span><span class="p">,</span> <span class="s2">&quot;н&quot;</span><span class="p">,</span> <span class="s2">&quot;г&quot;</span><span class="p">,</span> <span class="s2">&quot;ш&quot;</span><span class="p">,</span> <span class="s2">&quot;щ&quot;</span><span class="p">,</span> <span class="s2">&quot;з&quot;</span><span class="p">,</span> <span class="s2">&quot;х&quot;</span><span class="p">,</span> <span class="s2">&quot;ъ&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;ф&quot;</span><span class="p">,</span> <span class="s2">&quot;ы&quot;</span><span class="p">,</span> <span class="s2">&quot;в&quot;</span><span class="p">,</span> <span class="s2">&quot;а&quot;</span><span class="p">,</span> <span class="s2">&quot;п&quot;</span><span class="p">,</span> <span class="s2">&quot;р&quot;</span><span class="p">,</span> <span class="s2">&quot;о&quot;</span><span class="p">,</span> <span class="s2">&quot;л&quot;</span><span class="p">,</span> <span class="s2">&quot;д&quot;</span><span class="p">,</span> <span class="s2">&quot;ж&quot;</span><span class="p">,</span> <span class="s2">&quot;э&quot;</span><span class="p">,</span> <span class="s2">&quot;я&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;ч&quot;</span><span class="p">,</span> <span class="s2">&quot;с&quot;</span><span class="p">,</span> <span class="s2">&quot;м&quot;</span><span class="p">,</span> <span class="s2">&quot;и&quot;</span><span class="p">,</span> <span class="s2">&quot;т&quot;</span><span class="p">,</span> <span class="s2">&quot;ь&quot;</span><span class="p">,</span> <span class="s2">&quot;б&quot;</span><span class="p">,</span> <span class="s2">&quot;ю&quot;</span><span class="p">,</span> <span class="s2">&quot;ё&quot;</span><span class="p">}</span>
-<span class="n">languages</span><span class="p">.</span><span class="n">eng</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;q&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="s2">&quot;t&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="s2">&quot;u&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">,</span> <span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="s2">&quot;h&quot;</span><span class="p">,</span> <span class="s2">&quot;j&quot;</span><span class="p">,</span> <span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="s2">&quot;l&quot;</span><span class="p">,</span> <span class="s2">&quot;z&quot;</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;v&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;n&quot;</span><span class="p">,</span> <span class="s2">&quot;m&quot;</span><span class="p">}</span>
-<span class="n">letter</span> <span class="o">=</span> <span class="s1">&#39;п&#39;</span>
-<span class="kr">for</span> <span class="n">lang</span><span class="p">,</span> <span class="n">letters</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">languages</span><span class="p">)</span> <span class="kr">do</span>
-    <span class="kr">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="kr">in</span> <span class="nb">ipairs</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span> <span class="kr">do</span>
-        <span class="kr">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="n">v</span> <span class="kr">then</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">lang</span><span class="p">)</span>
-            <span class="n">run</span> <span class="o">=</span> <span class="kc">true</span>
-            <span class="kr">break</span>
-        <span class="kr">end</span>
-    <span class="kr">end</span>
-    <span class="kr">if</span> <span class="n">run</span> <span class="kr">then</span>
-        <span class="kr">break</span>
-    <span class="kr">end</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">languages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
+<span class="nv">languages</span><span class="p">.</span><span class="py">rus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s2">&quot;й&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ц&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;у&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;к&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;е&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;н&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;г&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ш&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;щ&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;з&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;х&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ъ&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;ф&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ы&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;в&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;а&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;п&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;р&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;о&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;л&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;д&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ж&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;э&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;я&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;ч&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;с&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;м&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;и&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;т&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ь&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;б&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ю&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ё&quot;</span><span class="p">}</span>
+<span class="nv">languages</span><span class="p">.</span><span class="py">eng</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s2">&quot;q&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;w&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;e&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;r&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;t&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;y&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;u&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;i&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;o&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;p&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;s&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;d&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;f&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;g&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;h&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;j&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;k&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;l&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;z&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;x&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;c&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;v&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;n&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;m&quot;</span><span class="p">}</span>
+<span class="nv">letter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;п&#39;</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">lang</span><span class="p">,</span><span class="w"> </span><span class="nv">letters</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">pairs</span><span class="p">(</span><span class="nv">languages</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="kr">for</span><span class="w"> </span><span class="nv">k</span><span class="p">,</span><span class="w"> </span><span class="nv">v</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">ipairs</span><span class="p">(</span><span class="nv">letters</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">        </span><span class="kr">if</span><span class="w"> </span><span class="nv">letter</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">v</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">            </span><span class="nb">print</span><span class="p">(</span><span class="nv">lang</span><span class="p">)</span>
+<span class="w">            </span><span class="nv">run</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">            </span><span class="kr">break</span>
+<span class="w">        </span><span class="kr">end</span>
+<span class="w">    </span><span class="kr">end</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">run</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="kr">break</span>
+<span class="w">    </span><span class="kr">end</span>
 <span class="kr">end</span>
 </pre></div>
 </div>
 </div>
 <div class="toggle docutils container">
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">letter</span> <span class="o">=</span> <span class="s1">&#39;t&#39;</span>
-<span class="kr">if</span> <span class="p">(</span><span class="n">letter</span> <span class="o">&gt;=</span> <span class="s1">&#39;а&#39;</span> <span class="ow">and</span> <span class="n">letter</span> <span class="o">&lt;=</span> <span class="s1">&#39;я&#39;</span> <span class="ow">or</span>
-        <span class="n">letter</span> <span class="o">&gt;=</span> <span class="s1">&#39;А&#39;</span> <span class="ow">and</span> <span class="n">letter</span> <span class="o">&lt;=</span> <span class="s1">&#39;Я&#39;</span><span class="p">)</span> <span class="kr">then</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rus&#39;</span><span class="p">)</span>
-<span class="kr">elseif</span> <span class="p">(</span><span class="n">letter</span> <span class="o">&gt;=</span> <span class="s1">&#39;a&#39;</span> <span class="ow">and</span> <span class="n">letter</span> <span class="o">&lt;=</span> <span class="s1">&#39;z&#39;</span> <span class="ow">or</span>
-            <span class="n">letter</span> <span class="o">&gt;=</span> <span class="s1">&#39;A&#39;</span> <span class="ow">and</span> <span class="n">letter</span> <span class="o">&lt;=</span> <span class="s1">&#39;Z&#39;</span><span class="p">)</span> <span class="kr">then</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;eng&#39;</span><span class="p">)</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">letter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;t&#39;</span>
+<span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nv">letter</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="s1">&#39;а&#39;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nv">letter</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="s1">&#39;я&#39;</span><span class="w"> </span><span class="ow">or</span>
+<span class="w">        </span><span class="nv">letter</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="s1">&#39;А&#39;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nv">letter</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="s1">&#39;Я&#39;</span><span class="p">)</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rus&#39;</span><span class="p">)</span>
+<span class="kr">elseif</span><span class="w"> </span><span class="p">(</span><span class="nv">letter</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="s1">&#39;a&#39;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nv">letter</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="s1">&#39;z&#39;</span><span class="w"> </span><span class="ow">or</span>
+<span class="w">            </span><span class="nv">letter</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="s1">&#39;A&#39;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nv">letter</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="s1">&#39;Z&#39;</span><span class="p">)</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;eng&#39;</span><span class="p">)</span>
 <span class="kr">end</span>
 </pre></div>
 </div>
@@ -900,10 +900,10 @@
 </section>
 <section id="id16">
 <h2>Собираемся в поход<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">things</span> <span class="o">=</span> <span class="p">{[</span><span class="s1">&#39;зажигалка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;компас&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;фрукты&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;рубашка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
-          <span class="p">[</span><span class="s1">&#39;термос&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;аптечка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;куртка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;бинокль&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
-        <span class="p">[</span><span class="s1">&#39;удочка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">1200</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;салфетки&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;бутерброды&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">820</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;палатка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">5500</span><span class="p">,</span>
-        <span class="p">[</span><span class="s1">&#39;спальный мешок&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">2250</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;жвачка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">10</span><span class="p">}</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">things</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{[</span><span class="s1">&#39;зажигалка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;компас&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;фрукты&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;рубашка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+<span class="w">          </span><span class="p">[</span><span class="s1">&#39;термос&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;аптечка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;куртка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;бинокль&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
+<span class="w">        </span><span class="p">[</span><span class="s1">&#39;удочка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">1200</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;салфетки&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;бутерброды&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">820</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;палатка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">5500</span><span class="p">,</span>
+<span class="w">        </span><span class="p">[</span><span class="s1">&#39;спальный мешок&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">2250</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;жвачка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">10</span><span class="p">}</span>
 </pre></div>
 </div>
 <p>Турист собирается в поход. Он сможет нести <code class="docutils literal notranslate"><span class="pre">N</span></code> кг вещей. Но вещей, которые он запланировал уложить в рюкзак, оказалось намного больше. Нужно определить, какие вещи от наиболее тяжелых к самым легким поместятся в рюкзак. Пример:</p>
@@ -930,40 +930,40 @@
 <li><p>Итоговый цикл, который перебирает вещи и выводит те, которые вмещаются в рюкзак.</p></li>
 </ol>
 <div class="toggle docutils container">
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="n">things</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="p">[</span><span class="s1">&#39;зажигалка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;компас&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;фрукты&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;рубашка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
-    <span class="p">[</span><span class="s1">&#39;термос&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;аптечка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;куртка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;бинокль&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
-    <span class="p">[</span><span class="s1">&#39;удочка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">1200</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;салфетки&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;бутерброды&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">820</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;палатка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">5500</span><span class="p">,</span>
-    <span class="p">[</span><span class="s1">&#39;спальный мешок&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">2250</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;жвачка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">10</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">things</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">[</span><span class="s1">&#39;зажигалка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;компас&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;фрукты&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;рубашка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+<span class="w">    </span><span class="p">[</span><span class="s1">&#39;термос&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;аптечка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;куртка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;бинокль&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
+<span class="w">    </span><span class="p">[</span><span class="s1">&#39;удочка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">1200</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;салфетки&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;бутерброды&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">820</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;палатка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">5500</span><span class="p">,</span>
+<span class="w">    </span><span class="p">[</span><span class="s1">&#39;спальный мешок&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">2250</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;жвачка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">10</span>
 <span class="p">}</span>
-<span class="n">N</span> <span class="o">=</span> <span class="nb">io.read</span><span class="p">()</span> <span class="o">*</span> <span class="mi">1000</span>
+<span class="nv">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.read</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span>
 <span class="c1">-- 1. Создаем таблицу только цифр из таблицы things</span>
-<span class="n">step_sorted</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="kr">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">things</span><span class="p">)</span> <span class="kr">do</span>
-    <span class="nb">table.insert</span><span class="p">(</span><span class="n">step_sorted</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+<span class="nv">only_nums</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">k</span><span class="p">,</span><span class="nv">v</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">pairs</span><span class="p">(</span><span class="nv">things</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nb">table.insert</span><span class="p">(</span><span class="nv">only_nums</span><span class="p">,</span><span class="w"> </span><span class="nv">v</span><span class="p">)</span>
 <span class="kr">end</span>
 
 <span class="c1">-- 2. Сортируем таблицу с числами по возрастанию</span>
-<span class="nb">table.sort</span><span class="p">(</span><span class="n">step_sorted</span><span class="p">)</span> 
+<span class="nb">table.sort</span><span class="p">(</span><span class="nv">only_nums</span><span class="p">)</span><span class="w"> </span>
 <span class="c1">-- Сортируем таблицу с числами по убыванию</span>
-<span class="n">things_sorted</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="kr">for</span> <span class="n">x</span> <span class="o">=</span> <span class="o">#</span><span class="n">step_sorted</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span> <span class="kr">do</span>
-    <span class="nb">table.insert</span><span class="p">(</span><span class="n">things_sorted</span><span class="p">,</span> <span class="n">step_sorted</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+<span class="nv">things_sorted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">#</span><span class="nv">only_nums</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nb">table.insert</span><span class="p">(</span><span class="nv">things_sorted</span><span class="p">,</span><span class="w"> </span><span class="nv">only_nums</span><span class="p">[</span><span class="nv">x</span><span class="p">])</span>
 <span class="kr">end</span>
 
 <span class="c1">-- 3. Cделаем свап таблицы things, чтобы мы находили, например по ключу 5500 -&gt; &#39;палатку&#39;</span>
-<span class="n">things_swap</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="kr">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">things</span><span class="p">)</span> <span class="kr">do</span>
-    <span class="n">things_swap</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">k</span>
+<span class="nv">things_swap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">k</span><span class="p">,</span><span class="nv">v</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">pairs</span><span class="p">(</span><span class="nv">things</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nv">things_swap</span><span class="p">[</span><span class="nv">v</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">k</span>
 <span class="kr">end</span>
 
 <span class="c1">-- Здесь итоговый цикл, который перебирает отсортированную таблицу, проводит вычисление, и выводит нужные вещи</span>
-<span class="n">sm</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="kr">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="kr">in</span> <span class="nb">pairs</span><span class="p">(</span><span class="n">things_sorted</span><span class="p">)</span> <span class="kr">do</span>
-    <span class="kr">if</span> <span class="n">sm</span> <span class="o">+</span> <span class="n">v</span> <span class="o">&lt;=</span> <span class="n">N</span> <span class="kr">then</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">things_swap</span><span class="p">[</span><span class="n">v</span><span class="p">])</span>
-        <span class="n">sm</span> <span class="o">=</span> <span class="n">sm</span> <span class="o">+</span> <span class="n">v</span>
-    <span class="kr">end</span>
+<span class="nv">sm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">k</span><span class="p">,</span><span class="w"> </span><span class="nv">v</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">pairs</span><span class="p">(</span><span class="nv">things_sorted</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">sm</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">v</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nv">N</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="nv">things_swap</span><span class="p">[</span><span class="nv">v</span><span class="p">])</span>
+<span class="w">        </span><span class="nv">sm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">sm</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">v</span>
+<span class="w">    </span><span class="kr">end</span>
 <span class="kr">end</span>
 
 <span class="c1">-- Вывод всех элементов таблицы</span>
