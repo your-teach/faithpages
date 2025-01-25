@@ -865,7 +865,7 @@ or
     -С помощью for и специальной функции pairs или ipairs можно перебрать таблицу.
     -ipairs для простых таблицы
         t = {&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;}
-        for x in ipairs(t) do
+        for k, v in ipairs(t) do
             print(x)
         end
     -pairs для словарей-таблиц
