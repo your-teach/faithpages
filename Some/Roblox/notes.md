@@ -129,6 +129,12 @@ button.Activated:Connect(onButtonActivated)
 
 ```lua
 local touch_objects = clone.Trunk:GetTouchingParts()
+
+-- Второй вариант касание:
+local Workspace = game:GetService("Workspace")
+local foundParts = Workspace:GetPartsInPart(clone.Box_Trunk)
 ```
 
 (Не работает, когда нет CanCollide)
+
+	
