@@ -567,6 +567,10 @@ Remote functions - это функции, которые можно вызыва
 <section id="id4">
 <h2>Касание других партов<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span><span class="w"> </span><span class="nv">touch_objects</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">clone</span><span class="p">.</span><span class="py">Trunk</span><span class="p">:</span><span class="nf">GetTouchingParts</span><span class="p">()</span>
+
+<span class="c1">-- Второй вариант касание:</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">Workspace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">game</span><span class="p">:</span><span class="nf">GetService</span><span class="p">(</span><span class="s2">&quot;Workspace&quot;</span><span class="p">)</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">foundParts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Workspace</span><span class="p">:</span><span class="nf">GetPartsInPart</span><span class="p">(</span><span class="nv">clone</span><span class="p">.</span><span class="py">Box_Trunk</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>(Не работает, когда нет CanCollide)</p>
