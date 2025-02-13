@@ -543,9 +543,34 @@
 <h2>Уникальные элементы таблицы<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
 <p>Напишите функцию, которая принимает в качестве аргумента таблицу и возвращает новую таблицу с уникальными элементами первой таблицы. Пример:</p>
 <blockquote>
-<div><p>Входная таблица: <code class="docutils literal notranslate"><span class="pre">{1,2,3,3,3,3,4,5}</span></code><br />
-Выходная уникальная таблица: <code class="docutils literal notranslate"><span class="pre">{1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5}</span></code></p>
+<div><p>Входная таблица: <code class="docutils literal notranslate"><span class="pre">{13,1,2,3,3,3,3,4,5,</span> <span class="pre">3}</span></code><br />
+Выходная уникальная таблица: <code class="docutils literal notranslate"><span class="pre">{13,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5}</span></code></p>
 </div></blockquote>
+<div class="toggle docutils container">
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">31</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">49</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span>
+<span class="kr">function</span><span class="w"> </span><span class="nf">unique</span><span class="p">(</span><span class="nv">raw</span><span class="p">)</span>
+<span class="w">    </span><span class="nv">newtable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">    </span><span class="kr">for</span><span class="w"> </span><span class="nv">_</span><span class="p">,</span><span class="w"> </span><span class="nv">num</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">ipairs</span><span class="p">(</span><span class="nv">raw</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">        </span><span class="nv">have</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">        </span><span class="kr">for</span><span class="w"> </span><span class="nv">__</span><span class="p">,</span><span class="w"> </span><span class="nv">num2</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">ipairs</span><span class="p">(</span><span class="nv">newtable</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">            </span><span class="kr">if</span><span class="w"> </span><span class="nv">num</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">num2</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">                </span><span class="nv">have</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">                </span><span class="kr">break</span>
+<span class="w">            </span><span class="kr">end</span>
+<span class="w">        </span><span class="kr">end</span>
+<span class="w">        </span><span class="kr">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="nv">have</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">            </span><span class="nb">table.insert</span><span class="p">(</span><span class="nv">newtable</span><span class="p">,</span><span class="w"> </span><span class="nv">num</span><span class="p">)</span>
+<span class="w">        </span><span class="kr">end</span>
+<span class="w">    </span><span class="kr">end</span>
+<span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="nv">newtable</span>
+<span class="kr">end</span>
+<span class="nv">newtable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">unique</span><span class="p">(</span><span class="nv">t</span><span class="p">)</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">_</span><span class="p">,</span><span class="nv">v</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">ipairs</span><span class="p">(</span><span class="nv">newtable</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">v</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
+</div>
 </section>
 <section id="id8">
 <h2>Простые числа таблицы<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
