@@ -780,7 +780,9 @@
 <span class="nb">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
 <span class="kr">for</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">#</span><span class="nv">words</span><span class="o">+</span><span class="mi">1</span><span class="w"> </span><span class="kr">do</span>
 <span class="w">    </span><span class="nv">letter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">words</span><span class="p">:</span><span class="nf">sub</span><span class="p">(</span><span class="nv">i</span><span class="p">,</span><span class="w"> </span><span class="nv">i</span><span class="p">)</span>
-<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">letter</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">#</span><span class="nv">words</span><span class="o">+</span><span class="mi">1</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="c1">-- letter = &quot;&quot;,</span>
+<span class="w">    </span><span class="c1">-- потому что при чтении несуществуюего индекса будет пустая строка</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">letter</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nv">letter</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span><span class="kr">then</span>
 <span class="w">        </span><span class="nb">table.insert</span><span class="p">(</span><span class="nv">dict</span><span class="p">,</span><span class="w"> </span><span class="nb">next</span><span class="p">)</span>
 <span class="w">        </span><span class="nb">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
 <span class="w">    </span><span class="kr">else</span>
@@ -789,6 +791,7 @@
 <span class="kr">end</span>
 <span class="c1">-- dict = {&#39;лес&#39;, &#39;огород&#39;, &#39;солнце&#39;, &#39;очки&#39;, &#39;лес&#39;, &#39;имя&#39;, &#39;очки&#39;}</span>
 <span class="nv">dict_sorted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
+<span class="nv">new_words</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
 <span class="kr">for</span><span class="w"> </span><span class="nv">key</span><span class="p">,</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">ipairs</span><span class="p">(</span><span class="nv">dict</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
 <span class="w">    </span><span class="nv">can</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">    </span><span class="kr">for</span><span class="w"> </span><span class="nv">k</span><span class="p">,</span><span class="w"> </span><span class="nv">v</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">ipairs</span><span class="p">(</span><span class="nv">dict_sorted</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
@@ -798,13 +801,14 @@
 <span class="w">        </span><span class="kr">end</span>
 <span class="w">    </span><span class="kr">end</span>
 <span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">can</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="nv">space</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39; &#39;</span>
+<span class="w">        </span><span class="c1">-- чтобы пробел не добавился в конец</span>
+<span class="w">        </span><span class="kr">if</span><span class="w"> </span><span class="nv">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">#</span><span class="nv">dict</span><span class="w"> </span><span class="kr">then</span><span class="w"> </span><span class="nv">space</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="kr">end</span>
 <span class="w">        </span><span class="nb">table.insert</span><span class="p">(</span><span class="nv">dict_sorted</span><span class="p">,</span><span class="w"> </span><span class="nv">value</span><span class="p">)</span>
+<span class="w">        </span><span class="nv">new_words</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">new_words</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nv">space</span>
 <span class="w">    </span><span class="kr">end</span>
 <span class="kr">end</span>
-
-<span class="kr">for</span><span class="w"> </span><span class="nv">k</span><span class="p">,</span><span class="nv">v</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">ipairs</span><span class="p">(</span><span class="nv">dict_sorted</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">v</span><span class="p">)</span>
-<span class="kr">end</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">new_words</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
