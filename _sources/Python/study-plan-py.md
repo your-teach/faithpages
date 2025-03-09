@@ -844,6 +844,23 @@ example2()
     https://docs-python.ru/tutorial/vstroennye-funktsii-interpretatora-python/funktsija-open/
     https://letpy.com/handbook/builtins/open/
 
+
+## Работа с json
+```python
+import json
+
+# Прочитать файл data.json
+with open('data.json', 'r', encoding='utf-8') as file:
+    result = json.load(file) # Перевести содержимое файла в dict
+print(result, type(result))
+
+# Записать dict в data.json
+data = {"1234": "ASDFG"}
+with open('data.json', 'w', encoding='utf-8') as file:
+    result = json.dumps(data) # Перевести dict в str
+    file.write(result) # Записать в файл
+```
+
 ## Работа с папками.
 
     import os

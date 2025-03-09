@@ -474,6 +474,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-sorted">Особенности сортировки через sort() и sorted().</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Итераторы и выражения-генераторы.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Работа с файлами.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#json">Работа с json</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Работа с папками.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Перемещение файлов.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Декораторы</a></li>
@@ -1466,6 +1467,23 @@ https://letpy.com/handbook/builtins/open/
 </pre></div>
 </div>
 </section>
+<section id="json">
+<h2>Работа с json<a class="headerlink" href="#json" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+
+<span class="c1"># Прочитать файл data.json</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.json&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span> <span class="c1"># Перевести содержимое файла в dict</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+
+<span class="c1"># Записать dict в data.json</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;1234&quot;</span><span class="p">:</span> <span class="s2">&quot;ASDFG&quot;</span><span class="p">}</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.json&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="c1"># Перевести dict в str</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="c1"># Записать в файл</span>
+</pre></div>
+</div>
+</section>
 <section id="id22">
 <h2>Работа с папками.<a class="headerlink" href="#id22" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import os
@@ -1716,6 +1734,7 @@ test2(&#39;privet&#39;)
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-sorted">Особенности сортировки через sort() и sorted().</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Итераторы и выражения-генераторы.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Работа с файлами.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#json">Работа с json</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Работа с папками.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Перемещение файлов.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Декораторы</a></li>
