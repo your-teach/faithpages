@@ -752,28 +752,6 @@ example2()
     -Глубокое копирование элемента, подходит для кортежей -> copy.deepcopy(tuple)
     -Обычное копирование -> copy.copy
 
-## Обработка ошибок и исключений.
-
-    - try, except
-    - else - выполняется, когда не произошло никаких ошибок
-    - finally - выполняется всегда после блока try, вне зависимости произошла ошибка или нет
-    - assert - утверждение, которое можно вложить внутрь try. (assert True == False), в случае False вызывается ошибка
-    - assert len(var) < 6, 'message' - Можно вместо 'message' создать текст для псевдо-ошибки
-    - assert работает не только в try, его можно вложить в любую часть кода
-    - raise - возбуждает указанное исключение -> raise BaseException('Мы вызвали ошибку')
-        https://sky.pro/wiki/python/ponimanie-i-ispolzovanie-klyuchevogo-slova-raise-v-python/
-    -Пример:
-        try:
-            res = x / y
-        except:
-            print("Произошло исключение")
-        except BaseException as err:
-            print("Сообщение ошибки: " + err)
-        else:
-            print("Исключений не произошло")
-        finally:
-            print("Блок finally выполняется всегда")
-
 ## Функция map.
 
     -https://proproprogs.ru/python_base/python3-funkciya-map-primery-ee-ispolzovaniya
@@ -816,6 +794,30 @@ example2()
         for i in lst:
             print(i, end="")
             if i > 100: break
+
+
+## Обработка ошибок и исключений.
+
+    - try, except
+    - else - выполняется, когда не произошло никаких ошибок
+    - finally - выполняется всегда после блока try, вне зависимости произошла ошибка или нет
+    - assert - утверждение, которое можно вложить внутрь try. (assert True == False), в случае False вызывается ошибка
+    - assert len(var) < 6, 'message' - Можно вместо 'message' создать текст для псевдо-ошибки
+    - assert работает не только в try, его можно вложить в любую часть кода
+    - raise - возбуждает указанное исключение -> raise BaseException('Мы вызвали ошибку')
+        https://sky.pro/wiki/python/ponimanie-i-ispolzovanie-klyuchevogo-slova-raise-v-python/
+    -Пример:
+        try:
+            res = x / y
+        except:
+            print("Произошло исключение")
+        except BaseException as err:
+            print("Сообщение ошибки: " + err)
+        else:
+            print("Исключений не произошло")
+        finally:
+            print("Блок finally выполняется всегда")
+
 
 ## Работа с файлами.
 

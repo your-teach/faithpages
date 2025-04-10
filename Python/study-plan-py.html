@@ -466,13 +466,13 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Еще о функциях</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Анонимная-функция или Лямбда-функция.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Разное</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Обработка ошибок и исключений.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#map">Функция map.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">Функция filter для отбора значений итерируемых объектов.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zip">Функция zip.(Редко используется)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yield">Функция-генератор. Оператор yield.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-sorted">Особенности сортировки через sort() и sorted().</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Итераторы и выражения-генераторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Итераторы и выражения-генераторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Обработка ошибок и исключений.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Работа с файлами.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#json">Работа с json</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Работа с папками.</a></li>
@@ -1359,30 +1359,6 @@ del list[0] - удаление элемента по индексу
 </pre></div>
 </div>
 </section>
-<section id="id19">
-<h2>Обработка ошибок и исключений.<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- try, except
-- else - выполняется, когда не произошло никаких ошибок
-- finally - выполняется всегда после блока try, вне зависимости произошла ошибка или нет
-- assert - утверждение, которое можно вложить внутрь try. (assert True == False), в случае False вызывается ошибка
-- assert len(var) &lt; 6, &#39;message&#39; - Можно вместо &#39;message&#39; создать текст для псевдо-ошибки
-- assert работает не только в try, его можно вложить в любую часть кода
-- raise - возбуждает указанное исключение -&gt; raise BaseException(&#39;Мы вызвали ошибку&#39;)
-    https://sky.pro/wiki/python/ponimanie-i-ispolzovanie-klyuchevogo-slova-raise-v-python/
--Пример:
-    try:
-        res = x / y
-    except:
-        print(&quot;Произошло исключение&quot;)
-    except BaseException as err:
-        print(&quot;Сообщение ошибки: &quot; + err)
-    else:
-        print(&quot;Исключений не произошло&quot;)
-    finally:
-        print(&quot;Блок finally выполняется всегда&quot;)
-</pre></div>
-</div>
-</section>
 <section id="map">
 <h2>Функция map.<a class="headerlink" href="#map" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-https://proproprogs.ru/python_base/python3-funkciya-map-primery-ee-ispolzovaniya
@@ -1413,8 +1389,8 @@ del list[0] - удаление элемента по индексу
 </pre></div>
 </div>
 </section>
-<section id="id20">
-<h2>Итераторы и выражения-генераторы.<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
+<section id="id19">
+<h2>Итераторы и выражения-генераторы.<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Генератор ? это итератор, элементы которого можно перебирать (итерировать) только один раз.
 -Итератор ? это объект, который поддерживает функцию next() для перехода к следующему элементу коллекции.
 -Итерируемый объект ? это объект, который позволяет поочередно обойти свои элементы и может быть преобразован к итератору.
@@ -1435,6 +1411,30 @@ del list[0] - удаление элемента по индексу
     for i in lst:
         print(i, end=&quot;&quot;)
         if i &gt; 100: break
+</pre></div>
+</div>
+</section>
+<section id="id20">
+<h2>Обработка ошибок и исключений.<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- try, except
+- else - выполняется, когда не произошло никаких ошибок
+- finally - выполняется всегда после блока try, вне зависимости произошла ошибка или нет
+- assert - утверждение, которое можно вложить внутрь try. (assert True == False), в случае False вызывается ошибка
+- assert len(var) &lt; 6, &#39;message&#39; - Можно вместо &#39;message&#39; создать текст для псевдо-ошибки
+- assert работает не только в try, его можно вложить в любую часть кода
+- raise - возбуждает указанное исключение -&gt; raise BaseException(&#39;Мы вызвали ошибку&#39;)
+    https://sky.pro/wiki/python/ponimanie-i-ispolzovanie-klyuchevogo-slova-raise-v-python/
+-Пример:
+    try:
+        res = x / y
+    except:
+        print(&quot;Произошло исключение&quot;)
+    except BaseException as err:
+        print(&quot;Сообщение ошибки: &quot; + err)
+    else:
+        print(&quot;Исключений не произошло&quot;)
+    finally:
+        print(&quot;Блок finally выполняется всегда&quot;)
 </pre></div>
 </div>
 </section>
@@ -1728,13 +1728,13 @@ test2(&#39;privet&#39;)
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Еще о функциях</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Анонимная-функция или Лямбда-функция.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Разное</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Обработка ошибок и исключений.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#map">Функция map.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">Функция filter для отбора значений итерируемых объектов.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zip">Функция zip.(Редко используется)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yield">Функция-генератор. Оператор yield.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-sorted">Особенности сортировки через sort() и sorted().</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Итераторы и выражения-генераторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Итераторы и выражения-генераторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Обработка ошибок и исключений.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Работа с файлами.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#json">Работа с json</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Работа с папками.</a></li>
