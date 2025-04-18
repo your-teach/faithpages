@@ -142,12 +142,12 @@ local foundParts = Workspace:GetPartsInPart(clone.Box_Trunk)
 
 ![](video/Animation%20Roblox.mkv)
 
-<video width="320" height="240" controls>
+<video text-align="center" width="600" height="400" controls>
   <source src="https://github.com/your-teach/faithpages/raw/refs/heads/main/video/Animation%20Roblox.mkv" type="video/mkv">
 </video>
 
 ![](https://github.com/your-teach/faithpages/raw/refs/heads/main/video/Animation-Roblox.mp4)
 
-<video width="320" height="240" controls>
+<video text-align="center" width="600" height="400" controls>
   <source src="https://github.com/your-teach/faithpages/raw/refs/heads/main/video/Animation-Roblox.mp4" type="video/mp4">
 </video>
