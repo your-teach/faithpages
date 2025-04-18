@@ -47,7 +47,6 @@ parts:
         sections:
         - file: Some/Roblox/notes
         - file: Some/Roblox/scripts
-        - file: Some/Roblox/door-script
       - file: Tables/ubuntu-table
         sections:
         - file: Some/Ubuntu/selenium-vps
