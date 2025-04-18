@@ -144,6 +144,6 @@ local foundParts = Workspace:GetPartsInPart(clone.Box_Trunk)
   <source src="https://github.com/your-teach/faithpages/raw/refs/heads/main/video/Animation%20Roblox.mkv" type="video/mkv">
 </video> -->
 
-<video style="display: block; margin: auto;" width="600" height="400" controls>
+<video style="display: block; margin: auto;" width="600" height="400" controls muted>
   <source src="https://github.com/your-teach/faithpages/raw/refs/heads/main/video/Animation-Roblox.mp4" type="video/mp4">
 </video>
