@@ -138,3 +138,6 @@ local foundParts = Workspace:GetPartsInPart(clone.Box_Trunk)
 (Не работает, когда нет CanCollide)
 
 	
+## Анимация
+
+![](/video/Animation%20Roblox.mkv)
