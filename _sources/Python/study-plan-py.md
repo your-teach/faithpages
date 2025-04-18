@@ -800,11 +800,11 @@ example2()
 
     - try, except
     - else - выполняется, когда не произошло никаких ошибок
-    - finally - выполняется всегда после блока try, вне зависимости произошла ошибка или нет
+    - finally - выполняется всегда в самом конце, вне зависимости произошла ошибка или нет
     - assert - утверждение, которое можно вложить внутрь try. (assert True == False), в случае False вызывается ошибка
     - assert len(var) < 6, 'message' - Можно вместо 'message' создать текст для псевдо-ошибки
     - assert работает не только в try, его можно вложить в любую часть кода
-    - raise - возбуждает указанное исключение -> raise BaseException('Мы вызвали ошибку')
+    - raise - возбуждает/поднимает указанное исключение -> raise BaseException('Мы вызвали ошибку')
         https://sky.pro/wiki/python/ponimanie-i-ispolzovanie-klyuchevogo-slova-raise-v-python/
     -Пример:
         try:

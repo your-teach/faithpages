@@ -11,3 +11,6 @@
 
 ## Виртуальное окружение в Ubuntu
 `source venv/bin/activate`
+
+## Установить пакет из Github
+`pip install git+https://github.com/username/name_package`

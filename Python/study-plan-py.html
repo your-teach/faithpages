@@ -1418,11 +1418,11 @@ del list[0] - удаление элемента по индексу
 <h2>Обработка ошибок и исключений.<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- try, except
 - else - выполняется, когда не произошло никаких ошибок
-- finally - выполняется всегда после блока try, вне зависимости произошла ошибка или нет
+- finally - выполняется всегда в самом конце, вне зависимости произошла ошибка или нет
 - assert - утверждение, которое можно вложить внутрь try. (assert True == False), в случае False вызывается ошибка
 - assert len(var) &lt; 6, &#39;message&#39; - Можно вместо &#39;message&#39; создать текст для псевдо-ошибки
 - assert работает не только в try, его можно вложить в любую часть кода
-- raise - возбуждает указанное исключение -&gt; raise BaseException(&#39;Мы вызвали ошибку&#39;)
+- raise - возбуждает/поднимает указанное исключение -&gt; raise BaseException(&#39;Мы вызвали ошибку&#39;)
     https://sky.pro/wiki/python/ponimanie-i-ispolzovanie-klyuchevogo-slova-raise-v-python/
 -Пример:
     try:
