@@ -641,10 +641,6 @@ document.write(`
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- &gt; &lt; &gt;= &lt;= == !=
 - in
 - not in
-- is
-- not is
-
-- Задание: Программа принимает число. Нужно вывести true, если число четное, а иначе вывести false.
 </pre></div>
 </div>
 </section>
@@ -652,10 +648,8 @@ document.write(`
 <h2>Логические операторы.<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- and, or. 
 - not
+- is
 - and имеет больший приоритет чем or
-- отличные два примеры с приоритетами действий:
-    True or False and False or True and False or False 
-    (True or False) and (False or True) and (False or False)
 </pre></div>
 </div>
 </section>
@@ -1190,6 +1184,9 @@ del list[0] - удаление элемента по индексу
 
     <span class="n">a</span> <span class="o">=</span> <span class="n">now</span> <span class="o">-</span> <span class="n">fixdate</span> <span class="c1"># тоже можем вычитать или суммировать</span>
 
+    <span class="c1"># Или даже сравнивать объекты времени (&gt; &lt; &gt;= &lt;= != ==)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">now</span> <span class="o">&lt;=</span> <span class="n">fixdate</span><span class="p">)</span>
+
     <span class="c1"># Форматируем объект даты в строку, с гибкими настройками</span>
     <span class="n">s</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span>
             <span class="n">now</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%d</span><span class="s2">.%m.%Y | %H:%M:%S&quot;</span><span class="p">)</span>
@@ -1442,7 +1439,7 @@ del list[0] - удаление элемента по индексу
 <h2>Работа с файлами.<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>file = open(&#39;text.txt, &#39;w&#39;)
 file.write(&#39;hey&#39;)
-file.writelines([&#39;hey&#39;,&#39;hey2]) # heyhey2
+file.writelines([&#39;hey&#39;,&#39;hey2]) # heyhey2 (непонятно зачем нужен)
 file = open(&#39;text.txt, &#39;r&#39;)
 file.read() # читает весь файл
 file.readline() # при каждом вызове читаем следующую строчку
@@ -1450,7 +1447,7 @@ file.readlines() # список со всеми строками
 -Прочтение с помощью цикла
     for line in file:
         print(line)
-fili.close() # закрытие файла
+file.close() # закрытие файла
 -Зачастую надо дописывать в open -&gt; encoding=&#39;utf-8&#39;
 -Обозначения:
     r - чтение
@@ -1459,10 +1456,11 @@ fili.close() # закрытие файла
     a - дозапись
     a+ - дозапись и чтение (создается файл, если не существует)
     + - запись/чтение (r+, w+)
-    x - вызывает ошибку, если файл существует, иначе создает файл
+    x - вызывает ошибку, если файл существует,  иначе создает файл и открывает его на запись
+
 - with file open(&#39;name.txt&#39;, &#39;w&#39;, encoding=&#39;utf-8&#39;):
     file.write(&#39;hello world&#39;)
--Задача на эту тему: Создать &quot;Регистрацию&quot; и &quot;Вход&quot; через терминал с помощью базы, которая лежит в txt.
+
 https://metanit.com/python/tutorial/4.1.php
 https://docs-python.ru/tutorial/vstroennye-funktsii-interpretatora-python/funktsija-open/
 https://letpy.com/handbook/builtins/open/

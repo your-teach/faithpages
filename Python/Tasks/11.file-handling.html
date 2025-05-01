@@ -443,6 +443,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Анализ файла</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Вызов исключения, если файл существует.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Создание уникального теста</a></li>
 </ul>
             </nav>
         </div>
@@ -477,23 +479,111 @@ Complex is better than complicated.
 <span class="mi">4</span> <span class="n">строки</span>
 </pre></div>
 </div>
-<details><summary>Решение</summary>
-<pre>
-file = open('file.txt', 'r')
-<p>r = file.readlines()
-letters = 0
-words = 0
-lines = len(r)</p>
-<p>for x in r:
-line = x.replace(‘\n’, ‘’).replace(‘.’, ‘’).split(’ ‘)
-print(line)
-words += len(line)
-letters += len(‘’.join(line))</p>
-<p>print(lines, ‘lines’)
-print(words, ‘words’)
-print(letters, ‘letters’)
-</pre></p>
-</details></section>
+<div class="toggle docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;text.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">letters</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">words</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">lines</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="n">letters</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">line</span><span class="p">))</span>
+    <span class="n">words</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="n">lines</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h2>Вызов исключения, если файл существует.<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Записать входные данные в файл с именем “system-data.txt”, если такой файл существует, то необходимо вызвать исключение со следующими действиями:
+Сохранить содержимое “system-data.txt” в новый файл с именем сегодняшней даты и времени (например “24-04-2025-18-34.txt”). После этого перезаписать “system-data.txt” с новыми входными данными.</p>
+</section>
+<section id="id4">
+<h2>Создание уникального теста<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Напишите программу для заполнения теста содержимым. Тест может иметь произвольное количество вопросов и ответов на них. Например:</p>
+<div class="toggle docutils container">
+<p>Пример входных данных:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Введите имя теста: Кто ты на даче?
+Введите вопрос №1 (остановиться - stop): Дача нужна для того, чтобы..
+Введите ответ №1 (остановиться - stop): Выращивать свои овощи и фрукты
+Введите ответ №2 (остановиться - stop): Тусоваться
+Введите ответ №3 (остановиться - stop): Каждый день уходить в лес
+Введите ответ №4 (остановиться - stop): stop
+Введите вопрос №2 (остановиться - stop): Что надо сажать в первую очередь?
+Введите ответ №1 (остановиться - stop): Кабачки
+Введите ответ №2 (остановиться - stop): Баклажаны
+Введите ответ №3 (остановиться - stop): stop
+Введите вопрос №3 (остановиться - stop): Что полезнее?
+Введите ответ №1 (остановиться - stop): Петрушка
+Введите ответ №2 (остановиться - stop): Укроп
+Введите ответ №3 (остановиться - stop): Рукола
+Введите ответ №4 (остановиться - stop): Зелёный лук
+Введите ответ №5 (остановиться - stop): stop
+Введите вопрос №4 (остановиться - stop): stop
+</pre></div>
+</div>
+<p>Ожидаемый результат содержимого Json файла:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Кто ты на даче?&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;questions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;Дача нужна для того, чтобы..&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Выращивать свои овощи и фрукты&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Тусоваться&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;3&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Каждый день уходить в лес&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;Что надо сажать в первую очередь?&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Кабачки&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Баклажаны&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;Что полезнее?&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Петрушка&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Укроп&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;3&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Рукола&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;4&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Зелёный лук&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>Решение:</p>
+<div class="toggle docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+
+<span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Введите имя теста: &quot;</span><span class="p">)</span>
+
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">questions</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">quest</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Введите вопрос №</span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s2"> (остановиться - stop): &quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">quest</span> <span class="o">==</span> <span class="s2">&quot;stop&quot;</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="n">questions</span><span class="p">[</span><span class="n">quest</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">count_ans</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">count_ans</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">answer</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Введите ответ №</span><span class="si">{</span><span class="n">count_ans</span><span class="si">}</span><span class="s2"> (остановиться - stop): &quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">answer</span> <span class="o">==</span> <span class="s2">&quot;stop&quot;</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">questions</span><span class="p">[</span><span class="n">quest</span><span class="p">][</span><span class="n">count_ans</span><span class="p">]</span> <span class="o">=</span> <span class="n">answer</span>
+
+<span class="n">test</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+        <span class="s2">&quot;questions&quot;</span><span class="p">:</span> <span class="n">questions</span><span class="p">}</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -561,6 +651,8 @@ print(letters, ‘letters’)
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Анализ файла</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Вызов исключения, если файл существует.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Создание уникального теста</a></li>
 </ul>
   </nav></div>
 
