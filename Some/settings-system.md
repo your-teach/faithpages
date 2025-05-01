@@ -62,6 +62,11 @@
 ## Кодировка файла в vscode.
 - Внизу нажать на utf-8 -> Сохранить в кодировке -> Cyrillic (CP 866)
 
+## Conda в терминале
+Автоактивация базовой среды conda:
+`conda config --set auto_activate_base true`
+Использование системной среды по умолчанию:
+`conda config --set auto_activate_base false`
 
 ## Если pip недоступен
 - Как установить модуль на конкретную версию python, варианты:
