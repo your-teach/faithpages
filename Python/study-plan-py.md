@@ -118,26 +118,18 @@
             math.e - число e
 
 ## Условные и логические операторы.
-
     - > < >= <= == !=
     - in
     - not in
-    - is
-    - not is
-    
-    - Задание: Программа принимает число. Нужно вывести true, если число четное, а иначе вывести false.
 
 ## Логические операторы.
 
     - and, or. 
     - not
+    - is
     - and имеет больший приоритет чем or
-    - отличные два примеры с приоритетами действий:
-        True or False and False or True and False or False 
-        (True or False) and (False or True) and (False or False)
 
 ## Строки.
-
     -Есть два вида кавычек "text" и 'text'
     -"""Многострочные строки""", '''Многострочные строки, пример 2'''
     -Перевод строки \n: 'hello\nworld'
@@ -643,6 +635,9 @@ example2()
 
     a = now - fixdate # тоже можем вычитать или суммировать
 
+    # Или даже сравнивать объекты времени (> < >= <= != ==)
+    print(now <= fixdate)
+
     # Форматируем объект даты в строку, с гибкими настройками
     s = datetime.strftime(
             now, "%d.%m.%Y | %H:%M:%S")
@@ -823,7 +818,7 @@ example2()
 
     file = open('text.txt, 'w')
     file.write('hey')
-    file.writelines(['hey','hey2]) # heyhey2
+    file.writelines(['hey','hey2]) # heyhey2 (непонятно зачем нужен)
     file = open('text.txt, 'r')
     file.read() # читает весь файл
     file.readline() # при каждом вызове читаем следующую строчку
@@ -831,7 +826,7 @@ example2()
     -Прочтение с помощью цикла
         for line in file:
             print(line)
-    fili.close() # закрытие файла
+    file.close() # закрытие файла
     -Зачастую надо дописывать в open -> encoding='utf-8'
     -Обозначения:
         r - чтение
@@ -840,10 +835,11 @@ example2()
         a - дозапись
         a+ - дозапись и чтение (создается файл, если не существует)
         + - запись/чтение (r+, w+)
-        x - вызывает ошибку, если файл существует, иначе создает файл
+        x - вызывает ошибку, если файл существует,  иначе создает файл и открывает его на запись
+
     - with file open('name.txt', 'w', encoding='utf-8'):
         file.write('hello world')
-    -Задача на эту тему: Создать "Регистрацию" и "Вход" через терминал с помощью базы, которая лежит в txt.
+
     https://metanit.com/python/tutorial/4.1.php
     https://docs-python.ru/tutorial/vstroennye-funktsii-interpretatora-python/funktsija-open/
     https://letpy.com/handbook/builtins/open/
