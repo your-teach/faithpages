@@ -64,9 +64,9 @@
 
 ## Conda в терминале
 Автоактивация базовой среды conda:
-`conda config --set auto_activate_base true`
+`conda config --set auto_activate_base true`\
 Использование системной среды по умолчанию:
-`conda config --set auto_activate_base false`
+`conda config --set auto_activate_base false`\
 
 ## Если pip недоступен
 - Как установить модуль на конкретную версию python, варианты:
