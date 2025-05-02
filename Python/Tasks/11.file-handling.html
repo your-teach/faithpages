@@ -509,28 +509,28 @@ Complex is better than complicated.
 <p>Напишите программу для заполнения теста содержимым. Тест может иметь произвольное количество вопросов и ответов на них. Например:</p>
 <div class="toggle docutils container">
 <p>Пример входных данных:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Введите имя теста: Кто ты на даче?
-Введите вопрос №1 (остановиться - stop): Дача нужна для того, чтобы..
-Введите ответ №1 (остановиться - stop): Выращивать свои овощи и фрукты
-Введите ответ №2 (остановиться - stop): Тусоваться
-Введите ответ №3 (остановиться - stop): Каждый день уходить в лес
-Введите ответ №4 (остановиться - stop): stop
-Введите вопрос №2 (остановиться - stop): Что надо сажать в первую очередь?
-Введите ответ №1 (остановиться - stop): Кабачки
-Введите ответ №2 (остановиться - stop): Баклажаны
-Введите ответ №3 (остановиться - stop): stop
-Введите вопрос №3 (остановиться - stop): Что полезнее?
-Введите ответ №1 (остановиться - stop): Петрушка
-Введите ответ №2 (остановиться - stop): Укроп
-Введите ответ №3 (остановиться - stop): Рукола
-Введите ответ №4 (остановиться - stop): Зелёный лук
-Введите ответ №5 (остановиться - stop): stop
-Введите вопрос №4 (остановиться - stop): stop
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Введите имя теста: Какой ты дачник?</span>
+<span class="go">Введите вопрос №1 (остановиться - stop): Дача нужна для того, чтобы..</span>
+<span class="go">Введите ответ №1 (остановиться - stop): Выращивать свои овощи и фрукты</span>
+<span class="go">Введите ответ №2 (остановиться - stop): Тусоваться</span>
+<span class="go">Введите ответ №3 (остановиться - stop): Каждый день уходить в лес</span>
+<span class="go">Введите ответ №4 (остановиться - stop): stop</span>
+<span class="go">Введите вопрос №2 (остановиться - stop): Что надо сажать в первую очередь?</span>
+<span class="go">Введите ответ №1 (остановиться - stop): Кабачки</span>
+<span class="go">Введите ответ №2 (остановиться - stop): Баклажаны</span>
+<span class="go">Введите ответ №3 (остановиться - stop): stop</span>
+<span class="go">Введите вопрос №3 (остановиться - stop): Что полезнее?</span>
+<span class="go">Введите ответ №1 (остановиться - stop): Петрушка</span>
+<span class="go">Введите ответ №2 (остановиться - stop): Укроп</span>
+<span class="go">Введите ответ №3 (остановиться - stop): Рукола</span>
+<span class="go">Введите ответ №4 (остановиться - stop): Зелёный лук</span>
+<span class="go">Введите ответ №5 (остановиться - stop): stop</span>
+<span class="go">Введите вопрос №4 (остановиться - stop): stop</span>
 </pre></div>
 </div>
 <p>Ожидаемый результат содержимого Json файла:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Кто ты на даче?&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Какой ты дачник?&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;questions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="nt">&quot;Дача нужна для того, чтобы..&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Выращивать свои овощи и фрукты&quot;</span><span class="p">,</span>
