@@ -447,6 +447,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#powershell">Виртуальное окружение в PowerShell</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ubuntu">Виртуальное окружение в Ubuntu</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda">Виртуальная среда Conda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ssh">Копирование файлов по ssh</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github">Установить пакет из Github</a></li>
 </ul>
             </nav>
@@ -496,6 +497,14 @@ document.write(`
 <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">deactivate</span> <span class="pre">ENV_NAME</span></code><br />
 Деактивация base:<br />
 <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">deactivate</span> <span class="pre">base</span></code> или просто <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">deactivate</span></code></p>
+</section>
+<section id="ssh">
+<h2>Копирование файлов по ssh<a class="headerlink" href="#ssh" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://putty.org.ru/download.html">PSCP</a></p>
+<p>Скопировать файл по ssh с сервера на windows:<br />
+<code class="docutils literal notranslate"><span class="pre">pscp</span> <span class="pre">login&#64;111.111.111:/folder/file.txt</span> <span class="pre">&quot;C:\Users\bound\Desktop&quot;</span></code><br />
+Наоборот с windows на сервер:<br />
+<code class="docutils literal notranslate"><span class="pre">pscp</span> <span class="pre">&quot;C:\Users\bound\Desktop\file.txt&quot;</span> <span class="pre">login&#64;111.111.111:/folder/</span></code></p>
 </section>
 <section id="github">
 <h2>Установить пакет из Github<a class="headerlink" href="#github" title="Link to this heading">#</a></h2>
@@ -572,6 +581,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#powershell">Виртуальное окружение в PowerShell</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ubuntu">Виртуальное окружение в Ubuntu</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda">Виртуальная среда Conda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ssh">Копирование файлов по ssh</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github">Установить пакет из Github</a></li>
 </ul>
   </nav></div>
