@@ -29,7 +29,7 @@
 Деактивация:  
 `conda deactivate ENV_NAME`  
 Деактивация base:  
-`conda deactivate base`  
+`conda deactivate base` или просто `conda deactivate`  
 
 ## Установить пакет из Github
 `pip install git+https://github.com/username/name_package`  
