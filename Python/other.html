@@ -442,9 +442,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#venv">Создание виртуального окружения venv</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cmd">Виртуальное окружение в CMD</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#powershell">Виртуальное окружение в PowerShell</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ubuntu">Виртуальное окружение в Ubuntu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda">Виртуальная среда Conda</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github">Установить пакет из Github</a></li>
 </ul>
             </nav>
@@ -459,6 +461,10 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="py">
 <h1>Разное <code class="docutils literal notranslate"><span class="pre">py</span></code><a class="headerlink" href="#py" title="Link to this heading">#</a></h1>
+<section id="venv">
+<h2>Создание виртуального окружения venv<a class="headerlink" href="#venv" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">venv</span> <span class="pre">ENV_NAME</span></code></p>
+</section>
 <section id="cmd">
 <h2>Виртуальное окружение в CMD<a class="headerlink" href="#cmd" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">venv\Scripts\activate.bat</span></code></p>
@@ -475,6 +481,21 @@ document.write(`
 <section id="ubuntu">
 <h2>Виртуальное окружение в Ubuntu<a class="headerlink" href="#ubuntu" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">venv/bin/activate</span></code></p>
+</section>
+<section id="conda">
+<h2>Виртуальная среда Conda<a class="headerlink" href="#conda" title="Link to this heading">#</a></h2>
+<p>Создание новой:
+<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">--name=ENV_NAME</span> <span class="pre">python=3.11</span></code></p>
+<p>Первый запуск:
+<code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">activate</span> <span class="pre">base</span></code>
+а потом
+<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">my_env</span></code></p>
+<p>Активация:
+<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">ENV_NAME</span></code>
+Деактивация:
+<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">deactivate</span> <span class="pre">ENV_NAME</span></code>
+Деактивация base:
+<code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">deactivate</span> <span class="pre">base</span></code></p>
 </section>
 <section id="github">
 <h2>Установить пакет из Github<a class="headerlink" href="#github" title="Link to this heading">#</a></h2>
@@ -546,9 +567,11 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#venv">Создание виртуального окружения venv</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cmd">Виртуальное окружение в CMD</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#powershell">Виртуальное окружение в PowerShell</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ubuntu">Виртуальное окружение в Ubuntu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda">Виртуальная среда Conda</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github">Установить пакет из Github</a></li>
 </ul>
   </nav></div>
