@@ -51,4 +51,4 @@
 `pip download -d packages_path package`  
 
 Установка пакета:  
-`pip install --no-index --find-links packages_path package`console  
+`pip install --no-index --find-links packages_path package` 
