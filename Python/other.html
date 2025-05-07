@@ -443,12 +443,13 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#venv">Создание виртуального окружения venv</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cmd">Виртуальное окружение в CMD</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cmd">Активировать виртуальное окружение в CMD</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#powershell">Виртуальное окружение в PowerShell</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ubuntu">Виртуальное окружение в Ubuntu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ubuntu">Активировать Виртуальное окружение в Ubuntu</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda">Виртуальная среда Conda</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ssh">Копирование файлов по ssh</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github">Установить пакет из Github</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Загрузка пакетов для оффлайн установки</a></li>
 </ul>
             </nav>
         </div>
@@ -467,20 +468,20 @@ document.write(`
 <p><code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">venv</span> <span class="pre">ENV_NAME</span></code></p>
 </section>
 <section id="cmd">
-<h2>Виртуальное окружение в CMD<a class="headerlink" href="#cmd" title="Link to this heading">#</a></h2>
+<h2>Активировать виртуальное окружение в CMD<a class="headerlink" href="#cmd" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">venv\Scripts\activate.bat</span></code></p>
 </section>
 <section id="powershell">
 <h2>Виртуальное окружение в PowerShell<a class="headerlink" href="#powershell" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Открой PowerShell от имени администратора.</p></li>
-<li><p>Введи команду “Set-ExecutionPolicy unrestricted” без кавычек.</p></li>
+<li><p>Введи команду <code class="docutils literal notranslate"><span class="pre">Set-ExecutionPolicy</span> <span class="pre">unrestricted</span></code>.</p></li>
 <li><p>Теперь, активировать виртуальное окружение (не важно в этом же окне или в новом).
 <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">env\Scripts\activate</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">env\Scripts\activate</span></code></p></li>
 </ol>
 </section>
 <section id="ubuntu">
-<h2>Виртуальное окружение в Ubuntu<a class="headerlink" href="#ubuntu" title="Link to this heading">#</a></h2>
+<h2>Активировать Виртуальное окружение в Ubuntu<a class="headerlink" href="#ubuntu" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">venv/bin/activate</span></code></p>
 </section>
 <section id="conda">
@@ -503,12 +504,22 @@ document.write(`
 <p><a class="reference external" href="https://putty.org.ru/download.html">PSCP</a></p>
 <p>Скопировать файл по ssh с сервера на windows:<br />
 <code class="docutils literal notranslate"><span class="pre">pscp</span> <span class="pre">login&#64;111.111.111:/folder/file.txt</span> <span class="pre">&quot;C:\Users\bound\Desktop&quot;</span></code><br />
-Наоборот с windows на сервер:<br />
+Наоборот, с windows на сервер:<br />
 <code class="docutils literal notranslate"><span class="pre">pscp</span> <span class="pre">&quot;C:\Users\bound\Desktop\file.txt&quot;</span> <span class="pre">login&#64;111.111.111:/folder/</span></code></p>
+<p>Еще есть программа <a class="reference external" href="https://winscp.net/eng/download.php">WinSCP</a></p>
 </section>
 <section id="github">
 <h2>Установить пакет из Github<a class="headerlink" href="#github" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">git+https://github.com/username/name_package</span></code></p>
+</section>
+<section id="id1">
+<h2>Загрузка пакетов для оффлайн установки<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>Создание папки для пакетов:<br />
+<code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">packages_path</span></code><br />
+Загрузка пакета в папку:<br />
+<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">download</span> <span class="pre">-d</span> <span class="pre">packages_path</span> <span class="pre">package</span></code></p>
+<p>Установка пакета:<br />
+<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--no-index</span> <span class="pre">--find-links</span> <span class="pre">packages_path</span> <span class="pre">package</span></code>console</p>
 </section>
 </section>
 
@@ -577,12 +588,13 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#venv">Создание виртуального окружения venv</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cmd">Виртуальное окружение в CMD</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cmd">Активировать виртуальное окружение в CMD</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#powershell">Виртуальное окружение в PowerShell</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ubuntu">Виртуальное окружение в Ubuntu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ubuntu">Активировать Виртуальное окружение в Ubuntu</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda">Виртуальная среда Conda</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ssh">Копирование файлов по ssh</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github">Установить пакет из Github</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Загрузка пакетов для оффлайн установки</a></li>
 </ul>
   </nav></div>
 
