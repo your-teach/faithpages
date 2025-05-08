@@ -1486,11 +1486,46 @@ https://letpy.com/handbook/builtins/open/
 </section>
 <section id="id22">
 <h2>Работа с папками.<a class="headerlink" href="#id22" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import os
--Посмотреть все файлы, каталоги и подкаталоги по пути path (более удобно)
-    result = os.walk(path)
--Посмотреть все файлы и папки лежащие по пути path (менее информативно)
-    files = os.listdir(path)
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```python
+# Работа с папками и не только 
+import os
+
+# Посмотреть все файлы папки и подпапки по пути path
+path = &quot;C:\HOME\PROG\web&quot;
+result = list(os.walk(path))
+print(result)
+
+# Посмотреть только файлы по пути path
+files = os.listdir(path)
+print(files)
+
+# Создание папки (если уже существует будет ошибка)
+os.mkdir(&quot;NEW&quot;)
+
+# Создание папки (если существует, то ошибки не будет)
+# Без &quot;exist_ok=True&quot; выйдет ошибка
+os.makedirs(&quot;FOLDER&quot;, exist_ok=True)
+
+print(os.name) # имя системы
+
+print(os.environ)
+os.environ[&quot;NEW VARIABLE&quot;] = &quot;123&quot;
+
+# Удаление папки (Если папки не существует, будет ошибка)
+os.rmdir(&quot;NEW&quot;)
+# Удаление папки (Если папки не существует, будет ошибка)
+os.removedirs(&quot;NEW&quot;)
+
+# Исполняет команду в консоле, например cmd (если система windows)
+result = os.system(&quot;dir&quot;)
+print(result)
+
+# Переименовать файл или папку
+# os.rename(&quot;NEW&quot;, &quot;FOLDER&quot;)
+
+# Все команды os модуля: https://pythonworld.ru/moduli/modul-os.html
+# Упражнения на os: https://www.w3resource.com/python-exercises/os/index.php
+```  
 </pre></div>
 </div>
 </section>

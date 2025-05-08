@@ -862,12 +862,46 @@ with open('data.json', 'w', encoding='utf-8') as file:
 ```
 
 ## Работа с папками.
-
+    ```python
+    # Работа с папками и не только 
     import os
-    -Посмотреть все файлы, каталоги и подкаталоги по пути path (более удобно)
-        result = os.walk(path)
-    -Посмотреть все файлы и папки лежащие по пути path (менее информативно)
-        files = os.listdir(path)
+
+    # Посмотреть все файлы папки и подпапки по пути path
+    path = "C:\HOME\PROG\web"
+    result = list(os.walk(path))
+    print(result)
+
+    # Посмотреть только файлы по пути path
+    files = os.listdir(path)
+    print(files)
+
+    # Создание папки (если уже существует будет ошибка)
+    os.mkdir("NEW")
+
+    # Создание папки (если существует, то ошибки не будет)
+    # Без "exist_ok=True" выйдет ошибка
+    os.makedirs("FOLDER", exist_ok=True)
+
+    print(os.name) # имя системы
+
+    print(os.environ)
+    os.environ["NEW VARIABLE"] = "123"
+
+    # Удаление папки (Если папки не существует, будет ошибка)
+    os.rmdir("NEW")
+    # Удаление папки (Если папки не существует, будет ошибка)
+    os.removedirs("NEW")
+
+    # Исполняет команду в консоле, например cmd (если система windows)
+    result = os.system("dir")
+    print(result)
+
+    # Переименовать файл или папку
+    # os.rename("NEW", "FOLDER")
+
+    # Все команды os модуля: https://pythonworld.ru/moduli/modul-os.html
+    # Упражнения на os: https://www.w3resource.com/python-exercises/os/index.php
+    ```  
 
 ## Перемещение файлов.
 
