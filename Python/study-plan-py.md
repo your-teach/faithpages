@@ -863,7 +863,6 @@ with open('data.json', 'w', encoding='utf-8') as file:
 
 ## Работа с папками.
     ```python
-    # Работа с папками и не только 
     import os
 
     # Посмотреть все файлы папки и подпапки по пути path
