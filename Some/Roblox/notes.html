@@ -537,8 +537,10 @@ Remote functions - это функции, которые можно вызыва
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span><span class="w"> </span><span class="nv">click_detector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">script</span><span class="p">.</span><span class="py">Parent</span><span class="p">.</span><span class="py">ClickDetector</span>
 <span class="kd">local</span><span class="w"> </span><span class="nv">part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">script</span><span class="p">.</span><span class="py">Parent</span>
 
-<span class="kr">function</span><span class="w"> </span><span class="nf">click</span><span class="p">()</span>
+<span class="kr">function</span><span class="w"> </span><span class="nf">click</span><span class="p">(</span><span class="nv">player</span><span class="p">)</span>
 <span class="w">	</span><span class="nv">part</span><span class="p">.</span><span class="py">BrickColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">BrickColor</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s1">&#39;Black&#39;</span><span class="p">)</span>
+<span class="w">	</span><span class="c1">-- teleport player</span>
+<span class="w">    </span><span class="nv">player</span><span class="p">.</span><span class="py">Character</span><span class="p">.</span><span class="py">HumanoidRootPart</span><span class="p">.</span><span class="py">CFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">CFrame</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
 <span class="kr">end</span>
 
 <span class="nv">click_detector</span><span class="p">.</span><span class="py">MouseClick</span><span class="p">:</span><span class="nf">Connect</span><span class="p">(</span><span class="nv">click</span><span class="p">)</span>
