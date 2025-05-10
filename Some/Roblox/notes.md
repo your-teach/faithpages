@@ -75,12 +75,14 @@ https://create.roblox.com/docs/scripting/events/remote - Server <=> Client
 ## ClickDetector
 
 Server Script
-```lua
+```lua 
 local click_detector = script.Parent.ClickDetector
 local part = script.Parent
 
-function click()
+function click(player)
 	part.BrickColor = BrickColor.new('Black')
+	-- teleport player
+    player.Character.HumanoidRootPart.CFrame = CFrame.new(0, 0, 0)
 end
 
 click_detector.MouseClick:Connect(click)
