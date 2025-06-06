@@ -116,6 +116,9 @@ https://ru.wikibooks.org/wiki/Lua/Типы_данных
     a = 0 < 1 -- true
     b = 0 == 1 -- false
     c = 'abc' == 'abc' -- true
+    d = 'a' < 'b' -- true
+    e = '!' > '?' -- false
+    f = true == false -- false
 
 ## Логические операторы.
     -and 
@@ -158,8 +161,7 @@ https://ru.wikibooks.org/wiki/Lua/Типы_данных
     b = 'World'
     s = a..b -- Оператор .. соединяет строки
     s = 'one\ntwo' -- Экранирование, перевод строки на новую
-    s = 'abc' == 'abc' -- Сравнение строк
-    s = 'a' < 'b' -- true
+
     Срезы строк.
         text = 'my string variable'
         result = text:sub(4,9) -- находим символы с 4 по 9, 'string'
@@ -167,11 +169,6 @@ https://ru.wikibooks.org/wiki/Lua/Типы_данных
     Методы строк.
         string.find(var, 'кс') - возвращает индекс первого найденного 'кс', иначе nil
         Остальные методы строк https://quikluacsharp.ru/2015/03/21/funktsii-raboty-so-strokami-v-qlua-lua/
-
-## Срезы строк.
-    text = 'my string variable'
-    result = text:sub(4,9) -- находим символы с 4 по 9, 'string'
-    result = text:sub(1,1) -- находим первый символ строки, 'm'
 
 ## Преобразование типов данных.
     -При сравнении числа введенного с помощью io.read() с другим числом возникает ошибка:

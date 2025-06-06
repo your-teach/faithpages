@@ -450,22 +450,21 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Логические операторы.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Приоритетность знаков (сверху-вниз).</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Строки.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Срезы строк.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Преобразование типов данных.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Условия.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Таблицы.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Циклы.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Функции.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Запись и чтение файла.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Модули</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Импорт модуля</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Создание модуля</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Старый способ создания модуля</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Преобразование типов данных.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Условия.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Таблицы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Циклы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Функции.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Запись и чтение файла.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Модули</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Импорт модуля</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Создание модуля</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Старый способ создания модуля</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Разное.</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Сортировка по убыванию</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Тернарный оператор</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Разное.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Сортировка по убыванию</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Тернарный оператор</a></li>
 </ul>
 </li>
 </ul>
@@ -615,6 +614,9 @@ i = i + 1 -- увеличить переменную на единицу
 a = 0 &lt; 1 -- true
 b = 0 == 1 -- false
 c = &#39;abc&#39; == &#39;abc&#39; -- true
+d = &#39;a&#39; &lt; &#39;b&#39; -- true
+e = &#39;!&#39; &gt; &#39;?&#39; -- false
+f = true == false -- false
 </pre></div>
 </div>
 </section>
@@ -666,8 +668,7 @@ a = &#39;Hello&#39;
 b = &#39;World&#39;
 s = a..b -- Оператор .. соединяет строки
 s = &#39;one\ntwo&#39; -- Экранирование, перевод строки на новую
-s = &#39;abc&#39; == &#39;abc&#39; -- Сравнение строк
-s = &#39;a&#39; &lt; &#39;b&#39; -- true
+
 Срезы строк.
     text = &#39;my string variable&#39;
     result = text:sub(4,9) -- находим символы с 4 по 9, &#39;string&#39;
@@ -679,15 +680,7 @@ s = &#39;a&#39; &lt; &#39;b&#39; -- true
 </div>
 </section>
 <section id="id10">
-<h2>Срезы строк.<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>text = &#39;my string variable&#39;
-result = text:sub(4,9) -- находим символы с 4 по 9, &#39;string&#39;
-result = text:sub(1,1) -- находим первый символ строки, &#39;m&#39;
-</pre></div>
-</div>
-</section>
-<section id="id11">
-<h2>Преобразование типов данных.<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<h2>Преобразование типов данных.<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-При сравнении числа введенного с помощью io.read() с другим числом возникает ошибка:
     enter = io.read()
     print(enter &gt; 5)
@@ -710,8 +703,8 @@ result = text:sub(1,1) -- находим первый символ строки,
 </pre></div>
 </div>
 </section>
-<section id="id12">
-<h2>Условия.<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<section id="id11">
+<h2>Условия.<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
 <p>-if    elseif     else
 -Комнаты</p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;blue&#39;</span>
@@ -772,8 +765,8 @@ result = text:sub(1,1) -- находим первый символ строки,
 </pre></div>
 </div>
 </section>
-<section id="id13">
-<h2>Таблицы.<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<section id="id12">
+<h2>Таблицы.<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Если в переменную необходимо положить несколько значений, то здесь нам помогут таблицы.
     animals = {&#39;Cat&#39;, &#39;Dog&#39;, &#39;Pig&#39;, &#39;Horse&#39;}
     print(animals[1]) -- Выводим первое значение таблицы
@@ -815,8 +808,8 @@ result = text:sub(1,1) -- находим первый символ строки,
 </pre></div>
 </div>
 </section>
-<section id="id14">
-<h2>Циклы.<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<section id="id13">
+<h2>Циклы.<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>--while
     --Циклы нужны для того, чтобы не писать один кусочек кода много раз вручную.
     --Повторение кода с интервалом
@@ -896,8 +889,8 @@ result = text:sub(1,1) -- находим первый символ строки,
 </pre></div>
 </div>
 </section>
-<section id="id15">
-<h2>Функции.<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<section id="id14">
+<h2>Функции.<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">--Команда которая имеет в конце скобки называется функцией, она выполняет заранее подготовленный список действий в тот момент, когда мы ее вызовем.</span>
 <span class="c1">--Существует два вида фукнций: невозвращаемые и возвращаемые функции.</span>
 
@@ -957,8 +950,8 @@ result = text:sub(1,1) -- находим первый символ строки,
 </pre></div>
 </div>
 </section>
-<section id="id16">
-<h2>Запись и чтение файла.<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
+<section id="id15">
+<h2>Запись и чтение файла.<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- &quot;r&quot; - чтение</span>
 <span class="c1">-- &quot;w&quot; - перезапись</span>
 <span class="c1">-- &quot;a&quot; - дозапить</span>
@@ -984,17 +977,17 @@ result = text:sub(1,1) -- находим первый символ строки,
 </div>
 <p><a class="reference external" href="https://oojoo.ru/11-zapis-i-chtieniie-iz-faila/">https://oojoo.ru/11-zapis-i-chtieniie-iz-faila/</a></p>
 </section>
+<section id="id16">
+<h2>Модули<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
 <section id="id17">
-<h2>Модули<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
-<section id="id18">
-<h3>Импорт модуля<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
+<h3>Импорт модуля<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span><span class="w"> </span><span class="nv">socket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="w"> </span><span class="s1">&#39;socket&#39;</span>
 <span class="nv">socket</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
-<section id="id19">
-<h3>Создание модуля<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
+<section id="id18">
+<h3>Создание модуля<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
 <p>Файл модуля</p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span><span class="w"> </span><span class="nv">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Storm&#39;</span><span class="p">,</span><span class="w"> </span><span class="nv">health</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">790</span><span class="p">,</span><span class="w"> </span><span class="nv">mana</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">540</span><span class="p">}</span>
 
@@ -1015,8 +1008,8 @@ result = text:sub(1,1) -- находим первый символ строки,
 </pre></div>
 </div>
 </section>
-<section id="id20">
-<h3>Старый способ создания модуля<a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
+<section id="id19">
+<h3>Старый способ создания модуля<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
 <p>Файл модуля</p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nf">module</span><span class="p">(</span><span class="s2">&quot;mymodule&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">package</span><span class="p">.</span><span class="py">seeall</span><span class="p">)</span>
 
@@ -1032,13 +1025,13 @@ result = text:sub(1,1) -- находим первый символ строки,
 </div>
 </section>
 </section>
-<section id="id21">
-<h2>Разное.<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
+<section id="id20">
+<h2>Разное.<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Рекурсивные функции?
 </pre></div>
 </div>
-<section id="id22">
-<h3>Сортировка по убыванию<a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
+<section id="id21">
+<h3>Сортировка по убыванию<a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
 <div class="toggle docutils container">
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- сортировка по убыванию</span>
 <span class="kd">local</span><span class="w"> </span><span class="nv">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">}</span>
@@ -1056,8 +1049,8 @@ result = text:sub(1,1) -- находим первый символ строки,
 </div>
 </div>
 </section>
-<section id="id23">
-<h3>Тернарный оператор<a class="headerlink" href="#id23" title="Link to this heading">#</a></h3>
+<section id="id22">
+<h3>Тернарный оператор<a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span>
 <span class="c1">-- Тернарный оператор</span>
 <span class="nv">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span>
@@ -1149,22 +1142,21 @@ result = text:sub(1,1) -- находим первый символ строки,
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Логические операторы.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Приоритетность знаков (сверху-вниз).</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Строки.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Срезы строк.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Преобразование типов данных.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Условия.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Таблицы.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Циклы.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Функции.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Запись и чтение файла.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Модули</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Импорт модуля</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Создание модуля</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Старый способ создания модуля</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Преобразование типов данных.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Условия.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Таблицы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Циклы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Функции.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Запись и чтение файла.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Модули</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Импорт модуля</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Создание модуля</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Старый способ создания модуля</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Разное.</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Сортировка по убыванию</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Тернарный оператор</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Разное.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Сортировка по убыванию</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Тернарный оператор</a></li>
 </ul>
 </li>
 </ul>
