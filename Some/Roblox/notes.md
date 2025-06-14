@@ -52,6 +52,12 @@ end
 CframeValue:GetPropertyChangedSignal("Value"):Connect(function()
 	model:PivotTo(CframeValue.Value)
 end)
+
+-- Парт будет смотреть в сторону игрока (или иного парта):
+-- local part = ...
+-- local HumanoidRootPart = ...
+Part.CFrame = CFrame.lookAt(Part.Position, Vector3.new(HumanoidRootPart.Position.X, Part.Position.Y, HumanoidRootPart.Position.Z)
+
 ```
  
 ## Выдержки
@@ -144,3 +150,4 @@ local foundParts = Workspace:GetPartsInPart(clone.Box_Trunk)
 <video style="display: block; margin: auto;" width="600" height="400" controls muted>
   <source src="https://github.com/your-teach/faithpages/raw/refs/heads/main/video/Animation-Roblox.mp4" type="video/mp4">
 </video>
+
