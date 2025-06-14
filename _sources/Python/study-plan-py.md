@@ -858,6 +858,7 @@ print(result, type(result))
 data = {"1234": "ASDFG"}
 with open('data.json', 'w', encoding='utf-8') as file:
     result = json.dumps(data) # Перевести dict в str
+    # result = json.dumps(data, ensure_ascii=False) # если есть абракадабра после записи
     file.write(result) # Записать в файл
 ```
 
