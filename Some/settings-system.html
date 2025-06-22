@@ -449,13 +449,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Переменные среды</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#windows">Windows</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dotenv">Через dotenv</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Создание временной системной переменной через терминал:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#powershell-cmd">PowerShell или CMD:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-studio-code-settings-json">Через настройки visual studio code, settings.json:</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Использование переменной среды в коде Python:</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-studio-code-settings-json">Через настройки visual studio code, settings.json:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linux">Linux</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macos">MacOS</a></li>
 </ul>
@@ -605,28 +602,36 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="id3">
-<h4>Создание временной системной переменной через терминал:<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
-<p>set login=12345
-Создание постоянной системной переменной (изменения происходят после перезапуска терминала):
-setx my_login “54321” /M</p>
-<p>Проверка переменной:
-echo %login%</p>
-<p>Удаление временной:
-set login=</p>
-<p>Как удалить постоянную переменную непонятно, при следующей команде переменная остается в списке (изменения происходят после перезапуска терминала):
-setx my_login “”</p>
-</section>
-</section>
-</section>
-<section id="id4">
-<h2>Использование переменной среды в коде Python:<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<section id="powershell-cmd">
+<h4>PowerShell или CMD:<a class="headerlink" href="#powershell-cmd" title="Link to this heading">#</a></h4>
+<p>Временная переменная среды</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">login</span><span class="o">=</span><span class="mi">12345</span>
+</pre></div>
+</div>
+<p>Создание постоянной переменной среды (изменения происходят после перезапуска терминала):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setx</span> <span class="n">my_login</span> <span class="s2">&quot;54321&quot;</span> <span class="o">/</span><span class="n">M</span>
+</pre></div>
+</div>
+<p>Проверка переменной:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="o">%</span><span class="n">login</span><span class="o">%</span>
+</pre></div>
+</div>
+<p>Удаление временной:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">login</span><span class="o">=</span>
+</pre></div>
+</div>
+<p>Как удалить постоянную переменную непонятно, следующая команда оставляет переменную в списке (изменения происходят после перезапуска терминала):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setx</span> <span class="n">my_login</span> <span class="s2">&quot;&quot;</span>
+</pre></div>
+</div>
+<p>Использование переменной среды в коде Python:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;my_login&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
+</section>
 <section id="visual-studio-code-settings-json">
-<h3>Через настройки visual studio code, settings.json:<a class="headerlink" href="#visual-studio-code-settings-json" title="Link to this heading">#</a></h3>
+<h4>Через настройки visual studio code, settings.json:<a class="headerlink" href="#visual-studio-code-settings-json" title="Link to this heading">#</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;terminal.integrated.env.windows&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="s2">&quot;MYLOGIN&quot;</span><span class="p">:</span> <span class="s2">&quot;qwerty&quot;</span>
 <span class="p">}</span>
@@ -635,6 +640,7 @@ setx my_login “”</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;MYLOGIN&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
+</section>
 </section>
 <section id="linux">
 <h3>Linux<a class="headerlink" href="#linux" title="Link to this heading">#</a></h3>
@@ -764,13 +770,10 @@ setx my_login “”</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Переменные среды</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#windows">Windows</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dotenv">Через dotenv</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Создание временной системной переменной через терминал:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#powershell-cmd">PowerShell или CMD:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-studio-code-settings-json">Через настройки visual studio code, settings.json:</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Использование переменной среды в коде Python:</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-studio-code-settings-json">Через настройки visual studio code, settings.json:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linux">Linux</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macos">MacOS</a></li>
 </ul>
