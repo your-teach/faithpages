@@ -76,3 +76,116 @@
 - Запуск скрипта:
     - `C:/Users/Username/AppData/Local/Programs/Python/Python312/python.exe script.py`
     - `py -3.8 script.py`
+
+# Хранение секретных данных, ключей, паролей.
+
+## Windows
+
+### Через dotenv
+Создать файл .env в корневой директории проекта, с похожим содержимым:
+login=qwerty
+pass=12345
+
+from dotenv import load_dotenv
+import os
+
+data = load_dotenv()
+print(data) # True если в файле .env что-то есть
+
+print(os.environ["login"]) # qwerty
+print(os.environ["pass"]) # 12345
+
+### Создание временной системной переменной через терминал:
+set login=12345
+Создание постоянной системной переменной (изменения происходят после перезапуска терминала):
+setx my_login "54321" /M
+
+Проверка переменной:
+echo %login%
+
+Удаление временной:
+set login=
+
+Как удалить постоянную переменную непонятно, при следующей команде переменная остается в списке (изменения происходят после перезапуска терминала):
+setx my_login ""
+
+
+
+# Использование переменной среды в коде Python:
+```python
+import os
+print(os.getenv("my_login"))
+```
+
+### Через настройки visual studio code, settings.json:
+```
+"terminal.integrated.env.windows": {
+    "MYLOGIN": "qwerty"
+}
+```
+```python
+print(os.getenv("MYLOGIN"))
+```
+## Linux
+
+Создание временной переменной через терминал:
+```
+export TEST_VAR="Hello World!"
+```
+
+Применить изменение:
+```
+source ~/.bash_profile или source ~/.zshrc
+```
+
+Проверка
+```
+echo $TEST_VAR
+```
+
+Постоянная переменная:
+- Если переменная нужна для всех пользователей, редактируйте /etc/environment
+- Если переменная нужна только для текущего пользователя, редактируйте .bashrc (для bash) или .zshrc (для zsh) в домашней директории пользователя
+
+Для /etc/environment:
+```
+sudo nano /etc/environment
+VARIABLE_NAME="value"
+```
+
+Для .bashrc (или .zshrc):
+```
+nano ~/.bashrc (или nano ~/.zshrc)
+export VARIABLE_NAME="value"
+```
+
+Сохранение изменений:
+- Для /etc/environment: Перезагрузите систему или закройте и заново откройте терминал. 
+- Для .bashrc (или .zshrc): Выполните команду:
+```
+source ~/.bashrc (или source ~/.zshrc). 
+```
+
+
+## MacOS
+macOS обычно использует Bash или Zsh (узнать оболочку echo $SHELL)
+
+Временная переменная:
+```
+export MY_VARIABLE="my_value"
+```
+
+Постоянная переменная:
+Добавить через nano в файл ~/.bash_profile или ~/.zshrc
+следующую строку:
+```
+export MY_VARIABLE="my_value"
+```
+Применить изменение:
+```
+source ~/.bash_profile или source ~/.zshrc
+```
+Проверить переменную:
+```
+echo $MY_VARIABLE
+```

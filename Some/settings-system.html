@@ -227,6 +227,8 @@
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="codeforces.html">Задачи codeforces</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Настройки систем</a></li>
+
+
 </ul>
 
     </div>
@@ -439,6 +441,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Настройки систем</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-vscode">Настройки Git+Vscode.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#powershell">Проблема заглавных букв в Powershell</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">При запуске выдает “Python”.</a></li>
@@ -447,6 +450,23 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda">Conda в терминале</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pip">Если pip недоступен</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Хранение секретных данных, ключей, паролей.</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows">Windows</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dotenv">Через dotenv</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Создание временной системной переменной через терминал:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Использование переменной среды в коде Python:</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-studio-code-settings-json">Через настройки visual studio code, settings.json:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linux">Linux</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macos">MacOS</a></li>
+</ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -569,6 +589,114 @@ document.write(`
 </ul>
 </section>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="id2">
+<h1>Хранение секретных данных, ключей, паролей.<a class="headerlink" href="#id2" title="Link to this heading">#</a></h1>
+<section id="windows">
+<h2>Windows<a class="headerlink" href="#windows" title="Link to this heading">#</a></h2>
+<section id="dotenv">
+<h3>Через dotenv<a class="headerlink" href="#dotenv" title="Link to this heading">#</a></h3>
+<p>Создать файл .env в корневой директории проекта, с похожим содержимым:
+login=qwerty
+pass=12345</p>
+<p>from dotenv import load_dotenv
+import os</p>
+<p>data = load_dotenv()
+print(data) # True если в файле .env что-то есть</p>
+<p>print(os.environ[“login”]) # qwerty
+print(os.environ[“pass”]) # 12345</p>
+</section>
+<section id="id3">
+<h3>Создание временной системной переменной через терминал:<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>set login=12345
+Создание постоянной системной переменной (изменения происходят после перезапуска терминала):
+setx my_login “54321” /M</p>
+<p>Проверка переменной:
+echo %login%</p>
+<p>Удаление временной:
+set login=</p>
+<p>Как удалить постоянную переменную непонятно, при следующей команде переменная остается в списке (изменения происходят после перезапуска терминала):
+setx my_login “”</p>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id4">
+<h1>Использование переменной среды в коде Python:<a class="headerlink" href="#id4" title="Link to this heading">#</a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;my_login&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<section id="visual-studio-code-settings-json">
+<h2>Через настройки visual studio code, settings.json:<a class="headerlink" href="#visual-studio-code-settings-json" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;terminal.integrated.env.windows&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;MYLOGIN&quot;</span><span class="p">:</span> <span class="s2">&quot;qwerty&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;MYLOGIN&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="linux">
+<h2>Linux<a class="headerlink" href="#linux" title="Link to this heading">#</a></h2>
+<p>Создание временной переменной через терминал:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">TEST_VAR</span><span class="o">=</span><span class="s2">&quot;Hello World!&quot;</span>
+</pre></div>
+</div>
+<p>Применить изменение:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">~/.</span><span class="n">bash_profile</span> <span class="n">или</span> <span class="n">source</span> <span class="o">~/.</span><span class="n">zshrc</span>
+</pre></div>
+</div>
+<p>Проверка</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>echo $TEST_VAR
+</pre></div>
+</div>
+<p>Постоянная переменная:</p>
+<ul class="simple">
+<li><p>Если переменная нужна для всех пользователей, редактируйте /etc/environment</p></li>
+<li><p>Если переменная нужна только для текущего пользователя, редактируйте .bashrc (для bash) или .zshrc (для zsh) в домашней директории пользователя</p></li>
+</ul>
+<p>Для /etc/environment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">environment</span>
+<span class="n">VARIABLE_NAME</span><span class="o">=</span><span class="s2">&quot;value&quot;</span>
+</pre></div>
+</div>
+<p>Для .bashrc (или .zshrc):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nano</span> <span class="o">~/.</span><span class="n">bashrc</span> <span class="p">(</span><span class="n">или</span> <span class="n">nano</span> <span class="o">~/.</span><span class="n">zshrc</span><span class="p">)</span>
+<span class="n">export</span> <span class="n">VARIABLE_NAME</span><span class="o">=</span><span class="s2">&quot;value&quot;</span>
+</pre></div>
+</div>
+<p>Сохранение изменений:</p>
+<ul class="simple">
+<li><p>Для /etc/environment: Перезагрузите систему или закройте и заново откройте терминал.</p></li>
+<li><p>Для .bashrc (или .zshrc): Выполните команду:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">~/.</span><span class="n">bashrc</span> <span class="p">(</span><span class="n">или</span> <span class="n">source</span> <span class="o">~/.</span><span class="n">zshrc</span><span class="p">)</span><span class="o">.</span> 
+</pre></div>
+</div>
+</section>
+<section id="macos">
+<h2>MacOS<a class="headerlink" href="#macos" title="Link to this heading">#</a></h2>
+<p>macOS обычно использует Bash или Zsh (узнать оболочку echo $SHELL)</p>
+<p>Временная переменная:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">MY_VARIABLE</span><span class="o">=</span><span class="s2">&quot;my_value&quot;</span>
+</pre></div>
+</div>
+<p>Постоянная переменная:
+Добавить через nano в файл ~/.bash_profile или ~/.zshrc
+следующую строку:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">MY_VARIABLE</span><span class="o">=</span><span class="s2">&quot;my_value&quot;</span>
+</pre></div>
+</div>
+<p>Применить изменение:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">~/.</span><span class="n">bash_profile</span> <span class="n">или</span> <span class="n">source</span> <span class="o">~/.</span><span class="n">zshrc</span>
+</pre></div>
+</div>
+<p>Проверить переменную:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>echo $MY_VARIABLE
+</pre></div>
+</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -625,6 +753,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Настройки систем</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#git-vscode">Настройки Git+Vscode.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#powershell">Проблема заглавных букв в Powershell</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">При запуске выдает “Python”.</a></li>
@@ -633,6 +762,23 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda">Conda в терминале</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pip">Если pip недоступен</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Хранение секретных данных, ключей, паролей.</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows">Windows</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dotenv">Через dotenv</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Создание временной системной переменной через терминал:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Использование переменной среды в коде Python:</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-studio-code-settings-json">Через настройки visual studio code, settings.json:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linux">Linux</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macos">MacOS</a></li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>
