@@ -134,17 +134,14 @@ print(os.getenv("my_login"))
 print(os.getenv("MYLOGIN"))
 ```
 ### Linux
-
 Создание временной переменной через терминал:
 ```
 export TEST_VAR="Hello World!"
 ```
-
 Применить изменение:
 ```
 source ~/.bash_profile или source ~/.zshrc
 ```
-
 Проверка
 ```
 echo $TEST_VAR
@@ -181,9 +178,9 @@ macOS обычно использует Bash или Zsh (узнать оболо
 export MY_VARIABLE="my_value"
 ```
 
-Постоянная переменная:
+Постоянная переменная:  
 Добавить через nano в файл ~/.bash_profile или ~/.zshrc
-следующую строку:
+следующую строку
 ```
 export MY_VARIABLE="my_value"
 ```
