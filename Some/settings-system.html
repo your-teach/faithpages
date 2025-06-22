@@ -448,7 +448,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pip">Если pip недоступен</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Переменные среды</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#windows">Windows</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dotenv">Через dotenv</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#python-dotenv">Через модуль python-dotenv</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#powershell-cmd">PowerShell или CMD:</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-studio-code-settings-json">Через настройки visual studio code, settings.json:</a></li>
 </ul>
@@ -583,8 +583,8 @@ document.write(`
 <h2>Переменные среды<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <section id="windows">
 <h3>Windows<a class="headerlink" href="#windows" title="Link to this heading">#</a></h3>
-<section id="dotenv">
-<h4>Через dotenv<a class="headerlink" href="#dotenv" title="Link to this heading">#</a></h4>
+<section id="python-dotenv">
+<h4>Через модуль python-dotenv<a class="headerlink" href="#python-dotenv" title="Link to this heading">#</a></h4>
 <p>Создать файл <code class="docutils literal notranslate"><span class="pre">.env</span></code> в корневой директории проекта, с похожим содержимым:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">login</span><span class="o">=</span><span class="n">qwerty</span>
 <span class="k">pass</span><span class="o">=</span><span class="mi">12345</span>
@@ -632,8 +632,8 @@ document.write(`
 </section>
 <section id="visual-studio-code-settings-json">
 <h4>Через настройки visual studio code, settings.json:<a class="headerlink" href="#visual-studio-code-settings-json" title="Link to this heading">#</a></h4>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;terminal.integrated.env.windows&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">&quot;MYLOGIN&quot;</span><span class="p">:</span> <span class="s2">&quot;qwerty&quot;</span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;terminal.integrated.env.windows&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;MYLOGIN&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;qwerty&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -769,7 +769,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pip">Если pip недоступен</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Переменные среды</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#windows">Windows</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dotenv">Через dotenv</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#python-dotenv">Через модуль python-dotenv</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#powershell-cmd">PowerShell или CMD:</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-studio-code-settings-json">Через настройки visual studio code, settings.json:</a></li>
 </ul>
