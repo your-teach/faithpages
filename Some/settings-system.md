@@ -79,7 +79,7 @@
 
 ## Переменные среды
 ### Windows
-#### Через dotenv
+#### Через модуль python-dotenv
 Создать файл `.env` в корневой директории проекта, с похожим содержимым:
 ```
 login=qwerty
@@ -125,7 +125,7 @@ print(os.getenv("my_login"))
 ```
 
 #### Через настройки visual studio code, settings.json:
-```
+```json
 "terminal.integrated.env.windows": {
     "MYLOGIN": "qwerty"
 }
@@ -172,7 +172,6 @@ export VARIABLE_NAME="value"
 ```
 source ~/.bashrc (или source ~/.zshrc). 
 ```
-
 
 ### MacOS
 macOS обычно использует Bash или Zsh (узнать оболочку echo $SHELL)
