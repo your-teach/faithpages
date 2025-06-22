@@ -77,15 +77,16 @@
     - `C:/Users/Username/AppData/Local/Programs/Python/Python312/python.exe script.py`
     - `py -3.8 script.py`
 
-# Хранение секретных данных, ключей, паролей.
-
-## Windows
-
-### Через dotenv
-Создать файл .env в корневой директории проекта, с похожим содержимым:
+## Переменные среды
+### Windows
+#### Через dotenv
+Создать файл `.env` в корневой директории проекта, с похожим содержимым:
+```
 login=qwerty
 pass=12345
-
+```
+Далее код на Python:
+```python
 from dotenv import load_dotenv
 import os
 
@@ -94,8 +95,9 @@ print(data) # True если в файле .env что-то есть
 
 print(os.environ["login"]) # qwerty
 print(os.environ["pass"]) # 12345
+```
 
-### Создание временной системной переменной через терминал:
+#### Создание временной системной переменной через терминал:
 set login=12345
 Создание постоянной системной переменной (изменения происходят после перезапуска терминала):
 setx my_login "54321" /M
@@ -111,13 +113,13 @@ setx my_login ""
 
 
 
-# Использование переменной среды в коде Python:
+## Использование переменной среды в коде Python:
 ```python
 import os
 print(os.getenv("my_login"))
 ```
 
-### Через настройки visual studio code, settings.json:
+#### Через настройки visual studio code, settings.json:
 ```
 "terminal.integrated.env.windows": {
     "MYLOGIN": "qwerty"
@@ -126,7 +128,7 @@ print(os.getenv("my_login"))
 ```python
 print(os.getenv("MYLOGIN"))
 ```
-## Linux
+### Linux
 
 Создание временной переменной через терминал:
 ```
@@ -167,7 +169,7 @@ source ~/.bashrc (или source ~/.zshrc).
 ```
 
 
-## MacOS
+### MacOS
 macOS обычно использует Bash или Zsh (узнать оболочку echo $SHELL)
 
 Временная переменная:
