@@ -862,10 +862,12 @@ with open('data.json', 'w', encoding='utf-8') as file:
     file.write(result) # Записать в файл
 ```
 
-## Работа с папками.
+## Модуль os
     ```python
     import os
 
+
+    # Работа с папками.
     # Посмотреть все файлы папки и подпапки по пути path
     path = "C:\HOME\PROG\web"
     result = list(os.walk(path))
@@ -889,19 +891,26 @@ with open('data.json', 'w', encoding='utf-8') as file:
 
     # Удаление папки (Если папки не существует, будет ошибка)
     os.rmdir("NEW")
-    # Удаление папки (Если папки не существует, будет ошибка)
     os.removedirs("NEW")
 
+    # Переименовать файл или папку
+    os.rename("NEW", "FOLDER")
+
+    # Другое.
     # Исполняет команду в консоле, например cmd (если система windows)
     result = os.system("dir")
     print(result)
 
-    # Переименовать файл или папку
-    # os.rename("NEW", "FOLDER")
+    # Домашняя директория
+    homepath = os.path.expanduser("~")
+    print(homepath)
 
     # Все команды os модуля: https://pythonworld.ru/moduli/modul-os.html
     # Упражнения на os: https://www.w3resource.com/python-exercises/os/index.php
+
+
     ```  
+
 
 ## Перемещение файлов.
 
