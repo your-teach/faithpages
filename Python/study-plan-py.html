@@ -473,23 +473,23 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Обработка ошибок и исключений.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Работа с файлами.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#json">Работа с json</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Работа с папками.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Перемещение файлов.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Декораторы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#os">Модуль os</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Перемещение файлов.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Декораторы</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tkinter">Tkinter</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyqt">Pyqt</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requests">Модуль Requests</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requests-html">Модуль requests-html</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#selenium">Selenium</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">ООП</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Аннотации</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">ООП</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Аннотации</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#async-await">Асинхронное программирование async/await</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Создание телеграм бота</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Создание телеграм бота</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pygame">Pygame</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ursina">Ursina</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re">Регулярные выражения <code class="docutils literal notranslate"><span class="pre">'re'</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Решение проблем:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Дополнить план обучения следующим:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Решение проблем:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Дополнить план обучения следующим:</a></li>
 </ul>
             </nav>
         </div>
@@ -1483,11 +1483,13 @@ https://letpy.com/handbook/builtins/open/
 </pre></div>
 </div>
 </section>
-<section id="id22">
-<h2>Работа с папками.<a class="headerlink" href="#id22" title="Link to this heading">#</a></h2>
+<section id="os">
+<h2>Модуль os<a class="headerlink" href="#os" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```python
 import os
 
+
+# Работа с папками.
 # Посмотреть все файлы папки и подпапки по пути path
 path = &quot;C:\HOME\PROG\web&quot;
 result = list(os.walk(path))
@@ -1511,31 +1513,37 @@ os.environ[&quot;NEW VARIABLE&quot;] = &quot;123&quot;
 
 # Удаление папки (Если папки не существует, будет ошибка)
 os.rmdir(&quot;NEW&quot;)
-# Удаление папки (Если папки не существует, будет ошибка)
 os.removedirs(&quot;NEW&quot;)
 
+# Переименовать файл или папку
+os.rename(&quot;NEW&quot;, &quot;FOLDER&quot;)
+
+# Другое.
 # Исполняет команду в консоле, например cmd (если система windows)
 result = os.system(&quot;dir&quot;)
 print(result)
 
-# Переименовать файл или папку
-# os.rename(&quot;NEW&quot;, &quot;FOLDER&quot;)
+# Домашняя директория
+homepath = os.path.expanduser(&quot;~&quot;)
+print(homepath)
 
 # Все команды os модуля: https://pythonworld.ru/moduli/modul-os.html
 # Упражнения на os: https://www.w3resource.com/python-exercises/os/index.php
+
+
 ```  
 </pre></div>
 </div>
 </section>
-<section id="id23">
-<h2>Перемещение файлов.<a class="headerlink" href="#id23" title="Link to this heading">#</a></h2>
+<section id="id22">
+<h2>Перемещение файлов.<a class="headerlink" href="#id22" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import shutil
 shutil.move(&quot;path/to/current/file.foo&quot;, &quot;path/to/new/destination/for/file.foo&quot;)
 </pre></div>
 </div>
 </section>
-<section id="id24">
-<h2>Декораторы<a class="headerlink" href="#id24" title="Link to this heading">#</a></h2>
+<section id="id23">
+<h2>Декораторы<a class="headerlink" href="#id23" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span># from functools import wraps
 
 def detect(func):
@@ -1595,8 +1603,8 @@ test2(&#39;privet&#39;)
 </pre></div>
 </div>
 </section>
-<section id="id25">
-<h2>ООП<a class="headerlink" href="#id25" title="Link to this heading">#</a></h2>
+<section id="id24">
+<h2>ООП<a class="headerlink" href="#id24" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Инкапсуляция, наследование, полиморфизм.
 -Инкапсуляция - это принцип, согласно которому внутреннее устройство сущностей нужно объединять в специальной
 «оболочке» и скрывать от вмешательств извне. Доступ к объектам возможен через специальные открытые методы, а
@@ -1618,8 +1626,8 @@ test2(&#39;privet&#39;)
 </pre></div>
 </div>
 </section>
-<section id="id26">
-<h2>Аннотации<a class="headerlink" href="#id26" title="Link to this heading">#</a></h2>
+<section id="id25">
+<h2>Аннотации<a class="headerlink" href="#id25" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>https://clck.ru/339CnS
 </pre></div>
 </div>
@@ -1631,8 +1639,8 @@ test2(&#39;privet&#39;)
 </pre></div>
 </div>
 </section>
-<section id="id27">
-<h2>Создание телеграм бота<a class="headerlink" href="#id27" title="Link to this heading">#</a></h2>
+<section id="id26">
+<h2>Создание телеграм бота<a class="headerlink" href="#id26" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>https://github.com/python-telegram-bot/python-telegram-bot
 Просто начать с echo-бота, а там как пойдет
 </pre></div>
@@ -1656,15 +1664,15 @@ test2(&#39;privet&#39;)
 </pre></div>
 </div>
 </section>
-<section id="id28">
-<h2>Решение проблем:<a class="headerlink" href="#id28" title="Link to this heading">#</a></h2>
+<section id="id27">
+<h2>Решение проблем:<a class="headerlink" href="#id27" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-https://otvet.mail.ru/question/218478491 - Visual Studio Code не понимает русский язык в пути к файлу
 -https://ru.stackoverflow.com/questions/1095365/%d0%9a%d0%b0%d0%ba-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d1%82%d1%8c-pip-%d0%b4%d0%bb%d1%8f-%d1%80%d0%b0%d0%b7%d0%bd%d1%8b%d1%85-%d0%b2%d0%b5%d1%80%d1%81%d0%b8%d0%b9-python - Как использовать pip для разных версий python?
 </pre></div>
 </div>
 </section>
-<section id="id29">
-<h2>Дополнить план обучения следующим:<a class="headerlink" href="#id29" title="Link to this heading">#</a></h2>
+<section id="id28">
+<h2>Дополнить план обучения следующим:<a class="headerlink" href="#id28" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- чем? чем-то
 </pre></div>
 </div>
@@ -1768,23 +1776,23 @@ test2(&#39;privet&#39;)
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Обработка ошибок и исключений.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Работа с файлами.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#json">Работа с json</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Работа с папками.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Перемещение файлов.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Декораторы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#os">Модуль os</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Перемещение файлов.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Декораторы</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tkinter">Tkinter</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyqt">Pyqt</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requests">Модуль Requests</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requests-html">Модуль requests-html</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#selenium">Selenium</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">ООП</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Аннотации</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">ООП</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Аннотации</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#async-await">Асинхронное программирование async/await</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Создание телеграм бота</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Создание телеграм бота</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pygame">Pygame</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ursina">Ursina</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re">Регулярные выражения <code class="docutils literal notranslate"><span class="pre">'re'</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Решение проблем:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Дополнить план обучения следующим:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Решение проблем:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Дополнить план обучения следующим:</a></li>
 </ul>
   </nav></div>
 

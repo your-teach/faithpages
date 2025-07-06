@@ -41,6 +41,7 @@ players.FallenTheo или players['FallenTheo']
 game.Workspace[NamePlayer].HumanoidRootPart
 
 object:GetChildren() -- Получить все объекты, которые лежат в object
+object:GetDescendants() -- Получить все-все объекты, даже в подпапках
 
 for n = 1, 300 do
 	wait(1)
@@ -134,18 +135,15 @@ button.Activated:Connect(onButtonActivated)
 ```
 
 ## Касание других партов
-
 ```lua
-local touch_objects = clone.Trunk:GetTouchingParts()
-
+local part = script.Parent 
+-- Первый вариант касание:
+local touch_objects = part:GetTouchingParts()
 -- Второй вариант касание:
-local Workspace = game:GetService("Workspace")
-local foundParts = Workspace:GetPartsInPart(clone.Box_Trunk)
-```
-
+local touch_objects = workspace:GetPartsInPart(part)
+```  
 (Не работает, когда нет CanCollide)
 
-	
 ## Анимация
 <video style="display: block; margin: auto;" width="600" height="400" controls muted>
   <source src="https://github.com/your-teach/faithpages/raw/refs/heads/main/video/Animation-Roblox.mp4" type="video/mp4">
