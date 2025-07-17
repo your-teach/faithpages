@@ -792,26 +792,36 @@ example2()
 
 
 ## Обработка ошибок и исключений.
+- try, except
+- else - выполняется, когда не произошло никаких ошибок
+- finally - выполняется всегда в самом конце, вне зависимости произошла ошибка или нет
+- assert - вызывается ошибка если утверждение возвращает ложь
+- raise - возбуждает/поднимает указанное исключение -> raise BaseException('Мы вызвали ошибку')
+- Примеры:
 
-    - try, except
-    - else - выполняется, когда не произошло никаких ошибок
-    - finally - выполняется всегда в самом конце, вне зависимости произошла ошибка или нет
-    - assert - утверждение, которое можно вложить внутрь try. (assert True == False), в случае False вызывается ошибка
-    - assert len(var) < 6, 'message' - Можно вместо 'message' создать текст для псевдо-ошибки
-    - assert работает не только в try, его можно вложить в любую часть кода
-    - raise - возбуждает/поднимает указанное исключение -> raise BaseException('Мы вызвали ошибку')
-        https://sky.pro/wiki/python/ponimanie-i-ispolzovanie-klyuchevogo-slova-raise-v-python/
-    -Пример:
-        try:
-            res = x / y
-        except:
-            print("Произошло исключение")
-        except BaseException as err:
-            print("Сообщение ошибки: " + err)
-        else:
-            print("Исключений не произошло")
-        finally:
-            print("Блок finally выполняется всегда")
+```python
+try:
+    a = int(input())
+    b = int(input())
+    print(a / b)
+except ZeroDivisionError as err:
+    print("Делить на ноль нельзя:", err)
+except ValueError:
+    print("Введено неправильное значение")
+except:
+    print('Ошибка')
+# Нечасто используется (else и finally):
+else:
+    print("Выполняется, когда не произошло никаких ошибок")
+finally:
+    print("Выполняется абсолютно всегда, в самом конце.")
+
+a = 3
+assert a != 3 # вызовется ошибка, так как a != 3 это False
+assert a != 3, "Свое описание ошибки" # можно добавить описание ошибки
+
+raise BaseException("Свое описание ошибки")
+```
 
 
 ## Работа с файлами.
