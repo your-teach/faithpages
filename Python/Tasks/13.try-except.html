@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Ввод и вывод &#8212; Faith Pages</title>
+    <title>Ошибки и исключения &#8212; Faith Pages</title>
   
   
   
@@ -58,14 +58,14 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Python/Tasks/1.in-out';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Python/Tasks/13.try-except';</script>
     <script src="../../_static/script.js?v=5bc9876b"></script>
-    <link rel="canonical" href="https://your-teach.github.io/faithpages/Python/Tasks/1.in-out.html" />
+    <link rel="canonical" href="https://your-teach.github.io/faithpages/Python/Tasks/13.try-except.html" />
     <link rel="icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Строки" href="2.strings.html" />
-    <link rel="prev" title="Упражнения py" href="../../Tables/py-tasks-table.html" />
+    <link rel="next" title="Библиотеки и модули" href="../../Tables/table-Lib-modules.html" />
+    <link rel="prev" title="Tkinter" href="12.tkinter.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -179,7 +179,7 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../study-plan-py.html">План обучения <code class="docutils literal notranslate"><span class="pre">py</span></code></a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../Tables/py-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">py</span></code></a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Ввод и вывод</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1.in-out.html">Ввод и вывод</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.strings.html">Строки</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3.boolean.html">Логика</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.conditions.html">Условия</a></li>
@@ -192,7 +192,7 @@
 <li class="toctree-l2"><a class="reference internal" href="10.functions.html">Функции</a></li>
 <li class="toctree-l2"><a class="reference internal" href="11.file-handling.html">Работа с файлами</a></li>
 <li class="toctree-l2"><a class="reference internal" href="12.tkinter.html">Tkinter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="13.try-except.html">Ошибки и исключения</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Ошибки и исключения</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../Tables/table-Lib-modules.html">Библиотеки и модули</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -301,7 +301,7 @@
       
       
       
-      <li><a href="https://github.com/your-teach/faithpages/edit/main/Python/Tasks/1.in-out.md" target="_blank"
+      <li><a href="https://github.com/your-teach/faithpages/edit/main/Python/Tasks/13.try-except.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -318,7 +318,7 @@
       
       
       
-      <li><a href="https://github.com/your-teach/faithpages/issues/new?title=Issue%20on%20page%20%2FPython/Tasks/1.in-out.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/your-teach/faithpages/issues/new?title=Issue%20on%20page%20%2FPython/Tasks/13.try-except.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -348,7 +348,7 @@
       
       
       
-      <li><a href="../../_sources/Python/Tasks/1.in-out.md" target="_blank"
+      <li><a href="../../_sources/Python/Tasks/13.try-except.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -432,7 +432,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Ввод и вывод</h1>
+    <h1>Ошибки и исключения</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -442,8 +442,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Приветствие</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Возраст</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Обработка деления на ноль</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Обработка неправильного ввода</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Работа со списком и индексом</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Доступ к ключу словаря</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Собственное исключение</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Комбинированная обработка</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Обработка нескольких исключений</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#else-try-except">Использование else в try-except</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Перехват нескольких исключений в одном блоке</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#try-except">Вложенные блоки try-except</a></li>
 </ul>
             </nav>
         </div>
@@ -456,23 +464,71 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>Ввод и вывод<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<h1>Ошибки и исключения<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <section id="id2">
-<h2>Приветствие<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
-<p>Написать программу, которая просит ввести имя, а потом приветствует. Пример:</p>
-<blockquote>
-<div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">Иван</span></code><br />
-Ожидаемый результат: <code class="docutils literal notranslate"><span class="pre">Здравствуйте,</span> <span class="pre">Иван!</span></code></p>
-</div></blockquote>
+<h2>Обработка деления на ноль<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Напишите функцию, которая запрашивает у пользователя два числа и выводит результат деления первого на второе.
+Обработайте случай, когда второе число равно нулю, с выводом сообщения “Деление на ноль невозможно!”.</p>
 </section>
 <section id="id3">
-<h2>Возраст<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
-<p>Написать программу, которая запрашивает год рождения,
-а потом выводит возраст исходя из этого года. Пример:</p>
-<blockquote>
-<div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">2002</span></code><br />
-Ожидаемый результат: <code class="docutils literal notranslate"><span class="pre">23</span></code></p>
-</div></blockquote>
+<h2>Обработка неправильного ввода<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Напишите программу, которая просит пользователя ввести целое число. Если пользователь вводит не число, а строку,
+которая не может быть преобразована в целое число, программа должна вывести сообщение “Ошибка: введено не число”.
+Используйте try-except.</p>
+</section>
+<section id="id4">
+<h2>Работа со списком и индексом<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Создайте список из нескольких элементов. Запросите у пользователя индекс элемента, который он хочет увидеть.
+Если введенный индекс выходит за пределы списка, выведите сообщение “Индекс вне диапазона”.</p>
+</section>
+<section id="id5">
+<h2>Доступ к ключу словаря<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>Создайте словарь, например: {‘a’: 1, ‘b’: 2, ‘c’: 3}. Запросите у пользователя ключ.
+Если ключ отсутствует в словаре, выведите сообщение “Ключ не найден”. Обработайте исключение KeyError.</p>
+</section>
+<section id="id6">
+<h2>Собственное исключение<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>Напишите функцию, которая проверяет, является ли число положительным. Если число отрицательное,
+вызовите собственное исключение (например, NegativeNumberError) с сообщением “Число не должно быть отрицательным”.</p>
+</section>
+<section id="id7">
+<h2>Комбинированная обработка<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>Напишите программу, которая:</p>
+<ul class="simple">
+<li><p>Запрашивает у пользователя два числа.</p></li>
+<li><p>Выполняет их деление.</p></li>
+<li><p>Обрабатывает как ошибку деления на ноль, так и ошибку преобразования типов (если введено не число).</p></li>
+<li><p>В блоке finally выводит сообщение “Программа завершена”.</p></li>
+</ul>
+</section>
+<section id="id8">
+<h2>Обработка нескольких исключений<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p>Напишите программу, которая открывает файл для чтения. Обработайте следующие исключения:</p>
+<ul class="simple">
+<li><p>FileNotFoundError (если файл не существует)</p></li>
+<li><p>PermissionError (если нет прав на чтение)
+В случае успешного чтения выведите содержимое файла.</p></li>
+</ul>
+</section>
+<section id="else-try-except">
+<h2>Использование else в try-except<a class="headerlink" href="#else-try-except" title="Link to this heading">#</a></h2>
+<p>Напишите программу, которая пытается преобразовать введенную строку в целое число. В блоке try сделайте преобразование.
+В блоке except обработайте ValueError. В блоке else выведите сообщение “Преобразование прошло успешно!” и результат.</p>
+</section>
+<section id="id9">
+<h2>Перехват нескольких исключений в одном блоке<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>Напишите программу, которая обращается к элементу списка по индексу, введенному пользователем.
+Обработайте одновременно (в одном блоке except) два типа исключений: IndexError (неверный индекс) и TypeError (индекс не целое число).</p>
+</section>
+<section id="try-except">
+<h2>Вложенные блоки try-except<a class="headerlink" href="#try-except" title="Link to this heading">#</a></h2>
+<p>Напишите программу, которая:</p>
+<ul class="simple">
+<li><p>Внешний блок try: запрашивает у пользователя число и преобразует его в int.</p></li>
+<li><p>Внутренний блок try: делит 100 на это число и выводит результат.</p></li>
+<li><p>Обработайте во внутреннем блоке ZeroDivisionError.</p></li>
+<li><p>Обработайте во внешнем блоке ValueError (если введено не число).</p></li>
+</ul>
 </section>
 </section>
 
@@ -507,20 +563,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../../Tables/py-tasks-table.html"
+       href="12.tkinter.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Упражнения <code class="docutils literal notranslate"><span class="pre">py</span></code></p>
+        <p class="prev-next-title">Tkinter</p>
       </div>
     </a>
     <a class="right-next"
-       href="2.strings.html"
+       href="../../Tables/table-Lib-modules.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Строки</p>
+        <p class="prev-next-title">Библиотеки и модули</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -540,8 +596,16 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Приветствие</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Возраст</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Обработка деления на ноль</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Обработка неправильного ввода</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Работа со списком и индексом</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Доступ к ключу словаря</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Собственное исключение</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Комбинированная обработка</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Обработка нескольких исключений</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#else-try-except">Использование else в try-except</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Перехват нескольких исключений в одном блоке</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#try-except">Вложенные блоки try-except</a></li>
 </ul>
   </nav></div>
 

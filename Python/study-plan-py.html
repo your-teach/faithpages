@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fe3c39de" />
@@ -191,6 +191,8 @@
 <li class="toctree-l2"><a class="reference internal" href="Tasks/9.sets.html">Множества</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Tasks/10.functions.html">Функции</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Tasks/11.file-handling.html">Работа с файлами</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tasks/12.tkinter.html">Tkinter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tasks/13.try-except.html">Ошибки и исключения</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Tables/table-Lib-modules.html">Библиотеки и модули</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -1411,25 +1413,35 @@ del list[0] - удаление элемента по индексу
 </section>
 <section id="id20">
 <h2>Обработка ошибок и исключений.<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- try, except
-- else - выполняется, когда не произошло никаких ошибок
-- finally - выполняется всегда в самом конце, вне зависимости произошла ошибка или нет
-- assert - утверждение, которое можно вложить внутрь try. (assert True == False), в случае False вызывается ошибка
-- assert len(var) &lt; 6, &#39;message&#39; - Можно вместо &#39;message&#39; создать текст для псевдо-ошибки
-- assert работает не только в try, его можно вложить в любую часть кода
-- raise - возбуждает/поднимает указанное исключение -&gt; raise BaseException(&#39;Мы вызвали ошибку&#39;)
-    https://sky.pro/wiki/python/ponimanie-i-ispolzovanie-klyuchevogo-slova-raise-v-python/
--Пример:
-    try:
-        res = x / y
-    except:
-        print(&quot;Произошло исключение&quot;)
-    except BaseException as err:
-        print(&quot;Сообщение ошибки: &quot; + err)
-    else:
-        print(&quot;Исключений не произошло&quot;)
-    finally:
-        print(&quot;Блок finally выполняется всегда&quot;)
+<ul class="simple">
+<li><p>try, except</p></li>
+<li><p>else - выполняется, когда не произошло никаких ошибок</p></li>
+<li><p>finally - выполняется всегда в самом конце, вне зависимости произошла ошибка или нет</p></li>
+<li><p>assert - вызывается ошибка если утверждение возвращает ложь</p></li>
+<li><p>raise - возбуждает/поднимает указанное исключение -&gt; raise BaseException(‘Мы вызвали ошибку’)</p></li>
+<li><p>Примеры:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Делить на ноль нельзя:&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Введено неправильное значение&quot;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ошибка&#39;</span><span class="p">)</span>
+<span class="c1"># Нечасто используется (else и finally):</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Выполняется, когда не произошло никаких ошибок&quot;</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Выполняется абсолютно всегда, в самом конце.&quot;</span><span class="p">)</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">assert</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">3</span> <span class="c1"># вызовется ошибка, так как a != 3 это False</span>
+<span class="k">assert</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Свое описание ошибки&quot;</span> <span class="c1"># можно добавить описание ошибки</span>
+
+<span class="k">raise</span> <span class="ne">BaseException</span><span class="p">(</span><span class="s2">&quot;Свое описание ошибки&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
