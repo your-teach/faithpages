@@ -460,17 +460,16 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#localhost">Сертификат для localhost</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ca">1. Создание корневого сертификата (CA)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2. Создание сертификата для 127.0.0.1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ca">Создание корневого сертификата (CA)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Создание сертификата для 127.0.0.1</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-san-v3-ext">a. Создать конфигурационный файл для SAN (v3.ext)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#b">b. Создать закрытый ключ для сервера</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#c-csr">c. Создать запрос на подпись сертификата (CSR)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#d-csr-ca-san">d. Подписать CSR с помощью CA, используя конфигурацию с SAN</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">3. Установка корневого сертификата в систему</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">4. Настройка веб-сервера</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#telegram">5. Очистка кеша Telegram</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Установка корневого сертификата в систему</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#telegram">Очистка кеша Telegram</a></li>
 </ul>
 </li>
 </ul>
@@ -722,7 +721,7 @@ document.write(`
 <section id="localhost">
 <h2>Сертификат для localhost<a class="headerlink" href="#localhost" title="Link to this heading">#</a></h2>
 <section id="ca">
-<h3>1. Создание корневого сертификата (CA)<a class="headerlink" href="#ca" title="Link to this heading">#</a></h3>
+<h3>Создание корневого сертификата (CA)<a class="headerlink" href="#ca" title="Link to this heading">#</a></h3>
 <p>Создаем закрытый ключ для CA:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>openssl<span class="w"> </span>genrsa<span class="w"> </span>-out<span class="w"> </span>rootCA.key<span class="w"> </span><span class="m">2048</span>
 </pre></div>
@@ -734,7 +733,7 @@ document.write(`
 <p>При этом нужно ввести данные о CA (страна, город, организация и т.д.). В поле “Common Name” можно указать что-то вроде “My Local CA” 68.</p>
 </section>
 <section id="id3">
-<h3>2. Создание сертификата для 127.0.0.1<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<h3>Создание сертификата для 127.0.0.1<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p>Теперь создадим сертификат для локального IP-адреса. Важно указать SAN (Subject Alternative Name) для 127.0.0.1 и localhost.</p>
 <section id="a-san-v3-ext">
 <h4>a. Создать конфигурационный файл для SAN (v3.ext)<a class="headerlink" href="#a-san-v3-ext" title="Link to this heading">#</a></h4>
@@ -773,7 +772,7 @@ document.write(`
 </section>
 </section>
 <section id="id4">
-<h3>3. Установка корневого сертификата в систему<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<h3>Установка корневого сертификата в систему<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Windows</strong>:</p>
 <ul>
@@ -784,23 +783,8 @@ document.write(`
 </li>
 </ul>
 </section>
-<section id="id5">
-<h3>4. Настройка веб-сервера<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
-<p>Используйте <code class="docutils literal notranslate"><span class="pre">server.crt</span></code> и <code class="docutils literal notranslate"><span class="pre">server.key</span></code> в настройках вашего сервера. Пример для Node.js:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">https</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;https&#39;</span><span class="p">);</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s1">&#39;server.key&#39;</span><span class="p">),</span>
-<span class="w">  </span><span class="nx">cert</span><span class="o">:</span><span class="w"> </span><span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s1">&#39;server.crt&#39;</span><span class="p">)</span>
-<span class="p">};</span>
-<span class="nx">https</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="s1">&#39;Hello HTTPS!&#39;</span><span class="p">);</span>
-<span class="p">}).</span><span class="nx">listen</span><span class="p">(</span><span class="mf">443</span><span class="p">);</span>
-</pre></div>
-</div>
-</section>
 <section id="telegram">
-<h3>5. Очистка кеша Telegram<a class="headerlink" href="#telegram" title="Link to this heading">#</a></h3>
+<h3>Очистка кеша Telegram<a class="headerlink" href="#telegram" title="Link to this heading">#</a></h3>
 <p>После установки сертификата и перезапуска сервера:</p>
 <ul class="simple">
 <li><p>Закройте Telegram.</p></li>
@@ -885,17 +869,16 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#localhost">Сертификат для localhost</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ca">1. Создание корневого сертификата (CA)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2. Создание сертификата для 127.0.0.1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ca">Создание корневого сертификата (CA)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Создание сертификата для 127.0.0.1</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-san-v3-ext">a. Создать конфигурационный файл для SAN (v3.ext)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#b">b. Создать закрытый ключ для сервера</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#c-csr">c. Создать запрос на подпись сертификата (CSR)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#d-csr-ca-san">d. Подписать CSR с помощью CA, используя конфигурацию с SAN</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">3. Установка корневого сертификата в систему</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">4. Настройка веб-сервера</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#telegram">5. Очистка кеша Telegram</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Установка корневого сертификата в систему</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#telegram">Очистка кеша Telegram</a></li>
 </ul>
 </li>
 </ul>

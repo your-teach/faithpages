@@ -195,7 +195,7 @@ echo $MY_VARIABLE
 
 ## Сертификат для localhost
 
-### 1. Создание корневого сертификата (CA)
+### Создание корневого сертификата (CA)
 Создаем закрытый ключ для CA:
 ```bash
 openssl genrsa -out rootCA.key 2048
@@ -205,7 +205,7 @@ openssl genrsa -out rootCA.key 2048
 openssl req -x509 -new -nodes -key rootCA.key -sha256 -days 3650 -out rootCA.crt
 ```
 При этом нужно ввести данные о CA (страна, город, организация и т.д.). В поле "Common Name" можно указать что-то вроде "My Local CA" 68.
-### 2. Создание сертификата для 127.0.0.1
+### Создание сертификата для 127.0.0.1
 Теперь создадим сертификат для локального IP-адреса. Важно указать SAN (Subject Alternative Name) для 127.0.0.1 и localhost.
 #### a. Создать конфигурационный файл для SAN (v3.ext)
 Создайте файл `v3.ext` со следующим содержимым:
@@ -234,25 +234,13 @@ openssl req -new -key server.key -out server.csr -subj "/CN=localhost"
 openssl x509 -req -in server.csr -CA rootCA.crt -CAkey rootCA.key -CAcreateserial -out server.crt -days 365 -sha256 -extfile v3.ext
 ```
 Эта команда создает сертификат `server.crt`, подписанный нашим CA и с указанными в `v3.ext` альтернативными именами 7.
-### 3. Установка корневого сертификата в систему
+### Установка корневого сертификата в систему
 - **Windows**: 
   - Откройте файл `rootCA.crt`.
   - Выберите "Установить сертификат" → "Локальный компьютер" → "Поместить все сертификаты в следующую хранилище" → "Доверенные корневые центры сертификации".
   - Подтвердите установку 68.
-### 4. Настройка веб-сервера
-Используйте `server.crt` и `server.key` в настройках вашего сервера. Пример для Node.js:
-```javascript
-const https = require('https');
-const fs = require('fs');
-const options = {
-  key: fs.readFileSync('server.key'),
-  cert: fs.readFileSync('server.crt')
-};
-https.createServer(options, (req, res) => {
-  res.end('Hello HTTPS!');
-}).listen(443);
-```
-### 5. Очистка кеша Telegram
+
+### Очистка кеша Telegram
 После установки сертификата и перезапуска сервера:
 - Закройте Telegram.
 - Удалите папку кеша: `%APPDATA%\Telegram Desktop\tdata\webview` 1.
