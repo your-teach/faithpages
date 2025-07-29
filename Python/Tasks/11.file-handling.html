@@ -589,9 +589,27 @@ Complex is better than complicated.
 <h2>Создать путь<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
 <p>Создайте функцию, которая создает путь до папки, если этого пути не существует.
 Функция должна принимать один аргумент пути до папки в виде строки.
-Пример входных данных: <code class="docutils literal notranslate"><span class="pre">home/music/bands</span></code>
+Пример входных данных: <code class="docutils literal notranslate"><span class="pre">home/music/bands</span></code><br />
 На выходе должны получить созданную папку.
 Если папка существует - ничего не делаем.</p>
+<div class="toggle docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="n">mypath</span> <span class="o">=</span> <span class="s2">&quot;/home/music/bands/&quot;</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">open_path</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="n">parts</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+    <span class="n">snake_path</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">parts</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">part</span><span class="p">:</span>
+            <span class="n">snake_path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">part</span><span class="p">)</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">snake_path</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+<span class="n">open_path</span><span class="p">(</span><span class="n">mypath</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </section>
 </section>
 
