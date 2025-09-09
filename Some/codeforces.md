@@ -1,4 +1,22 @@
 # Задачи codeforces
+
+## Слово 
+https://codeforces.com/problemset/problem/59/A
+
+## Почти счастливое число
+https://codeforces.com/problemset/problem/110/A
+
+## Калькулятор дедушки Довлета
+https://codeforces.com/problemset/problem/620/B
+
+## Лифт
+https://codeforces.com/problemset/problem/120/A
+
+## Красивая матрица 
+https://codeforces.com/problemset/problem/263/A
+
+
+# Такие себе задачи:
 ## Игра с кубиком 
 https://codeforces.com/problemset/problem/378/A
 
@@ -18,12 +36,6 @@ for i in range(1, 7):
         s += 1
 print(f,s,t)
 ```
-
-## Слово 
-https://codeforces.com/problemset/problem/59/A
-
-## Красивая матрица 
-https://codeforces.com/problemset/problem/263/A
 
 ## Команда 
 https://codeforces.com/problemset/problem/231/A
