@@ -1519,6 +1519,9 @@ os.mkdir(&quot;NEW&quot;)
 # Без &quot;exist_ok=True&quot; выйдет ошибка
 os.makedirs(&quot;FOLDER&quot;, exist_ok=True)
 
+# Проверить существует ли папка или файл
+os.path.exists(&quot;folder/or/file&quot;)
+
 print(os.name) # имя системы
 
 print(os.environ)
