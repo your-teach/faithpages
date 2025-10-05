@@ -894,6 +894,9 @@ with open('data.json', 'w', encoding='utf-8') as file:
     # Без "exist_ok=True" выйдет ошибка
     os.makedirs("FOLDER", exist_ok=True)
 
+    # Проверить существует ли папка или файл
+    os.path.exists("folder/or/file")
+
     print(os.name) # имя системы
 
     print(os.environ)
