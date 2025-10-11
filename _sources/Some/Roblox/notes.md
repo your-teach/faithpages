@@ -149,3 +149,17 @@ local touch_objects = workspace:GetPartsInPart(part)
   <source src="https://github.com/your-teach/faithpages/raw/refs/heads/main/video/Animation-Roblox.mp4" type="video/mp4">
 </video>
 
+## Передвижение парта относительно другого парта
+```lua
+local partToMove = workspace.PartToMove
+local referencePart = workspace.ReferencePart
+local offset = 5
+
+-- Переместить partToMove вправо относительно referencePart
+partToMove.CFrame = partToMove.CFrame + referencePart.CFrame.RightVector * offset 
+
+-- Переместить partToMove вверх относительно referencePart
+partToMove.CFrame = partToMove.CFrame + referencePart.CFrame.UpVector * offset
+
+-- или использовать XVector, YVector, ZVector
+```

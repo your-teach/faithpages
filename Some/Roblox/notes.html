@@ -450,6 +450,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gui">Кнопка Gui</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Касание других партов</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Анимация</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Передвижение парта относительно другого парта</a></li>
 </ul>
             </nav>
         </div>
@@ -605,6 +606,22 @@ Remote functions - это функции, которые можно вызыва
   <source src="https://github.com/your-teach/faithpages/raw/refs/heads/main/video/Animation-Roblox.mp4" type="video/mp4">
 </video>
 </section>
+<section id="id6">
+<h2>Передвижение парта относительно другого парта<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span><span class="w"> </span><span class="nv">partToMove</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">workspace</span><span class="p">.</span><span class="py">PartToMove</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">referencePart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">workspace</span><span class="p">.</span><span class="py">ReferencePart</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+
+<span class="c1">-- Переместить partToMove вправо относительно referencePart</span>
+<span class="nv">partToMove</span><span class="p">.</span><span class="py">CFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">partToMove</span><span class="p">.</span><span class="py">CFrame</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">referencePart</span><span class="p">.</span><span class="py">CFrame</span><span class="p">.</span><span class="py">RightVector</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">offset</span><span class="w"> </span>
+
+<span class="c1">-- Переместить partToMove вверх относительно referencePart</span>
+<span class="nv">partToMove</span><span class="p">.</span><span class="py">CFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">partToMove</span><span class="p">.</span><span class="py">CFrame</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">referencePart</span><span class="p">.</span><span class="py">CFrame</span><span class="p">.</span><span class="py">UpVector</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">offset</span>
+
+<span class="c1">-- или использовать XVector, YVector, ZVector</span>
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -678,6 +695,7 @@ Remote functions - это функции, которые можно вызыва
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gui">Кнопка Gui</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Касание других партов</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Анимация</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Передвижение парта относительно другого парта</a></li>
 </ul>
   </nav></div>
 
