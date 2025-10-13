@@ -163,3 +163,5 @@ partToMove.CFrame = partToMove.CFrame + referencePart.CFrame.UpVector * offset
 
 -- или использовать XVector, YVector, ZVector
 ```
+
+## Что-то новое
