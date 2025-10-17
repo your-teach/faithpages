@@ -918,6 +918,12 @@ with open('data.json', 'w', encoding='utf-8') as file:
     homepath = os.path.expanduser("~")
     print(homepath)
 
+    # Еще можно разобрать
+    icon_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "qspectrumanalyzer.svg")
+    # os.path.join
+    # os.path.dirname
+    # os.path.realpath
+
     # Все команды os модуля: https://pythonworld.ru/moduli/modul-os.html
     # Упражнения на os: https://www.w3resource.com/python-exercises/os/index.php
 
