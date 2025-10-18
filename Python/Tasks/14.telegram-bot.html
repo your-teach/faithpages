@@ -466,6 +466,98 @@ document.write(`
 <p>Создать команду <code class="docutils literal notranslate"><span class="pre">/ban</span></code> для админа, с помощью которой можно забанить любого пользователя по его <code class="docutils literal notranslate"><span class="pre">user_id</span></code>.<br />
 После использования этой команды, пользователь добавляется в бан-лист.</p>
 <p>Необходимо создать декоратор который проверяет находится ли пользователь в бан-листе и применить его к фукнциям которые вызываются командами <code class="docutils literal notranslate"><span class="pre">/start</span></code> и <code class="docutils literal notranslate"><span class="pre">/getid</span></code>.</p>
+<p>Дополнительно: Можно сделать команду для разбана пользователя <code class="docutils literal notranslate"><span class="pre">/unban/</span></code></p>
+<div class="toggle docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">telegram</span><span class="w"> </span><span class="kn">import</span> <span class="n">ForceReply</span><span class="p">,</span> <span class="n">Update</span><span class="p">,</span> <span class="n">InlineKeyboardButton</span><span class="p">,</span> <span class="n">InlineKeyboardMarkup</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">telegram.ext</span><span class="w"> </span><span class="kn">import</span> <span class="n">Application</span><span class="p">,</span> <span class="n">CommandHandler</span><span class="p">,</span> <span class="n">ContextTypes</span><span class="p">,</span> <span class="n">MessageHandler</span><span class="p">,</span> <span class="n">filters</span>
+
+<span class="c1"># Enable logging</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span>
+    <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%(asctime)s</span><span class="s2"> - </span><span class="si">%(name)s</span><span class="s2"> - </span><span class="si">%(levelname)s</span><span class="s2"> - </span><span class="si">%(message)s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span>
+<span class="p">)</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;httpx&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">)</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="n">TOKEN</span> <span class="o">=</span> <span class="s2">&quot;TOKEN&quot;</span>
+<span class="n">ADMINS</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">banlist</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">detect</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">update_func</span><span class="p">(</span><span class="n">update</span><span class="p">:</span> <span class="n">Update</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">ContextTypes</span><span class="o">.</span><span class="n">DEFAULT_TYPE</span><span class="p">):</span>
+        <span class="n">userid</span> <span class="o">=</span> <span class="n">update</span><span class="o">.</span><span class="n">effective_user</span><span class="o">.</span><span class="n">id</span>
+        <span class="k">if</span> <span class="n">userid</span> <span class="ow">in</span> <span class="n">ADMINS</span><span class="p">:</span>
+            <span class="k">return</span> <span class="k">await</span> <span class="n">func</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">update</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">reply_text</span><span class="p">(</span><span class="s2">&quot;Вы не являетесь администратором&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">update_func</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">verification</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">update_func</span><span class="p">(</span><span class="n">update</span><span class="p">:</span> <span class="n">Update</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">ContextTypes</span><span class="o">.</span><span class="n">DEFAULT_TYPE</span><span class="p">):</span>
+        <span class="n">userid</span> <span class="o">=</span> <span class="n">update</span><span class="o">.</span><span class="n">effective_user</span><span class="o">.</span><span class="n">id</span>
+        <span class="k">if</span> <span class="n">userid</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">banlist</span><span class="p">:</span>
+            <span class="k">return</span> <span class="k">await</span> <span class="n">func</span><span class="p">(</span><span class="n">update</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">await</span> <span class="n">update</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">reply_text</span><span class="p">(</span><span class="s2">&quot;Вы забанены.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">update_func</span>
+
+<span class="c1"># @detect</span>
+<span class="nd">@verification</span>
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">start</span><span class="p">(</span><span class="n">update</span><span class="p">:</span> <span class="n">Update</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">ContextTypes</span><span class="o">.</span><span class="n">DEFAULT_TYPE</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">update</span><span class="o">.</span><span class="n">effective_user</span>
+    <span class="k">await</span> <span class="n">update</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">reply_html</span><span class="p">(</span>
+        <span class="sa">rf</span><span class="s2">&quot;Добро пожаловать </span><span class="si">{</span><span class="n">user</span><span class="o">.</span><span class="n">mention_html</span><span class="p">()</span><span class="si">}</span><span class="s2">!&quot;</span>
+    <span class="p">)</span>
+
+<span class="c1"># @detect</span>
+<span class="nd">@verification</span>
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">admin</span><span class="p">(</span><span class="n">update</span><span class="p">:</span> <span class="n">Update</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">ContextTypes</span><span class="o">.</span><span class="n">DEFAULT_TYPE</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">keyboard</span> <span class="o">=</span> <span class="p">[[</span><span class="n">InlineKeyboardButton</span><span class="p">(</span><span class="s2">&quot;Newsletter&quot;</span><span class="p">,</span> <span class="n">callback_data</span><span class="o">=</span><span class="mi">1</span><span class="p">)],</span>
+                <span class="p">[</span><span class="n">InlineKeyboardButton</span><span class="p">(</span><span class="s2">&quot;Edit info&quot;</span><span class="p">,</span> <span class="n">callback_data</span><span class="o">=</span><span class="mi">2</span><span class="p">)]]</span>
+    <span class="n">reply_markup</span> <span class="o">=</span> <span class="n">InlineKeyboardMarkup</span><span class="p">(</span><span class="n">keyboard</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">update</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">reply_text</span><span class="p">(</span><span class="s2">&quot;Admin menu&quot;</span><span class="p">,</span> <span class="n">reply_markup</span><span class="o">=</span><span class="n">reply_markup</span><span class="p">)</span>
+
+<span class="c1"># @detect</span>
+<span class="nd">@verification</span>
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">ban</span><span class="p">(</span><span class="n">update</span><span class="p">:</span> <span class="n">Update</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">ContextTypes</span><span class="o">.</span><span class="n">DEFAULT_TYPE</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">update</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">text</span>
+    <span class="n">ban_id</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">banlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">ban_id</span><span class="p">))</span>
+    <span class="k">await</span> <span class="n">update</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">reply_text</span><span class="p">(</span><span class="s2">&quot;Пользователь </span><span class="si">%s</span><span class="s2"> забанен.&quot;</span> <span class="o">%</span> <span class="n">ban_id</span><span class="p">)</span>
+
+<span class="c1"># @detect</span>
+<span class="nd">@verification</span>
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">getid</span><span class="p">(</span><span class="n">update</span><span class="p">:</span> <span class="n">Update</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">ContextTypes</span><span class="o">.</span><span class="n">DEFAULT_TYPE</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">user_id</span> <span class="o">=</span> <span class="n">update</span><span class="o">.</span><span class="n">effective_user</span><span class="o">.</span><span class="n">id</span>
+    <span class="k">await</span> <span class="n">update</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">reply_text</span><span class="p">(</span><span class="s2">&quot;Ваш userid: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">user_id</span><span class="p">)</span>
+
+<span class="c1"># @detect</span>
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">help_command</span><span class="p">(</span><span class="n">update</span><span class="p">:</span> <span class="n">Update</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">ContextTypes</span><span class="o">.</span><span class="n">DEFAULT_TYPE</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">await</span> <span class="n">update</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">reply_text</span><span class="p">(</span><span class="s2">&quot;Help!&quot;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Start the bot.&quot;&quot;&quot;</span>
+    <span class="n">application</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">builder</span><span class="p">()</span><span class="o">.</span><span class="n">token</span><span class="p">(</span><span class="n">TOKEN</span><span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
+
+    <span class="n">application</span><span class="o">.</span><span class="n">add_handler</span><span class="p">(</span><span class="n">CommandHandler</span><span class="p">(</span><span class="s2">&quot;start&quot;</span><span class="p">,</span> <span class="n">start</span><span class="p">))</span>
+    <span class="n">application</span><span class="o">.</span><span class="n">add_handler</span><span class="p">(</span><span class="n">CommandHandler</span><span class="p">(</span><span class="s2">&quot;help&quot;</span><span class="p">,</span> <span class="n">help_command</span><span class="p">))</span>
+    <span class="n">application</span><span class="o">.</span><span class="n">add_handler</span><span class="p">(</span><span class="n">CommandHandler</span><span class="p">(</span><span class="s2">&quot;admin&quot;</span><span class="p">,</span> <span class="n">admin</span><span class="p">))</span>
+    <span class="n">application</span><span class="o">.</span><span class="n">add_handler</span><span class="p">(</span><span class="n">CommandHandler</span><span class="p">(</span><span class="s2">&quot;ban&quot;</span><span class="p">,</span> <span class="n">ban</span><span class="p">))</span>
+    <span class="n">application</span><span class="o">.</span><span class="n">add_handler</span><span class="p">(</span><span class="n">CommandHandler</span><span class="p">(</span><span class="s2">&quot;getid&quot;</span><span class="p">,</span> <span class="n">getid</span><span class="p">))</span>
+
+    <span class="c1"># Run the bot until the user presses Ctrl-C</span>
+    <span class="n">application</span><span class="o">.</span><span class="n">run_polling</span><span class="p">(</span><span class="n">allowed_updates</span><span class="o">=</span><span class="n">Update</span><span class="o">.</span><span class="n">ALL_TYPES</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
 </section>
 </section>
 
