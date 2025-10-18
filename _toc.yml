@@ -23,6 +23,7 @@ parts:
         - file: Python/Tasks/11.file-handling
         - file: Python/Tasks/12.tkinter
         - file: Python/Tasks/13.try-except
+        - file: Python/Tasks/14.telegram-bot
       - file: Tables/table-Lib-modules
         sections:
         - file: Python/Lib-modules/1.Pip
