@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Генераторы списков &#8212; Faith Pages</title>
+    <title>Телеграм боты &#8212; Faith Pages</title>
   
   
   
@@ -58,14 +58,14 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Python/Tasks/6.2.list-comprehension';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Python/Tasks/14.telegram-bot';</script>
     <script src="../../_static/script.js?v=5bc9876b"></script>
-    <link rel="canonical" href="https://your-teach.github.io/faithpages/Python/Tasks/6.2.list-comprehension.html" />
+    <link rel="canonical" href="https://your-teach.github.io/faithpages/Python/Tasks/14.telegram-bot.html" />
     <link rel="icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Кортежи" href="7.tuples.html" />
-    <link rel="prev" title="Циклы" href="6.1.cycles.html" />
+    <link rel="next" title="Библиотеки и модули" href="../../Tables/table-Lib-modules.html" />
+    <link rel="prev" title="Ошибки и исключения" href="13.try-except.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -185,7 +185,7 @@
 <li class="toctree-l2"><a class="reference internal" href="4.conditions.html">Условия</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5.lists.html">Списки</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.1.cycles.html">Циклы</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Генераторы списков</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.2.list-comprehension.html">Генераторы списков</a></li>
 <li class="toctree-l2"><a class="reference internal" href="7.tuples.html">Кортежи</a></li>
 <li class="toctree-l2"><a class="reference internal" href="8.dictionaries.html">Словари</a></li>
 <li class="toctree-l2"><a class="reference internal" href="9.sets.html">Множества</a></li>
@@ -193,7 +193,7 @@
 <li class="toctree-l2"><a class="reference internal" href="11.file-handling.html">Работа с файлами</a></li>
 <li class="toctree-l2"><a class="reference internal" href="12.tkinter.html">Tkinter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="13.try-except.html">Ошибки и исключения</a></li>
-<li class="toctree-l2"><a class="reference internal" href="14.telegram-bot.html">Телеграм боты</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Телеграм боты</a></li>
 
 </ul>
 </details></li>
@@ -304,7 +304,7 @@
       
       
       
-      <li><a href="https://github.com/your-teach/faithpages/edit/main/Python/Tasks/6.2.list-comprehension.md" target="_blank"
+      <li><a href="https://github.com/your-teach/faithpages/edit/main/Python/Tasks/14.telegram-bot.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -321,7 +321,7 @@
       
       
       
-      <li><a href="https://github.com/your-teach/faithpages/issues/new?title=Issue%20on%20page%20%2FPython/Tasks/6.2.list-comprehension.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/your-teach/faithpages/issues/new?title=Issue%20on%20page%20%2FPython/Tasks/14.telegram-bot.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -351,7 +351,7 @@
       
       
       
-      <li><a href="../../_sources/Python/Tasks/6.2.list-comprehension.md" target="_blank"
+      <li><a href="../../_sources/Python/Tasks/14.telegram-bot.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -435,7 +435,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Генераторы списков</h1>
+    <h1>Телеграм боты</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -445,8 +445,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Список с алфавитом</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Телеграм боты</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Декораторы в телеграм ботах</a></li>
 </ul>
+
             </nav>
         </div>
     </div>
@@ -458,20 +460,16 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>Генераторы списков<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
-<section id="id2">
-<h2>Список с алфавитом<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
-<p>Сгенерировать список, который состоит из алфавита. Ожидаемый результат:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;а&#39;</span><span class="p">,</span> <span class="s1">&#39;б&#39;</span><span class="p">,</span> <span class="s1">&#39;в&#39;</span><span class="p">,</span> <span class="s1">&#39;г&#39;</span><span class="p">,</span> <span class="s1">&#39;д&#39;</span><span class="p">,</span> <span class="s1">&#39;е&#39;</span><span class="p">,</span> <span class="s1">&#39;ж&#39;</span><span class="p">,</span> <span class="s1">&#39;з&#39;</span><span class="p">,</span> <span class="s1">&#39;и&#39;</span><span class="p">,</span> <span class="s1">&#39;й&#39;</span><span class="p">,</span> <span class="s1">&#39;к&#39;</span><span class="p">,</span> <span class="s1">&#39;л&#39;</span><span class="p">,</span>
-<span class="s1">&#39;м&#39;</span><span class="p">,</span> <span class="s1">&#39;н&#39;</span><span class="p">,</span> <span class="s1">&#39;о&#39;</span><span class="p">,</span> <span class="s1">&#39;п&#39;</span><span class="p">,</span> <span class="s1">&#39;р&#39;</span><span class="p">,</span> <span class="s1">&#39;с&#39;</span><span class="p">,</span> <span class="s1">&#39;т&#39;</span><span class="p">,</span> <span class="s1">&#39;у&#39;</span><span class="p">,</span> <span class="s1">&#39;ф&#39;</span><span class="p">,</span> <span class="s1">&#39;х&#39;</span><span class="p">,</span> <span class="s1">&#39;ц&#39;</span><span class="p">,</span> <span class="s1">&#39;ч&#39;</span><span class="p">,</span>
-<span class="s1">&#39;ш&#39;</span><span class="p">,</span> <span class="s1">&#39;щ&#39;</span><span class="p">,</span> <span class="s1">&#39;ъ&#39;</span><span class="p">,</span> <span class="s1">&#39;ы&#39;</span><span class="p">,</span> <span class="s1">&#39;ь&#39;</span><span class="p">,</span> <span class="s1">&#39;э&#39;</span><span class="p">,</span> <span class="s1">&#39;ю&#39;</span><span class="p">,</span> <span class="s1">&#39;я&#39;</span><span class="p">]</span>
-</pre></div>
-</div>
-<details><summary>Решение</summary>
-<pre>
-A = [chr(x) for x in range(1072, 1103+1)]
-</pre>
-</details></section>
+<h1>Телеграм боты<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id2">
+<h1>Декораторы в телеграм ботах<a class="headerlink" href="#id2" title="Link to this heading">#</a></h1>
+<p>Создать две команды для пользователя:
+Одна команда <code class="docutils literal notranslate"><span class="pre">/start</span></code> приветствует пользователя
+Вторая команда <code class="docutils literal notranslate"><span class="pre">/getid</span></code> показывает пользователю его <code class="docutils literal notranslate"><span class="pre">user_id</span></code></p>
+<p>Создать команду <code class="docutils literal notranslate"><span class="pre">/ban</span></code> для админа, с помощью которой можно забанить любого пользователя по его <code class="docutils literal notranslate"><span class="pre">user_id</span></code>.
+После использования этой команды, пользователь добавляется в бан-лист.</p>
+<p>Необходимо создать декоратор который проверяет находится ли пользователь в бан-листе и применить его к фукнциям которые вызываются командами <code class="docutils literal notranslate"><span class="pre">/start</span></code> и <code class="docutils literal notranslate"><span class="pre">/getid</span></code>.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -505,20 +503,20 @@ A = [chr(x) for x in range(1072, 1103+1)]
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="6.1.cycles.html"
+       href="13.try-except.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Циклы</p>
+        <p class="prev-next-title">Ошибки и исключения</p>
       </div>
     </a>
     <a class="right-next"
-       href="7.tuples.html"
+       href="../../Tables/table-Lib-modules.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Кортежи</p>
+        <p class="prev-next-title">Библиотеки и модули</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -538,8 +536,10 @@ A = [chr(x) for x in range(1072, 1103+1)]
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Список с алфавитом</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Телеграм боты</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Декораторы в телеграм ботах</a></li>
 </ul>
+
   </nav></div>
 
 </div></div>
