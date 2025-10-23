@@ -36,8 +36,8 @@ parts:
       - file: Tables/lua-tasks-table
         sections:
         - file: Lua/Tasks/1.in-out
-        - file: Lua/Tasks/2.string
-        - file: Lua/Tasks/3.boolean
+        - file: Lua/Tasks/2.boolean
+        - file: Lua/Tasks/3.string
         - file: Lua/Tasks/4.conditions
         - file: Lua/Tasks/5.tables
         - file: Lua/Tasks/6.cycles
