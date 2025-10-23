@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Работа с файлами &#8212; Faith Pages</title>
+    <title>Строки &#8212; Faith Pages</title>
   
   
   
@@ -58,14 +58,14 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Lua/Tasks/8.file-handling';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Lua/Tasks/3.string';</script>
     <script src="../../_static/script.js?v=5bc9876b"></script>
-    <link rel="canonical" href="https://your-teach.github.io/faithpages/Lua/Tasks/8.file-handling.html" />
+    <link rel="canonical" href="https://your-teach.github.io/faithpages/Lua/Tasks/3.string.html" />
     <link rel="icon" href="../../_static/fav.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Roblox" href="../../Tables/roblox-table.html" />
-    <link rel="prev" title="Функции" href="7.functions.html" />
+    <link rel="next" title="Условия" href="4.conditions.html" />
+    <link rel="prev" title="Логика" href="2.boolean.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -210,12 +210,12 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../Tables/lua-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">lua</span></code></a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="1.in-out.html">Ввод и вывод</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.boolean.html">Логика</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.string.html">Строки</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Строки</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.conditions.html">Условия</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5.tables.html">Таблицы</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6.cycles.html">Циклы</a></li>
 <li class="toctree-l2"><a class="reference internal" href="7.functions.html">Функции</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Работа с файлами</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8.file-handling.html">Работа с файлами</a></li>
 </ul>
 </details></li>
 </ul>
@@ -305,7 +305,7 @@
       
       
       
-      <li><a href="https://github.com/your-teach/faithpages/edit/main/Lua/Tasks/8.file-handling.md" target="_blank"
+      <li><a href="https://github.com/your-teach/faithpages/edit/main/Lua/Tasks/3.string.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -322,7 +322,7 @@
       
       
       
-      <li><a href="https://github.com/your-teach/faithpages/issues/new?title=Issue%20on%20page%20%2FLua/Tasks/8.file-handling.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/your-teach/faithpages/issues/new?title=Issue%20on%20page%20%2FLua/Tasks/3.string.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -352,7 +352,7 @@
       
       
       
-      <li><a href="../../_sources/Lua/Tasks/8.file-handling.md" target="_blank"
+      <li><a href="../../_sources/Lua/Tasks/3.string.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -436,7 +436,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Работа с файлами</h1>
+    <h1>Строки</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -446,7 +446,17 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Анализ файла</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Соединение строк</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Одно слово</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Замена</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Два из четырех</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Пару символов</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Манипуляции с предложением</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Ха-ха</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">01</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Река и солнце</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#n-nn-nnn">n + nn + nnn</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Заменить первый пробел</a></li>
 </ul>
             </nav>
         </div>
@@ -459,52 +469,98 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>Работа с файлами<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<h1>Строки<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <section id="id2">
-<h2>Анализ файла<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
-<p>Имеется файл <code class="docutils literal notranslate"><span class="pre">file.txt</span></code> с текстом на латинице. Напишите программу, которая выводит следующую статистику по тексту: количество букв латинского алфавита, число слов, число строк.</p>
-<p>Предположим, что <code class="docutils literal notranslate"><span class="pre">file.txt</span></code> содержит приведенный ниже текст:</p>
-<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
-Complex is better than complicated.
+<h2>Соединение строк<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Есть две строки в переменных:</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;hello&#39;</span>
+<span class="nv">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;world&#39;</span>
 </pre></div>
 </div>
-<p>В этом случае программа должна вывести информацию о файле в следующем виде:</p>
-<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>Входной файл содержит:
-108 букв
-20 слов
-4 строки
+<p>Необходимо соединить эти строки так, чтобы между ними появился пробел. (Нельзя менять значения переменных <code class="docutils literal notranslate"><span class="pre">a</span></code> и <code class="docutils literal notranslate"><span class="pre">b</span></code>)
+Результат поместить в переменную <code class="docutils literal notranslate"><span class="pre">c</span></code>, и вывести её.
+Ожидаемый результат: <code class="docutils literal notranslate"><span class="pre">hello</span> <span class="pre">world</span></code></p>
+</section>
+<section id="id3">
+<h2>Одно слово<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Есть строка <code class="docutils literal notranslate"><span class="pre">'lesson</span> <span class="pre">one'</span></code>.
+Необходимо вывести из этой строки последнее слово. (Использовать срезы строк)</p>
+</section>
+<section id="id4">
+<h2>Замена<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Есть переменная:</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;hello!world&#39;</span>
 </pre></div>
 </div>
-<div class="toggle docutils container">
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span><span class="w"> </span><span class="nv">filepath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;file.txt&quot;</span>
-<span class="kd">local</span><span class="w"> </span><span class="nv">fileread</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.open</span><span class="p">(</span><span class="nv">filepath</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
-<span class="nv">letters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
-<span class="nv">words</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
-<span class="nv">lines</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
-
-<span class="kr">for</span><span class="w"> </span><span class="nv">line</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nv">fileread</span><span class="p">:</span><span class="nf">lines</span><span class="p">()</span><span class="w"> </span><span class="kr">do</span>
-<span class="w">    </span><span class="nv">lines</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">lines</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
-<span class="w">    </span><span class="kr">for</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">#</span><span class="nv">line</span><span class="w"> </span><span class="kr">do</span>
-<span class="w">        </span><span class="nv">symbol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">line</span><span class="p">:</span><span class="nf">sub</span><span class="p">(</span><span class="nv">i</span><span class="p">,</span><span class="w"> </span><span class="nv">i</span><span class="p">)</span>
-<span class="w">        </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nv">symbol</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="s1">&#39;a&#39;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nv">symbol</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="s1">&#39;z&#39;</span><span class="w"> </span><span class="ow">or</span>
-<span class="w">                </span><span class="nv">symbol</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="s1">&#39;A&#39;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nv">symbol</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="s1">&#39;Z&#39;</span><span class="w"> </span><span class="ow">or</span>
-<span class="w">                    </span><span class="nv">symbol</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="s1">&#39;а&#39;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nv">symbol</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="s1">&#39;я&#39;</span><span class="w"> </span><span class="ow">or</span>
-<span class="w">                        </span><span class="nv">symbol</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="s1">&#39;А&#39;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nv">symbol</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="s1">&#39;Я&#39;</span><span class="p">)</span><span class="w"> </span><span class="kr">then</span>
-<span class="w">            </span><span class="nv">letters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">letters</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
-<span class="w">        </span><span class="kr">end</span>
-<span class="w">        </span><span class="kr">if</span><span class="w"> </span><span class="nv">symbol</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="kr">then</span>
-<span class="w">            </span><span class="nv">words</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">words</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
-<span class="w">        </span><span class="kr">end</span>
-<span class="w">    </span><span class="kr">end</span>
-<span class="w">    </span><span class="nv">words</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">words</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
-<span class="kr">end</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="nv">letters</span><span class="p">,</span><span class="w"> </span><span class="nv">words</span><span class="p">,</span><span class="w"> </span><span class="nv">lines</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
+<p>Необходимо заменить символ восклицательный знак на пробел. Ожидаемый результат: <code class="docutils literal notranslate"><span class="pre">hello</span> <span class="pre">world</span></code></p>
+</section>
+<section id="id5">
+<h2>Два из четырех<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>Дано произвольное число из четырех цифр. Нужно вывести число, состоящее из первой и последней цифры. Пример:</p>
+<blockquote>
+<div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">1234</span></code><br />
+Выходные данные: <code class="docutils literal notranslate"><span class="pre">14</span></code></p>
+</div></blockquote>
+</section>
+<section id="id6">
+<h2>Пару символов<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>Дана произвольная строка, длиной 6 символов. Нужно вывести 3 и 4 символы через пробел. Примеры:</p>
+<blockquote>
+<div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">'abcdef'</span></code><br />
+Выходные данные: <code class="docutils literal notranslate"><span class="pre">'c d'</span></code></p>
+</div></blockquote>
+<blockquote>
+<div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">'привет'</span></code><br />
+Выходные данные: <code class="docutils literal notranslate"><span class="pre">'и</span> <span class="pre">в'</span></code></p>
+</div></blockquote>
+</section>
+<section id="id7">
+<h2>Манипуляции с предложением<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>Дана строка: <code class="docutils literal notranslate"><span class="pre">'никто</span> <span class="pre">никогда</span> <span class="pre">не</span> <span class="pre">проходил</span> <span class="pre">программирование</span> <span class="pre">до</span> <span class="pre">конца'</span></code></p>
+<ol class="arabic simple">
+<li><p>Посчитать сумму букв второго и последнего слова, вывести эту сумму.</p></li>
+<li><p>Вывести слово <code class="docutils literal notranslate"><span class="pre">&quot;программирование&quot;</span></code></p></li>
+<li><p>Вывести слово <code class="docutils literal notranslate"><span class="pre">&quot;никто&quot;</span></code></p></li>
+<li><p>Соединить эти два слова и поставить между ними <code class="docutils literal notranslate"><span class="pre">&quot;и&quot;</span></code>, чтобы получилось <code class="docutils literal notranslate"><span class="pre">&quot;программирование</span> <span class="pre">и</span> <span class="pre">никто&quot;</span></code></p></li>
+</ol>
+</section>
+<section id="id8">
+<h2>Ха-ха<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p>Есть строка <code class="docutils literal notranslate"><span class="pre">'haaahaaahaaah'</span></code>
+Необходимо вывести из этой строки все <code class="docutils literal notranslate"><span class="pre">h</span></code></p>
+</section>
+<section id="id9">
+<h2>01<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>Есть строка <code class="docutils literal notranslate"><span class="pre">'01010101'</span></code>
+Необходимо вывести из этой строки все единицы.</p>
+</section>
+<section id="id10">
+<h2>Река и солнце<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>Есть строка <code class="docutils literal notranslate"><span class="pre">'Река</span> <span class="pre">взошла</span> <span class="pre">и</span> <span class="pre">обернуло</span> <span class="pre">осью</span> <span class="pre">солнце'</span></code>
+С помощью срезов и соединения строк составить следующий результат:
+<code class="docutils literal notranslate"><span class="pre">&quot;Река</span> <span class="pre">и</span> <span class="pre">солнце&quot;</span></code></p>
+</section>
+<section id="n-nn-nnn">
+<h2>n + nn + nnn<a class="headerlink" href="#n-nn-nnn" title="Link to this heading">#</a></h2>
+<p>Напишите программу, которая принимает целое число <code class="docutils literal notranslate"><span class="pre">n</span></code> и вычисляет значение <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">+</span> <span class="pre">nn</span> <span class="pre">+</span> <span class="pre">nnn</span></code>. Примеры.</p>
+<blockquote>
+<div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">5</span></code><br />
+Выходные данные: <code class="docutils literal notranslate"><span class="pre">615</span></code></p>
+</div></blockquote>
+<blockquote>
+<div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">1</span></code><br />
+Выходные данные: <code class="docutils literal notranslate"><span class="pre">123</span></code></p>
+</div></blockquote>
+<p>(Необходимы знания типов данных, а так же преобразование типов)</p>
+</section>
+<section id="id11">
+<h2>Заменить первый пробел<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p>Напишите программу, которая принимает строку, и заменяет первый найденный пробел на восклицательный знак.
+Пример:</p>
+<blockquote>
+<div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">Хороший</span> <span class="pre">день</span> <span class="pre">сегодня</span></code><br />
+Выходные данные: <code class="docutils literal notranslate"><span class="pre">Хороший!день</span> <span class="pre">сегодня</span></code></p>
+</div></blockquote>
 </section>
 </section>
 
@@ -539,20 +595,20 @@ Complex is better than complicated.
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="7.functions.html"
+       href="2.boolean.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Функции</p>
+        <p class="prev-next-title">Логика</p>
       </div>
     </a>
     <a class="right-next"
-       href="../../Tables/roblox-table.html"
+       href="4.conditions.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Roblox</p>
+        <p class="prev-next-title">Условия</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -572,7 +628,17 @@ Complex is better than complicated.
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Анализ файла</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Соединение строк</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Одно слово</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Замена</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Два из четырех</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Пару символов</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Манипуляции с предложением</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Ха-ха</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">01</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Река и солнце</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#n-nn-nnn">n + nn + nnn</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Заменить первый пробел</a></li>
 </ul>
   </nav></div>
 
