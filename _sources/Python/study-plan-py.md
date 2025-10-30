@@ -1036,4 +1036,6 @@ with open('data.json', 'w', encoding='utf-8') as file:
     - Парсинг с помощью Selenium
     - Создание сайта с помощью Flask (фронтенд) и может быть еще Django (бэкенд)
     - Создание оконных приложений с помощью wxPython
+    - enumerate()
+    - Что такое: if __name__ == "__main__"
 
