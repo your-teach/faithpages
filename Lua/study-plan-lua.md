@@ -22,6 +22,13 @@ https://www.youtube.com/watch?v=X6BqMZyzAs4
                 "lua": "clear; lua" }
     8. Создать папку на рабочем столе -> Открываем её в Vscode -> Далее создаем два файла -> main.lua/py theory.lua/py
     9. Выключить Ai chat и прочее в настройках: Chat: Disable Ai Freatures
+    10. Выключить предупреждение об local
+        -создать папку .vscode с содержимым:
+            {
+                "Lua.diagnostics.disable": [
+                    "lowercase-global"
+                ]
+            }
     
 https://cronos.ru/kb-cronospro-lua.html
 https://user.su/lua/index.php?id=36
