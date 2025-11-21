@@ -21,6 +21,7 @@ https://www.youtube.com/watch?v=X6BqMZyzAs4
             "code-runner.executorMap": {
                 "lua": "clear; lua" }
     8. Создать папку на рабочем столе -> Открываем её в Vscode -> Далее создаем два файла -> main.lua/py theory.lua/py
+    9. Выключить Ai chat и прочее в настройках: Chat: Disable Ai Freatures
     
 https://cronos.ru/kb-cronospro-lua.html
 https://user.su/lua/index.php?id=36
@@ -196,19 +197,15 @@ https://ru.wikibooks.org/wiki/Lua/Типы_данных
 
 ## Условия.
 -if    elseif     else
--Комнаты
+
+-Самый простой пример
 ```lua
-key = 'blue'
-if key == 'blue' then
-    print('Синия комната')
-elseif key == 'red' then
-    print('Красная комната')
-elseif key == 'green' then
-    print('Зеленая комната')
-else
-    print('Запасная комната')
+n = 5
+if n == 5 then -- или n > 0
+    print("число равно 5")
 end
 ```
+
 -Температура на улице
 ```lua
 temp = tonumber(io.read())
@@ -224,6 +221,20 @@ else
 end
 ```
 
+-Комнаты
+```lua
+key = 'blue'
+if key == 'blue' then
+    print('Синия комната')
+elseif key == 'red' then
+    print('Красная комната')
+elseif key == 'green' then
+    print('Зеленая комната')
+else
+    print('Запасная комната')
+end
+```
+
 -Что такое заголовок/тело.  
 -Что такое табуирование, и где находится кнопка TAB.  
 -if может быть только один и только в начале  
@@ -233,11 +244,12 @@ end
 
 -Как найти четное число.
 ```lua
-n = int(input())
-if n % 2 == 0:
-    print('четное')
-else:
-    print('нечетное')
+n = io.read()
+if n % 2 == 0 then
+    print("четное")
+else
+    print("нечетное")
+end
 ```
 -Является ли переменная строкой:
 ```lua
