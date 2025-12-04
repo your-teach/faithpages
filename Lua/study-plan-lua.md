@@ -21,14 +21,6 @@ https://www.youtube.com/watch?v=X6BqMZyzAs4
             "code-runner.executorMap": {
                 "lua": "clear; lua" }
     8. Создать папку на рабочем столе -> Открываем её в Vscode -> Далее создаем два файла -> main.lua/py theory.lua/py
-    9. Выключить Ai chat и прочее в настройках: Chat: Disable Ai Freatures
-    10. Выключить предупреждение об local
-        -создать папку .vscode с содержимым:
-            {
-                "Lua.diagnostics.disable": [
-                    "lowercase-global"
-                ]
-            }
     
 https://cronos.ru/kb-cronospro-lua.html
 https://user.su/lua/index.php?id=36
@@ -113,30 +105,6 @@ https://ru.wikibooks.org/wiki/Lua/Типы_данных
     i = 0
     i = i + 1 -- увеличить переменную на единицу
 
-## Строки.
-    s = "Двойные кавычки"
-    s = 'Одинарные кавычки'
-    -- print("'Arrival' is good cinema") -- Кавычки в строке
-    s = [[ long
-                long
-                        lines]]
-    s = 'текст'
-    l = #s -- Находим длину строки в байтах
-    l = string.len(s) -- Работает точно так же, как #. Так что в ней нет смысла.
-    l = utf8.len(s) -- Более точный подсчет длины строки
-    a = 'Hello'
-    b = 'World'
-    s = a..b -- Оператор .. соединяет строки
-    s = 'one\ntwo' -- Экранирование, перевод строки на новую
-
-    Срезы строк.
-        text = 'my string variable'
-        result = text:sub(4,9) -- находим символы с 4 по 9, 'string'
-        result = text:sub(1,1) -- находим первый символ строки, 'm'
-    Методы строк.
-        string.find(var, 'кс') - возвращает индекс первого найденного 'кс', иначе nil
-        Остальные методы строк https://quikluacsharp.ru/2015/03/21/funktsii-raboty-so-strokami-v-qlua-lua/
-
 ## Условные операторы.
     >
     <
@@ -180,6 +148,31 @@ https://ru.wikibooks.org/wiki/Lua/Типы_данных
 |  and  |  Логическое И  |
 |  or  |  Логическое ИЛИ  |
 
+
+## Строки.
+    s = "Двойные кавычки"
+    s = 'Одинарные кавычки'
+    -- print("'Arrival' is good cinema") -- Кавычки в строке
+    s = [[ long
+                long
+                        lines]]
+    s = 'текст'
+    l = #s -- Находим длину строки в байтах
+    l = string.len(s) -- Работает точно так же, как #. Так что в ней нет смысла.
+    l = utf8.len(s) -- Более точный подсчет длины строки
+    a = 'Hello'
+    b = 'World'
+    s = a..b -- Оператор .. соединяет строки
+    s = 'one\ntwo' -- Экранирование, перевод строки на новую
+
+    Срезы строк.
+        text = 'my string variable'
+        result = text:sub(4,9) -- находим символы с 4 по 9, 'string'
+        result = text:sub(1,1) -- находим первый символ строки, 'm'
+    Методы строк.
+        string.find(var, 'кс') - возвращает индекс первого найденного 'кс', иначе nil
+        Остальные методы строк https://quikluacsharp.ru/2015/03/21/funktsii-raboty-so-strokami-v-qlua-lua/
+
 ## Преобразование типов данных.
     -При сравнении числа введенного с помощью io.read() с другим числом возникает ошибка:
         enter = io.read()
@@ -203,15 +196,19 @@ https://ru.wikibooks.org/wiki/Lua/Типы_данных
 
 ## Условия.
 -if    elseif     else
-
--Самый простой пример
+-Комнаты
 ```lua
-n = 5
-if n == 5 then -- или n > 0
-    print("число равно 5")
+key = 'blue'
+if key == 'blue' then
+    print('Синия комната')
+elseif key == 'red' then
+    print('Красная комната')
+elseif key == 'green' then
+    print('Зеленая комната')
+else
+    print('Запасная комната')
 end
 ```
-
 -Температура на улице
 ```lua
 temp = tonumber(io.read())
@@ -227,20 +224,6 @@ else
 end
 ```
 
--Комнаты
-```lua
-key = 'blue'
-if key == 'blue' then
-    print('Синия комната')
-elseif key == 'red' then
-    print('Красная комната')
-elseif key == 'green' then
-    print('Зеленая комната')
-else
-    print('Запасная комната')
-end
-```
-
 -Что такое заголовок/тело.  
 -Что такое табуирование, и где находится кнопка TAB.  
 -if может быть только один и только в начале  
@@ -250,12 +233,11 @@ end
 
 -Как найти четное число.
 ```lua
-n = io.read()
-if n % 2 == 0 then
-    print("четное")
-else
-    print("нечетное")
-end
+n = int(input())
+if n % 2 == 0:
+    print('четное')
+else:
+    print('нечетное')
 ```
 -Является ли переменная строкой:
 ```lua

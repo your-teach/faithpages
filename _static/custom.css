@@ -1,0 +1,8 @@
+blockquote {
+    font-size: 14px;
+    padding: 0.5em;
+}
+pre {
+    /* overflow: hidden; */
+    white-space: pre-wrap;
+}
