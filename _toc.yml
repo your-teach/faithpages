@@ -53,6 +53,7 @@ parts:
         sections:
         - file: Some/Ubuntu/selenium-vps
       - file: Some/codeforces
+      - file: Some/tasks
       - file: Some/settings-system
 
 
