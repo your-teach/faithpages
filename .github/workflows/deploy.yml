@@ -26,6 +26,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
+      working-directory: ./
 
     # Build the book
     - name: Build the book
@@ -36,7 +37,7 @@ jobs:
     # Отладочный шаг для проверки наличия директории
     - name: Check for build directory
       run: ls -R ./_build/html
-      
+
     # Deploy the book's HTML to gh-pages branch
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3.6.1
