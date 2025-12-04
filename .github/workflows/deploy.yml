@@ -32,7 +32,11 @@ jobs:
       run: |
         jupyter-book build .
       working-directory: ./book
-  
+
+    # Отладочный шаг для проверки наличия директории
+    - name: Check for build directory
+      run: ls -R ./_build/html
+      
     # Deploy the book's HTML to gh-pages branch
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3.6.1
