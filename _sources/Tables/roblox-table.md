@@ -1,3 +1,0 @@
-# Roblox
-```{tableofcontents}
-```
