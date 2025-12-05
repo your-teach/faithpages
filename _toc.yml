@@ -43,7 +43,7 @@ parts:
         - file: Lua/Tasks/6.cycles
         - file: Lua/Tasks/7.functions
         - file: Lua/Tasks/8.file-handling
-  - caption: Другое
+  - caption: Разное
     chapters:
       - file: Some/Roblox
       - file: Some/tasks
