@@ -674,7 +674,7 @@ example2()
 |%%	|Знак '%'|
 ```
 ```{toggle}
-![](../../files/python/time-format.png)
+![](../../images/python/time-format.png)
 ```
 
 [Упражнения](https://www.w3resource.com/python-exercises/date-time-exercise/index.php)
