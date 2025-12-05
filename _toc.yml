@@ -43,18 +43,13 @@ parts:
         - file: Lua/Tasks/6.cycles
         - file: Lua/Tasks/7.functions
         - file: Lua/Tasks/8.file-handling
-  - caption: Some
+  - caption: Другое
     chapters:
-      - file: Tables/roblox-table
-        sections:
-        - file: Some/Roblox/notes
-        - file: Some/Roblox/scripts
-      - file: Tables/ubuntu-table
-        sections:
-        - file: Some/Ubuntu/selenium-vps
-      - file: Some/codeforces
+      - file: Some/Roblox
       - file: Some/tasks
+      - file: Some/codeforces
       - file: Some/settings-system
+      - file: Some/ubuntu
 
 
 

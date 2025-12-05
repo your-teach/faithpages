@@ -1,5 +1,6 @@
-# Selenium на Vps
-## Запустить Selenium ChromeDriver на Ubuntu
+# Ubuntu
+
+## Запустить Selenium
 [Ссылка на первоисточник](https://www.youtube.com/watch?v=Jw9Gar_vcHY)
 
 Установка venv на сервер  
