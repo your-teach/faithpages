@@ -9,7 +9,7 @@ parts:
       - file: Python/study-plan-py
       - file: Tables/py-tasks-table 
         sections:
-        - file: Python/Tasks/1.in-out
+        - file: Python/Tasks/1.in-out 
         - file: Python/Tasks/2.strings
         - file: Python/Tasks/3.boolean
         - file: Python/Tasks/4.conditions
