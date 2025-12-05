@@ -233,6 +233,7 @@
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../Some/codeforces.html">Задачи codeforces</a></li>
 
+<li class="toctree-l1"><a class="reference internal" href="../Some/tasks.html">Другие задачки</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Some/settings-system.html">Настройки систем</a></li>
 </ul>
 
@@ -452,10 +453,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Типы данных.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Входные данные.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Арифметические операторы.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Условные операторы.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Логические операторы.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Приоритетность знаков (сверху-вниз).</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Строки.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Строки.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Условные операторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Логические операторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Приоритетность знаков (сверху-вниз).</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Преобразование типов данных.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Условия.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Таблицы.</a></li>
@@ -508,6 +509,14 @@ document.write(`
         &quot;code-runner.executorMap&quot;: {
             &quot;lua&quot;: &quot;clear; lua&quot; }
 8. Создать папку на рабочем столе -&gt; Открываем её в Vscode -&gt; Далее создаем два файла -&gt; main.lua/py theory.lua/py
+9. Выключить Ai chat и прочее в настройках: Chat: Disable Ai Freatures
+10. Выключить предупреждение об local
+    -создать папку .vscode с содержимым:
+        {
+            &quot;Lua.diagnostics.disable&quot;: [
+                &quot;lowercase-global&quot;
+            ]
+        }
 </pre></div>
 </div>
 <p><a class="reference external" href="https://cronos.ru/kb-cronospro-lua.html">https://cronos.ru/kb-cronospro-lua.html</a>
@@ -609,7 +618,34 @@ i = i + 1 -- увеличить переменную на единицу
 </div>
 </section>
 <section id="id6">
-<h2>Условные операторы.<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<h2>Строки.<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>s = &quot;Двойные кавычки&quot;
+s = &#39;Одинарные кавычки&#39;
+-- print(&quot;&#39;Arrival&#39; is good cinema&quot;) -- Кавычки в строке
+s = [[ long
+            long
+                    lines]]
+s = &#39;текст&#39;
+l = #s -- Находим длину строки в байтах
+l = string.len(s) -- Работает точно так же, как #. Так что в ней нет смысла.
+l = utf8.len(s) -- Более точный подсчет длины строки
+a = &#39;Hello&#39;
+b = &#39;World&#39;
+s = a..b -- Оператор .. соединяет строки
+s = &#39;one\ntwo&#39; -- Экранирование, перевод строки на новую
+
+Срезы строк.
+    text = &#39;my string variable&#39;
+    result = text:sub(4,9) -- находим символы с 4 по 9, &#39;string&#39;
+    result = text:sub(1,1) -- находим первый символ строки, &#39;m&#39;
+Методы строк.
+    string.find(var, &#39;кс&#39;) - возвращает индекс первого найденного &#39;кс&#39;, иначе nil
+    Остальные методы строк https://quikluacsharp.ru/2015/03/21/funktsii-raboty-so-strokami-v-qlua-lua/
+</pre></div>
+</div>
+</section>
+<section id="id7">
+<h2>Условные операторы.<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;
 &lt;
 &gt;=
@@ -626,8 +662,8 @@ f = true == false -- false
 </pre></div>
 </div>
 </section>
-<section id="id7">
-<h2>Логические операторы.<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<section id="id8">
+<h2>Логические операторы.<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-and 
     true and true -- true
     true and false -- false
@@ -644,8 +680,8 @@ f = true == false -- false
 </pre></div>
 </div>
 </section>
-<section id="id8">
-<h2>Приоритетность знаков (сверху-вниз).<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<section id="id9">
+<h2>Приоритетность знаков (сверху-вниз).<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Операторы</p></th>
@@ -684,33 +720,6 @@ f = true == false -- false
 </table>
 </div>
 </section>
-<section id="id9">
-<h2>Строки.<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>s = &quot;Двойные кавычки&quot;
-s = &#39;Одинарные кавычки&#39;
--- print(&quot;&#39;Arrival&#39; is good cinema&quot;) -- Кавычки в строке
-s = [[ long
-            long
-                    lines]]
-s = &#39;текст&#39;
-l = #s -- Находим длину строки в байтах
-l = string.len(s) -- Работает точно так же, как #. Так что в ней нет смысла.
-l = utf8.len(s) -- Более точный подсчет длины строки
-a = &#39;Hello&#39;
-b = &#39;World&#39;
-s = a..b -- Оператор .. соединяет строки
-s = &#39;one\ntwo&#39; -- Экранирование, перевод строки на новую
-
-Срезы строк.
-    text = &#39;my string variable&#39;
-    result = text:sub(4,9) -- находим символы с 4 по 9, &#39;string&#39;
-    result = text:sub(1,1) -- находим первый символ строки, &#39;m&#39;
-Методы строк.
-    string.find(var, &#39;кс&#39;) - возвращает индекс первого найденного &#39;кс&#39;, иначе nil
-    Остальные методы строк https://quikluacsharp.ru/2015/03/21/funktsii-raboty-so-strokami-v-qlua-lua/
-</pre></div>
-</div>
-</section>
 <section id="id10">
 <h2>Преобразование типов данных.<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-При сравнении числа введенного с помощью io.read() с другим числом возникает ошибка:
@@ -737,17 +746,11 @@ s = &#39;one\ntwo&#39; -- Экранирование, перевод строк�
 </section>
 <section id="id11">
 <h2>Условия.<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
-<p>-if    elseif     else
--Комнаты</p>
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;blue&#39;</span>
-<span class="kr">if</span><span class="w"> </span><span class="nv">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;blue&#39;</span><span class="w"> </span><span class="kr">then</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Синия комната&#39;</span><span class="p">)</span>
-<span class="kr">elseif</span><span class="w"> </span><span class="nv">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;red&#39;</span><span class="w"> </span><span class="kr">then</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Красная комната&#39;</span><span class="p">)</span>
-<span class="kr">elseif</span><span class="w"> </span><span class="nv">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;green&#39;</span><span class="w"> </span><span class="kr">then</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Зеленая комната&#39;</span><span class="p">)</span>
-<span class="kr">else</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Запасная комната&#39;</span><span class="p">)</span>
+<p>-if    elseif     else</p>
+<p>-Самый простой пример</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+<span class="kr">if</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="kr">then</span><span class="w"> </span><span class="c1">-- или n &gt; 0</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;число равно 5&quot;</span><span class="p">)</span>
 <span class="kr">end</span>
 </pre></div>
 </div>
@@ -765,6 +768,19 @@ s = &#39;one\ntwo&#39; -- Экранирование, перевод строк�
 <span class="kr">end</span>
 </pre></div>
 </div>
+<p>-Комнаты</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;blue&#39;</span>
+<span class="kr">if</span><span class="w"> </span><span class="nv">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;blue&#39;</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Синия комната&#39;</span><span class="p">)</span>
+<span class="kr">elseif</span><span class="w"> </span><span class="nv">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;red&#39;</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Красная комната&#39;</span><span class="p">)</span>
+<span class="kr">elseif</span><span class="w"> </span><span class="nv">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;green&#39;</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Зеленая комната&#39;</span><span class="p">)</span>
+<span class="kr">else</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Запасная комната&#39;</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
 <p>-Что такое заголовок/тело.<br />
 -Что такое табуирование, и где находится кнопка TAB.<br />
 -if может быть только один и только в начале<br />
@@ -772,11 +788,12 @@ s = &#39;one\ntwo&#39; -- Экранирование, перевод строк�
 -else может быть только один и только в конце<br />
 -Вывести “yes”, если число меньше 10, иначе “no”</p>
 <p>-Как найти четное число.</p>
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">int</span><span class="p">(</span><span class="nf">input</span><span class="p">())</span>
-<span class="kr">if</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;четное&#39;</span><span class="p">)</span>
-<span class="kr">else</span><span class="p">:</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;нечетное&#39;</span><span class="p">)</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.read</span><span class="p">()</span>
+<span class="kr">if</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;четное&quot;</span><span class="p">)</span>
+<span class="kr">else</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;нечетное&quot;</span><span class="p">)</span>
+<span class="kr">end</span>
 </pre></div>
 </div>
 <p>-Является ли переменная строкой:</p>
@@ -1170,10 +1187,10 @@ s = &#39;one\ntwo&#39; -- Экранирование, перевод строк�
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Типы данных.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Входные данные.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Арифметические операторы.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Условные операторы.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Логические операторы.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Приоритетность знаков (сверху-вниз).</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Строки.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Строки.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Условные операторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Логические операторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Приоритетность знаков (сверху-вниз).</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Преобразование типов данных.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Условия.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Таблицы.</a></li>

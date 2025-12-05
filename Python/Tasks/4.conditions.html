@@ -233,6 +233,7 @@
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Some/codeforces.html">Задачи codeforces</a></li>
 
+<li class="toctree-l1"><a class="reference internal" href="../../Some/tasks.html">Другие задачки</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Some/settings-system.html">Настройки систем</a></li>
 </ul>
 
@@ -457,6 +458,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Кондиционер</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Новая модель кондиционера</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Первый или второй</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Минимум из трех чисел</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Сколько совпадает чисел</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Дележ яблок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Шахматная доска</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Электронные часы</a></li>
 </ul>
             </nav>
         </div>
@@ -620,7 +626,80 @@ if n % 2 == 1:
 else:
     print("second")
 </pre>
-</details></section>
+</details>
+</section>
+<section id="id10">
+<h2>Минимум из трех чисел<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>Даны три целых числа. Выведите значение наименьшего из них.
+Пример:</p>
+<blockquote>
+<div><p>Входные данные:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> 
+<span class="mi">3</span> 
+<span class="mi">12</span> 
+</pre></div>
+</div>
+<p>Выходные данные:
+<code class="docutils literal notranslate"><span class="pre">12</span></code></p>
+</div></blockquote>
+</section>
+<section id="id11">
+<h2>Сколько совпадает чисел<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p>Даны три целых числа. Определите, сколько среди них совпадающих. Программа должна вывести одно из чисел: 3 (если все совпадают), 2 (если два совпадает) или 0 (если все числа различны).
+Пример:</p>
+<blockquote>
+<div><p>Входные данные:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span> 
+<span class="o">-</span><span class="mi">5</span> 
+<span class="mi">7</span> 
+</pre></div>
+</div>
+<p>Выходные данные:
+<code class="docutils literal notranslate"><span class="pre">2</span></code></p>
+</div></blockquote>
+</section>
+<section id="id12">
+<h2>Дележ яблок<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">n</span></code> школьников делят <code class="docutils literal notranslate"><span class="pre">k</span></code> яблок поровну, неделящийся остаток остается в корзинке. Сколько яблок достанется каждому школьнику? Сколько яблок останется в корзинке? Программа получает на вход числа <code class="docutils literal notranslate"><span class="pre">n</span></code> и <code class="docutils literal notranslate"><span class="pre">k</span></code> и должна вывести искомое количество яблок (два числа).</p>
+</section>
+<section id="id13">
+<h2>Шахматная доска<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<p>Заданы две клетки шахматной доски. Если они покрашены в один цвет, то выведите слово <code class="docutils literal notranslate"><span class="pre">YES</span></code>, а если в разные цвета — то <code class="docutils literal notranslate"><span class="pre">NO</span></code>. Программа получает на вход четыре числа от 1 до 8 каждое, задающие номер столбца и номер строки сначала для первой клетки, потом для второй клетки.
+Примеры:</p>
+<blockquote>
+<div><p>Входные данные:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> 
+<span class="mi">1</span> 
+<span class="mi">2</span> 
+<span class="mi">6</span> 
+</pre></div>
+</div>
+<p>Выходные данные:
+<code class="docutils literal notranslate"><span class="pre">YES</span></code></p>
+</div></blockquote>
+<blockquote>
+<div><p>Входные данные:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> 
+<span class="mi">2</span> 
+<span class="mi">2</span> 
+<span class="mi">5</span> 
+</pre></div>
+</div>
+<p>Выходные данные:
+<code class="docutils literal notranslate"><span class="pre">NO</span></code></p>
+</div></blockquote>
+</section>
+<section id="id14">
+<h2>Электронные часы<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<p>Дано число <code class="docutils literal notranslate"><span class="pre">n</span></code>. С начала суток прошло <code class="docutils literal notranslate"><span class="pre">n</span></code> минут. Определите, сколько часов и минут будут показывать электронные часы в этот момент. Программа должна вывести два числа: количество часов (от 0 до 23) и количество минут (от 0 до 59). Учтите, что число <code class="docutils literal notranslate"><span class="pre">n</span></code> может быть больше, чем количество минут в сутках.
+Пример:</p>
+<blockquote>
+<div><p>Входный данные:<br />
+<code class="docutils literal notranslate"><span class="pre">150</span></code>
+Выходные данные:
+<code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">30</span></code></p>
+</div></blockquote>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -698,6 +777,11 @@ else:
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Кондиционер</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Новая модель кондиционера</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Первый или второй</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Минимум из трех чисел</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Сколько совпадает чисел</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Дележ яблок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Шахматная доска</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Электронные часы</a></li>
 </ul>
   </nav></div>
 
