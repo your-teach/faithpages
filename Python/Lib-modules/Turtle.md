@@ -68,7 +68,7 @@ turtle.mainloop() # зацикливает окно программы, чтоб
 
 ## Квадрат, треугольник и круг
 
-![](../../files/turtle/3figures.png)
+![](../../images/turtle/3figures.png)
 
 ```python
 import turtle
@@ -105,7 +105,7 @@ turtle.mainloop()
 
 ## Pacman
 
-![](../../files/turtle/pacman.png)
+![](../../images/turtle/pacman.png)
 
 ````{toggle}
 ```python
@@ -128,7 +128,7 @@ mainloop()
 ````
 
 ## Солнце
-![](../../files/turtle/sun.png)
+![](../../images/turtle/sun.png)
 
 ```python
 from turtle import *
@@ -144,7 +144,7 @@ done()
 ```
 
 ## Солнце-мандала
-![](../../files/turtle/sun-mandala.png)
+![](../../images/turtle/sun-mandala.png)
 
 ```python
 from turtle import *
@@ -159,7 +159,7 @@ while True:
 ```
 
 ## Солнце-мандала 2
-![](../../files/turtle/sun-mandala2.png)
+![](../../images/turtle/sun-mandala2.png)
 ```python
 import turtle
 turtle.bgcolor("black")
@@ -176,7 +176,7 @@ turtle.mainloop()
 ```
 
 ## Спираль
-![](../../files/turtle/spiral.png)
+![](../../images/turtle/spiral.png)
 ```python
 from turtle import *
 
@@ -191,7 +191,7 @@ mainloop()
 
 ## Треугольная спираль
 
-![](../../files/turtle/spiral-triangle.png)
+![](../../images/turtle/spiral-triangle.png)
 
 ```python
 
@@ -213,7 +213,7 @@ turtle.mainloop()
 
 ## Мячик и след
 
-![](../../files/turtle/ball-line.png)
+![](../../images/turtle/ball-line.png)
 
 <details><summary>Решение</summary>
 <pre>
