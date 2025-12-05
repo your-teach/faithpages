@@ -3,22 +3,28 @@ permissions:
   contents: write
   pages: write
   id-token: write
- 
 on:
+  # Trigger the workflow on push to main branch
   push:
     branches:
       - main
 
+# This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
   build-and-deploy-book:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        python-version: [3.12]
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
-    - name: Set up Python
+    # Install dependencies
+    - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v5
-      with:
-        python-version: '3.11'
+      with: 
+        python-version: ${{ matrix.python-version }}
 
     - name: Cache pip
       uses: actions/cache@v4
@@ -27,14 +33,18 @@ jobs:
         key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
         restore-keys: |
           ${{ runner.os }}-pip-
-
+    
     - name: Install dependencies
-      run: pip install -r requirements.txt
+      run: |
+        pip install -r requirements.txt
 
+    # Build the book
     - name: Build the book
-      run: jupyter-book build .
+      run: |
+        jupyter-book build .
 
-    - name: Deploy to GitHub Pages
+    # Deploy the book's HTML to gh-pages branch
+    - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3.9.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
