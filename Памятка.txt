@@ -1,0 +1,133 @@
+````{toggle} Click
+```lua
+Some hidden toggle content!
+```
+````
+
+![](../images/image.png)
+![](../../video/Animation%20Roblox.mkv)
+
+<video style="display: block; margin: auto;" width="600" height="400" controls muted>
+  <source src="https://github.com/your-teach/faithpages/raw/refs/heads/main/video/Animation-Roblox.mp4" type="video/mp4">
+</video>
+
+[Ссылка на первоисточник](https://www.youtube.com/watch?v=Jw9Gar_vcHY)
+
+| :- | -: |
+|A   |   B|
+| :- | -: |
+|c   |   d|
+|c   |   d|
+
+|  A  |  B  |
+| :-: | :-: |
+|  c  |  d  |
+|  c  |  d  |
+
+
+
+
+
+
+
+
+
+
+<details><summary>Решение</summary>
+<pre>
+
+</pre>
+</details>
+
+
+
+<code>PASTE LOGS HERE</code>
+<code lang="python"></code>
+
+
+```{tableofcontents}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+blockcode {
+    /* word-wrap: break-word; */
+    white-space: pre-line;
+    /* display: block; */
+}
+code {
+    /* word-wrap: break-word; */
+    white-space: pre-line;
+    /* display: block; */
+}
+div.sourceCode {
+    /* word-wrap: break-word; */
+    white-space: pre-line;
+    overflow: hidden;
+}
+.highlight {
+    overflow: hidden;
+    /* word-wrap: break-word; */
+    word-break: break-all; 
+    overflow-wrap:break-word;
+    hyphens: auto;
+}
+div {
+    overflow: hidden;
+    /* word-wrap: break-word; */
+    word-break: break-all; 
+    overflow-wrap:break-word;
+    hyphens: auto;
+}
+
+    /* word-wrap: break-word; */
+    /* word-break: break-all;  */
+    /* overflow-wrap:break-word; */
+    /* hyphens: auto; */
+
+white-space: pre-line;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+parts:
+
+- caption: Упражнения
+  chapters:
+  - file: book/python-tasks
+  - file: book/lua-tasks
+- caption: Остальное
+  chapters:
+  - file: book/test
+    sections:
+    - file: book/markdown
+    - file: book/notebooks
+    - file: book/bibliography
+
+test file:
