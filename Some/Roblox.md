@@ -145,7 +145,7 @@ local touch_objects = workspace:GetPartsInPart(part)
  
 ## Анимация
 <video style="display: block; margin: auto;" width="600" height="400" controls muted>
-  <source src="../_images/Animation-Roblox.mp4" type="video/mp4">
+  <source src="../_static/Animation-Roblox.mp4" type="video/mp4">
 </video>
 
 ## Передвижение парта относительно другого парта
