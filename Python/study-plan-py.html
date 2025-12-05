@@ -1,0 +1,1880 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>План обучения py &#8212; Faith Pages</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fe3c39de" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Python/study-plan-py';</script>
+    <script src="../_static/script.js?v=5bc9876b"></script>
+    <link rel="canonical" href="https://your-teach.github.io/faithpages/Python/study-plan-py.html" />
+    <link rel="icon" href="../_static/fav.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Упражнения py" href="../Tables/py-tasks-table.html" />
+    <link rel="prev" title="Faith Pages" href="../index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Faith Pages - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Faith Pages - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">План обучения <code class="docutils literal notranslate"><span class="pre">py</span></code></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tables/py-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">py</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Tasks/1.in-out.html">Ввод и вывод</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tasks/2.strings.html">Строки</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tasks/3.boolean.html">Логика</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tasks/4.conditions.html">Условия</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tasks/5.lists.html">Списки</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tasks/6.1.cycles.html">Циклы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tasks/6.2.list-comprehension.html">Генераторы списков</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tasks/7.tuples.html">Кортежи</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tasks/8.dictionaries.html">Словари</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tasks/9.sets.html">Множества</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tasks/10.functions.html">Функции</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tasks/11.file-handling.html">Работа с файлами</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tasks/12.tkinter.html">Tkinter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tasks/13.try-except.html">Ошибки и исключения</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tasks/14.telegram-bot.html">Телеграм боты</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tables/table-Lib-modules.html">Библиотеки и модули</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Lib-modules/1.Pip.html">Команды <code class="docutils literal notranslate"><span class="pre">pip</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lib-modules/2.List-pckg.html">Список пакетов</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lib-modules/Turtle.html">Turtle</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">Разное <code class="docutils literal notranslate"><span class="pre">py</span></code></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lua</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Lua/study-plan-lua.html">План обучения <code class="docutils literal notranslate"><span class="pre">lua</span></code></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tables/lua-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">lua</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Lua/Tasks/1.in-out.html">Ввод и вывод</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lua/Tasks/2.boolean.html">Логика</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lua/Tasks/3.string.html">Строки</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lua/Tasks/4.conditions.html">Условия</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lua/Tasks/5.tables.html">Таблицы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lua/Tasks/6.cycles.html">Циклы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lua/Tasks/7.functions.html">Функции</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lua/Tasks/8.file-handling.html">Работа с файлами</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Some</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tables/roblox-table.html">Roblox</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Some/Roblox/notes.html">Наброски</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Some/Roblox/scripts.html">Скрипты <code class="docutils literal notranslate"><span class="pre">rblx</span></code></a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tables/ubuntu-table.html">Ubuntu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Some/Ubuntu/selenium-vps.html">Selenium на Vps</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../Some/codeforces.html">Задачи codeforces</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../Some/settings-system.html">Настройки систем</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/your-teach/faithpages" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/your-teach/faithpages/edit/main/Python/study-plan-py.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/your-teach/faithpages/issues/new?title=Issue%20on%20page%20%2FPython/study-plan-py.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Python/study-plan-py.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>План обучения py</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vs-code-python">Установка Vs Code + Python.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Введение.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Переменные.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Ввод/Вывод.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Арифметические операторы и операции.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Условные и логические операторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Логические операторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Строки.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Условия.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Списки.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Циклы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-comprehensions">Генераторы списков. list comprehensions.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Алгоритмы обработки списков.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notrdy">Кортежи. (((notrdy)))</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Словари.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Множества.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Функции.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Введение в Модули.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time">Модуль time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datetime">Модуль datetime</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#turtle">Модуль Turtle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Еще о функциях</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Анонимная-функция или Лямбда-функция.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Разное</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#map">Функция map.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">Функция filter для отбора значений итерируемых объектов.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zip">Функция zip.(Редко используется)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yield">Функция-генератор. Оператор yield.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-sorted">Особенности сортировки через sort() и sorted().</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Итераторы и выражения-генераторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Обработка ошибок и исключений.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Работа с файлами.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#json">Работа с json</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#os">Модуль os</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Перемещение файлов.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Декораторы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tkinter">Tkinter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyqt">Pyqt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requests">Модуль Requests</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requests-html">Модуль requests-html</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#selenium">Selenium</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">ООП</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Аннотации</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#async-await">Асинхронное программирование async/await</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Создание телеграм бота</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pygame">Pygame</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ursina">Ursina</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re">Регулярные выражения <code class="docutils literal notranslate"><span class="pre">'re'</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Решение проблем:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Дополнить план обучения следующим:</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="py">
+<h1>План обучения <code class="docutils literal notranslate"><span class="pre">py</span></code><a class="headerlink" href="#py" title="Link to this heading">#</a></h1>
+<section id="vs-code-python">
+<h2>Установка Vs Code + Python.<a class="headerlink" href="#vs-code-python" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a></p></li>
+<li><p><a class="reference external" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></p></li>
+<li><p>RuLang: Шестерёнка -&gt; Command Pallete -&gt; Вводим ‘lang’ -&gt; Configure Display Language -&gt; ‘Русский’</p></li>
+<li><p>Расширение Python</p></li>
+<li><p>Расширение Code Runner</p></li>
+<li><p>Параметры:</p>
+<ul class="simple">
+<li><p>Установить стандартное автосохрание -&gt; Файл -&gt; Автосохранение</p></li>
+<li><p>Изменить шрифт -&gt; editor.fontSize -&gt; 16</p></li>
+<li><p>Code-runner: Save file before run [галочка стоит]</p></li>
+<li><p>Code-runner: Run in terminal [галочка стоит]</p></li>
+</ul>
+</li>
+<li><p>Settings.json
+-Очистка консоли:
+“code-runner.executorMap”: {
+“python”: “clear; python -u” }</p></li>
+<li><p>Создать папку на рабочем столе -&gt; Открываем её в Vscode -&gt; Далее создаем два файла -&gt; main.lua/py theory.lua/py</p></li>
+</ol>
+</section>
+<section id="id1">
+<h2>Введение.<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print(&quot;Hello World&quot;)
+Что такое комментарии.
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h2>Переменные.<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Зачем они нужны, как мы бы жили без них.
+-Оператор присваивания; Каждый символ в программировании важен, в том числе пробел.
+-Представляем, что переменная это коробка в которую мы можем поместить только одно значение.
+    name = &#39;Ivan&#39;
+-Как можно и как нельзя создавать переменные.
+    -Название переменной желательно должно соответствовать ее содержанию.
+    -Можно: 
+        isName = None
+        my_name = None
+        number1 = None
+        k0l0b0k = None
+        KEK = None
+    -Нельзя: 
+        1var 
+        использовать название команд
+        спец символы !@#
+-Программа читает код каждую строку поочереди.
+-По этому, одна и та же переменная может иметь различные значения в разных частях кода:
+    a = &#39;one&#39;
+    print(a)
+    a = &#39;two&#39;
+    print(a)
+-Чувствительность к верхнему и нижнему регистру:
+    a = 0
+    A = 1
+-Как поместить значение переменной в другую переменную:
+    a = 42
+    b = a
+    -Сперва читаем то что справа от равно, а потом слева от равно.
+-Поменять значения переменных: a, b = b, a
+-Каскадное присваивание: x=y=z=0
+-Множественное присваивание: x, y, z = 1, 2, 3
+-Как обозначается ничего: None
+
+
+-Типы данных или Типы переменных.
+- str - СТРОКИ - определяются кавычками &quot;_&quot; или &#39;_&#39;
+- int - ЧИСЛА - только цифры, без пробелов и кавычек.
+- bool - ЛОГИКА -  логическое значение, может содержать True/False (обязательно писать с большой буквы)
+-Каждый тип можно представить в виде комнаты со своими правилами.
+-Примеры.
+    К числам можно применять знак минус, а к строкам и логике - нет.
+    Сравнение 10 и &#39;10&#39;
+-type() - функция показывающая тип переменной
+На самом деле почти всё имеет свой тип. Остальные типы данных будем проходить на следующих уроках.
+-Функции для изменения типов:
+    str()
+    int()
+    bool()
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h2>Ввод/Вывод.<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-input(&#39;text&#39;)
+-print(end=, sep=)
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h2>Арифметические операторы и операции.<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- (+ - * / // % **)
+- Приоритет действий и операций - https://letpy.com/handbook/operator-priorities/
+- Бинарный и унарный операторы.
+- минус &quot;-&quot; меняет знак числа на противоположный
+- тип данных float
+- None (ничего)
+- Функции.
+    abs(x) - вычисляет модуль числа x
+    round(x, y) - округляет x до ближайшего целого. y - максимальное кол цифр после запятой
+    min(x1, x2,?,x_n) - находит минимальное, среди указанных чисел
+    max(x1, x2,?,x_n) - находит максимальное, среди указанных чисел
+    pow(x, y) - возводит x в степень y
+- import math, методы.
+    math.ceil(x) - возвращает ближайшее наибольшее целое для x
+    math.floor(x) - возвращает ближайшее наименьшее целое для x
+    math.fabs(x) - возвращает модуль числа x
+    math.factorial(x) - вычисляет факториал x!
+    math.exp(x) - вычисляет e**x
+    math.log2(x) - вычисляет логарифм по основанию 2
+    math.log10(x) - вычисляет логарифм по основанию 10
+    math.log(x, [base]) - вычисляет логарифм по указанному основанию base (по умолчанию base = e ? натуральный логарифм)
+    math.pow(x, y) - возводит число x в степень y
+    math.sqrt(x) - вычисляет квадратный корень из x
+
+    -Тригонометрические функции
+        math.cos(x) - вычисляет косинус x
+        math.sin(x) - вычисляет синус x
+        math.tan(x) - вычисляет тангенс x
+        math.acos(x) - вычисляет арккосинус x
+        math.asin(x) - вычисляет арксинус x
+        math.atan(x) - вычисляет арктангенс x
+
+    -Математические константы
+        math.pi - число пи
+        math.e - число e
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h2>Условные и логические операторы.<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- &gt; &lt; &gt;= &lt;= == !=
+- in
+- not in
+</pre></div>
+</div>
+</section>
+<section id="id6">
+<h2>Логические операторы.<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- and, or. 
+- not
+- is
+- and имеет больший приоритет чем or
+</pre></div>
+</div>
+</section>
+<section id="id7">
+<h2>Строки.<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Есть два вида кавычек &quot;text&quot; и &#39;text&#39;
+-&quot;&quot;&quot;Многострочные строки&quot;&quot;&quot;, &#39;&#39;&#39;Многострочные строки, пример 2&#39;&#39;&#39;
+-Перевод строки \n: &#39;hello\nworld&#39;
+-Пустая строка: &quot;&quot;
+-Конкатенация или cоединение строк: &#39;str1&#39; + &#39;str2&#39;; &#39;str1&#39; + &#39; &#39; + &#39;str2&#39;
+-Умножение строк: &#39;str&#39; * 10
+-Проверка наличия в строке той или иной подстроки: &#39;abc&#39; in str1
+-Форматирование строки:
+    platypus = &quot;Алекс&quot;
+    pig = &quot;Пепе&quot;
+    &quot;Утконос %s шел мимо поля&quot; % platypus
+    &quot;Утконос %s шел мимо поля и встретил свинку %s&quot; % (platypus, pig)
+    f&quot;Утконос {platypus} шел мимо поля и встретил свинку {pig}&quot;
+
+-Индексы, тип str, str[-1]
+-Cрезы [5:10] [0:-1] [start:stop:step]
+-Реверс строки: [::-1]
+-len(str)
+-ord(), id(), chr()
+-Сравнение строк с помощью условных операторов:
+    &quot;ABC&quot; != &#39;abc&#39;; (пример с логином и паролем)
+    &#39;a&#39; &lt; &#39;b&#39; (разобрать, почему это True)
+-Изменение строки, добавление/удаление символов в конце/начале/середине.
+    msg = &quot;Hello World!&quot;
+    newmsg = msg[:6]+&quot;w&quot;+msg[7:9]+msg[10:]
+
+
+-Что такое методы, как они работают, &quot;возвращаемые и невозвращаемые&quot;.
+-Методы строк. 
+    str.upper() - буквы становятся большими
+    str.lower() - буквы становятся маленькими
+    str.count(&#39;ra&#39;, start, stop) - посчитать сколько вхождений &#39;ra&#39; (start, stop - можно использовать срезы)
+    str.find(&#39;a&#39;, start, stop) - находит индекс первого &#39;a&#39;, слева направо. возвращает -1 если буквы нет
+    str.rfind() - работает так же как find, но начинает поиск справа
+    str.index(&#39;a&#39;) - аналог find, возвращает ошибку если буква не найдена
+    str.replace(&#39;a&#39;, &#39;b&#39;) - меняет все &#39;a&#39; на &#39;b&#39;
+    str.replace(&#39;a&#39;, &#39;b&#39;, amount) - меняет все &#39;a&#39; на &#39;b&#39;, amount - максимальное количество замен
+    str.isalpha() - возвращает True, если все символы являются буквами, иначе False.
+    str.isdigit() - возвращает True, если все символы являются цифрами, иначе False.
+    str.rjust(10, &#39;!&#39;) - добавляет символы слева строки, если индексов меньше 10.
+    str.ljust() - тоже самое что rjust, только справа.
+    str.split() - разбивает строку в местах где есть пробелы, на выходе получаем список.
+    str.split(&#39;-&#39;) - аналогично. разбивает строку в местах где есть символ &#39;-&#39;. Вместо &#39;-&#39; можно использовать любой другой символ. 
+    str.strip() - удаляет пробелы и переносы строк в начале и конце строки.
+
+    &#39;...&#39;.join(list) - соединяет все элементы списка в строку, между элементами ставится &quot;...&quot; (важно, чтобы в list были только элементы с типом str)
+
+    str.isupper() - возвращает True, если все буквы в строке верхнего регистра.
+    str.islower() - возвращает True, если все буквы в строке нижнего регистра.
+</pre></div>
+</div>
+</section>
+<section id="id8">
+<h2>Условия.<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Что такое табуирование? Это отступы, которые ставятся с помощью клавиши TAB.
+-Что такое заголовок/тело
+-if (заголовок, тело условия)
+-if-elif-elif-elif-elif-else (&gt; &lt; &gt;= &lt;= == !=)
+-Наличие тока для включения лампочки.
+    tok = false
+    if tok == true then
+        print(&#39;Лампа включена&#39;)
+-Неплохой пример, показывающий поэтапность действий, и то что при первом срабатывании условия оно останавливается.
+    temp = int(input())
+    if temp &gt; 10:
+        print(&#39;Погода атас, бежим гулять!&#39;)
+    elif temp &gt; 0:
+        print(&#39;Идем гулять, но нужно взять теплые вещи!&#39;)
+    elif temp &lt; 0:
+        print(&#39;Остаемся дома и смотрим кино&#39;)
+    else:
+        print(&#39;Ого, нулевая температура&#39;)
+-одиночные проверки, if var &gt; 5: print(&#39;hello&#39;)
+-сравнение строк
+-and, or и not (снова повторить)
+-пример: входит ли число в диапазон чисел от 0 до 10
+-пример: одно число входит в диапазон, а другое не входит
+-Тернарный условный оператор:
+    a, b = 12, 7
+    var = True if a &gt; b else False
+-Как найти четное число:
+    n = int(input())
+    if n % 2 == 0:
+        print(&#39;число четное&#39;)
+    else:
+        print(&#39;число не четное&#39;)
+-Является ли переменная строкой:
+    s = &#39;took-took&#39;
+    if type(s) == str:
+        print(&#39;да&#39;)
+    else:
+        print(&#39;нет&#39;)
+</pre></div>
+</div>
+</section>
+<section id="id9">
+<h2>Списки.<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-пример списка
+-тип list
+-вывести весь список
+-обратится к одному элементу по индексу
+-добавление в список lst.append()
+-удаление из списка lst.remove()
+-удаление элемента списка по индексу del lst[1]
+-заменить элемент lst[0] = &#39;new&#39;
+-срезы [5:10] [0:-1] [start:stop:step] [::-1]
+-соединение списков lst = [1,2,3] + [4,5,6]
+
+
+-положить элемент в середину списка с помощью соединения
+    lst = [&#39;a&#39;,&#39;b&#39;,&#39;d&#39;]
+    lst = lst[:2] + [&#39;c&#39;] + lst[2:]
+    print(lst)
+-длина списка функцией len()
+-создание пустого списка 
+-быстрое создание большого списка с помощью умножения lst = [0]*100
+-список может содержать любой другой тип данных
+-найти элемент списка в списке list[0][0]
+-&#39;abc&#39; in lst
+-функция list(), например переводит строку в список
+-функции max(lst) min(lst)
+-сумма элементов sum(lst)
+-sorted(lst) - функция сортировки чисел по возрастанию; sorted(lst, reverse=True) - по убыванию.
+-сравнение списков lst == lst (&gt; &lt; и т.д.)
+
+-методы списков:
+    list.append(element) - Добавляет элемент в конец списка
+    list.extend([element1, element2]) - Добавляет сразу несколько элементов в список
+    list.remove(element) - Удаляет элемент по значению
+    list.insert(index, element) - Вставляет элемент в указанное место списка
+    list.pop() - Удаляет последний элемент, либо элемент с указанным индексом в скобках
+    list.clear() - Очищает список (удаляет все элементы)
+    list.copy() - Возвращает копию списка
+    list.count(value) - Возвращает число элементов с указанным значением value
+    list.index(element) - Возвращает индекс первого найденного элемента element
+    list.reverse() - Меняет порядок следования элементов на обратный
+    list.sort() - Сортирует элементы списка
+
+sorted(lst) - сортировка по возрастанию
+sorted(lst, reverse=True) - сортировка по убыванию
+&#39;&#39;.join(line) - соединяет все элементы списка в одну строку (важно, чтобы в list были только элементы с типом str)
+&#39;-&#39;.join(list) - тоже самое, только между элементами ставится &quot;-&quot;
+del list[0] - удаление элемента по индексу
+</pre></div>
+</div>
+</section>
+<section id="id10">
+<h2>Циклы.<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-ВАЖНО! Показывать работу циклов примера с мельницей. Расписывать полностью поэтапность действий цикла!
+-Итерация - это одно повторение цикла.
+-while (заголовок, тело цикла)
+    -работает, когда имеет значение True
+-условные операторы в цикле (можно писать все те же самые условия, что и в условном операторе if)
+    -счетчик
+    -перебрать цифры до 100
+    -перебрать цифры от 50 до 100
+-for
+    -имеет собственную переменную; перебирает элементы
+    -range(start, stop, step) - создает расстояние между двумя цифрами &quot;start&quot; и &quot;stop&quot;, с указанным шагом &quot;step&quot;;  range(10,0,-1)
+    -с помощью for можно перебирать элементы списка или строки
+        пример: изменение всех элементов списка
+-break, continue, else
+    break - остановка цикла
+    continue - переход на следующую итерацию
+    else - срабатывает после остановки цикла, не работает с break
+-сокращения += -= *= /= //= %= **= 
+-input() внутри циклов
+-10 in range(0,20)
+-вложенные циклы(цикл внутри цикла).
+    # Создание матрицы 5х5:
+        A = []
+        for y in range(5):
+            A.append([])
+            for x in range(5):
+                A[y].append(x)
+        # print(A)
+    # Вывод матрицы:
+        for i in range(5):
+            for j in range(5):
+                print(A[i][j])
+            print()
+</pre></div>
+</div>
+</section>
+<section id="list-comprehensions">
+<h2>Генераторы списков. list comprehensions.<a class="headerlink" href="#list-comprehensions" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Пример без генератора:
+    A=[]
+    N=10
+    for x in range(N):
+        A.append(x**2)
+    print(A)
+-Пример с генератором:
+    N=10
+    A = [x**2 for x in range(N)]
+    print(A)
+-Список только из четных чисел  [x**2 for x in range(N) if x % 2 != 0]
+-Простой список из очереди цифр
+-Выборка слов состоящих максимум из 7 букв:
+    cities = [&quot;Москва&quot;, &quot;Тверь&quot;, &quot;Рязань&quot;, &quot;Ярославль&quot;, &quot;Владимир&quot;]
+    A = [city for city in cities if len(city) &lt; 7]
+    print(A)
+-Вложенные генераторы списков
+    M, N = 3, 4
+    matrix = [[a for a in range(M)] for b in range(N)]
+    print(matrix)
+</pre></div>
+</div>
+</section>
+<section id="id11">
+<h2>Алгоритмы обработки списков.<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Видео https://youtu.be/gMM7632kTkI?t=267 (4:27)
+</pre></div>
+</div>
+</section>
+<section id="notrdy">
+<h2>Кортежи. (((notrdy)))<a class="headerlink" href="#notrdy" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Кортежи это неизменяемые списки.
+-Они меньше занимают памяти.
+    a = (1,2,3,4,5)
+    b = [1,2,3,4,5]
+    print(a.__sizeof__())
+    print(b.__sizeof__())
+-Создание кортежа:
+    new_tpl = tuple()
+    new_tpl = ()
+    new_tpl = (&#39;a&#39;)   - не получится
+    new_tpl = (&#39;a&#39;,)
+    new_tpl = &#39;a&#39;,
+-Разбить строку на кортеж: tuple(&#39;str&#39;)
+-Индексы и срезы
+-Конкатенация, умножение
+-Операции in/not in
+-Кортеж можно перебирать с помощью for
+
+-Методы кортежей.
+    tuple.index(element) - Поиск позиции элемента в кортеже
+    tuple.count(element) - Количество вхождений элемента в кортеж
+</pre></div>
+</div>
+</section>
+<section id="id12">
+<h2>Словари.<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Тип dict.
+-Похожи на списки, только нужно самостоятельно создавать индексы для элементов. Это называется ключ:значение. В списках мы находили значение по индексу, а здесь по самостоятельно созданному ключу.
+-{Ключ:значение}
+-Создание словаря: d = {&#39;key1&#39;:&#39;value1&#39;, &#39;key2&#39;:&#39;value2&#39;, &#39;key3&#39;:&#39;value3&#39;}  
+-Найти значение по ключу: d[&#39;key1&#39;]
+-Добавить новый ключ: d[&#39;new_key&#39;] = &#39;new_value&#39;
+-Заменить значение по ключу: d[&#39;key2&#39;] = &#39;Cyan&#39;
+-Удалить ключ: del d[&#39;key3&#39;]
+
+-Названия ключей могут быть: int, str, bool, tuple или любой другой неизменяемый тип данных; (например, list - изменяемый). У значений нет орграничений.
+-Названия ключей уникальны, если создать два одинаковых ключа, то будет работать последний.
+-Функция-конструктор dict() 
+    d2 = dict(house = &quot;дом&quot;, car = &quot;машина&quot;, tree = &quot;дерево&quot;, road = &quot;дорога&quot;, river = &quot;река&quot;)
+        lst = [[2, &quot;неудовлетворительно&quot;], [3, &quot;удовлетворительно&quot;], [4, &quot;хорошо&quot;], [5, &quot;отлично&quot;]]
+        d3 = dict(lst)
+-dict.fromkeys() - Возвращает словарь, сформированный из указанной последовательности(например, из списка)
+    a = dict.fromkeys([&quot;+7&quot;, &quot;+6&quot;, &quot;+5&quot;, &quot;+4&quot;])
+    a = dict.fromkeys([&quot;+7&quot;, &quot;+6&quot;, &quot;+5&quot;, &quot;+4&quot;], &quot;value&quot;)
+-После удаления несуществующего ключа возникнет ошибка.
+-Проверка существует ли определенный ключ в словаре: &#39;abc&#39; in d; или наоборот: &#39;abc&#39; not in d
+-Пустой словарь d = {}; d = dict()
+-len(d)
+-Словарь можно перебрать через цикл for
+
+-Сортировка.
+    sorted(d) - сортировка по возрастанию ключей
+    sorted(d, reverse=True) - сортировка по убыванию
+
+-Методы словарей.
+    dict.clear() - Удаление всех записей
+    dict.copy() - Создание копии словаря
+    dict.get(key) - Позволяет получать значение словаря по ключу (при указании неверного ключа не возникает ошибки, а выдается по умолчанию значение None)
+    dict.get(&quot;Несуществующий_ключ&quot;, False) - При ошибке будет выводится False
+    dict.setdefault(key[, default]) - Возвращает значение ключа key и если его нет, то добавляет его в словарь со значением None, либо со значением default, если оно указано
+    dict.pop(key) - Удаляет указанный ключ и возвращает его значение
+    dict.pop(&quot;abc&quot;, False) - Здесь возвратится False. Если же ключ присутствует, то возвращается его значение.
+    dict.popitem() - Удаляет и возвращает последний ключ:значение в виде кортежа (key, value)
+    dict.keys() - Возвращает коллекцию ключей (Удобно использовать в цикле for)
+    dict.values() - Возвращает коллекцию из значений словаря (Удобно использовать в цикле for)
+    dict.items() - Возвращает записи в виде кортежей: ключ, значение (Удобно использовать в цикле for)
+    dict.update({key:value}) - Позволяет дополнить словарь новыми значениями, или обновить существующие ключи с новыми значениями
+
+    dict.fromkeys() - Возвращает словарь, сформированный из указанной последовательности(например, из списка)
+        a = dict.fromkeys([&quot;+7&quot;, &quot;+6&quot;, &quot;+5&quot;, &quot;+4&quot;])
+        a = dict.fromkeys([&quot;+7&quot;, &quot;+6&quot;, &quot;+5&quot;, &quot;+4&quot;], &quot;value&quot;)
+</pre></div>
+</div>
+</section>
+<section id="id13">
+<h2>Множества.<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Тип set
+-Множество ? это неупорядоченная коллекция уникальных элементов.
+-Пример: a = {1, 2, 3, &quot;hello&quot;}
+-Повторяющиеся значения будут проигнорированы: a = {1,2,3,&quot;hello&quot;, 2,3, &quot;hello&quot;}
+-Можно использовать только неизменяемые типы: str, int, tuple
+-Функция set() позволяет создать множество:
+    a = set()
+    b=set(&quot;hello world!&quot;)
+    c=set([1,1,2,3,5,3,2,1])
+    d=set(range(7))  - или даже функцию range()
+-Невозможно создать множество с помощью b = {} - это будет словарь
+-Пример удаление всех дубликатов в списке:
+    a=[1,2,3,43,2,4,3,2,1]
+    b=set(a)
+    a=list(b)
+    a=list(set(a))
+-Перечисление с помощью for:
+    setA = {7,6,5,4,3}
+    for x in setA:
+        print(x)
+-Множество ? это неупорядоченная коллекция, setA[0] приведет к ошибке.
+-Методы множества.
+    set.add(7) - Добавить новое значение.
+    set.update(element) - Добавить несколько новых значений. Вместо element можно указывать любой перебираемый объект, str, list, tuple...
+    set.discard(2) - Удаление элемента по значению, без ошибки.
+    set.remove(4) - Удаление элемента по значению, будет ошибка, если 4 отсутствует в множестве.
+    set.pop() - Удаляет и возвращает первый элемент множества.
+    set.clear() - Удалить все элементы множества.
+
+-Операции над множествами - https://proproprogs.ru/python_base/operacii-nad-mnozhestvami
+</pre></div>
+</div>
+</section>
+<section id="id14">
+<h2>Функции.<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Команда которая имеет в конце скобки называется функцией, она выполняет заранее подготовленный список действий в тот момент, когда мы ее вызовем.
+Функции могут иметь аргументы, они вводятся в скобки, через запятую. В Python есть готовые функции, такие как print().
+Но так же мы можем создавать свои функции.
+-Функция без аргументов. Создание и вызов функции. Нельзя вызывать функции до создания.
+-Вызов функции. Со скобками и без них.
+-Создать ссылку для функции. a = func; a()
+-Аргументы в функции.
+    Их может быть неопределенное количество, и их легко перепутать с переменными. 
+    Они работают только внутри своей функции.
+    Ранее созданные переменные работают в функции, но их нельзя изменить без глобализации.
+-global variables,a,b,c
+-Пример: Функция с одним аргументов приводящее число в число с второй степенью.
+-return - Возвращает значение и завершает функцию.
+-Присвоить возвращаемые значения функции переменной     a = func(x,y)
+-Несколько возвращаемых значений в виде кортежа; или так:   a,b = func(x,y)
+-Что значит &quot;Функция возвращает значение&quot;.
+-Значения аргументов по умолчанию   func(x=0, y=0)
+
+-Условия и циклы внутри функций.
+-Что такое *args и **kwargs
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Объявление функции.</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">():</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Помахать рукой&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Подойти к человеку&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Пожать руку&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Приветствие:&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Здравствуйте, человек!&#39;</span><span class="p">)</span>
+<span class="c1"># Конец функции.</span>
+
+<span class="n">func</span><span class="p">()</span> <span class="c1"># Запуск функции</span>
+<span class="n">func</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">func</span><span class="p">)</span> <span class="c1"># объект функции; не является запуском</span>
+
+<span class="c1"># Функция с аргументами</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="n">name</span><span class="p">):</span> <span class="c1"># Можно создавать неограниченное кол-во аргументов</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Помахать рукой&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Подойти к &#39;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Пожать руку&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Приветствие:&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Здравствуйте, &#39;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+
+<span class="n">func</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Федор&#39;</span><span class="p">)</span>
+<span class="n">func</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Майя&#39;</span><span class="p">)</span>
+
+<span class="c1"># Пример функции, которая имеет два аргумента в виде чисел, и выводит их сумму</span>
+<span class="c1"># func() # Нельзя вызывать функцию до её объявления.</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">summa</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> 
+<span class="n">summa</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Данная функция вернет None, и является</span>
+<span class="c1"># &quot;Невозвращаемой функцией&quot;</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">summa</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> 
+
+
+<span class="c1"># Возвращаемая функция</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">summa2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="k">return</span> <span class="n">res</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">summa2</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span> <span class="c1"># альтернативный вариант: c = summa(5, 2) </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="c1"># 35</span>
+
+<span class="c1"># Локальная и глобальная переменные</span>
+<span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;глобальная переменная&#39;</span> <span class="c1"># работает по всей площади скрипта</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">example</span><span class="p">():</span>
+    <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;Text&#39;</span> <span class="c1"># локальная переменная, работает только внутри функции, где была создана</span>
+
+<span class="c1"># Вызвать глобальную переменную внутри функции</span>
+<span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;глобальная переменная&#39;</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">example</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="c1"># глобальную переменную, функция спокойно видит</span>
+<span class="n">example</span><span class="p">()</span>
+
+<span class="c1"># Попытка вызвать переменную функции, вне её</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">example</span><span class="p">():</span>
+    <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;переменная&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span>
+<span class="c1"># print(variable) # ошибка; не существует вне функции</span>
+
+<span class="c1"># У аргумента приоритет выше чем у глобальной переменной</span>
+<span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;глобальная переменная&#39;</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">example</span><span class="p">(</span><span class="n">variable</span><span class="p">):</span> <span class="c1"># на этой строке variable - это аргумент, не путать с &#39;глобальной переменной&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="c1"># выведется аргумент</span>
+<span class="n">example</span><span class="p">(</span><span class="s1">&#39;содержимое аргумента&#39;</span><span class="p">)</span> <span class="c1"># &#39;содержимое аргумента&#39;</span>
+
+<span class="c1"># Попытка изменить глобальную переменную внутри функции</span>
+<span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;глобальная переменная&#39;</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">example</span><span class="p">():</span>
+    <span class="c1"># print(variable) # ошибка; (!Не факт, что нужно показывать данную строчку как пример!) </span>
+    <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;новое значение&#39;</span> <span class="c1"># здесь variable - новая локальная переменная</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="c1"># &#39;новое значение&#39;</span>
+<span class="n">example</span><span class="p">()</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="c1"># &#39;глобальная переменная&#39;; изменение не сохранилось</span>
+
+
+<span class="c1"># Чтобы изменять глобальную переменную внутри функции, необходимо ее глобализировать</span>
+<span class="n">variable</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">change</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">variable</span> <span class="c1"># можно сразу несколько global a,b,c</span>
+    <span class="n">variable</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="c1"># False</span>
+<span class="n">change</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="c1"># True</span>
+
+<span class="c1"># Создание новой глобальной переменной внутри функции</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">newglobal</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
+
+<span class="n">newglobal</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="c1"># 1, 2, 3</span>
+
+<span class="c1"># Дефолтное значение для аргументов</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">def_value</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span>
+
+<span class="n">example</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="s1">&#39;Text&#39;</span><span class="p">)</span> <span class="c1"># &#39;Text&#39;</span>
+<span class="n">example</span><span class="p">()</span> <span class="c1"># None</span>
+
+<span class="c1"># Передаем ссылку на функцию другой переменной</span>
+<span class="n">new_name</span> <span class="o">=</span> <span class="n">example2</span>
+<span class="n">new_name</span><span class="p">()</span>
+<span class="n">example2</span><span class="p">()</span>
+
+<span class="c1"># Присвоить возвращаемые значения функции переменной:     a = func(x,y)</span>
+<span class="c1"># Несколько возвращаемых значений в виде кортежа:   a,b = func(x,y)</span>
+<span class="c1"># Можно использовать Условия и Циклы внутри функций.</span>
+<span class="c1"># *args и **kwargs</span>
+
+</pre></div>
+</div>
+</section>
+<section id="id15">
+<h2>Введение в Модули.<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Что такое модули/библиотеки/пакеты</p></li>
+<li><p>Как установить (на примере cowsay)</p></li>
+<li><p>Как импортировать (только import)</p></li>
+<li><p>Как создать свой</p></li>
+<li><p>способы импорта:\</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">module</span> <span class="pre">as</span> <span class="pre">md</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">module</span> <span class="pre">import</span> <span class="pre">*</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">module</span> <span class="pre">import</span> <span class="pre">&lt;attribute&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">module</span> <span class="pre">import</span> <span class="pre">&lt;attribute&gt;</span> <span class="pre">as</span> <span class="pre">attr</span></code></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="time">
+<h2>Модуль time<a class="headerlink" href="#time" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+
+    <span class="c1"># Остановка скрипта на 3 секунды</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+    <span class="c1"># Количество секунд с начала цифрового века (1970)</span>
+    <span class="n">seconds</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+    <span class="c1"># Количество лет с начала цифр. века</span>
+    <span class="n">years</span> <span class="o">=</span> <span class="n">seconds</span> <span class="o">/</span> <span class="mi">60</span> <span class="o">/</span> <span class="mi">60</span> <span class="o">/</span> <span class="mi">24</span> <span class="o">/</span> <span class="mi">365</span>
+
+    <span class="n">time_now</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="datetime">
+<h2>Модуль datetime<a class="headerlink" href="#datetime" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+    <span class="c1"># Время сейчас</span>
+    <span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+    <span class="c1"># Получить из объекта времени только часы и минуты </span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">now</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="n">now</span><span class="o">.</span><span class="n">minute</span><span class="p">)</span> 
+
+    <span class="c1"># Количество секунд с начала цифрового века (1970)</span>
+    <span class="n">datetime</span><span class="o">.</span><span class="n">timestamp</span><span class="p">(</span><span class="n">now</span><span class="p">)</span>
+
+    <span class="c1"># Количество дней с начала цифрового века </span>
+    <span class="n">datetime</span><span class="o">.</span><span class="n">toordinal</span><span class="p">(</span><span class="n">now</span><span class="p">)</span>
+
+    <span class="c1"># Изменить атрибуты datetime объекта в котором хранится дата</span>
+    <span class="n">now</span> <span class="o">=</span> <span class="n">now</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">day</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># Создать объект времени, в котором будет храниться 3 часа</span>
+    <span class="n">three_hour</span> <span class="o">=</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+    <span class="c1"># Вычитаем из объекта времени &quot;now&quot; 3 часа</span>
+    <span class="n">edit_time</span> <span class="o">=</span> <span class="n">now</span> <span class="o">-</span> <span class="n">three_hour</span>
+
+    <span class="c1"># Создать фиксированную дату </span>
+    <span class="n">fixdate</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">a</span> <span class="o">=</span> <span class="n">now</span> <span class="o">-</span> <span class="n">fixdate</span> <span class="c1"># тоже можем вычитать или суммировать</span>
+
+    <span class="c1"># Или даже сравнивать объекты времени (&gt; &lt; &gt;= &lt;= != ==)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">now</span> <span class="o">&lt;=</span> <span class="n">fixdate</span><span class="p">)</span>
+
+    <span class="c1"># Форматируем объект даты в строку, с гибкими настройками</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span>
+            <span class="n">now</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%d</span><span class="s2">.%m.%Y | %H:%M:%S&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Форматируем строку в объект datetime</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span>
+            <span class="n">s</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%d</span><span class="s2">.%m.%Y | %H:%M:%S&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="toggle docutils container">
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Формат</p></th>
+<th class="head text-left"><p>Значение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>%a</p></td>
+<td class="text-left"><p>Сокращенное название дня недели</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>%A</p></td>
+<td class="text-left"><p>Полное название дня недели</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>%b</p></td>
+<td class="text-left"><p>Сокращенное название месяца</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>%B</p></td>
+<td class="text-left"><p>Полное название месяца</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>%c</p></td>
+<td class="text-left"><p>Дата и время</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>%d</p></td>
+<td class="text-left"><p>День месяца [01,31]</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>%H</p></td>
+<td class="text-left"><p>Час (24-часовой формат) [00,23]</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>%I</p></td>
+<td class="text-left"><p>Час (12-часовой формат) [01,12]</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>%j</p></td>
+<td class="text-left"><p>День года [001,366]</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>%m</p></td>
+<td class="text-left"><p>Номер месяца [01,12]</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>%M</p></td>
+<td class="text-left"><p>Число минут [00,59]</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>%p</p></td>
+<td class="text-left"><p>До полудня или после (при 12-часовом формате)</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>%S</p></td>
+<td class="text-left"><p>Число секунд [00,61]</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>%U</p></td>
+<td class="text-left"><p>Номер недели в году (нулевая неделя начинается с воскресенья) [00,53]</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>%w</p></td>
+<td class="text-left"><p>Номер дня недели [0(Sunday),6]</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>%W</p></td>
+<td class="text-left"><p>Номер недели в году (нулевая неделя начинается с понедельника) [00,53]</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>%x</p></td>
+<td class="text-left"><p>Дата</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>%X</p></td>
+<td class="text-left"><p>Время</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>%y</p></td>
+<td class="text-left"><p>Год без века [00,99]</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>%Y</p></td>
+<td class="text-left"><p>Год с веком</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>%Z</p></td>
+<td class="text-left"><p>Временная зона</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>%%</p></td>
+<td class="text-left"><p>Знак ‘%’</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="toggle docutils container">
+<p><img alt="" src="../images/python/time-format.png" /></p>
+</div>
+<p><a class="reference external" href="https://www.w3resource.com/python-exercises/date-time-exercise/index.php">Упражнения</a></p>
+</section>
+<section id="turtle">
+<h2>Модуль Turtle<a class="headerlink" href="#turtle" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Дополнить
+</pre></div>
+</div>
+</section>
+<section id="id16">
+<h2>Еще о функциях<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Рекурсивные функции
+-Callback-Функции
+    https://clck.ru/339CnB
+-Элементы функционального подхода к программированию.
+    https://clck.ru/333qU6
+</pre></div>
+</div>
+</section>
+<section id="id17">
+<h2>Анонимная-функция или Лямбда-функция.<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Пример.
+    s = lambda a, b: a + b
+    s(1,2)
+    У данной функции два параметра a и b, а затем, через двоеточие написано, что с ними нужно сделать.
+-Пример 2.
+    a = [4, 5, lambda: print(&quot;lambda&quot;), 7, 8]
+    a[2]()
+-Пример 3 (Функция, которая выыбирает значение из этого списка по определенному критерию (фильтру)).
+    lst = [5, 3, 0, -6, 8, 10, 1]
+    def get_filter(a, filter=None):
+        if filter is None:
+            return a
+
+        res = []
+        for x in a:
+            if filter(x):
+                res.append(x)
+
+        return res
+    -Если вызвать ее только с первым аргументом:
+        lst = [5, 3, 0, -6, 8, 10, 1]
+        r = get_filter(lst)
+        print(r)
+    -Если вторым аргументом передать вот такую лямбда-функцию:
+        r = get_filter(lst, lambda p: p % 2 == 0)
+        -возвратится новый список, состоящий только из четных значений
+    -Если бы их не существовало, нам бы пришлось объявлять отдельную функцию:
+        def even(p):
+            return p % 2 == 0
+        r = get_filter(lst, even)
+    -Анонимная функция удобна тем, что мы можем быстро поменять условия фильтра.
+        r = get_filter(lst, lambda p: p &gt; 0)
+    -У таких функций есть одно существенное ограничение ? в них можно прописать только одну конструкцию.
+    -Нельзя объявлять анонимные функции в несколько строк:
+        lambda a: 
+            print(a)
+    -Нельзя использовать оператор присваивания:
+        lambda a: a = 1
+    -Правильные примеры:
+        s = lambda a: a + 1
+        s(1)
+        p = lambda: &quot;hello python&quot;
+        p()
+</pre></div>
+</div>
+</section>
+<section id="id18">
+<h2>Разное<a class="headerlink" href="#id18" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-reversed()
+-isinstance(10, int) - Позволяет проверить принадлежность экземпляра к классу (является ли 10 типом данных int).
+    ! isinstance(True, int) -&gt; True !
+-exec() - исполнение кода из строки
+-eval() - исполнение кода из строки (только функции, команды или выражения)
+-Оператор моржа(walrus) или моржовый оператор-&gt;  :=
+-Глубокое копирование элемента, подходит для кортежей -&gt; copy.deepcopy(tuple)
+-Обычное копирование -&gt; copy.copy
+</pre></div>
+</div>
+</section>
+<section id="map">
+<h2>Функция map.<a class="headerlink" href="#map" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-https://proproprogs.ru/python_base/python3-funkciya-map-primery-ee-ispolzovaniya
+</pre></div>
+</div>
+</section>
+<section id="filter">
+<h2>Функция filter для отбора значений итерируемых объектов.<a class="headerlink" href="#filter" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-https://proproprogs.ru/python_base/python3-funkciya-filter-dlya-otbora-znacheniy-iteriruemyh-obektov
+</pre></div>
+</div>
+</section>
+<section id="zip">
+<h2>Функция zip.(Редко используется)<a class="headerlink" href="#zip" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>https://proproprogs.ru/python_base/python3-funkciya-zip-primery-ispolzovaniya
+</pre></div>
+</div>
+</section>
+<section id="yield">
+<h2>Функция-генератор. Оператор yield.<a class="headerlink" href="#yield" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-https://proproprogs.ru/python_base/python3-funkciya-generator-operator-yield
+</pre></div>
+</div>
+</section>
+<section id="sort-sorted">
+<h2>Особенности сортировки через sort() и sorted().<a class="headerlink" href="#sort-sorted" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>https://proproprogs.ru/python_base/python3-osobennosti-sortirovki-cherez-sort-i-sorted
+</pre></div>
+</div>
+</section>
+<section id="id19">
+<h2>Итераторы и выражения-генераторы.<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Генератор ? это итератор, элементы которого можно перебирать (итерировать) только один раз.
+-Итератор ? это объект, который поддерживает функцию next() для перехода к следующему элементу коллекции.
+-Итерируемый объект ? это объект, который позволяет поочередно обойти свои элементы и может быть преобразован к итератору.
+    a = [x**2 for x in range(10)] # Генератор списков
+    print(a)
+
+    b = (x**2 for x in range(10)) # Выражение-генератор
+    print(b)
+    lst = list(b) # Перевести в список
+
+    a = [1,2,3] # Итерируемый объект
+    it = iter(a) # Преобразование списка в итератор
+    print(next(it)) # Перебираем генератор
+    print(next(it)) # Перебираем генератор
+
+    print(sum(b))
+    lst = (x for x in range(1000000000))
+    for i in lst:
+        print(i, end=&quot;&quot;)
+        if i &gt; 100: break
+</pre></div>
+</div>
+</section>
+<section id="id20">
+<h2>Обработка ошибок и исключений.<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>try, except</p></li>
+<li><p>else - выполняется, когда не произошло никаких ошибок</p></li>
+<li><p>finally - выполняется всегда в самом конце, вне зависимости произошла ошибка или нет</p></li>
+<li><p>assert - вызывается ошибка если утверждение возвращает ложь</p></li>
+<li><p>raise - возбуждает/поднимает указанное исключение -&gt; raise BaseException(‘Мы вызвали ошибку’)</p></li>
+<li><p>Примеры:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Делить на ноль нельзя:&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Введено неправильное значение&quot;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ошибка&#39;</span><span class="p">)</span>
+<span class="c1"># Нечасто используется (else и finally):</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Выполняется, когда не произошло никаких ошибок&quot;</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Выполняется абсолютно всегда, в самом конце.&quot;</span><span class="p">)</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">assert</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">3</span> <span class="c1"># вызовется ошибка, так как a != 3 это False</span>
+<span class="k">assert</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Свое описание ошибки&quot;</span> <span class="c1"># можно добавить описание ошибки</span>
+
+<span class="k">raise</span> <span class="ne">BaseException</span><span class="p">(</span><span class="s2">&quot;Свое описание ошибки&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id21">
+<h2>Работа с файлами.<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>file = open(&#39;text.txt, &#39;w&#39;)
+file.write(&#39;hey&#39;)
+file.writelines([&#39;hey&#39;,&#39;hey2]) # heyhey2 (непонятно зачем нужен)
+file = open(&#39;text.txt, &#39;r&#39;)
+file.read() # читает весь файл
+file.readline() # при каждом вызове читаем следующую строчку
+file.readlines() # список со всеми строками
+-Прочтение с помощью цикла
+    for line in file:
+        print(line)
+file.close() # закрытие файла
+-Зачастую надо дописывать в open -&gt; encoding=&#39;utf-8&#39;
+-Обозначения:
+    r - чтение
+    w - запись/перезапись (создается файл, если не существует)
+
+    a - дозапись
+    a+ - дозапись и чтение (создается файл, если не существует)
+    + - запись/чтение (r+, w+)
+    x - вызывает ошибку, если файл существует,  иначе создает файл и открывает его на запись
+
+- with file open(&#39;name.txt&#39;, &#39;w&#39;, encoding=&#39;utf-8&#39;):
+    file.write(&#39;hello world&#39;)
+
+https://metanit.com/python/tutorial/4.1.php
+https://docs-python.ru/tutorial/vstroennye-funktsii-interpretatora-python/funktsija-open/
+https://letpy.com/handbook/builtins/open/
+</pre></div>
+</div>
+</section>
+<section id="json">
+<h2>Работа с json<a class="headerlink" href="#json" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+
+<span class="c1"># Прочитать файл data.json</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.json&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span> <span class="c1"># Перевести содержимое файла в dict</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+
+<span class="c1"># Записать dict в data.json</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;1234&quot;</span><span class="p">:</span> <span class="s2">&quot;ASDFG&quot;</span><span class="p">}</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.json&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="c1"># Перевести dict в str</span>
+    <span class="c1"># result = json.dumps(data, ensure_ascii=False) # если есть абракадабра после записи</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="c1"># Записать в файл</span>
+</pre></div>
+</div>
+</section>
+<section id="os">
+<h2>Модуль os<a class="headerlink" href="#os" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```python
+import os
+
+
+# Работа с папками.
+# Посмотреть все файлы папки и подпапки по пути path
+path = &quot;C:\HOME\PROG\web&quot;
+result = list(os.walk(path))
+print(result)
+
+# Посмотреть только файлы по пути path
+files = os.listdir(path)
+print(files)
+
+# Создание папки (если уже существует будет ошибка)
+os.mkdir(&quot;NEW&quot;)
+
+# Создание папки (если существует, то ошибки не будет)
+# Без &quot;exist_ok=True&quot; выйдет ошибка
+os.makedirs(&quot;FOLDER&quot;, exist_ok=True)
+
+# Проверить существует ли папка или файл
+os.path.exists(&quot;folder/or/file&quot;)
+
+print(os.name) # имя системы
+
+print(os.environ)
+os.environ[&quot;NEW VARIABLE&quot;] = &quot;123&quot;
+
+# Удаление папки (Если папки не существует, будет ошибка)
+os.rmdir(&quot;NEW&quot;)
+os.removedirs(&quot;NEW&quot;)
+
+# Переименовать файл или папку
+os.rename(&quot;NEW&quot;, &quot;FOLDER&quot;)
+
+# Другое.
+# Исполняет команду в консоле, например cmd (если система windows)
+result = os.system(&quot;dir&quot;)
+print(result)
+
+# Домашняя директория
+homepath = os.path.expanduser(&quot;~&quot;)
+print(homepath)
+
+# Еще можно разобрать
+icon_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), &quot;qspectrumanalyzer.svg&quot;)
+# os.path.join
+# os.path.dirname
+# os.path.realpath
+
+# Все команды os модуля: https://pythonworld.ru/moduli/modul-os.html
+# Упражнения на os: https://www.w3resource.com/python-exercises/os/index.php
+
+
+```  
+</pre></div>
+</div>
+</section>
+<section id="id22">
+<h2>Перемещение файлов.<a class="headerlink" href="#id22" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import shutil
+shutil.move(&quot;path/to/current/file.foo&quot;, &quot;path/to/new/destination/for/file.foo&quot;)
+</pre></div>
+</div>
+</section>
+<section id="id23">
+<h2>Декораторы<a class="headerlink" href="#id23" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># from functools import wraps
+
+def detect(func):
+    # @wraps(func)
+    def updatefunc(*args, **kwargs):
+        try:
+            return func(*args, **kwargs)
+        except BaseException as err:
+            print(f&#39;Ошибка в функции {func.__name__}: {err}&#39;)
+            return
+    return updatefunc
+
+@detect # новый вариант декорирования
+def test(a, b):
+    print(a / b)
+
+# test = detect(test) # старый вариант декорирования
+
+@detect
+def test2(text):
+    res = text.upper()
+    print(res)
+
+test(1, 0) # Ошибка
+test2(&#39;privet&#39;)
+</pre></div>
+</div>
+</section>
+<section id="tkinter">
+<h2>Tkinter<a class="headerlink" href="#tkinter" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Где-то здесь надо пройти Tkinter
+</pre></div>
+</div>
+</section>
+<section id="pyqt">
+<h2>Pyqt<a class="headerlink" href="#pyqt" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Или даже Pyqt6 или Pyqt5
+</pre></div>
+</div>
+</section>
+<section id="requests">
+<h2>Модуль Requests<a class="headerlink" href="#requests" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Модуль requests и http запросы
+</pre></div>
+</div>
+</section>
+<section id="requests-html">
+<h2>Модуль requests-html<a class="headerlink" href="#requests-html" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Моудль requests-html и http запросы
+Парсинг страниц, в том числе с javascript
+</pre></div>
+</div>
+</section>
+<section id="selenium">
+<h2>Selenium<a class="headerlink" href="#selenium" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Продвинутый парсинг
+</pre></div>
+</div>
+</section>
+<section id="id24">
+<h2>ООП<a class="headerlink" href="#id24" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Инкапсуляция, наследование, полиморфизм.
+-Инкапсуляция - это принцип, согласно которому внутреннее устройство сущностей нужно объединять в специальной
+«оболочке» и скрывать от вмешательств извне. Доступ к объектам возможен через специальные открытые методы, а
+напрямую обратиться к их содержимому нельзя.
+-Наследование - это механизм, при котором один класс приобретает свойство другого класса
+-Полиморфизм - возможность работы с совершенно разными объектами (языка Python) единым образом. Пример:
+Курсор может принимать различные формы, такие как стрелка, линия, крест или другие фигуры.
+
+-Классы
+    Объекты / экземпляры
+        Свойства / атрибуты
+        Методы
+-Что такое self
+-Магические методы.
+    - __dict__
+    - __init__ (Показать как будет работать инициализация с помощью обычного созданного вручную метода, а потом просто подставить __init__)
+    - __del__
+...
+</pre></div>
+</div>
+</section>
+<section id="id25">
+<h2>Аннотации<a class="headerlink" href="#id25" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>https://clck.ru/339CnS
+</pre></div>
+</div>
+</section>
+<section id="async-await">
+<h2>Асинхронное программирование async/await<a class="headerlink" href="#async-await" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1. https://habr.com/ru/articles/667630
+2. https://habr.com/ru/articles/671798/
+</pre></div>
+</div>
+</section>
+<section id="id26">
+<h2>Создание телеграм бота<a class="headerlink" href="#id26" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>https://github.com/python-telegram-bot/python-telegram-bot
+Просто начать с echo-бота, а там как пойдет
+</pre></div>
+</div>
+</section>
+<section id="pygame">
+<h2>Pygame<a class="headerlink" href="#pygame" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Изучение pygame
+</pre></div>
+</div>
+</section>
+<section id="ursina">
+<h2>Ursina<a class="headerlink" href="#ursina" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Изучение ursina
+</pre></div>
+</div>
+</section>
+<section id="re">
+<h2>Регулярные выражения <code class="docutils literal notranslate"><span class="pre">'re'</span></code><a class="headerlink" href="#re" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>https://docs.python.org/3/library/re.html#module-re
+</pre></div>
+</div>
+</section>
+<section id="id27">
+<h2>Решение проблем:<a class="headerlink" href="#id27" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-https://otvet.mail.ru/question/218478491 - Visual Studio Code не понимает русский язык в пути к файлу
+-https://ru.stackoverflow.com/questions/1095365/%d0%9a%d0%b0%d0%ba-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d1%82%d1%8c-pip-%d0%b4%d0%bb%d1%8f-%d1%80%d0%b0%d0%b7%d0%bd%d1%8b%d1%85-%d0%b2%d0%b5%d1%80%d1%81%d0%b8%d0%b9-python - Как использовать pip для разных версий python?
+</pre></div>
+</div>
+</section>
+<section id="id28">
+<h2>Дополнить план обучения следующим:<a class="headerlink" href="#id28" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- ComputerVision (Очень много можно придумать тем для выявления разного всего, и может быть создания масок типа &quot;Очки&quot; и пр.)
+- Парсинг с помощью Selenium
+- Создание сайта с помощью Flask (фронтенд) и может быть еще Django (бэкенд)
+- Создание оконных приложений с помощью wxPython
+- enumerate()
+- Что такое: if __name__ == &quot;__main__&quot;
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Faith Pages</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../Tables/py-tasks-table.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Упражнения <code class="docutils literal notranslate"><span class="pre">py</span></code></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vs-code-python">Установка Vs Code + Python.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Введение.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Переменные.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Ввод/Вывод.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Арифметические операторы и операции.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Условные и логические операторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Логические операторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Строки.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Условия.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Списки.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Циклы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-comprehensions">Генераторы списков. list comprehensions.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Алгоритмы обработки списков.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notrdy">Кортежи. (((notrdy)))</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Словари.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Множества.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Функции.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Введение в Модули.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time">Модуль time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datetime">Модуль datetime</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#turtle">Модуль Turtle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Еще о функциях</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Анонимная-функция или Лямбда-функция.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Разное</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#map">Функция map.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">Функция filter для отбора значений итерируемых объектов.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zip">Функция zip.(Редко используется)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yield">Функция-генератор. Оператор yield.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-sorted">Особенности сортировки через sort() и sorted().</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Итераторы и выражения-генераторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Обработка ошибок и исключений.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Работа с файлами.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#json">Работа с json</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#os">Модуль os</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Перемещение файлов.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Декораторы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tkinter">Tkinter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyqt">Pyqt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requests">Модуль Requests</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requests-html">Модуль requests-html</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#selenium">Selenium</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">ООП</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Аннотации</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#async-await">Асинхронное программирование async/await</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Создание телеграм бота</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pygame">Pygame</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ursina">Ursina</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re">Регулярные выражения <code class="docutils literal notranslate"><span class="pre">'re'</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Решение проблем:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Дополнить план обучения следующим:</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By your-teach
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

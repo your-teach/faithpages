@@ -1,0 +1,1248 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>План обучения lua &#8212; Faith Pages</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=fe3c39de" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Lua/study-plan-lua';</script>
+    <script src="../_static/script.js?v=5bc9876b"></script>
+    <link rel="canonical" href="https://your-teach.github.io/faithpages/Lua/study-plan-lua.html" />
+    <link rel="icon" href="../_static/fav.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Упражнения lua" href="../Tables/lua-tasks-table.html" />
+    <link rel="prev" title="Разное py" href="../Python/other.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Faith Pages - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Faith Pages - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Python/study-plan-py.html">План обучения <code class="docutils literal notranslate"><span class="pre">py</span></code></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tables/py-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">py</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Python/Tasks/1.in-out.html">Ввод и вывод</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Python/Tasks/2.strings.html">Строки</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Python/Tasks/3.boolean.html">Логика</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Python/Tasks/4.conditions.html">Условия</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Python/Tasks/5.lists.html">Списки</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Python/Tasks/6.1.cycles.html">Циклы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Python/Tasks/6.2.list-comprehension.html">Генераторы списков</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Python/Tasks/7.tuples.html">Кортежи</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Python/Tasks/8.dictionaries.html">Словари</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Python/Tasks/9.sets.html">Множества</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Python/Tasks/10.functions.html">Функции</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Python/Tasks/11.file-handling.html">Работа с файлами</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Python/Tasks/12.tkinter.html">Tkinter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Python/Tasks/13.try-except.html">Ошибки и исключения</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Python/Tasks/14.telegram-bot.html">Телеграм боты</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tables/table-Lib-modules.html">Библиотеки и модули</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Python/Lib-modules/1.Pip.html">Команды <code class="docutils literal notranslate"><span class="pre">pip</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Python/Lib-modules/2.List-pckg.html">Список пакетов</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Python/Lib-modules/Turtle.html">Turtle</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../Python/other.html">Разное <code class="docutils literal notranslate"><span class="pre">py</span></code></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lua</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">План обучения <code class="docutils literal notranslate"><span class="pre">lua</span></code></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tables/lua-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">lua</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Tasks/1.in-out.html">Ввод и вывод</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tasks/2.boolean.html">Логика</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tasks/3.string.html">Строки</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tasks/4.conditions.html">Условия</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tasks/5.tables.html">Таблицы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tasks/6.cycles.html">Циклы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tasks/7.functions.html">Функции</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tasks/8.file-handling.html">Работа с файлами</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Some</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tables/roblox-table.html">Roblox</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Some/Roblox/notes.html">Наброски</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Some/Roblox/scripts.html">Скрипты <code class="docutils literal notranslate"><span class="pre">rblx</span></code></a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tables/ubuntu-table.html">Ubuntu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Some/Ubuntu/selenium-vps.html">Selenium на Vps</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../Some/codeforces.html">Задачи codeforces</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../Some/settings-system.html">Настройки систем</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/your-teach/faithpages" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/your-teach/faithpages/edit/main/Lua/study-plan-lua.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/your-teach/faithpages/issues/new?title=Issue%20on%20page%20%2FLua/study-plan-lua.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Lua/study-plan-lua.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>План обучения lua</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vs-code-lua">Установка Vs Code + Lua</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Введение.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Переменные.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Типы данных.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Входные данные.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Арифметические операторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Условные операторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Логические операторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Приоритетность знаков (сверху-вниз).</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Строки.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Преобразование типов данных.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Условия.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Таблицы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Циклы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Функции.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Запись и чтение файла.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Модули</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Импорт модуля</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Создание модуля</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Старый способ создания модуля</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Разное.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Сортировка по убыванию</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Тернарный оператор</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="lua">
+<h1>План обучения <code class="docutils literal notranslate"><span class="pre">lua</span></code><a class="headerlink" href="#lua" title="Link to this heading">#</a></h1>
+<section id="vs-code-lua">
+<h2>Установка Vs Code + Lua<a class="headerlink" href="#vs-code-lua" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=X6BqMZyzAs4">https://www.youtube.com/watch?v=X6BqMZyzAs4</a></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1. https://code.visualstudio.com/download
+2. https://github.com/rjpcomputing/luaforwindows/releases
+3. RuLang: Шестерёнка -&gt; Command Pallete -&gt; Вводим &#39;lang&#39; -&gt; Configure Display Language -&gt; &#39;Русский&#39;
+4. Расширение Lua (sumneko)
+5. Расширение Code Runner
+6. Параметры:
+    - Установить стандартное автосохрание -&gt; Файл -&gt; Автосохранение
+    - Изменить шрифт -&gt; editor.fontSize -&gt; 16
+    - Code-runner: Save file before run [галочка стоит]
+    - Code-runner: Run in terminal [галочка стоит]
+7. Settings.json
+    -Открывать в кодировке cp866:
+        &quot;[lua]&quot;: {
+            &quot;files.encoding&quot;: &quot;cp866&quot;,
+        }
+    -Очистка консоли:
+        &quot;code-runner.executorMap&quot;: {
+            &quot;lua&quot;: &quot;clear; lua&quot; }
+8. Создать папку на рабочем столе -&gt; Открываем её в Vscode -&gt; Далее создаем два файла -&gt; main.lua/py theory.lua/py
+</pre></div>
+</div>
+<p><a class="reference external" href="https://cronos.ru/kb-cronospro-lua.html">https://cronos.ru/kb-cronospro-lua.html</a>
+<a class="reference external" href="https://user.su/lua/index.php?id=36">https://user.su/lua/index.php?id=36</a>
+<a class="reference external" href="https://ru.wikibooks.org/wiki/Lua/%D0%A2%D0%B8%D0%BF%D1%8B_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85">https://ru.wikibooks.org/wiki/Lua/Типы_данных</a></p>
+</section>
+<section id="id1">
+<h2>Введение.<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Команда, с которой по традиции начинается обучение языка программирования.
+    print(&quot;Hello World&quot;)
+-Что такое комментарии. --
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h2>Переменные.<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Зачем они нужны, как мы бы жили без них.
+-Представляем, что переменная это коробка в которую мы можем поместить только одно значение.
+-Оператор присваивания:
+    name = &#39;Ivan&#39;
+-Как можно и как нельзя называть переменные:
+    -Название переменной желательно должно соответствовать ее содержанию.
+    -Можно: 
+        isName = nil
+        my_name = nil
+        number1 = nil
+        k0l0b0k = nil
+        KEK = nil
+    -Нельзя: 
+        1var
+        использовать название команд
+        спец символы !@#
+-Одна и та же переменная может иметь разные значения в разных частях кода:
+    a = &#39;one&#39;
+    print(a)
+    a = &#39;two&#39;
+    print(a)
+    -это обозначает, что Lua читает строки поочереди следуя их нумерации.
+-Чувствительность к верхнему и нижнему регистру:
+    a = &#39;one&#39;
+    A = &#39;two&#39;
+-Как поместить значение переменной в другую переменную:
+    a = 42
+    b = a
+    -Сперва читаем то что справа от равно, а потом слева от равно.
+-Поменять значения переменных:
+    a = 0
+    b = 1
+
+    c = a
+    a = b
+    b = a
+-Поменять значения переменных: a, b = b, a
+-Множественное присваивание: x, y, z = 1, 2, 3
+-Как обозначается ничего: nil
+-При выводе несуществующей переменной результат будет nil
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h2>Типы данных.<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Можно говорить: &quot;Типы данных&quot; или &quot;Типы переменных&quot;
+    string - СТРОКИ
+    number - ЧИСЛА
+    boolean - ЛОГИКА (true/false)
+-Каждый тип можно представить в виде комнаты со своими правилами.
+-Чем отличаются типы:
+    Это каждого типа есть свои правила.
+    К числам можно применять знак плюс, а к строкам и логике - нет.
+-Примеры:
+    a = &#39;text 123&#39; -- string    (Самое главное правило - наличие кавычек)
+    b = 42 -- number    (Самое главное правило - наличие только цифр, без пробелов)
+    c = true -- boolean     (Только true или false)
+-type() - Команда, которая выдает тип переменной.
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h2>Входные данные.<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-io.read() - Команда, которая ожидает ввод данных с терминала/консоли
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h2>Арифметические операторы.<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Правила которые работают с типом number
+a = 1 + 1
+b = 2 - 2
+c = 3 * 3
+d = 4 / 4
+f = 3 ^ 4 -- возведение числа 3 в степень 4
+g = (2 + 2) * 2 -- скобки создают приоритет, как в математике
+
+h = 7 % 6 -- остаток от деления
+
+i = 0
+i = i + 1 -- увеличить переменную на единицу
+</pre></div>
+</div>
+</section>
+<section id="id6">
+<h2>Условные операторы.<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;
+&lt;
+&gt;=
+&lt;=
+==    РАВНО
+~=    НЕ РАВНО
+
+a = 0 &lt; 1 -- true
+b = 0 == 1 -- false
+c = &#39;abc&#39; == &#39;abc&#39; -- true
+d = &#39;a&#39; &lt; &#39;b&#39; -- true
+e = &#39;!&#39; &gt; &#39;?&#39; -- false
+f = true == false -- false
+</pre></div>
+</div>
+</section>
+<section id="id7">
+<h2>Логические операторы.<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-and 
+    true and true -- true
+    true and false -- false
+    false and false -- false
+-or
+    true or true -- true
+    true or false -- true
+    false or false -- false
+-not
+    not true -- false
+
+-and имеет приоритет выше, чем or:
+    true or false and false or true and false or false
+</pre></div>
+</div>
+</section>
+<section id="id8">
+<h2>Приоритетность знаков (сверху-вниз).<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Операторы</p></th>
+<th class="head text-left"><p>Описание</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>()</p></td>
+<td class="text-left"><p>Скобки</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>^</p></td>
+<td class="text-left"><p>Возведение в степень</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>not</p></td>
+<td class="text-left"><p>Логическое НЕ</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>*, /</p></td>
+<td class="text-left"><p>Умножение и деление</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>+, -</p></td>
+<td class="text-left"><p>Сложение и вычитание</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>..</p></td>
+<td class="text-left"><p>Соединение строк</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>&lt;, &gt;, &lt;=, &gt;=, ~=, ==</p></td>
+<td class="text-left"><p>Условные операторы</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>and</p></td>
+<td class="text-left"><p>Логическое И</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>or</p></td>
+<td class="text-left"><p>Логическое ИЛИ</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id9">
+<h2>Строки.<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>s = &quot;Двойные кавычки&quot;
+s = &#39;Одинарные кавычки&#39;
+-- print(&quot;&#39;Arrival&#39; is good cinema&quot;) -- Кавычки в строке
+s = [[ long
+            long
+                    lines]]
+s = &#39;текст&#39;
+l = #s -- Находим длину строки в байтах
+l = string.len(s) -- Работает точно так же, как #. Так что в ней нет смысла.
+l = utf8.len(s) -- Более точный подсчет длины строки
+a = &#39;Hello&#39;
+b = &#39;World&#39;
+s = a..b -- Оператор .. соединяет строки
+s = &#39;one\ntwo&#39; -- Экранирование, перевод строки на новую
+
+Срезы строк.
+    text = &#39;my string variable&#39;
+    result = text:sub(4,9) -- находим символы с 4 по 9, &#39;string&#39;
+    result = text:sub(1,1) -- находим первый символ строки, &#39;m&#39;
+Методы строк.
+    string.find(var, &#39;кс&#39;) - возвращает индекс первого найденного &#39;кс&#39;, иначе nil
+    Остальные методы строк https://quikluacsharp.ru/2015/03/21/funktsii-raboty-so-strokami-v-qlua-lua/
+</pre></div>
+</div>
+</section>
+<section id="id10">
+<h2>Преобразование типов данных.<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-При сравнении числа введенного с помощью io.read() с другим числом возникает ошибка:
+    enter = io.read()
+    print(enter &gt; 5)
+-В это случае нам помогут функции изменяющие тип переменной.
+    -tonumber(var) - переводит переменную var в число
+    -tostring(var) - переводит переменную var в строку
+-Не забываем с помощью type() проверять тип переменной.
+-Знаки &#39;..&#39; и &#39;+&#39; автоматически меняют тип значений.
+-Устное задание.
+    Назвать типы переменных каждого из следующих выражений, number/string/boolean:
+        -- word = &#39;Programming&#39;
+        -- a = 101
+        -- b = &#39;42&#39;
+        -- c = text -- nil
+        -- d = &#39;2&#39; + 2
+        -- e = 0..&#39;1&#39; -- ошибка
+        -- f = true
+        -- g = &#39;false&#39;
+        -- р = &#39;-99&#39;..1
+</pre></div>
+</div>
+</section>
+<section id="id11">
+<h2>Условия.<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p>-if    elseif     else
+-Комнаты</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;blue&#39;</span>
+<span class="kr">if</span><span class="w"> </span><span class="nv">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;blue&#39;</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Синия комната&#39;</span><span class="p">)</span>
+<span class="kr">elseif</span><span class="w"> </span><span class="nv">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;red&#39;</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Красная комната&#39;</span><span class="p">)</span>
+<span class="kr">elseif</span><span class="w"> </span><span class="nv">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;green&#39;</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Зеленая комната&#39;</span><span class="p">)</span>
+<span class="kr">else</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Запасная комната&#39;</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
+<p>-Температура на улице</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
+<span class="kr">if</span><span class="w"> </span><span class="nv">temp</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Погода супер, идем гулять&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;.....&#39;</span><span class="p">)</span>
+<span class="kr">elseif</span><span class="w"> </span><span class="nv">temp</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Идем гулять, но оденемся потеплее&#39;</span><span class="p">)</span>
+<span class="kr">elseif</span><span class="w"> </span><span class="nv">temp</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Лучше остаться дома, посмотреть кино&#39;</span><span class="p">)</span>
+<span class="kr">else</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ого, температура ровно ноль&#39;</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
+<p>-Что такое заголовок/тело.<br />
+-Что такое табуирование, и где находится кнопка TAB.<br />
+-if может быть только один и только в начале<br />
+-elseif может быть неограниченное количество<br />
+-else может быть только один и только в конце<br />
+-Вывести “yes”, если число меньше 10, иначе “no”</p>
+<p>-Как найти четное число.</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">int</span><span class="p">(</span><span class="nf">input</span><span class="p">())</span>
+<span class="kr">if</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;четное&#39;</span><span class="p">)</span>
+<span class="kr">else</span><span class="p">:</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;нечетное&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>-Является ли переменная строкой:</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;tick&#39;</span>
+<span class="kr">if</span><span class="w"> </span><span class="nb">type</span><span class="p">(</span><span class="nv">s</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;string&#39;</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;да&#39;</span><span class="p">)</span>
+<span class="kr">else</span><span class="w"> </span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;нет&#39;</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
+<p>-Что такое локальный переменные (local a = ‘hello’)</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kr">if</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="kd">local</span><span class="w"> </span><span class="nv">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">c</span><span class="p">)</span><span class="w"> </span><span class="c1">-- true</span>
+<span class="kr">end</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">c</span><span class="p">)</span><span class="w"> </span><span class="c1">-- nil, так как переменная локальная, и работает только в условии выше</span>
+</pre></div>
+</div>
+</section>
+<section id="id12">
+<h2>Таблицы.<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Если в переменную необходимо положить несколько значений, то здесь нам помогут таблицы.
+    animals = {&#39;Cat&#39;, &#39;Dog&#39;, &#39;Pig&#39;, &#39;Horse&#39;}
+    print(animals[1]) -- Выводим первое значение таблицы
+    print(animals[6]) -- Выведет nil
+    print(#animals) -- Длина таблицы
+    animals[5] = &#39;Cow&#39; -- Положить на 4-е место &#39;Cow&#39;
+    animals[1] = &#39;Kitty Cat&#39; -- Заменить 1-е значение на &#39;Kitty Cat&#39;
+    print(animals[5])
+    animals[100] = 100 -- Здесь таблица превратится в разряженную (не будет показываться точная длина)
+    t = {} -- пустая таблица
+-Добавить элемент в конец таблицы:
+    t = {&#39;a&#39;, &#39;b&#39;, &#39;c&#39;}
+    l = #t
+    t[l + 1] = &#39;d&#39;
+-Таблицы в таблице
+    t = {
+        {101, 102, 103},
+        {201, 202, 203},
+        {301, 302, 303}
+    }
+    print(t[1][3]) -- находим первую таблицу [1], далее третий элемент в таблице [3]
+
+-Использование таблицы как словаря (Ключ=Значение).
+    t = {[&#39;one&#39;] = 1, two = 2}
+    print(t[&#39;one&#39;]) -- выводим элемент с ключем &#39;one&#39;
+    print(t.one) -- Тоже самое что вывод выше
+
+    t.three = 3 -- Добавим в таблицу three = 3
+    t:four = 4 -- Второй вариант, four = 4
+    t[&#39;five&#39;] = 5 -- Третий вариант
+
+-Методы таблиц.
+    t = {&#39;c&#39;, &#39;b&#39;, &#39;a&#39;}
+    table.sort(t) -- Сортирует таблицу по возрастанию
+    table.insert(t, &#39;e&#39;) -- положить &#39;e&#39; в конец таблицы
+    table.insert(t, 1, &#39;e&#39;) -- сдвинуть таблицу, и положить &#39;e&#39; на первое место 
+    table.remove(t, 1) -- Удаление элемента под номером 1, из таблицы t
+    print(t[1])
+</pre></div>
+</div>
+</section>
+<section id="id13">
+<h2>Циклы.<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>--while
+    --Циклы нужны для того, чтобы не писать один кусочек кода много раз вручную.
+    --Повторение кода с интервалом
+    local socket = require &#39;socket&#39;
+    while true do
+        print(&quot;Какой-то код, который нужно бесконечно повторять с интервалом в 5 секунд&quot;)
+        socket.sleep(5)
+    end
+    --Цикл, который выводит числа от 1 до 10
+        score = 0
+        while score &lt; 10 do
+            score = score + 1
+            print(score)
+        end
+    --Бесконечный цикл со счетчиком
+    score = 0
+    while true do
+        print(score)
+        score = score + 1
+    end
+
+    -Задание: Написать цикл, который выводит числа от 0 до 3, и прочитать его.
+    -Задание: Написать цикл, который выводит числа от -1 до 1, и прочитать его.
+    -Задание: Написать цикл, который выводит числа от 20 до 10.
+
+    -Можно использовать условия внутри циклов.
+    -Цикл, который выводит каждую букву отдельно:
+        i = 0
+        text = &#39;hello world&#39;
+        while i &lt; #text do
+            i = i + 1
+            print(text:sub(i,i))
+        end
+    -Аналогичный цикл, но который пропускает все буквы &#39;o&#39;
+        i = 0
+        text = &#39;hello world&#39;
+        while i &lt; #text do
+            i = i + 1
+            if text:sub(i,i) ~= &#39;o&#39; then
+                print(text:sub(i,i))
+            end
+        end
+    -Задание: Написать цикл, который выводит четные числа от 0 до 100.
+    -break (пример с остановкой бесконечного цикла)
+
+-for
+    -Отличается от while тем, что имеет собственную переменную,
+    эта переменная отличается от привычных нам переменных, тем
+    что она каждое повторение меняет свое значение.
+    -Цикл, который выводит числа от 1 до 10
+        for x = 0, 10 do
+            print(x)
+        end
+    -Тот же цикл, но с шагом 2
+        for x = 0, 10, 2 do
+            print(x)
+        end
+    -С помощью for и специальной функции pairs или ipairs можно перебрать таблицу.
+    -ipairs для простых таблицы
+        t = {&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;}
+        for k, v in ipairs(t) do
+            print(x)
+        end
+    -pairs для словарей-таблиц
+        y = {[&#39;one&#39;] = 1, [&#39;two&#39;] = 2}
+        for k, v in pairs(y) do  -- pairs работает с массивами (словари)
+            print(k, v)
+        end
+    -Цикл, который выводит числа в обратном порядке от 10 до 0.
+    for x = 10,0,-1 do
+        print(x)
+    end
+    -Здесь так же можно использовать break
+
+    -Цикл имеет заголовок и тело.
+    -Что значит одно повторение цикла/один круг или другими словами &quot;Итерация&quot;.
+</pre></div>
+</div>
+</section>
+<section id="id14">
+<h2>Функции.<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">--Команда которая имеет в конце скобки называется функцией, она выполняет заранее подготовленный список действий в тот момент, когда мы ее вызовем.</span>
+<span class="c1">--Существует два вида фукнций: невозвращаемые и возвращаемые функции.</span>
+
+<span class="c1">-- Объявление функции:</span>
+<span class="kr">function</span><span class="w"> </span><span class="nf">robot</span><span class="p">()</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Помахать&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Подойти и пожать руку&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Приветствие:&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Здравствуйте, человек!&#39;</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="c1">-- Запуск функции</span>
+<span class="nf">robot</span><span class="p">()</span>
+
+<span class="c1">-- Функции с аргументами</span>
+<span class="kr">function</span><span class="w"> </span><span class="nf">robot</span><span class="p">(</span><span class="nv">name</span><span class="p">,</span><span class="w"> </span><span class="nv">lastname</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Помахать&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Подойти и пожать руку&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Приветствие:&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Здравствуйте, &#39;</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="o">..</span><span class="s1">&#39; &#39;</span><span class="o">..</span><span class="w"> </span><span class="nv">lastname</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="nf">robot</span><span class="p">(</span><span class="s1">&#39;Федор&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Морозов&#39;</span><span class="p">)</span>
+<span class="nf">robot</span><span class="p">(</span><span class="s1">&#39;Кирилл&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Варшавский&#39;</span><span class="p">)</span>
+<span class="nf">robot</span><span class="p">(</span><span class="s1">&#39;Михаил&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Мельников&#39;</span><span class="p">)</span>
+
+
+<span class="c1">-- Возвращаемые функции</span>
+<span class="kr">function</span><span class="w"> </span><span class="nf">summa</span><span class="p">(</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">)</span>
+<span class="w">    </span><span class="nv">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">b</span>
+<span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="nv">res</span>
+<span class="kr">end</span>
+
+<span class="nv">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">summa</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
+<span class="nv">r2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">summa</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">r</span><span class="p">)</span><span class="w"> </span><span class="c1">-- 5</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">r2</span><span class="p">)</span><span class="w"> </span><span class="c1">-- 30</span>
+
+<span class="c1">-- Функции, которые не имею return, возвращают nil, и называеются &quot;невозвращаемыми&quot;</span>
+<span class="nv">r3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">robot</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">r3</span><span class="p">)</span><span class="w"> </span><span class="c1">-- nil</span>
+
+<span class="c1">-- Альтернативный способ создания функции</span>
+<span class="nv">one</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">()</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Функция one&#39;</span><span class="p">)</span>
+<span class="kr">end</span>
+<span class="nf">one</span><span class="p">()</span>
+
+<span class="c1">-- Функции могут хранится в таблицах</span>
+<span class="nv">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
+<span class="nv">t</span><span class="p">.</span><span class="py">three</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">()</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;functioin in table&#39;</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="nv">t</span><span class="p">.</span><span class="nf">three</span><span class="p">()</span>
+<span class="c1">-- t:three()</span>
+</pre></div>
+</div>
+</section>
+<section id="id15">
+<h2>Запись и чтение файла.<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- &quot;r&quot; - чтение</span>
+<span class="c1">-- &quot;w&quot; - перезапись</span>
+<span class="c1">-- &quot;a&quot; - дозапить</span>
+
+<span class="kd">local</span><span class="w"> </span><span class="nv">filepath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">HOME</span><span class="se">\\</span><span class="s2">PROG</span><span class="se">\\</span><span class="s2">text.txt&quot;</span>
+<span class="c1">-- Чтение</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">fileread</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.open</span><span class="p">(</span><span class="nv">filepath</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">fileread</span><span class="p">:</span><span class="nf">read</span><span class="p">())</span><span class="w"> </span><span class="c1">-- прочитать первую строку</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">fileread</span><span class="p">:</span><span class="nf">read</span><span class="p">())</span><span class="w"> </span><span class="c1">-- прочитать вторую строку</span>
+<span class="c1">-- Чтение всех строк файла через цикл</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">line</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nv">fileread</span><span class="p">:</span><span class="nf">lines</span><span class="p">()</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">line</span><span class="p">)</span>
+<span class="kr">end</span>
+<span class="c1">-- Перезапись</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">filewrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.open</span><span class="p">(</span><span class="nv">filepath</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
+<span class="nv">filewrite</span><span class="p">:</span><span class="nf">write</span><span class="p">(</span><span class="s2">&quot;new data&quot;</span><span class="p">)</span>
+<span class="nv">filewrite</span><span class="p">:</span><span class="nf">close</span><span class="p">()</span>
+<span class="c1">-- Дозапись (перед записью, файл очищается)</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">filewrite2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.open</span><span class="p">(</span><span class="nv">filepath</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="nv">filewrite2</span><span class="p">:</span><span class="nf">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">add in file&quot;</span><span class="p">)</span>
+<span class="nv">filewrite2</span><span class="p">:</span><span class="nf">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://oojoo.ru/11-zapis-i-chtieniie-iz-faila/">https://oojoo.ru/11-zapis-i-chtieniie-iz-faila/</a></p>
+</section>
+<section id="id16">
+<h2>Модули<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
+<section id="id17">
+<h3>Импорт модуля<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span><span class="w"> </span><span class="nv">socket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="w"> </span><span class="s1">&#39;socket&#39;</span>
+<span class="nv">socket</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id18">
+<h3>Создание модуля<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
+<p>Файл модуля</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span><span class="w"> </span><span class="nv">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Storm&#39;</span><span class="p">,</span><span class="w"> </span><span class="nv">health</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">790</span><span class="p">,</span><span class="w"> </span><span class="nv">mana</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">540</span><span class="p">}</span>
+
+<span class="nv">items</span><span class="p">.</span><span class="py">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Storm&#39;</span>
+<span class="nv">items</span><span class="p">.</span><span class="py">health</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">790</span>
+<span class="nv">items</span><span class="p">.</span><span class="py">mana</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">540</span>
+
+<span class="kr">function</span><span class="w"> </span><span class="nc">items</span><span class="p">.</span><span class="nf">congrats</span><span class="p">()</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Congratulations!!!&quot;</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="kr">return</span><span class="w"> </span><span class="nv">items</span>
+</pre></div>
+</div>
+<p>Файл импорта</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span><span class="w"> </span><span class="nv">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="w"> </span><span class="s1">&#39;a&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">items</span><span class="p">.</span><span class="py">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id19">
+<h3>Старый способ создания модуля<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
+<p>Файл модуля</p>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nf">module</span><span class="p">(</span><span class="s2">&quot;mymodule&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">package</span><span class="p">.</span><span class="py">seeall</span><span class="p">)</span>
+
+<span class="kr">function</span><span class="w"> </span><span class="nf">foo</span><span class="p">()</span><span class="w"> </span><span class="c1">-- create it as if it&#39;s a global function</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
+<p>Файл импорта</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">require</span> <span class="s2">&quot;mymodule&quot;</span>
+<span class="n">mymodule</span><span class="o">.</span><span class="n">foo</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id20">
+<h2>Разное.<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Рекурсивные функции?
+</pre></div>
+</div>
+<section id="id21">
+<h3>Сортировка по убыванию<a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
+<div class="toggle docutils container">
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- сортировка по убыванию</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">}</span>
+<span class="nf">log</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;clear&quot;</span><span class="p">)</span><span class="w"> </span><span class="nf">log</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;mode compact&quot;</span><span class="p">)</span>
+<span class="nf">log</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;Массив до сортировки:&quot;</span><span class="p">)</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">#</span><span class="nv">arr</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nf">log</span><span class="w"> </span><span class="p">(</span><span class="nv">arr</span><span class="p">[</span><span class="nv">i</span><span class="p">])</span>
+<span class="kr">end</span>
+<span class="nb">table.sort</span><span class="w"> </span><span class="p">(</span><span class="nv">arr</span><span class="p">,</span><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="p">(</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">)</span><span class="w"> </span><span class="kr">return</span><span class="w"> </span><span class="p">(</span><span class="nv">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nv">b</span><span class="p">)</span><span class="w"> </span><span class="kr">end</span><span class="p">)</span>
+<span class="nf">log</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;Массив после сортировки:&quot;</span><span class="p">)</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">#</span><span class="nv">arr</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nf">log</span><span class="w"> </span><span class="p">(</span><span class="nv">arr</span><span class="p">[</span><span class="nv">i</span><span class="p">])</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id22">
+<h3>Тернарный оператор<a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span>
+<span class="c1">-- Тернарный оператор</span>
+<span class="nv">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span>
+<span class="c1">-- Альтернатива через обычное условие</span>
+<span class="kr">if</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nv">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="kr">else</span>
+<span class="w">    </span><span class="nv">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span>
+<span class="kr">end</span>
+<span class="c1">-- Вывод 1 или -1</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">step</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Lua"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../Python/other.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Разное <code class="docutils literal notranslate"><span class="pre">py</span></code></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../Tables/lua-tasks-table.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Упражнения <code class="docutils literal notranslate"><span class="pre">lua</span></code></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vs-code-lua">Установка Vs Code + Lua</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Введение.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Переменные.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Типы данных.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Входные данные.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Арифметические операторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Условные операторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Логические операторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Приоритетность знаков (сверху-вниз).</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Строки.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Преобразование типов данных.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Условия.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Таблицы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Циклы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Функции.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Запись и чтение файла.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Модули</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Импорт модуля</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Создание модуля</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Старый способ создания модуля</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Разное.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Сортировка по убыванию</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Тернарный оператор</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By your-teach
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

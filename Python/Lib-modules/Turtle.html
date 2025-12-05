@@ -1,0 +1,863 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Turtle &#8212; Faith Pages</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fe3c39de" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Python/Lib-modules/Turtle';</script>
+    <script src="../../_static/script.js?v=5bc9876b"></script>
+    <link rel="canonical" href="https://your-teach.github.io/faithpages/Python/Lib-modules/Turtle.html" />
+    <link rel="icon" href="../../_static/fav.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Разное py" href="../other.html" />
+    <link rel="prev" title="Список пакетов" href="2.List-pckg.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Faith Pages - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Faith Pages - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../study-plan-py.html">План обучения <code class="docutils literal notranslate"><span class="pre">py</span></code></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Tables/py-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">py</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Tasks/1.in-out.html">Ввод и вывод</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tasks/2.strings.html">Строки</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tasks/3.boolean.html">Логика</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tasks/4.conditions.html">Условия</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tasks/5.lists.html">Списки</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tasks/6.1.cycles.html">Циклы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tasks/6.2.list-comprehension.html">Генераторы списков</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tasks/7.tuples.html">Кортежи</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tasks/8.dictionaries.html">Словари</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tasks/9.sets.html">Множества</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tasks/10.functions.html">Функции</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tasks/11.file-handling.html">Работа с файлами</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tasks/12.tkinter.html">Tkinter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tasks/13.try-except.html">Ошибки и исключения</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tasks/14.telegram-bot.html">Телеграм боты</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../Tables/table-Lib-modules.html">Библиотеки и модули</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="1.Pip.html">Команды <code class="docutils literal notranslate"><span class="pre">pip</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.List-pckg.html">Список пакетов</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Turtle</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../other.html">Разное <code class="docutils literal notranslate"><span class="pre">py</span></code></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lua</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Lua/study-plan-lua.html">План обучения <code class="docutils literal notranslate"><span class="pre">lua</span></code></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Tables/lua-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">lua</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Lua/Tasks/1.in-out.html">Ввод и вывод</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Lua/Tasks/2.boolean.html">Логика</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Lua/Tasks/3.string.html">Строки</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Lua/Tasks/4.conditions.html">Условия</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Lua/Tasks/5.tables.html">Таблицы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Lua/Tasks/6.cycles.html">Циклы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Lua/Tasks/7.functions.html">Функции</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Lua/Tasks/8.file-handling.html">Работа с файлами</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Some</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Tables/roblox-table.html">Roblox</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Some/Roblox/notes.html">Наброски</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Some/Roblox/scripts.html">Скрипты <code class="docutils literal notranslate"><span class="pre">rblx</span></code></a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Tables/ubuntu-table.html">Ubuntu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Some/Ubuntu/selenium-vps.html">Selenium на Vps</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Some/codeforces.html">Задачи codeforces</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../Some/settings-system.html">Настройки систем</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/your-teach/faithpages" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/your-teach/faithpages/edit/main/Python/Lib-modules/Turtle.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/your-teach/faithpages/issues/new?title=Issue%20on%20page%20%2FPython/Lib-modules/Turtle.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Python/Lib-modules/Turtle.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Turtle</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Импорт</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Основные команды</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Квадрат, треугольник и круг</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pacman">Pacman</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Солнце</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Солнце-мандала</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Солнце-мандала 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Спираль</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Треугольная спираль</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Мячик и след</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="turtle">
+<h1>Turtle<a class="headerlink" href="#turtle" title="Link to this heading">#</a></h1>
+<section id="id1">
+<h2>Импорт<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">turtle</span>
+<span class="n">pen</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span> <span class="c1"># зацикливает окно программы, чтобы оно не закрылось</span>
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h2>Основные команды<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">turtle.forward(distance)</span></code>
+Двигать черепаху вперёд на указанный distance, в сторону направления черепахи.</p>
+<p><code class="docutils literal notranslate"><span class="pre">turtle.backward(distance)</span></code>
+Переместить черепаху назад на distance, противоположную направлению, в котором движется черепаха. Не меняет направление черепахи.</p>
+<p><code class="docutils literal notranslate"><span class="pre">turtle.right(angle)</span></code>
+Повернуть черепаху направо на angle единиц. (Единицы измерения по умолчанию являются градусами, но могут быть установлены с помощью функций degrees() и radians()). Ориентация угла зависит от режима черепахи, см. mode()</p>
+<p><code class="docutils literal notranslate"><span class="pre">turtle.left(angle)</span></code>
+Повернуть черепаху налево на angle единиц. (Единицы измерения по умолчанию являются градусами, но могут устанавливаться с помощью функций degrees() и radians()). Ориентация угла зависит от режима черепахи, см. mode()</p>
+<p><code class="docutils literal notranslate"><span class="pre">turtle.circle(radius,</span> <span class="pre">extent=None,</span> <span class="pre">steps=None)</span></code>
+- radius – число
+- extent – число (или None)
+- steps – целое число (или None)
+Нарисовать круг с заданным radius. Центр — это radius единиц слева от черепахи; угол extent определяет, какая часть окружности нарисована. Если extent не указан, нарисовать весь круг. Если extent не является полным кругом, одна конечная точка дуги является текущим положением пера. Провести дугу против часовой стрелки, если radius положительный, в противном случае — по часовой стрелке. Наконец, направление черепахи изменяется на extent.</p>
+<p>Поскольку окружность аппроксимируется вписанным правильным многоугольником, steps определяет количество шагов для использования. Если он не указан, он будет рассчитан автоматически. Может использоваться для построения правильных многоугольников.</p>
+<p><code class="docutils literal notranslate"><span class="pre">turtle.up()</span></code>
+Прекратить рисование (поднять перо)</p>
+<p><code class="docutils literal notranslate"><span class="pre">turtle.down()</span></code>
+Возобновить рисование (опустить перо)</p>
+<p><code class="docutils literal notranslate"><span class="pre">turtle.hideturtle()</span></code>
+Спрятать черепашку(стрелку)</p>
+<p><code class="docutils literal notranslate"><span class="pre">turtle.undo</span></code>
+Отменить действие</p>
+<p><code class="docutils literal notranslate"><span class="pre">turtle.bgcolor('black')</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">turtle.color('orange',</span> <span class="pre">'yellow')</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">turtle.setpos(x,</span> <span class="pre">y)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">turtle.sety(y)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">turtle.setx(x)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">turtle.ycor()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">turtle.xcor()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">turtle.begin_fill()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">turtle.end_fill()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">turtle.tracer(1)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">turtle.delay(0)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">turtle.speed(0)</span></code></p>
+</section>
+<section id="id3">
+<h2>Квадрат, треугольник и круг<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p><img alt="" src="../../_images/3figures.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">turtle</span>
+
+<span class="n">pen</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">up</span><span class="p">()</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">backward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">down</span><span class="p">()</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">up</span><span class="p">()</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">down</span><span class="p">()</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">up</span><span class="p">()</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">250</span><span class="p">)</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">down</span><span class="p">()</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">360</span><span class="p">)</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">hideturtle</span><span class="p">()</span>
+
+<span class="n">turtle</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="pacman">
+<h2>Pacman<a class="headerlink" href="#pacman" title="Link to this heading">#</a></h2>
+<p><img alt="" src="../../_images/pacman.png" /></p>
+<div class="toggle docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">turtle</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="n">color</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">)</span>
+<span class="n">speed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">up</span><span class="p">()</span>
+<span class="n">backward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">down</span><span class="p">()</span>
+<span class="n">begin_fill</span><span class="p">()</span>
+<span class="n">right</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+<span class="n">circle</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">right</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">end_fill</span><span class="p">()</span>
+<span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id4">
+<h2>Солнце<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p><img alt="" src="../../_images/sun.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">turtle</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="n">color</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">)</span>
+<span class="n">begin_fill</span><span class="p">()</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">forward</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">170</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">pos</span><span class="p">())</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">break</span>
+<span class="n">end_fill</span><span class="p">()</span>
+<span class="n">done</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h2>Солнце-мандала<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p><img alt="" src="../../_images/sun-mandala.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">turtle</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="n">bgcolor</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">Pen</span><span class="p">()</span>
+<span class="n">t</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">)</span>
+<span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">score</span> <span class="o">+=</span> <span class="mi">10</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">170</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id6">
+<h2>Солнце-мандала 2<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p><img alt="" src="../../_images/sun-mandala2.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">turtle</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">bgcolor</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Pen</span><span class="p">()</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">tracer</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">delay</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;orange&#39;</span><span class="p">)</span>
+<span class="n">go</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="p">):</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">go</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">75</span><span class="p">)</span>
+    <span class="n">go</span><span class="o">+=</span> <span class="mi">1</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="id7">
+<h2>Спираль<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p><img alt="" src="../../_images/spiral.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">turtle</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">tracer</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">radius</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">extent</span> <span class="o">=</span> <span class="mi">120</span>
+<span class="k">while</span> <span class="n">radius</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
+    <span class="n">radius</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">circle</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span> <span class="mi">90</span><span class="p">)</span>
+<span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="id8">
+<h2>Треугольная спираль<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p><img alt="" src="../../_images/spiral-triangle.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">turtle</span>
+
+<span class="n">turtle</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="mi">700</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Spiral&quot;</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">speed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">hideturtle</span><span class="p">()</span>
+<span class="n">n</span><span class="o">=</span><span class="mi">200</span>
+<span class="n">s</span><span class="o">=</span><span class="mi">2</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">turtle</span><span class="o">.</span><span class="n">fd</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="n">turtle</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">119</span><span class="p">)</span>
+    <span class="n">s</span> <span class="o">+=</span> <span class="mi">2</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+
+</pre></div>
+</div>
+</section>
+<section id="id9">
+<h2>Мячик и след<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p><img alt="" src="../../_images/ball-line.png" /></p>
+<details><summary>Решение</summary>
+<pre>
+<code class="language-python">
+<p>import turtle
+import time
+gravity = -0.005  # pixels/(time of iteration)^2
+y_velocity = 1  # pixels/(time of iteration)
+x_velocity = 0.25  # pixels/(time of iteration)
+energy_loss = 0.95</p>
+<p>width = 600
+height = 800</p>
+<p>window = turtle.Screen()
+window.setup(width, height)
+window.tracer(0)</p>
+<p>ball = turtle.Turtle()
+ball.penup()
+ball.setx(-600)
+ball.sety(-300)
+ball.color(“green”)
+ball.shape(“circle”)
+ball.sety(ball.ycor() + y_velocity)
+ball.pendown()
+while True:
+ball.sety(ball.ycor() + y_velocity)
+ball.setx(ball.xcor() + x_velocity)
+ball.circle(1, 360)
+print(ball.ycor(), ball.xcor())
+y_velocity += gravity
+if ball.ycor() &lt; -height / 2:
+y_velocity = -y_velocity * energy_loss
+window.update()</p>
+</code>
+</pre>
+</details>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">turtle</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="n">gravity</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.005</span>  <span class="c1"># pixels/(time of iteration)^2</span>
+<span class="n">y_velocity</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># pixels/(time of iteration)</span>
+<span class="n">x_velocity</span> <span class="o">=</span> <span class="mf">0.25</span>  <span class="c1"># pixels/(time of iteration)</span>
+<span class="n">energy_loss</span> <span class="o">=</span> <span class="mf">0.95</span>
+
+<span class="n">width</span> <span class="o">=</span> <span class="mi">600</span>
+<span class="n">height</span> <span class="o">=</span> <span class="mi">800</span>
+
+<span class="n">window</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+<span class="n">window</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+<span class="n">window</span><span class="o">.</span><span class="n">tracer</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">ball</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+<span class="n">ball</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
+<span class="n">ball</span><span class="o">.</span><span class="n">setx</span><span class="p">(</span><span class="o">-</span><span class="mi">600</span><span class="p">)</span>
+<span class="n">ball</span><span class="o">.</span><span class="n">sety</span><span class="p">(</span><span class="o">-</span><span class="mi">300</span><span class="p">)</span>
+<span class="n">ball</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
+<span class="n">ball</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="s2">&quot;circle&quot;</span><span class="p">)</span>
+<span class="n">ball</span><span class="o">.</span><span class="n">sety</span><span class="p">(</span><span class="n">ball</span><span class="o">.</span><span class="n">ycor</span><span class="p">()</span> <span class="o">+</span> <span class="n">y_velocity</span><span class="p">)</span>
+<span class="n">ball</span><span class="o">.</span><span class="n">pendown</span><span class="p">()</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">ball</span><span class="o">.</span><span class="n">sety</span><span class="p">(</span><span class="n">ball</span><span class="o">.</span><span class="n">ycor</span><span class="p">()</span> <span class="o">+</span> <span class="n">y_velocity</span><span class="p">)</span>
+    <span class="n">ball</span><span class="o">.</span><span class="n">setx</span><span class="p">(</span><span class="n">ball</span><span class="o">.</span><span class="n">xcor</span><span class="p">()</span> <span class="o">+</span> <span class="n">x_velocity</span><span class="p">)</span>
+    <span class="n">ball</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">360</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ball</span><span class="o">.</span><span class="n">ycor</span><span class="p">(),</span> <span class="n">ball</span><span class="o">.</span><span class="n">xcor</span><span class="p">())</span>
+    <span class="n">y_velocity</span> <span class="o">+=</span> <span class="n">gravity</span>
+    <span class="k">if</span> <span class="n">ball</span><span class="o">.</span><span class="n">ycor</span><span class="p">()</span> <span class="o">&lt;</span> <span class="o">-</span><span class="n">height</span> <span class="o">/</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">y_velocity</span> <span class="o">=</span> <span class="o">-</span><span class="n">y_velocity</span> <span class="o">*</span> <span class="n">energy_loss</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Python/Lib-modules"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="2.List-pckg.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Список пакетов</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../other.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Разное <code class="docutils literal notranslate"><span class="pre">py</span></code></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Импорт</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Основные команды</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Квадрат, треугольник и круг</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pacman">Pacman</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Солнце</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Солнце-мандала</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Солнце-мандала 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Спираль</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Треугольная спираль</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Мячик и след</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By your-teach
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

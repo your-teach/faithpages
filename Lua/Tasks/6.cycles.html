@@ -1,0 +1,1145 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Циклы &#8212; Faith Pages</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=fe3c39de" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Lua/Tasks/6.cycles';</script>
+    <script src="../../_static/script.js?v=5bc9876b"></script>
+    <link rel="canonical" href="https://your-teach.github.io/faithpages/Lua/Tasks/6.cycles.html" />
+    <link rel="icon" href="../../_static/fav.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Функции" href="7.functions.html" />
+    <link rel="prev" title="Таблицы" href="5.tables.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Faith Pages - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Faith Pages - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Python/study-plan-py.html">План обучения <code class="docutils literal notranslate"><span class="pre">py</span></code></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Tables/py-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">py</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/Tasks/1.in-out.html">Ввод и вывод</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/Tasks/2.strings.html">Строки</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/Tasks/3.boolean.html">Логика</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/Tasks/4.conditions.html">Условия</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/Tasks/5.lists.html">Списки</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/Tasks/6.1.cycles.html">Циклы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/Tasks/6.2.list-comprehension.html">Генераторы списков</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/Tasks/7.tuples.html">Кортежи</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/Tasks/8.dictionaries.html">Словари</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/Tasks/9.sets.html">Множества</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/Tasks/10.functions.html">Функции</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/Tasks/11.file-handling.html">Работа с файлами</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/Tasks/12.tkinter.html">Tkinter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/Tasks/13.try-except.html">Ошибки и исключения</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/Tasks/14.telegram-bot.html">Телеграм боты</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Tables/table-Lib-modules.html">Библиотеки и модули</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/Lib-modules/1.Pip.html">Команды <code class="docutils literal notranslate"><span class="pre">pip</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/Lib-modules/2.List-pckg.html">Список пакетов</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Python/Lib-modules/Turtle.html">Turtle</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Python/other.html">Разное <code class="docutils literal notranslate"><span class="pre">py</span></code></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lua</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../study-plan-lua.html">План обучения <code class="docutils literal notranslate"><span class="pre">lua</span></code></a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../Tables/lua-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">lua</span></code></a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="1.in-out.html">Ввод и вывод</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.boolean.html">Логика</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.string.html">Строки</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.conditions.html">Условия</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.tables.html">Таблицы</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Циклы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7.functions.html">Функции</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8.file-handling.html">Работа с файлами</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Some</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Tables/roblox-table.html">Roblox</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Some/Roblox/notes.html">Наброски</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Some/Roblox/scripts.html">Скрипты <code class="docutils literal notranslate"><span class="pre">rblx</span></code></a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Tables/ubuntu-table.html">Ubuntu</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Some/Ubuntu/selenium-vps.html">Selenium на Vps</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Some/codeforces.html">Задачи codeforces</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../Some/settings-system.html">Настройки систем</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/your-teach/faithpages" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/your-teach/faithpages/edit/main/Lua/Tasks/6.cycles.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/your-teach/faithpages/issues/new?title=Issue%20on%20page%20%2FLua/Tasks/6.cycles.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Lua/Tasks/6.cycles.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Циклы</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#while">while</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Сумма последовательности</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Реверс слова</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Реверс, если есть ‘о’</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Палиндром</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Количество четных чисел</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Маша и телефон</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for">for</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Первый-второй-первый</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#n">От нуля до n</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Пирамида</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Сортировка таблицы по убыванию</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Отбор ключей таблицы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Отбор значений таблицы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Удаление дубликатов</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Цифра 3 в таблице</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-1-n">Cумма от 1 до N</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Буква алфавита</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Собираемся в поход</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Циклы<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="while">
+<h2>while<a class="headerlink" href="#while" title="Link to this heading">#</a></h2>
+</section>
+<section id="id2">
+<h2>Сумма последовательности<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Определите сумму всех элементов последовательности, завершающейся числом <code class="docutils literal notranslate"><span class="pre">0</span></code>. После запуска скрипта, пользователь вводит по очереди числа. Как только будет введен ноль, программа останавливается и выводит сумму всех предыдущих чисел. Примеры:</p>
+<blockquote>
+<div><p>Входные данные:</p>
+<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>1
+7
+9
+0
+</pre></div>
+</div>
+<p>Выходные данные: <code class="docutils literal notranslate"><span class="pre">17</span></code></p>
+</div></blockquote>
+<blockquote>
+<div><p>Входные данные:</p>
+<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>1
+1
+1
+1
+0
+</pre></div>
+</div>
+<p>Выходные данные: <code class="docutils literal notranslate"><span class="pre">4</span></code></p>
+</div></blockquote>
+<div class="toggle docutils container">
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">summa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="kr">while</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nv">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
+<span class="w">    </span><span class="nv">summa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">summa</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">number</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">number</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="kr">break</span>
+<span class="w">    </span><span class="kr">end</span>
+<span class="kr">end</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">summa</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id3">
+<h2>Реверс слова<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Напишите программу, которая принимает слово от пользователя и переворачивает его. Пример:</p>
+<blockquote>
+<div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">'апельсин'</span></code><br />
+Выходные данные: <code class="docutils literal notranslate"><span class="pre">'нисьлепа'</span></code></p>
+</div></blockquote>
+<div class="toggle docutils container">
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.read</span><span class="p">()</span>
+<span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">#</span><span class="nv">text</span>
+<span class="nv">reverse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
+<span class="kr">while</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nv">letter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">text</span><span class="p">:</span><span class="nf">sub</span><span class="p">(</span><span class="nv">i</span><span class="p">,</span><span class="w"> </span><span class="nv">i</span><span class="p">)</span>
+<span class="w">    </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="nv">reverse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">reverse</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nv">letter</span>
+<span class="kr">end</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">reverse</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id4">
+<h2>Реверс, если есть ‘о’<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Напишите программу, которая принимает строку и переворачивает ее в том случае, если в этой строке есть буква <code class="docutils literal notranslate"><span class="pre">o</span></code>. Иначе вывести значение <code class="docutils literal notranslate"><span class="pre">nil</span></code>. Примеры:</p>
+<blockquote>
+<div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">'остров'</span></code><br />
+Выходные данные: <code class="docutils literal notranslate"><span class="pre">'вортсо'</span></code></p>
+</div></blockquote>
+<blockquote>
+<div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">'рыба'</span></code><br />
+Выходные данные: <code class="docutils literal notranslate"><span class="pre">nil</span></code></p>
+</div></blockquote>
+</section>
+<section id="id5">
+<h2>Палиндром<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>Напишите программу, которая проверяет, является ли строка палиндромом. (<code class="docutils literal notranslate"><span class="pre">Палиндром</span></code> - это слово или фраза, которые одинаково читаются слева направо и справа налево.)
+Примеры:</p>
+<blockquote>
+<div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">&quot;Заказ&quot;</span></code><br />
+Выходные данные: <code class="docutils literal notranslate"><span class="pre">&quot;Yes&quot;</span></code></p>
+</div></blockquote>
+<blockquote>
+<div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">&quot;Теплица&quot;</span></code><br />
+Выходные данные: <code class="docutils literal notranslate"><span class="pre">&quot;No&quot;</span></code></p>
+</div></blockquote>
+</section>
+<section id="id6">
+<h2>Количество четных чисел<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>Вводятся <code class="docutils literal notranslate"><span class="pre">N</span></code> чисел. Посчитайте, сколько среди них четных.<br />
+<strong>Входные данные</strong>: На первой строке вводится одно число <code class="docutils literal notranslate"><span class="pre">N</span></code>. Далее вводятся столько чисел, сколько вы написали в первой строке, числом <code class="docutils literal notranslate"><span class="pre">N</span></code>.<br />
+<strong>Входные данные</strong>: Выведите ответ на задачу.</p>
+<p>Пример:</p>
+<blockquote>
+<div><p>Входные данные:</p>
+<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>4
+10
+11
+12
+13
+</pre></div>
+</div>
+<p>Выходные данные: <code class="docutils literal notranslate"><span class="pre">2</span></code></p>
+</div></blockquote>
+<div class="toggle docutils container">
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
+<span class="nv">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="nv">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="kr">while</span><span class="w"> </span><span class="nv">score</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="nv">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="kr">end</span>
+<span class="w">    </span><span class="nv">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">score</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<span class="kr">end</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">k</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
+<span class="nv">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="nv">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="kr">end</span>
+<span class="kr">end</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">k</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id7">
+<h2>Маша и телефон<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>Маша хочет накопить на новый телефон. Телефон стоит <code class="docutils literal notranslate"><span class="pre">N</span></code> рублей. Маша может откладывать <code class="docutils literal notranslate"><span class="pre">K</span></code> рублей в день каждый день, за исключением воскресенья, когда она тратит деньги на поход в кино. Маша начинает копить в понедельник. За сколько дней она накопит нужную сумму?<br />
+<strong>Входные данные</strong>: Вводятся два числа <code class="docutils literal notranslate"><span class="pre">N</span></code> и <code class="docutils literal notranslate"><span class="pre">K</span></code>.<br />
+<strong>Входные данные</strong>: Выведите искомое количество дней</p>
+<p>Примеры:</p>
+<blockquote>
+<div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">100</span> <span class="pre">50</span></code><br />
+Выходные данные: <code class="docutils literal notranslate"><span class="pre">2</span></code></p>
+</div></blockquote>
+<blockquote>
+<div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">100</span> <span class="pre">10</span></code><br />
+Выходные данные: <code class="docutils literal notranslate"><span class="pre">11</span></code></p>
+</div></blockquote>
+<div class="toggle docutils container">
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">enter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.read</span><span class="p">()</span>
+<span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">string.find</span><span class="p">(</span><span class="nv">enter</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">enter</span><span class="p">:</span><span class="nf">sub</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="nv">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">enter</span><span class="p">:</span><span class="nf">sub</span><span class="p">(</span><span class="nv">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="nv">n</span><span class="p">,</span><span class="w"> </span><span class="nv">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nv">n</span><span class="p">),</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nv">k</span><span class="p">)</span>
+<span class="nv">day</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="nv">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="kr">while</span><span class="w"> </span><span class="nv">s</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">day</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="o">~=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="nv">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">k</span>
+<span class="w">    </span><span class="kr">end</span>
+<span class="w">    </span><span class="nv">day</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">day</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<span class="kr">end</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">day</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="for">
+<h2>for<a class="headerlink" href="#for" title="Link to this heading">#</a></h2>
+</section>
+<section id="id8">
+<h2>Первый-второй-первый<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p>В классе <code class="docutils literal notranslate"><span class="pre">N</span></code> школьников. На уроке физкультуры тренер говорит «на первый-второй рассчитайтесь».
+Выведите, что скажут ученики.<br />
+<strong>Входные данные</strong>: Вводится одно целое число — количество человек в классе.<br />
+<strong>Входные данные</strong>: Выведите последовательность чисел <code class="docutils literal notranslate"><span class="pre">1</span></code> и <code class="docutils literal notranslate"><span class="pre">2</span></code>, в том порядке, как будут говорить школьники.
+Пример:</p>
+<blockquote>
+<div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">5</span></code><br />
+Выходные данные:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">1</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="toggle docutils container">
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="kr">else</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
+<span class="nv">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="kr">while</span><span class="w"> </span><span class="nv">score</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">score</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="kr">else</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="kr">end</span>
+<span class="w">    </span><span class="nv">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">score</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="n">
+<h2>От нуля до n<a class="headerlink" href="#n" title="Link to this heading">#</a></h2>
+<p>Пользователь вводит число <code class="docutils literal notranslate"><span class="pre">n</span></code>. Далее необходимо, чтобы программа начала перечислять числа от <code class="docutils literal notranslate"><span class="pre">0</span></code> до <code class="docutils literal notranslate"><span class="pre">n</span></code>.
+Если число <code class="docutils literal notranslate"><span class="pre">n</span></code> меньше нуля, то отсчет идет в соответствующую сторону, от нуля к минусовым значениям: <code class="docutils literal notranslate"><span class="pre">0,</span> <span class="pre">-1,</span> <span class="pre">-2,</span> <span class="pre">-3</span></code> и т.д. Если больше нуля, то: <code class="docutils literal notranslate"><span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3</span></code> и т.д. Примеры:</p>
+<blockquote>
+<div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">8</span></code><br />
+Выходные данные: <code class="docutils literal notranslate"><span class="pre">0,1,2,3,4,5,6,7,8</span></code></p>
+</div></blockquote>
+<blockquote>
+<div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">-3</span></code><br />
+Выходные данные: <code class="docutils literal notranslate"><span class="pre">0,-1,-2,-3</span></code></p>
+</div></blockquote>
+<div class="toggle docutils container">
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">10</span>
+<span class="kr">if</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kr">then</span><span class="w"> </span><span class="nv">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="kr">else</span><span class="w"> </span><span class="nv">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="kr">end</span>
+
+<span class="kr">for</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nv">n</span><span class="p">,</span><span class="w"> </span><span class="nv">step</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">x</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="c1">-- альтернативное условие, с тернарным оператором:</span>
+<span class="nv">step</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id9">
+<h2>Пирамида<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>Напишите программу для построения следующего шаблона, используя циклы:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> 
+<span class="o">*</span> <span class="o">*</span> 
+<span class="o">*</span> <span class="o">*</span> <span class="o">*</span> 
+<span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> 
+<span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> 
+<span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> 
+<span class="o">*</span> <span class="o">*</span> <span class="o">*</span> 
+<span class="o">*</span> <span class="o">*</span> 
+<span class="o">*</span>
+</pre></div>
+</div>
+<div class="toggle docutils container">
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">stars</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;*&#39;</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">stars</span><span class="p">)</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="nv">stars</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">stars</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="s1">&#39;*&#39;</span>
+<span class="w">    </span><span class="kr">else</span>
+<span class="w">        </span><span class="nv">stars</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">stars</span><span class="p">:</span><span class="nf">sub</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nb">string.len</span><span class="p">(</span><span class="nv">stars</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="kr">end</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id10">
+<h2>Сортировка таблицы по убыванию<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>Напишите программу, которая сортирует произвольную таблицу по убыванию. Пример:</p>
+<blockquote>
+<div><p>Входная таблица: <code class="docutils literal notranslate"><span class="pre">{39,</span> <span class="pre">5,</span> <span class="pre">1,</span> <span class="pre">-7,</span> <span class="pre">2,</span> <span class="pre">0,</span> <span class="pre">81,</span> <span class="pre">3}</span></code><br />
+Выходная таблица: <code class="docutils literal notranslate"><span class="pre">{81,</span> <span class="pre">39,</span> <span class="pre">5,</span> <span class="pre">3,</span> <span class="pre">2,</span> <span class="pre">1,</span> <span class="pre">0,</span> <span class="pre">-7}</span></code></p>
+</div></blockquote>
+<div class="toggle docutils container">
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">}</span>
+<span class="nb">table.sort</span><span class="p">(</span><span class="nv">s</span><span class="p">)</span>
+<span class="nv">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">#</span><span class="nv">s</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nb">table.insert</span><span class="p">(</span><span class="nv">s2</span><span class="p">,</span><span class="w"> </span><span class="nv">s</span><span class="p">[</span><span class="nv">i</span><span class="p">])</span>
+<span class="kr">end</span>
+
+<span class="kr">for</span><span class="w"> </span><span class="nv">k</span><span class="p">,</span><span class="nv">v</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">ipairs</span><span class="p">(</span><span class="nv">s2</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">k</span><span class="p">,</span><span class="nv">v</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id11">
+<h2>Отбор ключей таблицы<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p>Напишите программу, которая отбирает из таблицы-словаря только ключи этой тыблицы. Результаты поместить в новую таблицу. Пример:</p>
+<blockquote>
+<div><p>Входная таблица: <code class="docutils literal notranslate"><span class="pre">{['life']='жизнь',</span> <span class="pre">['more']='больше',</span> <span class="pre">['permanent']='постоянный'}</span></code><br />
+Выходные данные: <code class="docutils literal notranslate"><span class="pre">{'life',</span> <span class="pre">'more',</span> <span class="pre">'permanent'}</span></code></p>
+</div></blockquote>
+</section>
+<section id="id12">
+<h2>Отбор значений таблицы<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<p>Напишите программу, которая отбирает из таблицы-словаря только значения этой тыблицы. Результаты поместить в новую таблицу. Пример:</p>
+<blockquote>
+<div><p>Входная таблица: <code class="docutils literal notranslate"><span class="pre">{-1</span> <span class="pre">=</span> <span class="pre">'lower',</span> <span class="pre">0</span> <span class="pre">=</span> <span class="pre">'middle',</span> <span class="pre">1</span> <span class="pre">=</span> <span class="pre">'high'}</span></code><br />
+Выходные данные: <code class="docutils literal notranslate"><span class="pre">{'lower',</span> <span class="pre">'middle',</span> <span class="pre">'high'}</span></code></p>
+</div></blockquote>
+</section>
+<section id="id13">
+<h2>Удаление дубликатов<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<p>Пользователь вводит через пробел произвольные данные, необходимо удалить дубликаты этих данных. Пример:</p>
+<blockquote>
+<div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">лес</span> <span class="pre">огород</span> <span class="pre">солнце</span> <span class="pre">очки</span> <span class="pre">лес</span> <span class="pre">имя</span> <span class="pre">очки</span></code><br />
+Выходные данные: <code class="docutils literal notranslate"><span class="pre">лес</span> <span class="pre">огород</span> <span class="pre">солнце</span> <span class="pre">очки</span> <span class="pre">имя</span></code></p>
+</div></blockquote>
+<div class="toggle docutils container">
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">words</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;лес огород солнце очки лес имя очки&quot;</span>
+<span class="nv">dict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
+<span class="nb">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">#</span><span class="nv">words</span><span class="o">+</span><span class="mi">1</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nv">letter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">words</span><span class="p">:</span><span class="nf">sub</span><span class="p">(</span><span class="nv">i</span><span class="p">,</span><span class="w"> </span><span class="nv">i</span><span class="p">)</span>
+<span class="w">    </span><span class="c1">-- letter = &quot;&quot;,</span>
+<span class="w">    </span><span class="c1">-- потому что при чтении несуществуюего индекса будет пустая строка</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">letter</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nv">letter</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="nb">table.insert</span><span class="p">(</span><span class="nv">dict</span><span class="p">,</span><span class="w"> </span><span class="nb">next</span><span class="p">)</span>
+<span class="w">        </span><span class="nb">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="w">    </span><span class="kr">else</span>
+<span class="w">        </span><span class="nb">next</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">next</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nv">letter</span>
+<span class="w">    </span><span class="kr">end</span>
+<span class="kr">end</span>
+<span class="c1">-- dict = {&#39;лес&#39;, &#39;огород&#39;, &#39;солнце&#39;, &#39;очки&#39;, &#39;лес&#39;, &#39;имя&#39;, &#39;очки&#39;}</span>
+<span class="nv">dict_sorted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
+<span class="nv">new_words</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">key</span><span class="p">,</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">ipairs</span><span class="p">(</span><span class="nv">dict</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nv">can</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="kr">for</span><span class="w"> </span><span class="nv">k</span><span class="p">,</span><span class="w"> </span><span class="nv">v</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">ipairs</span><span class="p">(</span><span class="nv">dict_sorted</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">        </span><span class="kr">if</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">v</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">            </span><span class="nv">can</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">            </span><span class="kr">break</span>
+<span class="w">        </span><span class="kr">end</span>
+<span class="w">    </span><span class="kr">end</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">can</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="nv">space</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39; &#39;</span>
+<span class="w">        </span><span class="c1">-- чтобы пробел не добавился в конец</span>
+<span class="w">        </span><span class="kr">if</span><span class="w"> </span><span class="nv">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">#</span><span class="nv">dict</span><span class="w"> </span><span class="kr">then</span><span class="w"> </span><span class="nv">space</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="kr">end</span>
+<span class="w">        </span><span class="nb">table.insert</span><span class="p">(</span><span class="nv">dict_sorted</span><span class="p">,</span><span class="w"> </span><span class="nv">value</span><span class="p">)</span>
+<span class="w">        </span><span class="nv">new_words</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">new_words</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nv">space</span>
+<span class="w">    </span><span class="kr">end</span>
+<span class="kr">end</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">new_words</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id14">
+<h2>Цифра 3 в таблице<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<p>Дана произвольная таблица с числами.
+Напишите программу, которая выводит <code class="docutils literal notranslate"><span class="pre">'YES'</span></code>, если в таблице присутствует цифра <code class="docutils literal notranslate"><span class="pre">3</span></code>, иначе выводится <code class="docutils literal notranslate"><span class="pre">'NO'</span></code>. Примеры:</p>
+<blockquote>
+<div><p>Таблица: <code class="docutils literal notranslate"><span class="pre">{9,</span> <span class="pre">10,</span> <span class="pre">3,</span> <span class="pre">-4,</span> <span class="pre">7,</span> <span class="pre">93}</span></code><br />
+Ожидаемый результат: <code class="docutils literal notranslate"><span class="pre">YES</span></code></p>
+</div></blockquote>
+<blockquote>
+<div><p>Таблица <code class="docutils literal notranslate"><span class="pre">{41,6,32}</span></code><br />
+Ожидаемый результат: <code class="docutils literal notranslate"><span class="pre">NO</span></code></p>
+</div></blockquote>
+</section>
+<section id="c-1-n">
+<h2>Cумма от 1 до N<a class="headerlink" href="#c-1-n" title="Link to this heading">#</a></h2>
+<p>Посчитайте сумму <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">2</span> <span class="pre">+</span> <span class="pre">3</span> <span class="pre">+</span> <span class="pre">...</span> <span class="pre">+</span> <span class="pre">N</span></code>.<br />
+<strong>Входные данные</strong>: Вводится одно целое число <br />
+<strong>Входные данные</strong>: Выведите искомую сумму.</p>
+<p>Примеры:</p>
+<blockquote>
+<div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">2</span></code><br />
+Выходные данные: <code class="docutils literal notranslate"><span class="pre">3</span></code></p>
+</div></blockquote>
+<blockquote>
+<div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">5</span></code><br />
+Выходные данные: <code class="docutils literal notranslate"><span class="pre">15</span></code></p>
+</div></blockquote>
+<div class="toggle docutils container">
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
+<span class="nv">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nv">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">k</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">i</span>
+<span class="kr">end</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">k</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id15">
+<h2>Буква алфавита<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<p>Пользователю предлагается ввести один символ. Нужно выяснить, входит ли символ в русский или английский алфавит, если да, то написать в какой. Примеры:</p>
+<blockquote>
+<div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">'П'</span></code><br />
+Выходные данные: <code class="docutils literal notranslate"><span class="pre">'Буква</span> <span class="pre">русского</span> <span class="pre">алфавита'</span></code></p>
+</div></blockquote>
+<blockquote>
+<div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">'j'</span></code><br />
+Выходные данные: <code class="docutils literal notranslate"><span class="pre">'Буква</span> <span class="pre">английского</span> <span class="pre">алфавита'</span></code></p>
+</div></blockquote>
+<blockquote>
+<div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">'&amp;'</span></code><br />
+Выходные данные: <code class="docutils literal notranslate"><span class="pre">'Символ</span> <span class="pre">не</span> <span class="pre">входит</span> <span class="pre">в</span> <span class="pre">рус/англ</span> <span class="pre">алфавиты'</span></code></p>
+</div></blockquote>
+<div class="toggle docutils container">
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">languages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
+<span class="nv">languages</span><span class="p">.</span><span class="py">rus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="s2">&quot;й&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ц&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;у&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;к&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;е&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;н&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;г&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="s2">&quot;ш&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;щ&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;з&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;х&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ъ&quot;</span><span class="p">,</span>
+<span class="s2">&quot;ф&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ы&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;в&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;а&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;п&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;р&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;о&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;л&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;д&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ж&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;э&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;я&quot;</span><span class="p">,</span><span class="s2">&quot;ч&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;с&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;м&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;и&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;т&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ь&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;б&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ю&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ё&quot;</span><span class="p">}</span>
+<span class="nv">languages</span><span class="p">.</span><span class="py">eng</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="s2">&quot;q&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;w&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;e&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;r&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;t&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;y&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;u&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;i&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;o&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;p&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;s&quot;</span><span class="p">,</span><span class="s2">&quot;d&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;f&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;g&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;h&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;j&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;k&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;l&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;z&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;x&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;c&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;v&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;n&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;m&quot;</span><span class="p">}</span>
+
+<span class="nv">letter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;з&#39;</span>
+<span class="nv">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Символ не входит в рус/англ алфавиты&#39;</span>
+
+<span class="kr">for</span><span class="w"> </span><span class="nv">lang</span><span class="p">,</span><span class="w"> </span><span class="nv">letters</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">pairs</span><span class="p">(</span><span class="nv">languages</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="kr">for</span><span class="w"> </span><span class="nv">key</span><span class="p">,</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">pairs</span><span class="p">(</span><span class="nv">letters</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">        </span><span class="kr">if</span><span class="w"> </span><span class="nv">letter</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">            </span><span class="kr">if</span><span class="w"> </span><span class="nv">lang</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;rus&#39;</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">                </span><span class="nv">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Буква русского алфавита&#39;</span>
+<span class="w">            </span><span class="kr">else</span>
+<span class="w">                </span><span class="nv">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Буква английского алфавита&#39;</span>
+<span class="w">            </span><span class="kr">end</span>
+<span class="w">            </span><span class="nv">stop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">            </span><span class="kr">break</span>
+<span class="w">        </span><span class="kr">end</span>
+<span class="w">    </span><span class="kr">end</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">stop</span><span class="w"> </span><span class="kr">then</span><span class="w"> </span><span class="kr">break</span><span class="w"> </span><span class="kr">end</span>
+<span class="kr">end</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="toggle docutils container">
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">letter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;t&#39;</span>
+<span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nv">letter</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="s1">&#39;а&#39;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nv">letter</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="s1">&#39;я&#39;</span><span class="w"> </span><span class="ow">or</span>
+<span class="w">        </span><span class="nv">letter</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="s1">&#39;А&#39;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nv">letter</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="s1">&#39;Я&#39;</span><span class="p">)</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;rus&#39;</span><span class="p">)</span>
+<span class="kr">elseif</span><span class="w"> </span><span class="p">(</span><span class="nv">letter</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="s1">&#39;a&#39;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nv">letter</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="s1">&#39;z&#39;</span><span class="w"> </span><span class="ow">or</span>
+<span class="w">            </span><span class="nv">letter</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="s1">&#39;A&#39;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nv">letter</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="s1">&#39;Z&#39;</span><span class="p">)</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;eng&#39;</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="id16">
+<h2>Собираемся в поход<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">things</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{[</span><span class="s1">&#39;зажигалка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;компас&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;фрукты&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;рубашка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+<span class="w">          </span><span class="p">[</span><span class="s1">&#39;термос&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;аптечка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;куртка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;бинокль&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
+<span class="w">        </span><span class="p">[</span><span class="s1">&#39;удочка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">1200</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;салфетки&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;бутерброды&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">820</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;палатка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">5500</span><span class="p">,</span>
+<span class="w">        </span><span class="p">[</span><span class="s1">&#39;спальный мешок&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">2250</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;жвачка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">10</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Турист собирается в поход. Он сможет нести <code class="docutils literal notranslate"><span class="pre">N</span></code> кг вещей. Но вещей, которые он запланировал уложить в рюкзак, оказалось намного больше. Нужно определить, какие вещи от наиболее тяжелых к самым легким поместятся в рюкзак. Пример:</p>
+<blockquote>
+<div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">10</span></code><br />
+Выходные данные:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">палатка</span>
+<span class="n">спальный</span> <span class="n">мешок</span>
+<span class="n">удочка</span>
+<span class="n">термос</span>
+<span class="n">салфетки</span>
+<span class="n">жвачка</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Этапы решения данного упражнения:</p>
+<ol class="arabic simple">
+<li><p>Создать таблицу в которой будут лежать числа из таблицы things. Пример:<br />
+<code class="docutils literal notranslate"><span class="pre">{20,</span> <span class="pre">100,</span> <span class="pre">500,</span> <span class="pre">...}</span></code></p></li>
+<li><p>Отсортировать  новую таблицу с числами, по убыванию. Пример:<br />
+<code class="docutils literal notranslate"><span class="pre">{5500,</span> <span class="pre">2250,</span> <span class="pre">1000,</span> <span class="pre">...}</span></code></p></li>
+<li><p>Поменять местами ключи и значения первоначальной таблицы things. Пример:<br />
+<code class="docutils literal notranslate"><span class="pre">{20='зажигалка',</span> <span class="pre">100='компас',</span> <span class="pre">500='фрукты',</span> <span class="pre">...}</span></code></p></li>
+<li><p>Итоговый цикл, который перебирает вещи и выводит те, которые вмещаются в рюкзак.</p></li>
+</ol>
+<div class="toggle docutils container">
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">things</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">[</span><span class="s1">&#39;зажигалка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;компас&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;фрукты&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;рубашка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+<span class="w">    </span><span class="p">[</span><span class="s1">&#39;термос&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;аптечка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;куртка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;бинокль&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
+<span class="w">    </span><span class="p">[</span><span class="s1">&#39;удочка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">1200</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;салфетки&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;бутерброды&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">820</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;палатка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">5500</span><span class="p">,</span>
+<span class="w">    </span><span class="p">[</span><span class="s1">&#39;спальный мешок&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">2250</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;жвачка&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">10</span>
+<span class="p">}</span>
+<span class="nv">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.read</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1000</span>
+<span class="c1">-- 1. Создаем таблицу только цифр из таблицы things</span>
+<span class="nv">only_nums</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">k</span><span class="p">,</span><span class="nv">v</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">pairs</span><span class="p">(</span><span class="nv">things</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nb">table.insert</span><span class="p">(</span><span class="nv">only_nums</span><span class="p">,</span><span class="w"> </span><span class="nv">v</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="c1">-- 2. Сортируем таблицу с числами по возрастанию</span>
+<span class="nb">table.sort</span><span class="p">(</span><span class="nv">only_nums</span><span class="p">)</span><span class="w"> </span>
+<span class="c1">-- Сортируем таблицу с числами по убыванию</span>
+<span class="nv">things_sorted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">#</span><span class="nv">only_nums</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nb">table.insert</span><span class="p">(</span><span class="nv">things_sorted</span><span class="p">,</span><span class="w"> </span><span class="nv">only_nums</span><span class="p">[</span><span class="nv">x</span><span class="p">])</span>
+<span class="kr">end</span>
+
+<span class="c1">-- 3. Cделаем свап таблицы things, чтобы мы находили, например по ключу 5500 -&gt; &#39;палатку&#39;</span>
+<span class="nv">things_swap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">k</span><span class="p">,</span><span class="nv">v</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">pairs</span><span class="p">(</span><span class="nv">things</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nv">things_swap</span><span class="p">[</span><span class="nv">v</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">k</span>
+<span class="kr">end</span>
+
+<span class="c1">-- Здесь итоговый цикл, который перебирает отсортированную таблицу, проводит вычисление, и выводит нужные вещи</span>
+<span class="nv">sm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">k</span><span class="p">,</span><span class="w"> </span><span class="nv">v</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">pairs</span><span class="p">(</span><span class="nv">things_sorted</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">sm</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">v</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nv">N</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="nv">things_swap</span><span class="p">[</span><span class="nv">v</span><span class="p">])</span>
+<span class="w">        </span><span class="nv">sm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">sm</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">v</span>
+<span class="w">    </span><span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="c1">-- Вывод всех элементов таблицы</span>
+<span class="c1">-- for k,v in pairs(things_sorted) do</span>
+<span class="c1">--     print(k, v)</span>
+<span class="c1">-- end</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Lua/Tasks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="5.tables.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Таблицы</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="7.functions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Функции</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#while">while</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Сумма последовательности</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Реверс слова</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Реверс, если есть ‘о’</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Палиндром</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Количество четных чисел</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Маша и телефон</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for">for</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Первый-второй-первый</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#n">От нуля до n</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Пирамида</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Сортировка таблицы по убыванию</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Отбор ключей таблицы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Отбор значений таблицы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Удаление дубликатов</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Цифра 3 в таблице</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-1-n">Cумма от 1 до N</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Буква алфавита</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Собираемся в поход</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By your-teach
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
