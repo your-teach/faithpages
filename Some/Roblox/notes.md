@@ -143,7 +143,7 @@ local touch_objects = part:GetTouchingParts()
 local touch_objects = workspace:GetPartsInPart(part)
 ```  
 (Не работает, когда нет CanCollide)
- 
+
 ## Анимация
 <video style="display: block; margin: auto;" width="600" height="400" controls muted>
   <source src="https://github.com/your-teach/faithpages/raw/refs/heads/main/video/Animation-Roblox.mp4" type="video/mp4">
