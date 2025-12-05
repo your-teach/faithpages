@@ -16,21 +16,27 @@ jobs:
         os: [ubuntu-latest]
         python-version: [3.9]
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     # Install dependencies
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
+      # working-directory: ./
 
     # Build the book
     - name: Build the book
       run: |
         jupyter-book build .
+      # working-directory: ./book
+
+    # Отладочный шаг для проверки наличия директории
+    - name: Check for build directory
+      run: ls -R ./_build/html
 
     # Deploy the book's HTML to gh-pages branch
     - name: GitHub Pages action
@@ -38,3 +44,4 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./_build/html
+        force_orphan: true
