@@ -8,7 +8,7 @@ Some hidden toggle content!
 ![](../../video/Animation%20Roblox.mkv)
 
 <video style="display: block; margin: auto;" width="600" height="400" controls muted>
-  <source src="https://github.com/your-teach/faithpages/raw/refs/heads/main/video/Animation-Roblox.mp4" type="video/mp4">
+  <source src="../_static/Animation-Roblox.mp4">
 </video>
 
 [Ссылка на первоисточник](https://www.youtube.com/watch?v=Jw9Gar_vcHY)

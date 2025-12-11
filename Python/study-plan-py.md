@@ -870,65 +870,69 @@ with open('data.json', 'w', encoding='utf-8') as file:
     result = json.dumps(data) # Перевести dict в str
     # result = json.dumps(data, ensure_ascii=False) # если есть абракадабра после записи
     file.write(result) # Записать в файл
+
+# Еще неплохой способ
+# indent=4 - автоматически выравнивает json
+with open("myfile.json", "w", encoding="utf-8") as file:
+    json.dump(data, file, indent=4, ensure_ascii=False)
 ```
 
 ## Модуль os
-    ```python
-    import os
+```python
+import os
+
+# Работа с папками.
+# Посмотреть все файлы папки и подпапки по пути path
+path = "C:\HOME\PROG\web"
+result = list(os.walk(path))
+print(result)
+
+# Посмотреть только файлы по пути path
+files = os.listdir(path)
+print(files)
+
+# Создание папки (если уже существует будет ошибка)
+os.mkdir("NEW")
+
+# Создание папки (если существует, то ошибки не будет)
+# Без "exist_ok=True" выйдет ошибка
+os.makedirs("FOLDER", exist_ok=True)
+
+# Проверить существует ли папка или файл
+os.path.exists("folder/or/file")
+
+print(os.name) # имя системы
+
+print(os.environ)
+os.environ["NEW VARIABLE"] = "123"
+
+# Удаление папки (Если папки не существует, будет ошибка)
+os.rmdir("NEW")
+os.removedirs("NEW")
+
+# Переименовать файл или папку
+os.rename("NEW", "FOLDER")
+
+# Другое.
+# Исполняет команду в консоле, например cmd (если система windows)
+result = os.system("dir")
+print(result)
+
+# Домашняя директория
+homepath = os.path.expanduser("~")
+print(homepath)
+
+# Еще можно разобрать
+icon_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "qspectrumanalyzer.svg")
+# os.path.join
+# os.path.dirname
+# os.path.realpath
+
+# Все команды os модуля: https://pythonworld.ru/moduli/modul-os.html
+# Упражнения на os: https://www.w3resource.com/python-exercises/os/index.php
 
 
-    # Работа с папками.
-    # Посмотреть все файлы папки и подпапки по пути path
-    path = "C:\HOME\PROG\web"
-    result = list(os.walk(path))
-    print(result)
-
-    # Посмотреть только файлы по пути path
-    files = os.listdir(path)
-    print(files)
-
-    # Создание папки (если уже существует будет ошибка)
-    os.mkdir("NEW")
-
-    # Создание папки (если существует, то ошибки не будет)
-    # Без "exist_ok=True" выйдет ошибка
-    os.makedirs("FOLDER", exist_ok=True)
-
-    # Проверить существует ли папка или файл
-    os.path.exists("folder/or/file")
-
-    print(os.name) # имя системы
-
-    print(os.environ)
-    os.environ["NEW VARIABLE"] = "123"
-
-    # Удаление папки (Если папки не существует, будет ошибка)
-    os.rmdir("NEW")
-    os.removedirs("NEW")
-
-    # Переименовать файл или папку
-    os.rename("NEW", "FOLDER")
-
-    # Другое.
-    # Исполняет команду в консоле, например cmd (если система windows)
-    result = os.system("dir")
-    print(result)
-
-    # Домашняя директория
-    homepath = os.path.expanduser("~")
-    print(homepath)
-
-    # Еще можно разобрать
-    icon_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "qspectrumanalyzer.svg")
-    # os.path.join
-    # os.path.dirname
-    # os.path.realpath
-
-    # Все команды os модуля: https://pythonworld.ru/moduli/modul-os.html
-    # Упражнения на os: https://www.w3resource.com/python-exercises/os/index.php
-
-
-    ```  
+```  
 
 
 ## Перемещение файлов.
