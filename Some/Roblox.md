@@ -1,6 +1,6 @@
 # Roblox
 
-## Разное
+# Разное
 ```lua
 workspace.Part.BrickColor = BrickColor.new("Pastel Blue")
 -- https://create.roblox.com/docs/reference/engine/datatypes/BrickColor
@@ -61,7 +61,7 @@ Part.CFrame = CFrame.lookAt(Part.Position, Vector3.new(HumanoidRootPart.Position
 
 ```
  
-## Выдержки
+# Выдержки
 **Stepped**, **Heartbeat**, **RenderStepped**:
 	RenderStepped работает только в локальных скриптах,
 	а Heartbeat и Stepped работают как в обычных, так и в локальных скриптах.
@@ -79,7 +79,7 @@ Remote functions - это функции, которые можно вызыва
 https://create.roblox.com/docs/scripting/events/remote - Server <=> Client
 
 
-## ClickDetector
+# ClickDetector
 Server Script
 ```lua 
 local click_detector = script.Parent.ClickDetector
@@ -94,7 +94,7 @@ end
 click_detector.MouseClick:Connect(click)
 ```
 
-## RemoteEvent
+# RemoteEvent
 
 Server Script
 ```lua
@@ -119,7 +119,7 @@ remoteEvent:FireServer("Прошло 10 секунд в local script")
 
 ```
 
-## Кнопка Gui
+# Кнопка Gui
 
 StarterGui -> ScreenGui -> TextButton -> LocalScript:
 
@@ -133,7 +133,7 @@ button.Activated:Connect(onButtonActivated)
 
 ```
 
-## Касание других партов
+# Касание других партов
 ```lua
 local part = script.Parent 
 -- Первый вариант касание:
@@ -143,12 +143,12 @@ local touch_objects = workspace:GetPartsInPart(part)
 ```  
 (Не работает, когда нет CanCollide)
  
-## Анимация
+# Анимация
 <video style="display: block; margin: auto;" width="600" height="400" controls muted>
   <source src="../_static/Animation-Roblox.mp4" type="video/mp4">
 </video>
 
-## Передвижение парта относительно другого парта
+# Передвижение парта относительно другого парта
 ````{toggle}
 ```lua
 local partToMove = workspace.PartToMove
@@ -165,7 +165,7 @@ partToMove.CFrame = partToMove.CFrame + referencePart.CFrame.UpVector * offset
 ```
 ````
 
-## Один цвет на всех
+# Один цвет на всех
 Поменять цвет всех партов в workspace на синий
 ````{toggle}
 ```lua
@@ -179,7 +179,7 @@ end
 ```
 ````
 
-## Бесконечные мячики
+# Бесконечные мячики
 - Создать парт Ball 
 - Включить у него Anchored
 - Создать в нем скрипт с содержимым:
@@ -245,10 +245,11 @@ end)
 ```
 ````
 
-## Raycat
+# Raycat
 
-### В направлении куда смотрит парт
+## В направлении куда смотрит парт
 ```lua
+-- вставить в парт
 local part = script.Parent
 local direction = part.CFrame.LookVector * 50 -- Направление на 50 студов
 
@@ -259,8 +260,7 @@ if result then
 end
 ```
 
-###  В опеределенную сторону
-````{toggle}
+##  В опеределенную сторону
 ```lua
 -- вставить в парт
 local start = script.Parent.Position
@@ -273,7 +273,8 @@ if result then
 end
 ```
 
-### С визуализацией 
+## С визуализацией
+````{toggle}
 ```lua
 -- вставить в парт
 local RunService = game:GetService("RunService")
