@@ -223,6 +223,17 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Some/Roblox.html">Roblox</a></li>
 
+
+
+
+
+
+
+
+
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="../Some/tasks.html">Разные задачки</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Some/codeforces.html">Задачи codeforces</a></li>
 
@@ -1490,67 +1501,69 @@ https://letpy.com/handbook/builtins/open/
     <span class="n">result</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="c1"># Перевести dict в str</span>
     <span class="c1"># result = json.dumps(data, ensure_ascii=False) # если есть абракадабра после записи</span>
     <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="c1"># Записать в файл</span>
+
+<span class="c1"># Еще неплохой способ</span>
+<span class="c1"># indent=4 - автоматически выравнивает json</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;myfile.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="os">
 <h2>Модуль os<a class="headerlink" href="#os" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```python
-import os
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="c1"># Работа с папками.</span>
+<span class="c1"># Посмотреть все файлы папки и подпапки по пути path</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;C:\HOME\PROG\web&quot;</span>
+<span class="n">result</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="c1"># Посмотреть только файлы по пути path</span>
+<span class="n">files</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">files</span><span class="p">)</span>
+
+<span class="c1"># Создание папки (если уже существует будет ошибка)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s2">&quot;NEW&quot;</span><span class="p">)</span>
+
+<span class="c1"># Создание папки (если существует, то ошибки не будет)</span>
+<span class="c1"># Без &quot;exist_ok=True&quot; выйдет ошибка</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">&quot;FOLDER&quot;</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Проверить существует ли папка или файл</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;folder/or/file&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="c1"># имя системы</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;NEW VARIABLE&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;123&quot;</span>
+
+<span class="c1"># Удаление папки (Если папки не существует, будет ошибка)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="s2">&quot;NEW&quot;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">removedirs</span><span class="p">(</span><span class="s2">&quot;NEW&quot;</span><span class="p">)</span>
+
+<span class="c1"># Переименовать файл или папку</span>
+<span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s2">&quot;NEW&quot;</span><span class="p">,</span> <span class="s2">&quot;FOLDER&quot;</span><span class="p">)</span>
+
+<span class="c1"># Другое.</span>
+<span class="c1"># Исполняет команду в консоле, например cmd (если система windows)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;dir&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="c1"># Домашняя директория</span>
+<span class="n">homepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s2">&quot;~&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">homepath</span><span class="p">)</span>
+
+<span class="c1"># Еще можно разобрать</span>
+<span class="n">icon_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)),</span> <span class="s2">&quot;qspectrumanalyzer.svg&quot;</span><span class="p">)</span>
+<span class="c1"># os.path.join</span>
+<span class="c1"># os.path.dirname</span>
+<span class="c1"># os.path.realpath</span>
+
+<span class="c1"># Все команды os модуля: https://pythonworld.ru/moduli/modul-os.html</span>
+<span class="c1"># Упражнения на os: https://www.w3resource.com/python-exercises/os/index.php</span>
 
 
-# Работа с папками.
-# Посмотреть все файлы папки и подпапки по пути path
-path = &quot;C:\HOME\PROG\web&quot;
-result = list(os.walk(path))
-print(result)
-
-# Посмотреть только файлы по пути path
-files = os.listdir(path)
-print(files)
-
-# Создание папки (если уже существует будет ошибка)
-os.mkdir(&quot;NEW&quot;)
-
-# Создание папки (если существует, то ошибки не будет)
-# Без &quot;exist_ok=True&quot; выйдет ошибка
-os.makedirs(&quot;FOLDER&quot;, exist_ok=True)
-
-# Проверить существует ли папка или файл
-os.path.exists(&quot;folder/or/file&quot;)
-
-print(os.name) # имя системы
-
-print(os.environ)
-os.environ[&quot;NEW VARIABLE&quot;] = &quot;123&quot;
-
-# Удаление папки (Если папки не существует, будет ошибка)
-os.rmdir(&quot;NEW&quot;)
-os.removedirs(&quot;NEW&quot;)
-
-# Переименовать файл или папку
-os.rename(&quot;NEW&quot;, &quot;FOLDER&quot;)
-
-# Другое.
-# Исполняет команду в консоле, например cmd (если система windows)
-result = os.system(&quot;dir&quot;)
-print(result)
-
-# Домашняя директория
-homepath = os.path.expanduser(&quot;~&quot;)
-print(homepath)
-
-# Еще можно разобрать
-icon_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), &quot;qspectrumanalyzer.svg&quot;)
-# os.path.join
-# os.path.dirname
-# os.path.realpath
-
-# Все команды os модуля: https://pythonworld.ru/moduli/modul-os.html
-# Упражнения на os: https://www.w3resource.com/python-exercises/os/index.php
-
-
-```  
 </pre></div>
 </div>
 </section>

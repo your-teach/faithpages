@@ -223,6 +223,17 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Some/Roblox.html">Roblox</a></li>
 
+
+
+
+
+
+
+
+
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="../Some/tasks.html">Разные задачки</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Some/codeforces.html">Задачи codeforces</a></li>
 
@@ -493,14 +504,17 @@ document.write(`
     - Изменить шрифт -&gt; editor.fontSize -&gt; 16
     - Code-runner: Save file before run [галочка стоит]
     - Code-runner: Run in terminal [галочка стоит]
-7. Settings.json
-    -Открывать в кодировке cp866:
-        &quot;[lua]&quot;: {
-            &quot;files.encoding&quot;: &quot;cp866&quot;,
+7. Открывать в кодировке cp866, как должен выглядеть файл Settings.json:
+    ```json
+        {
+            &quot;code-runner.runInTerminal&quot;: true,
+            &quot;code-runner.saveFileBeforeRun&quot;: true,
+            &quot;editor.fontSize&quot;: 17,
+            &quot;[lua]&quot;: {
+                        &quot;files.encoding&quot;: &quot;cp866&quot;
+                    }
         }
-    -Очистка консоли:
-        &quot;code-runner.executorMap&quot;: {
-            &quot;lua&quot;: &quot;clear; lua&quot; }
+    ```
 8. Создать папку на рабочем столе -&gt; Открываем её в Vscode -&gt; Далее создаем два файла -&gt; main.lua/py theory.lua/py
 9. Выключить Ai chat и прочее в настройках: Chat: Disable Ai Freatures
 10. Выключить предупреждение об local

@@ -1,6 +1,6 @@
 # Roblox
 
-## Разное
+# Разное
 ```lua
 workspace.Part.BrickColor = BrickColor.new("Pastel Blue")
 -- https://create.roblox.com/docs/reference/engine/datatypes/BrickColor
@@ -61,7 +61,7 @@ Part.CFrame = CFrame.lookAt(Part.Position, Vector3.new(HumanoidRootPart.Position
 
 ```
  
-## Выдержки
+# Выдержки
 **Stepped**, **Heartbeat**, **RenderStepped**:
 	RenderStepped работает только в локальных скриптах,
 	а Heartbeat и Stepped работают как в обычных, так и в локальных скриптах.
@@ -79,7 +79,7 @@ Remote functions - это функции, которые можно вызыва
 https://create.roblox.com/docs/scripting/events/remote - Server <=> Client
 
 
-## ClickDetector
+# ClickDetector
 Server Script
 ```lua 
 local click_detector = script.Parent.ClickDetector
@@ -94,7 +94,7 @@ end
 click_detector.MouseClick:Connect(click)
 ```
 
-## RemoteEvent
+# RemoteEvent
 
 Server Script
 ```lua
@@ -119,7 +119,7 @@ remoteEvent:FireServer("Прошло 10 секунд в local script")
 
 ```
 
-## Кнопка Gui
+# Кнопка Gui
 
 StarterGui -> ScreenGui -> TextButton -> LocalScript:
 
@@ -133,7 +133,7 @@ button.Activated:Connect(onButtonActivated)
 
 ```
 
-## Касание других партов
+# Касание других партов
 ```lua
 local part = script.Parent 
 -- Первый вариант касание:
@@ -143,12 +143,12 @@ local touch_objects = workspace:GetPartsInPart(part)
 ```  
 (Не работает, когда нет CanCollide)
  
-## Анимация
+# Анимация
 <video style="display: block; margin: auto;" width="600" height="400" controls muted>
   <source src="../_static/Animation-Roblox.mp4" type="video/mp4">
 </video>
 
-## Передвижение парта относительно другого парта
+# Передвижение парта относительно другого парта
 ````{toggle}
 ```lua
 local partToMove = workspace.PartToMove
@@ -165,7 +165,7 @@ partToMove.CFrame = partToMove.CFrame + referencePart.CFrame.UpVector * offset
 ```
 ````
 
-## Один цвет на всех
+# Один цвет на всех
 Поменять цвет всех партов в workspace на синий
 ````{toggle}
 ```lua
@@ -179,7 +179,7 @@ end
 ```
 ````
 
-## Бесконечные мячики
+# Бесконечные мячики
 - Создать парт Ball 
 - Включить у него Anchored
 - Создать в нем скрипт с содержимым:
@@ -242,5 +242,110 @@ proximityPrompt.Triggered:Connect(function()
 		workspace.Door.ProximityPrompt.Enabled = false
 	end
 end)
+```
+````
+
+# Raycat
+
+## В направлении куда смотрит парт
+```lua
+-- вставить в парт
+local part = script.Parent
+local direction = part.CFrame.LookVector * 50 -- Направление на 50 студов
+
+local result = workspace:Raycast(part.Position, direction) -- Сам рейкаст
+
+if result then
+	print("Попал в: " .. result.Instance.Name) -- Регистрация касания
+end
+```
+
+##  В опеределенную сторону
+```lua
+-- вставить в парт
+local start = script.Parent.Position
+local target = Vector3.new(0,10,0) -- координата направления
+
+local result = workspace:Raycast(start, target - start) -- Сам рейкаст
+
+if result then
+	print("Попал в: " .. result.Instance.Name) -- Регистрация касания
+end
+```
+
+## С визуализацией
+````{toggle}
+```lua
+-- вставить в парт
+local RunService = game:GetService("RunService")
+
+local originPart = script.Parent
+local RAY_DISTANCE = 100 
+
+-- Создаем визуализацию (Beam)
+local attachmentStart = Instance.new("Attachment", originPart)
+local endPointPart = Instance.new("Part")
+endPointPart.Anchored = true
+endPointPart.CanCollide = false
+endPointPart.CanQuery = false
+endPointPart.Transparency = 1
+endPointPart.Parent = workspace
+
+local attachmentEnd = Instance.new("Attachment", endPointPart)
+local beam = Instance.new("Beam")
+beam.Attachment0 = attachmentStart
+beam.Attachment1 = attachmentEnd
+beam.Width0, beam.Width1 = 0.1, 0.1
+beam.Color = ColorSequence.new(Color3.fromRGB(0, 255, 0)) -- Зеленый цвет
+beam.Parent = originPart
+
+-- Переменная для хранения списка имен объектов с прошлого кадра
+local lastHitNames = ""
+
+local function updateRaycast()
+	local origin = originPart.Position
+	local direction = originPart.CFrame.LookVector * RAY_DISTANCE
+
+	local hitResults = {}
+	local ignoreList = {originPart, endPointPart}
+	local params = RaycastParams.new()
+	params.FilterType = Enum.RaycastFilterType.Exclude
+
+	-- Собираем все объекты на пути
+	while true do
+		params.FilterDescendantsInstances = ignoreList
+		local result = workspace:Raycast(origin, direction, params)
+
+		if result then
+			table.insert(hitResults, result.Instance) -- Сохраняем сам объект
+			table.insert(ignoreList, result.Instance)
+		else
+			break
+		end
+	end
+
+	-- Формируем строку из имен всех попавших объектов для сравнения
+	local currentHitNames = ""
+	for _, obj in ipairs(hitResults) do
+		currentHitNames = currentHitNames .. obj.Name .. ","
+	end
+
+	-- Если список объектов изменился — выводим print
+	if currentHitNames ~= lastHitNames then
+		if #hitResults > 0 then
+			local names = {}
+			for _, obj in ipairs(hitResults) do table.insert(names, obj.Name) end
+			print("🚀 Луч пересекает: " .. table.concat(names, " | "))
+		else
+			print("⚪ Пусто (препятствий нет)")
+		end
+		lastHitNames = currentHitNames -- Запоминаем текущее состояние
+	end
+
+	-- Обновляем положение визуального луча
+	endPointPart.Position = origin + direction
+end
+
+RunService.Heartbeat:Connect(updateRaycast)
 ```
 ````

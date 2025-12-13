@@ -12,14 +12,17 @@ https://www.youtube.com/watch?v=X6BqMZyzAs4
         - Изменить шрифт -> editor.fontSize -> 16
         - Code-runner: Save file before run [галочка стоит]
         - Code-runner: Run in terminal [галочка стоит]
-    7. Settings.json
-        -Открывать в кодировке cp866:
-            "[lua]": {
-                "files.encoding": "cp866",
+    7. Открывать в кодировке cp866, как должен выглядеть файл Settings.json:
+        ```json
+            {
+                "code-runner.runInTerminal": true,
+                "code-runner.saveFileBeforeRun": true,
+                "editor.fontSize": 17,
+                "[lua]": {
+                            "files.encoding": "cp866"
+                        }
             }
-        -Очистка консоли:
-            "code-runner.executorMap": {
-                "lua": "clear; lua" }
+        ```
     8. Создать папку на рабочем столе -> Открываем её в Vscode -> Далее создаем два файла -> main.lua/py theory.lua/py
     9. Выключить Ai chat и прочее в настройках: Chat: Disable Ai Freatures
     10. Выключить предупреждение об local
