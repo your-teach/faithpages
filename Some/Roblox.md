@@ -244,3 +244,107 @@ proximityPrompt.Triggered:Connect(function()
 end)
 ```
 ````
+
+## Raycat
+
+### В направлении куда смотрит парт
+```lua
+local part = script.Parent
+local direction = part.CFrame.LookVector * 50 -- Направление на 50 студов
+
+local result = workspace:Raycast(part.Position, direction) -- Сам рейкаст
+
+if result then
+	print("Попал в: " .. result.Instance.Name) -- Регистрация касания
+end
+```
+
+###  В опеределенную сторону
+````{toggle}
+```lua
+-- вставить в парт
+local start = script.Parent.Position
+local target = Vector3.new(0,10,0) -- координата направления
+
+local result = workspace:Raycast(start, target - start) -- Сам рейкаст
+
+if result then
+	print("Попал в: " .. result.Instance.Name) -- Регистрация касания
+end
+```
+
+### С визуализацией 
+```lua
+-- вставить в парт
+local RunService = game:GetService("RunService")
+
+local originPart = script.Parent
+local RAY_DISTANCE = 100 
+
+-- Создаем визуализацию (Beam)
+local attachmentStart = Instance.new("Attachment", originPart)
+local endPointPart = Instance.new("Part")
+endPointPart.Anchored = true
+endPointPart.CanCollide = false
+endPointPart.CanQuery = false
+endPointPart.Transparency = 1
+endPointPart.Parent = workspace
+
+local attachmentEnd = Instance.new("Attachment", endPointPart)
+local beam = Instance.new("Beam")
+beam.Attachment0 = attachmentStart
+beam.Attachment1 = attachmentEnd
+beam.Width0, beam.Width1 = 0.1, 0.1
+beam.Color = ColorSequence.new(Color3.fromRGB(0, 255, 0)) -- Зеленый цвет
+beam.Parent = originPart
+
+-- Переменная для хранения списка имен объектов с прошлого кадра
+local lastHitNames = ""
+
+local function updateRaycast()
+	local origin = originPart.Position
+	local direction = originPart.CFrame.LookVector * RAY_DISTANCE
+
+	local hitResults = {}
+	local ignoreList = {originPart, endPointPart}
+	local params = RaycastParams.new()
+	params.FilterType = Enum.RaycastFilterType.Exclude
+
+	-- Собираем все объекты на пути
+	while true do
+		params.FilterDescendantsInstances = ignoreList
+		local result = workspace:Raycast(origin, direction, params)
+
+		if result then
+			table.insert(hitResults, result.Instance) -- Сохраняем сам объект
+			table.insert(ignoreList, result.Instance)
+		else
+			break
+		end
+	end
+
+	-- Формируем строку из имен всех попавших объектов для сравнения
+	local currentHitNames = ""
+	for _, obj in ipairs(hitResults) do
+		currentHitNames = currentHitNames .. obj.Name .. ","
+	end
+
+	-- Если список объектов изменился — выводим print
+	if currentHitNames ~= lastHitNames then
+		if #hitResults > 0 then
+			local names = {}
+			for _, obj in ipairs(hitResults) do table.insert(names, obj.Name) end
+			print("🚀 Луч пересекает: " .. table.concat(names, " | "))
+		else
+			print("⚪ Пусто (препятствий нет)")
+		end
+		lastHitNames = currentHitNames -- Запоминаем текущее состояние
+	end
+
+	-- Обновляем положение визуального луча
+	endPointPart.Position = origin + direction
+end
+
+RunService.Heartbeat:Connect(updateRaycast)
+```
+````
