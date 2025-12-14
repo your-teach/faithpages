@@ -233,12 +233,13 @@
 
 
 
-
 <li class="toctree-l1"><a class="reference internal" href="tasks.html">Разные задачки</a></li>
 <li class="toctree-l1"><a class="reference internal" href="codeforces.html">Задачи codeforces</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="settings-system.html">Настройки систем</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ubuntu.html">Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">Git</a></li>
+
 </ul>
 
     </div>
@@ -453,20 +454,19 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Roblox</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Разное</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Выдержки</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#clickdetector">ClickDetector</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#remoteevent">RemoteEvent</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gui">Кнопка Gui</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Касание других партов</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Анимация</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Передвижение парта относительно другого парта</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Один цвет на всех</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Бесконечные мячики</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Плавная дверь</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#raycat">Raycat</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">В направлении куда смотрит парт</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">В опеределенную сторону</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">С визуализацией</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Касание других партов</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Анимация</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Передвижение парта относительно другого парта</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Один цвет на всех</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Бесконечные мячики</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Плавная дверь</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#raycast">Raycast</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">В направлении куда смотрит парт</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">В опеределенную сторону</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">С визуализацией</a></li>
 </ul>
 </li>
 </ul>
@@ -544,9 +544,6 @@ document.write(`
 <span class="nv">Part</span><span class="p">.</span><span class="py">CFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">CFrame</span><span class="p">.</span><span class="nf">lookAt</span><span class="p">(</span><span class="nv">Part</span><span class="p">.</span><span class="py">Position</span><span class="p">,</span><span class="w"> </span><span class="nv">Vector3</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="nv">HumanoidRootPart</span><span class="p">.</span><span class="py">Position</span><span class="p">.</span><span class="py">X</span><span class="p">,</span><span class="w"> </span><span class="nv">Part</span><span class="p">.</span><span class="py">Position</span><span class="p">.</span><span class="py">Y</span><span class="p">,</span><span class="w"> </span><span class="nv">HumanoidRootPart</span><span class="p">.</span><span class="py">Position</span><span class="p">.</span><span class="py">Z</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="id2">
-<h1>Выдержки<a class="headerlink" href="#id2" title="Link to this heading">#</a></h1>
 <p><strong>Stepped</strong>, <strong>Heartbeat</strong>, <strong>RenderStepped</strong>:
 RenderStepped работает только в локальных скриптах,
 а Heartbeat и Stepped работают как в обычных, так и в локальных скриптах.
@@ -609,8 +606,8 @@ Remote functions - это функции, которые можно вызыва
 </pre></div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="id3">
-<h1>Касание других партов<a class="headerlink" href="#id3" title="Link to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="id2">
+<h1>Касание других партов<a class="headerlink" href="#id2" title="Link to this heading">#</a></h1>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span><span class="w"> </span><span class="nv">part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">script</span><span class="p">.</span><span class="py">Parent</span><span class="w"> </span>
 <span class="c1">-- Первый вариант касание:</span>
 <span class="kd">local</span><span class="w"> </span><span class="nv">touch_objects</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">part</span><span class="p">:</span><span class="nf">GetTouchingParts</span><span class="p">()</span>
@@ -620,14 +617,14 @@ Remote functions - это функции, которые можно вызыва
 </div>
 <p>(Не работает, когда нет CanCollide)</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="id4">
-<h1>Анимация<a class="headerlink" href="#id4" title="Link to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="id3">
+<h1>Анимация<a class="headerlink" href="#id3" title="Link to this heading">#</a></h1>
 <video style="display: block; margin: auto;" width="600" height="400" controls muted>
   <source src="../_static/Animation-Roblox.mp4" type="video/mp4">
 </video>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="id5">
-<h1>Передвижение парта относительно другого парта<a class="headerlink" href="#id5" title="Link to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="id4">
+<h1>Передвижение парта относительно другого парта<a class="headerlink" href="#id4" title="Link to this heading">#</a></h1>
 <div class="toggle docutils container">
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span><span class="w"> </span><span class="nv">partToMove</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">workspace</span><span class="p">.</span><span class="py">PartToMove</span>
 <span class="kd">local</span><span class="w"> </span><span class="nv">referencePart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">workspace</span><span class="p">.</span><span class="py">ReferencePart</span>
@@ -644,8 +641,8 @@ Remote functions - это функции, которые можно вызыва
 </div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="id6">
-<h1>Один цвет на всех<a class="headerlink" href="#id6" title="Link to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="id5">
+<h1>Один цвет на всех<a class="headerlink" href="#id5" title="Link to this heading">#</a></h1>
 <p>Поменять цвет всех партов в workspace на синий</p>
 <div class="toggle docutils container">
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nf">wait</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -659,8 +656,8 @@ Remote functions - это функции, которые можно вызыва
 </div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="id7">
-<h1>Бесконечные мячики<a class="headerlink" href="#id7" title="Link to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="id6">
+<h1>Бесконечные мячики<a class="headerlink" href="#id6" title="Link to this heading">#</a></h1>
 <ul>
 <li><p>Создать парт Ball</p></li>
 <li><p>Включить у него Anchored</p></li>
@@ -684,8 +681,8 @@ Remote functions - это функции, которые можно вызыва
 </li>
 </ul>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="id8">
-<h1>Плавная дверь<a class="headerlink" href="#id8" title="Link to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="id7">
+<h1>Плавная дверь<a class="headerlink" href="#id7" title="Link to this heading">#</a></h1>
 <div class="toggle docutils container">
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span><span class="w"> </span><span class="nv">proximityPrompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">script</span><span class="p">.</span><span class="py">Parent</span><span class="p">.</span><span class="py">ProximityPrompt</span>
 <span class="kd">local</span><span class="w"> </span><span class="nv">TweenService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">game</span><span class="p">:</span><span class="nf">GetService</span><span class="p">(</span><span class="s2">&quot;TweenService&quot;</span><span class="p">)</span>
@@ -730,10 +727,10 @@ Remote functions - это функции, которые можно вызыва
 </div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="raycat">
-<h1>Raycat<a class="headerlink" href="#raycat" title="Link to this heading">#</a></h1>
-<section id="id9">
-<h2>В направлении куда смотрит парт<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<section class="tex2jax_ignore mathjax_ignore" id="raycast">
+<h1>Raycast<a class="headerlink" href="#raycast" title="Link to this heading">#</a></h1>
+<section id="id8">
+<h2>В направлении куда смотрит парт<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- вставить в парт</span>
 <span class="kd">local</span><span class="w"> </span><span class="nv">part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">script</span><span class="p">.</span><span class="py">Parent</span>
 <span class="kd">local</span><span class="w"> </span><span class="nv">direction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">part</span><span class="p">.</span><span class="py">CFrame</span><span class="p">.</span><span class="py">LookVector</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="c1">-- Направление на 50 студов</span>
@@ -746,8 +743,8 @@ Remote functions - это функции, которые можно вызыва
 </pre></div>
 </div>
 </section>
-<section id="id10">
-<h2>В опеределенную сторону<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<section id="id9">
+<h2>В опеределенную сторону<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- вставить в парт</span>
 <span class="kd">local</span><span class="w"> </span><span class="nv">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">script</span><span class="p">.</span><span class="py">Parent</span><span class="p">.</span><span class="py">Position</span>
 <span class="kd">local</span><span class="w"> </span><span class="nv">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Vector3</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="c1">-- координата направления</span>
@@ -760,8 +757,8 @@ Remote functions - это функции, которые можно вызыва
 </pre></div>
 </div>
 </section>
-<section id="id11">
-<h2>С визуализацией<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<section id="id10">
+<h2>С визуализацией<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
 <div class="toggle docutils container">
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- вставить в парт</span>
 <span class="kd">local</span><span class="w"> </span><span class="nv">RunService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">game</span><span class="p">:</span><span class="nf">GetService</span><span class="p">(</span><span class="s2">&quot;RunService&quot;</span><span class="p">)</span>
@@ -906,20 +903,19 @@ Remote functions - это функции, которые можно вызыва
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Roblox</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Разное</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Выдержки</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#clickdetector">ClickDetector</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#remoteevent">RemoteEvent</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#gui">Кнопка Gui</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Касание других партов</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Анимация</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Передвижение парта относительно другого парта</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Один цвет на всех</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Бесконечные мячики</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Плавная дверь</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#raycat">Raycat</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">В направлении куда смотрит парт</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">В опеределенную сторону</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">С визуализацией</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Касание других партов</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Анимация</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Передвижение парта относительно другого парта</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Один цвет на всех</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Бесконечные мячики</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Плавная дверь</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#raycast">Raycast</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">В направлении куда смотрит парт</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">В опеределенную сторону</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">С визуализацией</a></li>
 </ul>
 </li>
 </ul>
