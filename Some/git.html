@@ -475,55 +475,56 @@ document.write(`
 <h1>Git<a class="headerlink" href="#git" title="Link to this heading">#</a></h1>
 <section id="id1">
 <h2>Команды<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code> - инициилизация репозитория
-<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code> - добавить измененные/новые файлы в индекс (staging area) для следующего коммита
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code> - инициилизация репозитория<br />
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code> - добавить измененные/новые файлы в индекс (staging area) для следующего коммита<br />
 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">path/to/file</span></code> - можно точечно (или убрать <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">restore</span> <span class="pre">--staged</span> <span class="pre">file</span> <span class="pre">.</span></code>)
-<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;Описание</span> <span class="pre">изменений&quot;</span></code> - коммит
-<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">main</span></code> - отправка файлов на удаленную ветку main
-<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span> <span class="pre">--rebase</span></code> - если удаленная история отличается — возможен отказ пуша; использовать перед push (вроде) или согласовать изменения
-<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span> <span class="pre">origin</span> <span class="pre">main</span></code> - получение загрузка новых коммитов к себе (git pull = git fetch + git merge)
-<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span></code> - посмотреть все ветки репозитория
-<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">-m</span> <span class="pre">main</span></code> - переименовать локальную ветку в main
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;Описание</span> <span class="pre">изменений&quot;</span></code> - коммит<br />
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">main</span></code> - отправка файлов на удаленную ветку main<br />
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span> <span class="pre">--rebase</span></code> - если удаленная история отличается — возможен отказ пуша; использовать перед push (вроде) или согласовать изменения<br />
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span> <span class="pre">origin</span> <span class="pre">main</span></code> - получение загрузка новых коммитов к себе (git pull = git fetch + git merge)<br />
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span></code> - посмотреть все ветки репозитория<br />
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">-m</span> <span class="pre">main</span></code> - переименовать локальную ветку в main<br />
 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span></code> - загружает новые данные (коммиты, файлы и ссылки) из удаленного репозитория в локальный, но не объединяет их существующими файлами</p>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="ssh-github-gitlab-bitbucket">
 <h1>SSH для GitHub/GitLab/Bitbucket<a class="headerlink" href="#ssh-github-gitlab-bitbucket" title="Link to this heading">#</a></h1>
-<p><strong>Создание ключа и привязка</strong>
-Проверить наличие SSH-ключа
-<code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-al</span> <span class="pre">~/.ssh</span></code>
+<p><strong>Создание ключа и привязка</strong><br />
+Проверить наличие SSH-ключа<br />
+<code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-al</span> <span class="pre">~/.ssh</span></code><br />
 Обычно ключи называются id_rsa и id_rsa.pub или id_ed25519 и id_ed25519.pub.</p>
-<p>Создать новый ключ (если нет)
+<p>Создать новый ключ (если нет)<br />
 <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span> <span class="pre">-t</span> <span class="pre">ed25519</span> <span class="pre">-C</span> <span class="pre">&quot;your_email&#64;example.com&quot;</span></code></p>
-<p>Запустить фоновый процесс ssh-agent, который хранит расшифрованные ключи в памяти и предоставляет их клиентам SSH.
-<code class="docutils literal notranslate"><span class="pre">eval</span> <span class="pre">&quot;$(ssh-agent</span> <span class="pre">-s)&quot;</span></code>
-Загрузить приватный ключ в ssh-agent, чтобы не вводить пароль при каждом соединении.
+<p>Запустить фоновый процесс ssh-agent, который хранит расшифрованные ключи в памяти и предоставляет их клиентам SSH.<br />
+<code class="docutils literal notranslate"><span class="pre">eval</span> <span class="pre">&quot;$(ssh-agent</span> <span class="pre">-s)&quot;</span></code><br />
+Загрузить приватный ключ в ssh-agent, чтобы не вводить пароль при каждом соединении.<br />
 <code class="docutils literal notranslate"><span class="pre">ssh-add</span> <span class="pre">~/.ssh/id_ed25519</span></code></p>
-<p>Скопировать публичный полученный ключ и добавить его в GitHub/GitLab → SSH Keys
+<p>Скопировать публичный полученный ключ и добавить его в GitHub/GitLab → SSH Keys<br />
 <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">~/.ssh/id_ed25519.pub</span></code></p>
-<p>После добавления ключа можно клонировать репозиторий по SSH:
+<p>После добавления ключа можно клонировать репозиторий по SSH:<br />
 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">git&#64;github.com:username/repository.git</span> <span class="pre">.</span></code></p>
-<p><strong>Работа с коммитами</strong>
-Добавить изменения:
-<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code>
-Сделать коммит:
-<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;Описание</span> <span class="pre">изменений&quot;</span></code>
-Отправить изменения в удалённый репозиторий:
-<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">main</span></code>
-Чтобы обновить локальную копию:
+<p><strong>Работа с коммитами</strong><br />
+Добавить изменения:<br />
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code><br />
+Сделать коммит:<br />
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;Описание</span> <span class="pre">изменений&quot;</span></code><br />
+Отправить изменения в удалённый репозиторий:<br />
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">main</span></code><br />
+Чтобы обновить локальную копию:<br />
 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span> <span class="pre">origin</span> <span class="pre">main</span></code></p>
 <section id="id2">
 <h2>Слияние репозиториев<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <p>Если в папке имеются файлы, и нужны еще и клонировать новый репозиторий</p>
-<p>Инициализация: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code>
-Привязка удаленного репозитория: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">add</span> <span class="pre">origin</span> <span class="pre">&lt;ссылка&gt;</span></code>
-Получение данных: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span></code>
-Принудительное слияние: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reset</span> <span class="pre">--hard</span> <span class="pre">origin/main</span></code> ( это затрет локальные файлы с такими же именами, как в репозитории).
-Далее:
-<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code>
-<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;commit</span> <span class="pre">name&quot;</span></code>
+<p>Инициализация: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code><br />
+Привязка удаленного репозитория: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">add</span> <span class="pre">origin</span> <span class="pre">&lt;ссылка&gt;</span></code><br />
+Получение данных: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span></code><br />
+Принудительное слияние: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reset</span> <span class="pre">--hard</span> <span class="pre">origin/main</span></code> ( это затрет локальные файлы с такими же именами, как в репозитории).<br />
+Далее:<br />
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code><br />
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;commit</span> <span class="pre">name&quot;</span></code><br />
 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span> <span class="pre">-m</span> <span class="pre">main</span></code> - изменить название локальной ветки на main</p>
-<p>Теперь можно пушить</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">main</span></code> - теперь можно пушить<br />
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span> <span class="pre">origin</span> <span class="pre">main</span> <span class="pre">--rebase</span></code> - или (это объединит ваши файлы с файлами из облака, не удаляя их.)</p>
 </section>
 </section>
 
