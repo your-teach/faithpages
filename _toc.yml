@@ -50,6 +50,7 @@ parts:
       - file: Some/codeforces
       - file: Some/settings-system
       - file: Some/ubuntu
+      - file: Some/git
 
 
 

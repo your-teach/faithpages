@@ -60,8 +60,7 @@ end)
 Part.CFrame = CFrame.lookAt(Part.Position, Vector3.new(HumanoidRootPart.Position.X, Part.Position.Y, HumanoidRootPart.Position.Z)
 
 ```
- 
-# Выдержки
+
 **Stepped**, **Heartbeat**, **RenderStepped**:
 	RenderStepped работает только в локальных скриптах,
 	а Heartbeat и Stepped работают как в обычных, так и в локальных скриптах.
@@ -245,7 +244,7 @@ end)
 ```
 ````
 
-# Raycat
+# Raycast
 
 ## В направлении куда смотрит парт
 ```lua
