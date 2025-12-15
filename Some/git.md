@@ -4,7 +4,7 @@
 
 `git init` - инициилизация репозитория  
 `git add .` - добавить измененные/новые файлы в индекс (staging area) для следующего коммита  
-`git add path/to/file` - можно точечно (или убрать `git restore --staged file .`)
+`git add path/to/file` - можно точечно (или убрать `git restore --staged file .`)  
 `git commit -m "Описание изменений"` - коммит  
 `git push origin main` - отправка файлов на удаленную ветку main  
 `git pull --rebase` - если удаленная история отличается — возможен отказ пуша; использовать перед push (вроде) или согласовать изменения  
