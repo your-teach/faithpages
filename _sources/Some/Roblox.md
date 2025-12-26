@@ -272,6 +272,19 @@ if result then
 end
 ```
 
+## От парта A к парту B
+```lua
+-- вставить в парт
+local partA = partA.Postition
+local partB = partB.Postition
+
+local result = workspace:Raycast(partA, partB - partA)
+
+if result then
+	print("Попал в: " .. result.Instance.Name)
+end
+```
+
 ## С визуализацией
 ````{toggle}
 ```lua

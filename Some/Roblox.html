@@ -466,6 +466,7 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#raycast">Raycast</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">В направлении куда смотрит парт</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">В опеределенную сторону</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-b">От парта A к парту B</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">С визуализацией</a></li>
 </ul>
 </li>
@@ -757,6 +758,20 @@ Remote functions - это функции, которые можно вызыва
 </pre></div>
 </div>
 </section>
+<section id="a-b">
+<h2>От парта A к парту B<a class="headerlink" href="#a-b" title="Link to this heading">#</a></h2>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- вставить в парт</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">partA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">partA</span><span class="p">.</span><span class="py">Postition</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">partB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">partB</span><span class="p">.</span><span class="py">Postition</span>
+
+<span class="kd">local</span><span class="w"> </span><span class="nv">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">workspace</span><span class="p">:</span><span class="nf">Raycast</span><span class="p">(</span><span class="nv">partA</span><span class="p">,</span><span class="w"> </span><span class="nv">partB</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nv">partA</span><span class="p">)</span>
+
+<span class="kr">if</span><span class="w"> </span><span class="nv">result</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">	</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Попал в: &quot;</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nv">result</span><span class="p">.</span><span class="py">Instance</span><span class="p">.</span><span class="py">Name</span><span class="p">)</span>
+<span class="kr">end</span>
+</pre></div>
+</div>
+</section>
 <section id="id10">
 <h2>С визуализацией<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
 <div class="toggle docutils container">
@@ -915,6 +930,7 @@ Remote functions - это функции, которые можно вызыва
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#raycast">Raycast</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">В направлении куда смотрит парт</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">В опеределенную сторону</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-b">От парта A к парту B</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">С визуализацией</a></li>
 </ul>
 </li>

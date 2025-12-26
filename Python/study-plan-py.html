@@ -475,20 +475,20 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Рекурсивные функции</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Коллбэк функция</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Лямбда функция или анонимная функция</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">ООП</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Разное</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Декораторы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">ООП</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Разное</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#map">Функция map.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">Функция filter для отбора значений итерируемых объектов.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zip">Функция zip.(Редко используется)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yield">Функция-генератор. Оператор yield.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-sorted">Особенности сортировки через sort() и sorted().</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Итераторы и выражения-генераторы.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Обработка ошибок и исключений.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Работа с файлами.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Итераторы и выражения-генераторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Обработка ошибок и исключений.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Работа с файлами.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#json">Работа с json</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#os">Модуль os</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Перемещение файлов.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Декораторы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Перемещение файлов.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tkinter">Tkinter</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyqt">Pyqt</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requests">Модуль Requests</a></li>
@@ -1315,18 +1315,27 @@ del list[0] - удаление элемента по индексу
 <span class="n">dublicate</span> <span class="o">=</span> <span class="n">welcome</span>
 <span class="n">dublicate</span><span class="p">(</span><span class="s1">&#39;Имя&#39;</span><span class="p">)</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">welcome2</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;welcome&quot;</span><span class="p">)</span>
+<span class="c1"># Идеальный пример callback-функции</span>
+<span class="c1"># time_spent функция считает время работы функции</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">run_event</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-    <span class="n">func</span><span class="p">()</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">time_spent</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">func</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="c1"># func - это и есть callback</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span>
 
-<span class="n">run_event</span><span class="p">(</span><span class="n">welcome2</span><span class="p">)</span>
+<span class="n">time_spent</span><span class="p">(</span><span class="nb">min</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">time_spent</span><span class="p">(</span><span class="nb">max</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">run_event2</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-    <span class="n">func</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="c1"># Можно еще такой пример привести и заодно разобрать requests</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">connection</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://soundcloud.com&quot;</span>
+    <span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
 
-<span class="n">run_event2</span><span class="p">(</span><span class="n">welcome</span><span class="p">,</span> <span class="s1">&#39;Имя&#39;</span><span class="p">)</span>
+<span class="n">time_spent</span><span class="p">(</span><span class="n">connection</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -1421,7 +1430,37 @@ return a</p>
 </div>
 </section>
 <section id="id19">
-<h2>ООП<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
+<h2>Декораторы<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># from functools import wraps
+
+def detect(func):
+    # @wraps(func)
+    def updatefunc(*args, **kwargs):
+        try:
+            return func(*args, **kwargs)
+        except BaseException as err:
+            print(f&#39;Ошибка в функции {func.__name__}: {err}&#39;)
+            return
+    return updatefunc
+
+@detect # новый вариант декорирования
+def test(a, b):
+    print(a / b)
+
+# test = detect(test) # старый вариант декорирования
+
+@detect
+def test2(text):
+    res = text.upper()
+    print(res)
+
+test(1, 0) # Ошибка
+test2(&#39;privet&#39;)
+</pre></div>
+</div>
+</section>
+<section id="id20">
+<h2>ООП<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Инкапсуляция, наследование, полиморфизм.
 -Инкапсуляция - это принцип, согласно которому внутреннее устройство сущностей нужно объединять в специальной
 «оболочке» и скрывать от вмешательств извне. Доступ к объектам возможен через специальные открытые методы, а
@@ -1443,8 +1482,8 @@ return a</p>
 </pre></div>
 </div>
 </section>
-<section id="id20">
-<h2>Разное<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
+<section id="id21">
+<h2>Разное<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-reversed()
 -isinstance(10, int) - Позволяет проверить принадлежность экземпляра к классу (является ли 10 типом данных int).
     ! isinstance(True, int) -&gt; True !
@@ -1486,8 +1525,8 @@ return a</p>
 </pre></div>
 </div>
 </section>
-<section id="id21">
-<h2>Итераторы и выражения-генераторы.<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
+<section id="id22">
+<h2>Итераторы и выражения-генераторы.<a class="headerlink" href="#id22" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Генератор ? это итератор, элементы которого можно перебирать (итерировать) только один раз.
 -Итератор ? это объект, который поддерживает функцию next() для перехода к следующему элементу коллекции.
 -Итерируемый объект ? это объект, который позволяет поочередно обойти свои элементы и может быть преобразован к итератору.
@@ -1511,8 +1550,8 @@ return a</p>
 </pre></div>
 </div>
 </section>
-<section id="id22">
-<h2>Обработка ошибок и исключений.<a class="headerlink" href="#id22" title="Link to this heading">#</a></h2>
+<section id="id23">
+<h2>Обработка ошибок и исключений.<a class="headerlink" href="#id23" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>try, except</p></li>
 <li><p>else - выполняется, когда не произошло никаких ошибок</p></li>
@@ -1545,8 +1584,8 @@ return a</p>
 </pre></div>
 </div>
 </section>
-<section id="id23">
-<h2>Работа с файлами.<a class="headerlink" href="#id23" title="Link to this heading">#</a></h2>
+<section id="id24">
+<h2>Работа с файлами.<a class="headerlink" href="#id24" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>file = open(&#39;text.txt, &#39;w&#39;)
 file.write(&#39;hey&#39;)
 file.writelines([&#39;hey&#39;,&#39;hey2]) # heyhey2 (непонятно зачем нужен)
@@ -1658,40 +1697,10 @@ https://letpy.com/handbook/builtins/open/
 </pre></div>
 </div>
 </section>
-<section id="id24">
-<h2>Перемещение файлов.<a class="headerlink" href="#id24" title="Link to this heading">#</a></h2>
+<section id="id25">
+<h2>Перемещение файлов.<a class="headerlink" href="#id25" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import shutil
 shutil.move(&quot;path/to/current/file.foo&quot;, &quot;path/to/new/destination/for/file.foo&quot;)
-</pre></div>
-</div>
-</section>
-<section id="id25">
-<h2>Декораторы<a class="headerlink" href="#id25" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># from functools import wraps
-
-def detect(func):
-    # @wraps(func)
-    def updatefunc(*args, **kwargs):
-        try:
-            return func(*args, **kwargs)
-        except BaseException as err:
-            print(f&#39;Ошибка в функции {func.__name__}: {err}&#39;)
-            return
-    return updatefunc
-
-@detect # новый вариант декорирования
-def test(a, b):
-    print(a / b)
-
-# test = detect(test) # старый вариант декорирования
-
-@detect
-def test2(text):
-    res = text.upper()
-    print(res)
-
-test(1, 0) # Ошибка
-test2(&#39;privet&#39;)
 </pre></div>
 </div>
 </section>
@@ -1886,20 +1895,20 @@ test2(&#39;privet&#39;)
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Рекурсивные функции</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Коллбэк функция</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Лямбда функция или анонимная функция</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">ООП</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Разное</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Декораторы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">ООП</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Разное</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#map">Функция map.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">Функция filter для отбора значений итерируемых объектов.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zip">Функция zip.(Редко используется)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yield">Функция-генератор. Оператор yield.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-sorted">Особенности сортировки через sort() и sorted().</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Итераторы и выражения-генераторы.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Обработка ошибок и исключений.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Работа с файлами.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Итераторы и выражения-генераторы.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Обработка ошибок и исключений.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Работа с файлами.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#json">Работа с json</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#os">Модуль os</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Перемещение файлов.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Декораторы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Перемещение файлов.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tkinter">Tkinter</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyqt">Pyqt</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requests">Модуль Requests</a></li>
