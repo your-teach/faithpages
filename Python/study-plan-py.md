@@ -700,18 +700,27 @@ def welcome(name):
 dublicate = welcome
 dublicate('Имя')
 
-def welcome2():
-    print("welcome")
+# Идеальный пример callback-функции
+# time_spent функция считает время работы функции
+import time
 
-def run_event(func):
-    func()
+def time_spent(func, *args):
+    a = time.time()
+    func(args) # func - это и есть callback
+    b = time.time()
+    print(b - a)
 
-run_event(welcome2)
+time_spent(min, 1,2,3,4,5,6,7,8)
+time_spent(max, 1,2,3,4,5,6,7,8)
 
-def run_event2(func, data):
-    func(data)
+# Можно еще такой пример привести и заодно разобрать requests
+import requests
+def connection(*args):
+    url = "https://soundcloud.com"
+    session = requests.get(url)
+    print(session.content)
 
-run_event2(welcome, 'Имя')
+time_spent(connection)
 ```
 
 ## Лямбда функция или анонимная функция
@@ -802,6 +811,34 @@ print(s)
         p = lambda: "hello python"
         p()
 ```
+
+## Декораторы
+
+    # from functools import wraps
+    
+    def detect(func):
+        # @wraps(func)
+        def updatefunc(*args, **kwargs):
+            try:
+                return func(*args, **kwargs)
+            except BaseException as err:
+                print(f'Ошибка в функции {func.__name__}: {err}')
+                return
+        return updatefunc
+
+    @detect # новый вариант декорирования
+    def test(a, b):
+        print(a / b)
+    
+    # test = detect(test) # старый вариант декорирования
+
+    @detect
+    def test2(text):
+        res = text.upper()
+        print(res)
+
+    test(1, 0) # Ошибка
+    test2('privet')
 
 ## ООП
 
@@ -1027,34 +1064,6 @@ icon_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "qspectrum
 
     import shutil
     shutil.move("path/to/current/file.foo", "path/to/new/destination/for/file.foo")
-
-## Декораторы
-
-    # from functools import wraps
-    
-    def detect(func):
-        # @wraps(func)
-        def updatefunc(*args, **kwargs):
-            try:
-                return func(*args, **kwargs)
-            except BaseException as err:
-                print(f'Ошибка в функции {func.__name__}: {err}')
-                return
-        return updatefunc
-
-    @detect # новый вариант декорирования
-    def test(a, b):
-        print(a / b)
-    
-    # test = detect(test) # старый вариант декорирования
-
-    @detect
-    def test2(text):
-        res = text.upper()
-        print(res)
-
-    test(1, 0) # Ошибка
-    test2('privet')
 
 ## Tkinter
     Где-то здесь надо пройти Tkinter
