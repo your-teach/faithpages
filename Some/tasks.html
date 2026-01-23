@@ -30,7 +30,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
@@ -51,7 +51,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js?v=1ae7504c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -455,7 +455,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lua">Формат строки (в основном для lua)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Данные строки преобразовать в словарь (СЛОВАРИ)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Таймер</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Работников и предприятия</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Работники и предприятия</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#callback">Коллбэк-функции (callback)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Обработчик секретных сообщений</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Робот-повар</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -498,7 +503,7 @@ print(result)
 По истечению таймера необходимо вывести сообщение в консоль “Время истекло”.</p>
 </section>
 <section id="id4">
-<h2>Работников и предприятия<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<h2>Работники и предприятия<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
 <p>Описать классы “Работник” и “Предприятие” позволяющие создавать работников, принимать, уволнять, изменять должность, переводить на другое предприятие, изменять зарплату.</p>
 <ol class="arabic simple">
 <li><p>Создать два класса “Предприятия” и “Работники”</p></li>
@@ -509,6 +514,30 @@ print(result)
 <li><p>Переводить на другое предприятие</p></li>
 <li><p>Работник может так же сам уволиться.</p></li>
 </ol>
+</section>
+<section id="callback">
+<h2>Коллбэк-функции (callback)<a class="headerlink" href="#callback" title="Link to this heading">#</a></h2>
+<section id="id5">
+<h3>Обработчик секретных сообщений<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Напиши функцию <code class="docutils literal notranslate"><span class="pre">process_message(message,</span> <span class="pre">action)</span></code>, которая берет строку и применяет к ней функцию-callback action.<br />
+Задание: Создай три варианта обработки:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">to_shout(text)</span></code> — превращает текст в ВЕРХНИЙ РЕГИСТР и добавляет «!!!».</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_secret(text)</span></code> — заменяет все буквы «а» на «&#64;», а «о» на «0».</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_reverse(text)</span></code> — переворачивает строку задом наперед.</p></li>
+</ol>
+<p>Вызови process_message с фразой «привет мир» для каждого из этих действий.</p>
+</section>
+<section id="id6">
+<h3>Робот-повар<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Представь, что у тебя есть функция <code class="docutils literal notranslate"><span class="pre">cook(item,</span> <span class="pre">callback)</span></code>, которая имитирует приготовление блюда. Она должна выводить: «Готовлю: [название блюда]…», а затем вызывать callback.</p>
+<p>Задание:<br />
+Создай callback-функции для разных приправ: <code class="docutils literal notranslate"><span class="pre">add_salt()</span></code>, <code class="docutils literal notranslate"><span class="pre">add_pepper()</span></code>, <code class="docutils literal notranslate"><span class="pre">add_sauce()</span></code>. Каждая просто пишет, что добавлена конкретная специя.
+Вызови <code class="docutils literal notranslate"><span class="pre">cook(&quot;Пицца&quot;,</span> <span class="pre">add_sauce)</span></code>.</p>
+<p>Усложнение задания:<br />
+Измени функцию так, чтобы она принимала не один коллбэк, а список из нескольких callback-ов <code class="docutils literal notranslate"><span class="pre">cook(item,</span> <span class="pre">callbacks_list)</span></code>, которая принимает список из нескольких callback-ов и вызывает их по очереди после того, как блюдо «приготовится».</p>
+<p>Совет: В Python функции — это такие же объекты, как числа или строки, поэтому их легко можно складывать в списки: <code class="docutils literal notranslate"><span class="pre">my_actions</span> <span class="pre">=</span> <span class="pre">[add_salt,</span> <span class="pre">add_sauce]</span></code>.</p>
+</section>
 </section>
 </section>
 
@@ -579,7 +608,12 @@ print(result)
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lua">Формат строки (в основном для lua)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Данные строки преобразовать в словарь (СЛОВАРИ)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Таймер</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Работников и предприятия</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Работники и предприятия</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#callback">Коллбэк-функции (callback)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Обработчик секретных сообщений</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Робот-повар</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
