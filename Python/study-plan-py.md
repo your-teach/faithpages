@@ -16,6 +16,7 @@
         "code-runner.executorMap": {
             "python": "clear; python -u" }
 8. Создать папку на рабочем столе -> Открываем её в Vscode -> Далее создаем два файла -> main.lua/py theory.lua/py
+9. Выключить Ai chat и прочее в настройках: Chat: Disable Ai Freatures
 
 ## Введение.
 
