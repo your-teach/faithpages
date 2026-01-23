@@ -535,7 +535,7 @@ print(result)
 Создай callback-функции для разных приправ: <code class="docutils literal notranslate"><span class="pre">add_salt()</span></code>, <code class="docutils literal notranslate"><span class="pre">add_pepper()</span></code>, <code class="docutils literal notranslate"><span class="pre">add_sauce()</span></code>. Каждая просто пишет, что добавлена конкретная специя.
 Вызови <code class="docutils literal notranslate"><span class="pre">cook(&quot;Пицца&quot;,</span> <span class="pre">add_sauce)</span></code>.</p>
 <p>Усложнение задания:<br />
-Измени функцию так, чтобы она принимала не один коллбэк, а список из нескольких callback-ов <code class="docutils literal notranslate"><span class="pre">cook(item,</span> <span class="pre">callbacks_list)</span></code>, и вызывает их по очереди после того, как блюдо «приготовится».</p>
+Измени функцию так, чтобы она принимала не один коллбэк, а список из нескольких callback-ов <code class="docutils literal notranslate"><span class="pre">cook(item,</span> <span class="pre">callbacks_list)</span></code>, и вызывала их по очереди после того, как блюдо «приготовится».</p>
 <p>Совет: В Python функции — это такие же объекты, как числа или строки, поэтому их легко можно складывать в списки: <code class="docutils literal notranslate"><span class="pre">my_actions</span> <span class="pre">=</span> <span class="pre">[add_salt,</span> <span class="pre">add_sauce]</span></code>.</p>
 </section>
 </section>
