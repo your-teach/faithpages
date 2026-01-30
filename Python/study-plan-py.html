@@ -475,16 +475,16 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Рекурсивные функции</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Коллбэк функция</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Лямбда функция или анонимная функция</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Декораторы</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">ООП</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Разное</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Обработка ошибок и исключений.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Декораторы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">ООП</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Разное</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#map">Функция map.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">Функция filter для отбора значений итерируемых объектов.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zip">Функция zip.(Редко используется)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yield">Функция-генератор. Оператор yield.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-sorted">Особенности сортировки через sort() и sorted().</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Итераторы и выражения-генераторы.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Обработка ошибок и исключений.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Итераторы и выражения-генераторы.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Работа с файлами.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#json">Работа с json</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#os">Модуль os</a></li>
@@ -1437,7 +1437,41 @@ return a</p>
 </div>
 </section>
 <section id="id19">
-<h2>Декораторы<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
+<h2>Обработка ошибок и исключений.<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>try, except</p></li>
+<li><p>else - выполняется, когда не произошло никаких ошибок</p></li>
+<li><p>finally - выполняется всегда в самом конце, вне зависимости произошла ошибка или нет</p></li>
+<li><p>assert - вызывается ошибка если утверждение возвращает ложь</p></li>
+<li><p>raise - возбуждает/поднимает указанное исключение -&gt; raise BaseException(‘Мы вызвали ошибку’)</p></li>
+<li><p>Примеры:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Делить на ноль нельзя:&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Введено неправильное значение&quot;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ошибка&#39;</span><span class="p">)</span>
+<span class="c1"># Нечасто используется (else и finally):</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Выполняется, когда не произошло никаких ошибок&quot;</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Выполняется абсолютно всегда, в самом конце.&quot;</span><span class="p">)</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">assert</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">3</span> <span class="c1"># вызовется ошибка, так как a != 3 это False</span>
+<span class="k">assert</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Свое описание ошибки&quot;</span> <span class="c1"># можно добавить описание ошибки</span>
+
+<span class="k">raise</span> <span class="ne">BaseException</span><span class="p">(</span><span class="s2">&quot;Свое описание ошибки&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id20">
+<h2>Декораторы<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span># from functools import wraps
 
 def detect(func):
@@ -1466,8 +1500,8 @@ test2(&#39;privet&#39;)
 </pre></div>
 </div>
 </section>
-<section id="id20">
-<h2>ООП<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
+<section id="id21">
+<h2>ООП<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Инкапсуляция, наследование, полиморфизм.
 -Инкапсуляция - это принцип, согласно которому внутреннее устройство сущностей нужно объединять в специальной
 «оболочке» и скрывать от вмешательств извне. Доступ к объектам возможен через специальные открытые методы, а
@@ -1489,8 +1523,8 @@ test2(&#39;privet&#39;)
 </pre></div>
 </div>
 </section>
-<section id="id21">
-<h2>Разное<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
+<section id="id22">
+<h2>Разное<a class="headerlink" href="#id22" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-reversed()
 -isinstance(10, int) - Позволяет проверить принадлежность экземпляра к классу (является ли 10 типом данных int).
     ! isinstance(True, int) -&gt; True !
@@ -1532,8 +1566,8 @@ test2(&#39;privet&#39;)
 </pre></div>
 </div>
 </section>
-<section id="id22">
-<h2>Итераторы и выражения-генераторы.<a class="headerlink" href="#id22" title="Link to this heading">#</a></h2>
+<section id="id23">
+<h2>Итераторы и выражения-генераторы.<a class="headerlink" href="#id23" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Генератор ? это итератор, элементы которого можно перебирать (итерировать) только один раз.
 -Итератор ? это объект, который поддерживает функцию next() для перехода к следующему элементу коллекции.
 -Итерируемый объект ? это объект, который позволяет поочередно обойти свои элементы и может быть преобразован к итератору.
@@ -1554,40 +1588,6 @@ test2(&#39;privet&#39;)
     for i in lst:
         print(i, end=&quot;&quot;)
         if i &gt; 100: break
-</pre></div>
-</div>
-</section>
-<section id="id23">
-<h2>Обработка ошибок и исключений.<a class="headerlink" href="#id23" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>try, except</p></li>
-<li><p>else - выполняется, когда не произошло никаких ошибок</p></li>
-<li><p>finally - выполняется всегда в самом конце, вне зависимости произошла ошибка или нет</p></li>
-<li><p>assert - вызывается ошибка если утверждение возвращает ложь</p></li>
-<li><p>raise - возбуждает/поднимает указанное исключение -&gt; raise BaseException(‘Мы вызвали ошибку’)</p></li>
-<li><p>Примеры:</p></li>
-</ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-    <span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span>
-<span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Делить на ноль нельзя:&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
-<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Введено неправильное значение&quot;</span><span class="p">)</span>
-<span class="k">except</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ошибка&#39;</span><span class="p">)</span>
-<span class="c1"># Нечасто используется (else и finally):</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Выполняется, когда не произошло никаких ошибок&quot;</span><span class="p">)</span>
-<span class="k">finally</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Выполняется абсолютно всегда, в самом конце.&quot;</span><span class="p">)</span>
-
-<span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="k">assert</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">3</span> <span class="c1"># вызовется ошибка, так как a != 3 это False</span>
-<span class="k">assert</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Свое описание ошибки&quot;</span> <span class="c1"># можно добавить описание ошибки</span>
-
-<span class="k">raise</span> <span class="ne">BaseException</span><span class="p">(</span><span class="s2">&quot;Свое описание ошибки&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -1902,16 +1902,16 @@ shutil.move(&quot;path/to/current/file.foo&quot;, &quot;path/to/new/destination/
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Рекурсивные функции</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Коллбэк функция</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Лямбда функция или анонимная функция</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Декораторы</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">ООП</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Разное</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Обработка ошибок и исключений.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Декораторы</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">ООП</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Разное</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#map">Функция map.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">Функция filter для отбора значений итерируемых объектов.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zip">Функция zip.(Редко используется)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yield">Функция-генератор. Оператор yield.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-sorted">Особенности сортировки через sort() и sorted().</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Итераторы и выражения-генераторы.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Обработка ошибок и исключений.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Итераторы и выражения-генераторы.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Работа с файлами.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#json">Работа с json</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#os">Модуль os</a></li>
