@@ -1,9 +1,9 @@
 # Git
 
 ## Классический коммит и пуш
-`git add .`
-`git commit -m "Ваше сообщение коммита"`
-`git push`
+`git add .`  
+`git commit -m "название коммита"`  
+`git push`  
 
 ## Команды
 
