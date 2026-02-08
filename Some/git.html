@@ -452,11 +452,12 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Git</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Команды</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Классический коммит и пуш</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Команды</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ssh-github-gitlab-bitbucket">SSH для GitHub/GitLab/Bitbucket</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Слияние репозиториев</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Слияние репозиториев</a></li>
 </ul>
 </li>
 </ul>
@@ -474,7 +475,13 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="git">
 <h1>Git<a class="headerlink" href="#git" title="Link to this heading">#</a></h1>
 <section id="id1">
-<h2>Команды<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<h2>Классический коммит и пуш<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code>
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;Ваше</span> <span class="pre">сообщение</span> <span class="pre">коммита&quot;</span></code>
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code></p>
+</section>
+<section id="id2">
+<h2>Команды<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code> - инициилизация репозитория<br />
 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code> - добавить измененные/новые файлы в индекс (staging area) для следующего коммита<br />
 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">path/to/file</span></code> - можно точечно (или убрать <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">restore</span> <span class="pre">--staged</span> <span class="pre">file</span> <span class="pre">.</span></code>)<br />
@@ -512,8 +519,8 @@ document.write(`
 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">main</span></code><br />
 Чтобы обновить локальную копию:<br />
 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span> <span class="pre">origin</span> <span class="pre">main</span></code></p>
-<section id="id2">
-<h2>Слияние репозиториев<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<section id="id3">
+<h2>Слияние репозиториев<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <p>Если в папке имеются файлы, и нужны еще и клонировать новый репозиторий</p>
 <p>Инициализация: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code><br />
 Привязка удаленного репозитория: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">add</span> <span class="pre">origin</span> <span class="pre">&lt;ссылка&gt;</span></code><br />
@@ -584,11 +591,12 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Git</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Команды</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Классический коммит и пуш</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Команды</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ssh-github-gitlab-bitbucket">SSH для GitHub/GitLab/Bitbucket</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Слияние репозиториев</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Слияние репозиториев</a></li>
 </ul>
 </li>
 </ul>
