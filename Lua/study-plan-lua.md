@@ -491,22 +491,23 @@ socket.sleep(3)
 ### Создание модуля
 Файл модуля
 ```lua
-local items = {name = 'Storm', health = 790, mana = 540}
-
-items.name = 'Storm'
-items.health = 790
-items.mana = 540
+local items = {}
 
 function items.congrats()
     print("Congratulations!!!")
 end
 
+items.name = 'Storm'
+items.health = 790
+items.mana = 540
+
 return items
 ```
 Файл импорта
 ```lua
-local items = require 'a'
-print(items.name)
+local module = require 'module'
+module.congrats()
+print(module.name)
 ```
 
 ### Старый способ создания модуля
