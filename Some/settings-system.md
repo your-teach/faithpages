@@ -46,6 +46,8 @@
     // PATH:
     // C:/Users/Username/AppData/Local/Programs/Python/Python312/python.exe
     ```
+3. Еще одно хорошее решение:\
+    Удалить из переменных сред все ссылки связанные с microsoft store (может быть называется иначе)
 
 ## VScode + Lua на MacOs
 
