@@ -18,6 +18,9 @@
 `git branch -m main` - переименовать локальную ветку в main  
 `git fetch` - загружает новые данные (коммиты, файлы и ссылки) из удаленного репозитория в локальный, но не объединяет их существующими файлами  
 
+Перейти на Pull Request (PR). 134 - номер PR, pyminifier-pr-134 - название (любое можно)
+`git fetch origin pull/134/head:pyminifier-pr-134`
+`git checkout pyminifier-pr-134`
 
 # SSH для GitHub/GitLab/Bitbucket
 **Создание ключа и привязка**  
