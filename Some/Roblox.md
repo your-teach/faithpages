@@ -14,7 +14,11 @@ workspace.Part.Size = Vector3.new(2, 2, 2)
 -- https://create.roblox.com/docs/workspace/cframes teleport part
 workspace.Part.CFrame = CFrame.new(0,0,0) 				
 -- https://create.roblox.com/docs/reference/engine/enums/Material
-workspace.Part.Material = Enum.Material.Plastic    
+workspace.Part.Material = Enum.Material.Plastic   
+-- Рандомное число 
+local randomNumber = math.random(1, 10)
+-- Рандомный цвет
+script.Parent.BrickColor = BrickColor.Random()
 -- вращение на 90 градусов       
 workspace.Part.CFrame = workspace.Part.CFrame * CFrame.Angles(0, math.rad(90), 0) 
 -- кнопка у объекта (нужно добавить сначала к парту proximityPrompt)
