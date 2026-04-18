@@ -65,6 +65,9 @@ Part.CFrame = CFrame.lookAt(Part.Position, Vector3.new(HumanoidRootPart.Position
 
 ```
 
+
+
+
 **Stepped**, **Heartbeat**, **RenderStepped**:
 	RenderStepped работает только в локальных скриптах,
 	а Heartbeat и Stepped работают как в обычных, так и в локальных скриптах.
@@ -81,6 +84,19 @@ Remote functions - это функции, которые можно вызыва
 
 https://create.roblox.com/docs/scripting/events/remote - Server <=> Client
 
+
+# Плавное изменение цвета света
+```lua
+local lamp = script.Parent
+local hue = 0
+
+while true do
+	wait(0.1)
+	hue += 0.001
+	lamp.SpotLight.Color = Color3.fromHSV(hue, 1, 1)
+	print(hue)
+end
+```
 
 # ClickDetector
 Server Script
@@ -365,3 +381,4 @@ end
 RunService.Heartbeat:Connect(updateRaycast)
 ```
 ````
+
