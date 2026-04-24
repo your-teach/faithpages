@@ -382,3 +382,8 @@ RunService.Heartbeat:Connect(updateRaycast)
 ```
 ````
 
+## Загрузка картинки в Roblox (текстура)
+
+- Зайдите на roblox.com.
+- Перейдите в Development Items → Decals.
+- Нажмите Upload Asset и загрузите фото.
