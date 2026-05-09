@@ -14,7 +14,11 @@ workspace.Part.Size = Vector3.new(2, 2, 2)
 -- https://create.roblox.com/docs/workspace/cframes teleport part
 workspace.Part.CFrame = CFrame.new(0,0,0) 				
 -- https://create.roblox.com/docs/reference/engine/enums/Material
-workspace.Part.Material = Enum.Material.Plastic    
+workspace.Part.Material = Enum.Material.Plastic   
+-- Рандомное число 
+local randomNumber = math.random(1, 10)
+-- Рандомный цвет
+script.Parent.BrickColor = BrickColor.Random()
 -- вращение на 90 градусов       
 workspace.Part.CFrame = workspace.Part.CFrame * CFrame.Angles(0, math.rad(90), 0) 
 -- кнопка у объекта (нужно добавить сначала к парту proximityPrompt)
@@ -61,6 +65,9 @@ Part.CFrame = CFrame.lookAt(Part.Position, Vector3.new(HumanoidRootPart.Position
 
 ```
 
+
+
+
 **Stepped**, **Heartbeat**, **RenderStepped**:
 	RenderStepped работает только в локальных скриптах,
 	а Heartbeat и Stepped работают как в обычных, так и в локальных скриптах.
@@ -77,6 +84,19 @@ Remote functions - это функции, которые можно вызыва
 
 https://create.roblox.com/docs/scripting/events/remote - Server <=> Client
 
+
+# Плавное изменение цвета света
+```lua
+local lamp = script.Parent
+local hue = 0
+
+while true do
+	wait(0.1)
+	hue += 0.001
+	lamp.SpotLight.Color = Color3.fromHSV(hue, 1, 1)
+	print(hue)
+end
+```
 
 # ClickDetector
 Server Script
@@ -361,3 +381,9 @@ end
 RunService.Heartbeat:Connect(updateRaycast)
 ```
 ````
+
+## Загрузка картинки в Roblox (текстура)
+
+- Зайдите на roblox.com.
+- Перейдите в Development Items → Decals.
+- Нажмите Upload Asset и загрузите фото.

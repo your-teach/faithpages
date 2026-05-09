@@ -51,7 +51,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -222,6 +222,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Разное</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Roblox.html">Roblox</a></li>
+
 
 
 
@@ -461,6 +462,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Робот-повар</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o1">Упражнение №1. Проверка и очистка одного сообщения</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o2">Упражнение №2. Обработка ФИО через индексы списка</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o3">Упражнение №3. Валидация пароля (логические проверки)</a></li>
 </ul>
             </nav>
         </div>
@@ -539,6 +543,38 @@ print(result)
 <p>Совет: В Python функции — это такие же объекты, как числа или строки, поэтому их легко можно складывать в списки: <code class="docutils literal notranslate"><span class="pre">my_actions</span> <span class="pre">=</span> <span class="pre">[add_salt,</span> <span class="pre">add_sauce]</span></code>.</p>
 </section>
 </section>
+<section id="o1">
+<h2>Упражнение №1. Проверка и очистка одного сообщения<a class="headerlink" href="#o1" title="Link to this heading">#</a></h2>
+<p>Цель: Работа с методами strip(), lower(), replace() и базовыми условиями if/else.
+Задание:
+Дана строка raw_message = “ ВНИМАНИЕ! Скидка на все товары “.
+Удалите лишние пробелы по краям.
+Приведите строку к нижнему регистру для проверки.
+Проверьте, содержит ли строка слово “скидка”.
+Результат: Если слово найдено, выведите «Спам». Если нет — выведите очищенную строку, где первая буква заглавная, а остальные строчные.</p>
+</section>
+<section id="o2">
+<h2>Упражнение №2. Обработка ФИО через индексы списка<a class="headerlink" href="#o2" title="Link to this heading">#</a></h2>
+<p>Цель: Преобразование строки в список, обращение к элементам по индексу и сборка строки.</p>
+<p>Задание:
+Дана строка fio_input = “ петров иван сидорович “.
+Очистите строку от пробелов по краям и разбейте её на список слов (используйте split()).
+Сохраните фамилию, имя и отчество в три разные переменные, обращаясь к элементам списка по индексам [0], [1] и [2].
+Примените к каждой переменной метод capitalize().
+Создайте новый список из этих трех исправленных переменных.</p>
+<p>Результат: Объедините элементы итогового списка в одну строку через пробел и выведите её.</p>
+</section>
+<section id="o3">
+<h2>Упражнение №3. Валидация пароля (логические проверки)<a class="headerlink" href="#o3" title="Link to this heading">#</a></h2>
+<p>Цель: Использование методов isdigit(), isupper(), а также операторов len() и in.</p>
+<p>Задание:
+Дана строка password = “Admin123”.
+Создайте пустой список report.
+Если длина строки меньше 8, добавьте в список report строку “Короткий”.
+Если в строке нет ни одной цифры (проверьте наличие конкретной цифры, например ‘1’ in password, или используйте метод any(), если знаком), добавьте “Нет цифр”.
+Если в строке есть запрещенный символ (например, ‘!’), добавьте “Символ запрещен”.</p>
+<p>Результат: Если список report пуст, выведите «Пароль принят». Если нет — выведите содержимое списка.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -614,6 +650,9 @@ print(result)
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Робот-повар</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o1">Упражнение №1. Проверка и очистка одного сообщения</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o2">Упражнение №2. Обработка ФИО через индексы списка</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o3">Упражнение №3. Валидация пароля (логические проверки)</a></li>
 </ul>
   </nav></div>
 

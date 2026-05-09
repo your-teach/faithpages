@@ -836,6 +836,8 @@ except ZeroDivisionError as err:
     print("Делить на ноль нельзя:", err)
 except ValueError:
     print("Введено неправильное значение")
+except (NameError, SyntaxError):
+    print("Можно создать except одновременно для двух типов ошибок")
 except:
     print('Ошибка')
 # Нечасто используется (else и finally):
