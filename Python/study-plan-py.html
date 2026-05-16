@@ -722,6 +722,7 @@ document.write(`
     str.split() - разбивает строку в местах где есть пробелы, на выходе получаем список.
     str.split(&#39;-&#39;) - аналогично. разбивает строку в местах где есть символ &#39;-&#39;. Вместо &#39;-&#39; можно использовать любой другой символ. 
     str.strip() - удаляет пробелы и переносы строк в начале и конце строки.
+    str.endswith(&quot;.pdf&quot;) - возвращает True, если строка заканчивается на &quot;.pdf&quot;, и False в противном случае
 
     &#39;...&#39;.join(list) - соединяет все элементы списка в строку, между элементами ставится &quot;...&quot; (важно, чтобы в list были только элементы с типом str)
 
@@ -1500,6 +1501,23 @@ def test2(text):
 
 test(1, 0) # Ошибка
 test2(&#39;privet&#39;)
+
+# Еще пример таймера
+import time
+def timer(func):
+    def updatefunc(*args, **kwargs):
+        start = time.time()
+        result = func(*args, **kwargs)
+        stop = time.time()
+        print(stop - start)
+        return result
+    return updatefunc
+
+@timer
+def test(txt: str):
+    newtxt = txt.upper().strip()
+    time.sleep(1)
+    return newtxt
 </pre></div>
 </div>
 </section>
