@@ -181,7 +181,8 @@ f = 7 != 8 # не равно
         str.split() - разбивает строку в местах где есть пробелы, на выходе получаем список.
         str.split('-') - аналогично. разбивает строку в местах где есть символ '-'. Вместо '-' можно использовать любой другой символ. 
         str.strip() - удаляет пробелы и переносы строк в начале и конце строки.
-    
+        str.endswith(".pdf") - возвращает True, если строка заканчивается на ".pdf", и False в противном случае
+
         '...'.join(list) - соединяет все элементы списка в строку, между элементами ставится "..." (важно, чтобы в list были только элементы с типом str)
     
         str.isupper() - возвращает True, если все буквы в строке верхнего регистра.
@@ -880,6 +881,23 @@ raise BaseException("Свое описание ошибки")
 
     test(1, 0) # Ошибка
     test2('privet')
+
+    # Еще пример таймера
+    import time
+    def timer(func):
+        def updatefunc(*args, **kwargs):
+            start = time.time()
+            result = func(*args, **kwargs)
+            stop = time.time()
+            print(stop - start)
+            return result
+        return updatefunc
+
+    @timer
+    def test(txt: str):
+        newtxt = txt.upper().strip()
+        time.sleep(1)
+        return newtxt
 
 ## ООП
 
