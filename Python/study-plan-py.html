@@ -1470,7 +1470,9 @@ return a</p>
 <span class="k">assert</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">3</span> <span class="c1"># вызовется ошибка, так как a != 3 это False</span>
 <span class="k">assert</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Свое описание ошибки&quot;</span> <span class="c1"># можно добавить описание ошибки</span>
 
-<span class="k">raise</span> <span class="ne">BaseException</span><span class="p">(</span><span class="s2">&quot;Свое описание ошибки&quot;</span><span class="p">)</span>
+<span class="k">raise</span> <span class="ne">BaseException</span><span class="p">(</span><span class="s2">&quot;Свое описание ошибки&quot;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">err</span>
+<span class="c1"># err.args = (&quot;Мое описание ошибки&quot;,) # При этом err.__cause__ будет всегда возвращать дефолтное описание ошибки</span>
+<span class="c1"># raise # Поднимает изначальную ошибку, удобно использовать если надо в except снова вызвать исходную ошибку</span>
 </pre></div>
 </div>
 </section>
