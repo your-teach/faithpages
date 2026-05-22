@@ -465,6 +465,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o1">Упражнение №1. Проверка и очистка одного сообщения</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o2">Упражнение №2. Обработка ФИО через индексы списка</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o3">Упражнение №3. Валидация пароля (логические проверки)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datetime">datetime</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Капсула времени: Привет из прошлого</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Симулятор будильника «Умный сон»</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Детектив: Анализ логов сервера</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -575,6 +581,33 @@ print(result)
 Если в строке есть запрещенный символ (например, ‘!’), добавьте “Символ запрещен”.</p>
 <p>Результат: Если список report пуст, выведите «Пароль принят». Если нет — выведите содержимое списка.</p>
 </section>
+<section id="datetime">
+<h2>datetime<a class="headerlink" href="#datetime" title="Link to this heading">#</a></h2>
+<section id="id7">
+<h3>Капсула времени: Привет из прошлого<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Задача: Напишите программу, которая запрашивает у пользователя дату его рождения в формате ДД.ММ.ГГГГ. Программа должна рассчитать и вывести:<br />
+Точный возраст в днях, часах и минутах.<br />
+Дата какого дня недели это была (используйте поиск по кодам формата для strftime).<br />
+Через сколько дней наступит следующий юбилей (дата, кратная 5 годам: 20, 25, 30 и т.д.).</p>
+</section>
+<section id="id8">
+<h3>Симулятор будильника «Умный сон»<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>Задача: Напишите скрипт для расчета идеального времени пробуждения.<br />
+Пользователь вводит время, когда он ложится спать (например, 23:15).<br />
+Один цикл сна длится ровно 90 минут.<br />
+Программа должна рассчитать и вывести 4 варианта времени для будильника, прибавляя к исходному времени по очереди: 4.5 часа, 6 часов, 7.5 часов и 9 часов (3, 4, 5 и 6 полных циклов).<br />
+Время должно выводиться в красивом формате: «Вариант 1: 03:45».</p>
+</section>
+<section id="id9">
+<h3>Детектив: Анализ логов сервера<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>Задача: Представьте, что вы расследуете хакерскую атаку. У вас есть две строчки из логов сервера (текстовые строки):<br />
+start_attack = “2026-05-22 в 23:45:10”<br />
+end_attack = “2026-05-23 в 02:15:35”<br />
+Превратите эти строки в объекты datetime.<br />
+Посчитайте, сколько секунд длилась атака.<br />
+Используя time.sleep(), сделайте симуляцию: пусть программа выведет «Анализ логов…», подождет 2 секунды, а затем выведет: «Атака длилась Х секунд. Внимание, это произошло ночью!» (если атака пересекала промежуток с 00:00 до 06:00).</p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -653,6 +686,12 @@ print(result)
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o1">Упражнение №1. Проверка и очистка одного сообщения</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o2">Упражнение №2. Обработка ФИО через индексы списка</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o3">Упражнение №3. Валидация пароля (логические проверки)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datetime">datetime</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Капсула времени: Привет из прошлого</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Симулятор будильника «Умный сон»</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Детектив: Анализ логов сервера</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
