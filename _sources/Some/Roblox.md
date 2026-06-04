@@ -382,13 +382,13 @@ RunService.Heartbeat:Connect(updateRaycast)
 ```
 ````
 
-## Загрузка картинки в Roblox (текстура)
+# Загрузка картинки в Roblox (текстура)
 
 - Зайдите на roblox.com.
 - Перейдите в Development Items → Decals.
 - Нажмите Upload Asset и загрузите фото.
 
-## BindAction
+# BindAction
 [BindAction](https://create.roblox.com/docs/reference/engine/classes/ContextActionService#BindAction)
 ```lua
 local ContextActionService = game:GetService("ContextActionService")
