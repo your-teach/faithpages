@@ -211,6 +211,26 @@ turtle.mainloop()
 
 ```
 
+## Бактерия
+
+![](../../images/turtle/bacteria.png)
+
+```python
+import turtle
+turtle.bgcolor('black')
+pen = turtle.Pen()
+pen.color('green')
+pen.speed(0)
+f = l = 5
+while l <= 190:
+    f += 2
+    l += 1
+    pen.forward(f)
+    pen.left(l)
+pen.hideturtle()
+turtle.mainloop()
+```
+
 ## Мячик и след
 
 ![](../../images/turtle/ball-line.png)
