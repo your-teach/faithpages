@@ -465,7 +465,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Спираль</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Треугольная спираль</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Бактерия</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Мячик и след</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Гора / график</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Мячик и след</a></li>
 </ul>
             </nav>
         </div>
@@ -688,7 +689,25 @@ document.write(`
 </div>
 </section>
 <section id="id10">
-<h2>Мячик и след<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<h2>Гора / график<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">turtle</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+
+<span class="n">pen</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">hideturtle</span><span class="p">()</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">up</span><span class="p">()</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">setx</span><span class="p">(</span><span class="o">-</span><span class="mi">300</span><span class="p">)</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">down</span><span class="p">()</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">pen</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">pen</span><span class="o">.</span><span class="n">sety</span><span class="p">(</span><span class="n">pen</span><span class="o">.</span><span class="n">ycor</span><span class="p">()</span> <span class="o">+</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="n">turtle</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="id11">
+<h2>Мячик и след<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
 <p><img alt="" src="../../_images/ball-line.png" /></p>
 <details><summary>Решение</summary>
 <pre>
@@ -835,7 +854,8 @@ window.update()</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Спираль</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Треугольная спираль</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Бактерия</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Мячик и след</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Гора / график</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Мячик и след</a></li>
 </ul>
   </nav></div>
 

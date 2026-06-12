@@ -689,6 +689,7 @@ example2()
 
 ## Рекурсивные функции
 ```python
+# Простой пример
 import time
 def func():
     time.sleep(3)
@@ -696,6 +697,28 @@ def func():
     func()
 
 func()
+
+# Второй пример
+import time
+def func(score):
+    time.sleep(1)
+    print("score:", score)
+    if score:
+        func(score=score-1)
+
+func(score=1001)
+
+# Идеальный пример рекурсии, является ли слово палиндромом
+def is_palindrome(text):
+    if len(text) <= 1:
+        return True
+    
+    if text[0] == text[-1]:
+        return is_palindrome(text[1:-1])
+
+    return False
+
+print(is_palindrome("кабак"))
 ```
 
 
