@@ -231,6 +231,24 @@ pen.hideturtle()
 turtle.mainloop()
 ```
 
+## Гора / график
+
+```python
+import turtle
+import random
+
+pen = turtle.Turtle()
+pen.hideturtle()
+pen.up()
+pen.setx(-300)
+pen.down()
+while True:
+    pen.forward(1)
+    pen.sety(pen.ycor() + random.randint(-6, 6))
+
+turtle.mainloop()
+```
+
 ## Мячик и след
 
 ![](../../images/turtle/ball-line.png)
