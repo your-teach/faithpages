@@ -233,6 +233,8 @@ turtle.mainloop()
 
 ## Гора / график
 
+
+![](../../images/turtle/graph.png)
 ```python
 import turtle
 import random
