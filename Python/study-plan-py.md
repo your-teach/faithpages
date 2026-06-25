@@ -791,7 +791,7 @@ lst = [10, 20, 30, -30, -20, -10]
 lst2 = map(str, lst) # перевели все значения списка в строки
 s = "".join(lst2) # объединили все значения списка в сплошную строку, итог: "102030-30-20-10"
 # map вместе с лябмдой
-lst3 = map(lambda x: str(10) if x >= 0 else f"|{x}|", lst)
+lst3 = map(lambda x: str(x) if x >= 0 else f"|{x}|", lst)
 s = "".join(lst3)
 print(s)
 ```
