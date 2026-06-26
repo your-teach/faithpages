@@ -236,6 +236,7 @@
 
 
 
+
 <li class="toctree-l1"><a class="reference internal" href="tasks.html">Разные задачки</a></li>
 <li class="toctree-l1"><a class="reference internal" href="codeforces.html">Задачи codeforces</a></li>
 
@@ -476,6 +477,7 @@ document.write(`
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Загрузка картинки в Roblox (текстура)</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bindaction">BindAction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Поворот парта и его передвижение в сторону куда смотрит</a></li>
 </ul>
 
             </nav>
@@ -908,6 +910,28 @@ Remote functions - это функции, которые можно вызыва
 </pre></div>
 </div>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="id13">
+<h1>Поворот парта и его передвижение в сторону куда смотрит<a class="headerlink" href="#id13" title="Link to this heading">#</a></h1>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span><span class="w"> </span><span class="nv">part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">workspace</span><span class="p">:</span><span class="nf">WaitForChild</span><span class="p">(</span><span class="s2">&quot;TestPartVector&quot;</span><span class="p">)</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">ContextActionService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">game</span><span class="p">:</span><span class="nf">GetService</span><span class="p">(</span><span class="s2">&quot;ContextActionService&quot;</span><span class="p">)</span>
+
+<span class="kd">local</span><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">handleAction</span><span class="p">(</span><span class="nv">actionName</span><span class="p">,</span><span class="w"> </span><span class="nv">inputState</span><span class="p">,</span><span class="w"> </span><span class="nv">_inputObject</span><span class="p">)</span>
+<span class="w">	</span><span class="kr">if</span><span class="w"> </span><span class="nv">actionName</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;R&quot;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nv">inputState</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">Enum</span><span class="p">.</span><span class="py">UserInputState</span><span class="p">.</span><span class="py">Begin</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">		</span><span class="nv">part</span><span class="p">.</span><span class="py">CFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">part</span><span class="p">.</span><span class="py">CFrame</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nv">CFrame</span><span class="p">.</span><span class="nf">Angles</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nb">math.rad</span><span class="p">(</span><span class="mi">30</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">	</span><span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="kd">local</span><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">handleActionF</span><span class="p">(</span><span class="nv">actionName</span><span class="p">,</span><span class="w"> </span><span class="nv">inputState</span><span class="p">,</span><span class="w"> </span><span class="nv">_inputObject</span><span class="p">)</span>
+<span class="w">	</span><span class="kr">if</span><span class="w"> </span><span class="nv">actionName</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;F&#39;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nv">inputState</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">Enum</span><span class="p">.</span><span class="py">UserInputState</span><span class="p">.</span><span class="py">Begin</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">		</span><span class="nv">part</span><span class="p">.</span><span class="py">CFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">part</span><span class="p">.</span><span class="py">CFrame</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="nv">part</span><span class="p">.</span><span class="py">CFrame</span><span class="p">.</span><span class="py">LookVector</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="w">	</span><span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="nv">ContextActionService</span><span class="p">:</span><span class="nf">BindAction</span><span class="p">(</span><span class="s2">&quot;R&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">handleAction</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nv">Enum</span><span class="p">.</span><span class="py">KeyCode</span><span class="p">.</span><span class="py">R</span><span class="p">)</span>
+<span class="nv">ContextActionService</span><span class="p">:</span><span class="nf">BindAction</span><span class="p">(</span><span class="s2">&quot;F&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">handleActionF</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nv">Enum</span><span class="p">.</span><span class="py">KeyCode</span><span class="p">.</span><span class="py">F</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -994,6 +1018,7 @@ Remote functions - это функции, которые можно вызыва
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Загрузка картинки в Roblox (текстура)</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bindaction">BindAction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Поворот парта и его передвижение в сторону куда смотрит</a></li>
 </ul>
 
   </nav></div>

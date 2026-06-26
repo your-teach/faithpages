@@ -411,3 +411,24 @@ tool.Unequipped:Connect(function()
 	ContextActionService:UnbindAction(ACTION_RELOAD)
 end)
 ```
+
+# Поворот парта и его передвижение в сторону куда смотрит
+```lua
+local part = workspace:WaitForChild("TestPartVector")
+local ContextActionService = game:GetService("ContextActionService")
+
+local function handleAction(actionName, inputState, _inputObject)
+	if actionName == "R" and inputState == Enum.UserInputState.Begin then
+		part.CFrame = part.CFrame * CFrame.Angles(0, math.rad(30), 0)
+	end
+end
+
+local function handleActionF(actionName, inputState, _inputObject)
+	if actionName == 'F' and inputState == Enum.UserInputState.Begin then
+		part.CFrame = part.CFrame + (part.CFrame.LookVector * 1)
+	end
+end
+
+ContextActionService:BindAction("R", handleAction, true, Enum.KeyCode.R)
+ContextActionService:BindAction("F", handleActionF, true, Enum.KeyCode.F)
+```
