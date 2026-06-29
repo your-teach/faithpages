@@ -593,6 +593,9 @@ example2()
     - `from module import <attribute>`
     - `from module import <attribute> as attr`
 
+- проверка, существует ли модуль:  
+`python -c "import threading; print(threading.__file__)"`  
+
 ## Модуль time
 ```python
     import time
