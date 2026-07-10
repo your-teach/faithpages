@@ -456,22 +456,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Обработка деления на ноль</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Обработка неправильного ввода</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Работа со списком и индексом</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Доступ к ключу словаря</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Собственное исключение</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Комбинированная обработка</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Обработка нескольких исключений</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#else-try-except">Использование else в try-except</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Перехват нескольких исключений в одном блоке</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#try-except">Вложенные блоки try-except</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Безопасный ввод чисел</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Защищённый доступ к словарю</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Калькулятор с обработкой ошибок</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Защита индексации списка</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Пользовательские исключения для валидации данных</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Комплексная обработка вложенных ошибок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Работа со списком и индексом</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Доступ к ключу словаря</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Обработка нескольких исключений</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Перехват нескольких исключений в одном блоке</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Калькулятор с обработкой ошибок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Пользовательские исключения для валидации данных</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Комплексная обработка вложенных ошибок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Собственное исключение</a></li>
 </ul>
             </nav>
         </div>
@@ -487,43 +479,17 @@ document.write(`
 <h1>Ошибки и исключения<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <p>(Необходимо редактирование и доработка данной страницы!)</p>
 <section id="id2">
-<h2>Обработка деления на ноль<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
-<p>Напишите функцию, которая запрашивает у пользователя два числа и выводит результат деления первого на второе.
-Обработайте случай, когда второе число равно нулю, с выводом сообщения “Деление на ноль невозможно!”.</p>
-</section>
-<section id="id3">
-<h2>Обработка неправильного ввода<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
-<p>Напишите программу, которая просит пользователя ввести целое число. Если пользователь вводит не число, а строку,
-которая не может быть преобразована в целое число, программа должна вывести сообщение “Ошибка: введено не число”.
-Используйте try-except.</p>
-</section>
-<section id="id4">
-<h2>Работа со списком и индексом<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<h2>Работа со списком и индексом<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <p>Создайте список из нескольких элементов. Запросите у пользователя индекс элемента, который он хочет увидеть.
 Если введенный индекс выходит за пределы списка, выведите сообщение “Индекс вне диапазона”.</p>
 </section>
-<section id="id5">
-<h2>Доступ к ключу словаря<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<section id="id3">
+<h2>Доступ к ключу словаря<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <p>Создайте словарь, например: {‘a’: 1, ‘b’: 2, ‘c’: 3}. Запросите у пользователя ключ.
 Если ключ отсутствует в словаре, выведите сообщение “Ключ не найден”. Обработайте исключение KeyError.</p>
 </section>
-<section id="id6">
-<h2>Собственное исключение<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
-<p>Напишите функцию, которая проверяет, является ли число положительным. Если число отрицательное,
-вызовите собственное исключение (например, NegativeNumberError) с сообщением “Число не должно быть отрицательным”.</p>
-</section>
-<section id="id7">
-<h2>Комбинированная обработка<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
-<p>Напишите программу, которая:</p>
-<ul class="simple">
-<li><p>Запрашивает у пользователя два числа.</p></li>
-<li><p>Выполняет их деление.</p></li>
-<li><p>Обрабатывает как ошибку деления на ноль, так и ошибку преобразования типов (если введено не число).</p></li>
-<li><p>В блоке finally выводит сообщение “Программа завершена”.</p></li>
-</ul>
-</section>
-<section id="id8">
-<h2>Обработка нескольких исключений<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<section id="id4">
+<h2>Обработка нескольких исключений<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
 <p>Напишите программу, которая открывает файл для чтения. Обработайте следующие исключения:</p>
 <ul class="simple">
 <li><p>FileNotFoundError (если файл не существует)</p></li>
@@ -531,65 +497,13 @@ document.write(`
 В случае успешного чтения выведите содержимое файла.</p></li>
 </ul>
 </section>
-<section id="else-try-except">
-<h2>Использование else в try-except<a class="headerlink" href="#else-try-except" title="Link to this heading">#</a></h2>
-<p>Напишите программу, которая пытается преобразовать введенную строку в целое число. В блоке try сделайте преобразование.
-В блоке except обработайте ValueError. В блоке else выведите сообщение “Преобразование прошло успешно!” и результат.</p>
-</section>
-<section id="id9">
-<h2>Перехват нескольких исключений в одном блоке<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<section id="id5">
+<h2>Перехват нескольких исключений в одном блоке<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
 <p>Напишите программу, которая обращается к элементу списка по индексу, введенному пользователем.
 Обработайте одновременно (в одном блоке except) два типа исключений: IndexError (неверный индекс) и TypeError (индекс не целое число).</p>
 </section>
-<section id="try-except">
-<h2>Вложенные блоки try-except<a class="headerlink" href="#try-except" title="Link to this heading">#</a></h2>
-<p>Напишите программу, которая:</p>
-<ul class="simple">
-<li><p>Внешний блок try: запрашивает у пользователя число и преобразует его в int.</p></li>
-<li><p>Внутренний блок try: делит 100 на это число и выводит результат.</p></li>
-<li><p>Обработайте во внутреннем блоке ZeroDivisionError.</p></li>
-<li><p>Обработайте во внешнем блоке ValueError (если введено не число).</p></li>
-</ul>
-<p>Вот несколько упражнений по Python на тему “Ошибки и исключения”, учитывающих ваш уровень знаний. Они помогут закрепить работу с <code class="docutils literal notranslate"><span class="pre">try/except</span></code>, пользовательскими исключениями и обработкой разных типов ошибок.</p>
-</section>
-<section id="id10">
-<h2>Безопасный ввод чисел<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
-<p><strong>Задача</strong>:<br />
-Напишите функцию <code class="docutils literal notranslate"><span class="pre">safe_input()</span></code>, которая:</p>
-<ul class="simple">
-<li><p>Запрашивает у пользователя целое число.</p></li>
-<li><p>При вводе нечисловых данных (например, строки) выводит сообщение <code class="docutils literal notranslate"><span class="pre">&quot;Ошибка:</span> <span class="pre">введено</span> <span class="pre">не</span> <span class="pre">число&quot;</span></code> и повторяет запрос.</p></li>
-<li><p>Возвращает число только при корректном вводе.</p></li>
-</ul>
-<p><strong>Пример использования</strong>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="n">safe_input</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Вы ввели:&quot;</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
-</pre></div>
-</div>
-<p><strong>Подсказка</strong>:<br />
-Используйте цикл <code class="docutils literal notranslate"><span class="pre">while</span></code> и обработку <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>.</p>
-</section>
-<hr class="docutils" />
-<section id="id11">
-<h2>Защищённый доступ к словарю<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
-<p><strong>Задача</strong>:<br />
-Создайте функцию <code class="docutils literal notranslate"><span class="pre">get_from_dict(dictionary,</span> <span class="pre">key)</span></code>, которая:</p>
-<ul class="simple">
-<li><p>Принимает словарь и ключ.</p></li>
-<li><p>Возвращает значение по ключу.</p></li>
-<li><p>Если ключа нет, генерирует <em>пользовательское</em> исключение <code class="docutils literal notranslate"><span class="pre">KeyNotFoundError</span></code> с сообщением <code class="docutils literal notranslate"><span class="pre">&quot;Ключ</span> <span class="pre">'X'</span> <span class="pre">не</span> <span class="pre">существует&quot;</span></code> (X — подставить ключ).</p></li>
-<li><p>Обрабатывает исключение в основной программе, выводя сообщение об ошибке.</p></li>
-</ul>
-<p><strong>Пример словаря</strong>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Paris&quot;</span><span class="p">}</span>
-</pre></div>
-</div>
-<p><strong>Цель</strong>:<br />
-Практика создания собственных исключений (через <code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">KeyNotFoundError(Exception):</span> <span class="pre">...</span></code>).</p>
-</section>
-<hr class="docutils" />
-<section id="id12">
-<h2>Калькулятор с обработкой ошибок<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<section id="id6">
+<h2>Калькулятор с обработкой ошибок<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
 <p><strong>Задача</strong>:<br />
 Напишите калькулятор, который:</p>
 <ul class="simple">
@@ -612,27 +526,8 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<hr class="docutils" />
-<section id="id13">
-<h2>Защита индексации списка<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
-<p><strong>Задача</strong>:<br />
-Создайте функцию <code class="docutils literal notranslate"><span class="pre">safe_get_element(lst,</span> <span class="pre">index)</span></code>, которая:</p>
-<ul class="simple">
-<li><p>Принимает список и индекс.</p></li>
-<li><p>Возвращает элемент по индексу.</p></li>
-<li><p>Обрабатывает:</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">IndexError</span></code> (если индекс вне диапазона, вывод: <code class="docutils literal notranslate"><span class="pre">&quot;Индекс</span> <span class="pre">выходит</span> <span class="pre">за</span> <span class="pre">пределы</span> <span class="pre">списка&quot;</span></code>).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">TypeError</span></code> (если индекс не целое число, вывод: <code class="docutils literal notranslate"><span class="pre">&quot;Индекс</span> <span class="pre">должен</span> <span class="pre">быть</span> <span class="pre">целым</span> <span class="pre">числом&quot;</span></code>).</p></li>
-</ul>
-</li>
-</ul>
-<p><strong>Дополнительно</strong>:<br />
-Поддержите отрицательные индексы (например, <code class="docutils literal notranslate"><span class="pre">-1</span></code> для последнего элемента).</p>
-</section>
-<hr class="docutils" />
-<section id="id14">
-<h2>Пользовательские исключения для валидации данных<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<section id="id7">
+<h2>Пользовательские исключения для валидации данных<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
 <p><strong>Задача</strong>:<br />
 Напишите функцию <code class="docutils literal notranslate"><span class="pre">validate_user_data(name,</span> <span class="pre">age)</span></code>, которая проверяет:</p>
 <ul class="simple">
@@ -652,9 +547,8 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<hr class="docutils" />
-<section id="id15">
-<h2>Комплексная обработка вложенных ошибок<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<section id="id8">
+<h2>Комплексная обработка вложенных ошибок<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
 <p><strong>Задача</strong>:<br />
 Напишите программу, которая:</p>
 <ol class="arabic simple">
@@ -674,6 +568,11 @@ document.write(`
 <li><p>Используйте блоки <code class="docutils literal notranslate"><span class="pre">try/except/finally</span></code>.</p></li>
 <li><p>Для общей ошибки выводите <code class="docutils literal notranslate"><span class="pre">&quot;Неизвестная</span> <span class="pre">ошибка:</span> <span class="pre">[описание]&quot;</span></code> и записывайте в файл.</p></li>
 </ul>
+</section>
+<section id="id9">
+<h2>Собственное исключение<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>Напишите функцию, которая проверяет, является ли число положительным. Если число отрицательное,
+вызовите собственное исключение (например, NegativeNumberError) с сообщением “Число не должно быть отрицательным”.</p>
 </section>
 </section>
 
@@ -741,22 +640,14 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Обработка деления на ноль</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Обработка неправильного ввода</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Работа со списком и индексом</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Доступ к ключу словаря</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Собственное исключение</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Комбинированная обработка</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Обработка нескольких исключений</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#else-try-except">Использование else в try-except</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Перехват нескольких исключений в одном блоке</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#try-except">Вложенные блоки try-except</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Безопасный ввод чисел</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Защищённый доступ к словарю</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Калькулятор с обработкой ошибок</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Защита индексации списка</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Пользовательские исключения для валидации данных</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Комплексная обработка вложенных ошибок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Работа со списком и индексом</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Доступ к ключу словаря</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Обработка нескольких исключений</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Перехват нескольких исключений в одном блоке</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Калькулятор с обработкой ошибок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Пользовательские исключения для валидации данных</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Комплексная обработка вложенных ошибок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Собственное исключение</a></li>
 </ul>
   </nav></div>
 
