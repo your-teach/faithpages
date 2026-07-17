@@ -11,12 +11,25 @@
     - Изменить шрифт -> editor.fontSize -> 16
     - Code-runner: Save file before run [галочка стоит]
     - Code-runner: Run in terminal [галочка стоит]
-7. Settings.json
+7. Settings.json  
     -Очистка консоли:
+    ```
         "code-runner.executorMap": {
             "python": "clear; python -u" }
-8. Создать папку на рабочем столе -> Открываем её в Vscode -> Далее создаем два файла -> main.lua/py theory.lua/py
-9. Выключить Ai chat и прочее в настройках: Chat: Disable Ai Freatures
+    ```
+8. Создать папку на рабочем столе -> Открываем её в Vscode -> Далее создаем два файла -> main.py theory.py  
+9. Выключить Ai chat и прочее в настройках: Chat: Disable Ai Freatures  
+10. Выключить подсказки в vs code:  
+    ```
+    "editor.quickSuggestions": {
+        "other": "off",
+        "comments": "off",
+        "strings": "off"
+    },
+    "editor.suggestOnTriggerCharacters": false,
+    "editor.parameterHints.enabled": false,
+    "editor.hover.enabled": false
+    ```
 
 ## Введение.
 

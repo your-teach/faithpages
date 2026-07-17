@@ -526,7 +526,7 @@ document.write(`
 <h1>План обучения <code class="docutils literal notranslate"><span class="pre">py</span></code><a class="headerlink" href="#py" title="Link to this heading">#</a></h1>
 <section id="vs-code-python">
 <h2>Установка Vs Code + Python.<a class="headerlink" href="#vs-code-python" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p><a class="reference external" href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a></p></li>
 <li><p><a class="reference external" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></p></li>
 <li><p>RuLang: Шестерёнка -&gt; Command Pallete -&gt; Вводим ‘lang’ -&gt; Configure Display Language -&gt; ‘Русский’</p></li>
@@ -540,12 +540,27 @@ document.write(`
 <li><p>Code-runner: Run in terminal [галочка стоит]</p></li>
 </ul>
 </li>
-<li><p>Settings.json
--Очистка консоли:
-“code-runner.executorMap”: {
-“python”: “clear; python -u” }</p></li>
-<li><p>Создать папку на рабочем столе -&gt; Открываем её в Vscode -&gt; Далее создаем два файла -&gt; main.lua/py theory.lua/py</p></li>
+<li><p>Settings.json<br />
+-Очистка консоли:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="s2">&quot;code-runner.executorMap&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;python&quot;</span><span class="p">:</span> <span class="s2">&quot;clear; python -u&quot;</span> <span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Создать папку на рабочем столе -&gt; Открываем её в Vscode -&gt; Далее создаем два файла -&gt; <a class="reference external" href="http://main.py">main.py</a> <a class="reference external" href="http://theory.py">theory.py</a></p></li>
 <li><p>Выключить Ai chat и прочее в настройках: Chat: Disable Ai Freatures</p></li>
+<li><p>Выключить подсказки в vs code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;editor.quickSuggestions&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;other&quot;</span><span class="p">:</span> <span class="s2">&quot;off&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;off&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;strings&quot;</span><span class="p">:</span> <span class="s2">&quot;off&quot;</span>
+<span class="p">},</span>
+<span class="s2">&quot;editor.suggestOnTriggerCharacters&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+<span class="s2">&quot;editor.parameterHints.enabled&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+<span class="s2">&quot;editor.hover.enabled&quot;</span><span class="p">:</span> <span class="n">false</span>
+</pre></div>
+</div>
+</li>
 </ol>
 </section>
 <section id="id1">
