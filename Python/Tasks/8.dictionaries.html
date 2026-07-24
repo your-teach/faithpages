@@ -456,8 +456,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Количество символов</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Собираемся в поход</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Меняем местами ключ и значение</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Количество символов</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Собираемся в поход</a></li>
 </ul>
             </nav>
         </div>
@@ -472,15 +473,23 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>Словари<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <section id="id2">
-<h2>Количество символов<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<h2>Меняем местами ключ и значение<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Напишите скрипт, который преобразует словарь, меняя местами ключ и значения.<br />
+Например:<br />
+<code class="docutils literal notranslate"><span class="pre">d</span> <span class="pre">=</span> <span class="pre">{&quot;red&quot;:</span> <span class="pre">&quot;красный&quot;,</span> <span class="pre">&quot;green&quot;:</span> <span class="pre">&quot;зеленый&quot;,</span> <span class="pre">&quot;blue&quot;:</span> <span class="pre">&quot;синий&quot;}</span></code>
+Результат:<br />
+<code class="docutils literal notranslate"><span class="pre">d</span> <span class="pre">=</span> <span class="pre">{&quot;красный&quot;:</span> <span class="pre">&quot;red&quot;,</span> <span class="pre">&quot;зеленый&quot;:</span> <span class="pre">&quot;green&quot;,</span> <span class="pre">&quot;синий&quot;:</span> <span class="pre">&quot;blue&quot;}</span></code></p>
+</section>
+<section id="id3">
+<h2>Количество символов<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <p>Создайте словарь из строки <code class="docutils literal notranslate"><span class="pre">'pythonist'</span></code> следующим образом: в качестве ключей возьмите буквы строки, а значениями пусть будут числа, соответствующие количеству вхождений данной буквы в строку. Пример:</p>
 <blockquote>
 <div><p>Входные данные: <code class="docutils literal notranslate"><span class="pre">'pythonist'</span></code><br />
 Выходные данные: <code class="docutils literal notranslate"><span class="pre">{'p':</span> <span class="pre">1,</span> <span class="pre">'y':</span> <span class="pre">1,</span> <span class="pre">'t':</span> <span class="pre">2,</span> <span class="pre">'h':</span> <span class="pre">1,</span> <span class="pre">'o':</span> <span class="pre">1,</span> <span class="pre">'n':</span> <span class="pre">1,</span> <span class="pre">'i':</span> <span class="pre">1,</span> <span class="pre">'s':</span> <span class="pre">1}</span></code></p>
 </div></blockquote>
 </section>
-<section id="id3">
-<h2>Собираемся в поход<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<section id="id4">
+<h2>Собираемся в поход<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">things</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;зажигалка&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;компас&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;фрукты&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span> <span class="s1">&#39;рубашка&#39;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
           <span class="s1">&#39;термос&#39;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s1">&#39;аптечка&#39;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;куртка&#39;</span><span class="p">:</span> <span class="mi">600</span><span class="p">,</span> <span class="s1">&#39;бинокль&#39;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
         <span class="s1">&#39;удочка&#39;</span><span class="p">:</span> <span class="mi">1200</span><span class="p">,</span> <span class="s1">&#39;салфетки&#39;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span> <span class="s1">&#39;бутерброды&#39;</span><span class="p">:</span> <span class="mi">820</span><span class="p">,</span> <span class="s1">&#39;палатка&#39;</span><span class="p">:</span> <span class="mi">5500</span><span class="p">,</span>
@@ -593,8 +602,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Количество символов</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Собираемся в поход</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Меняем местами ключ и значение</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Количество символов</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Собираемся в поход</a></li>
 </ul>
   </nav></div>
 
