@@ -115,6 +115,8 @@ click_detector.MouseClick:Connect(click)
 
 # RemoteEvent
 
+- Сначала необходимо добавить `RemoteEvent` в `ReplicateStorage`
+
 Server Script
 ```lua
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
