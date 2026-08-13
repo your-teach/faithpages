@@ -601,6 +601,9 @@ Remote functions - это функции, которые можно вызыва
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="remoteevent">
 <h1>RemoteEvent<a class="headerlink" href="#remoteevent" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Сначала необходимо добавить <code class="docutils literal notranslate"><span class="pre">RemoteEvent</span></code> в <code class="docutils literal notranslate"><span class="pre">ReplicateStorage</span></code></p></li>
+</ul>
 <p>Server Script</p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span><span class="w"> </span><span class="nv">ReplicatedStorage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">game</span><span class="p">:</span><span class="nf">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">)</span>
 <span class="kd">local</span><span class="w"> </span><span class="nv">remoteEvent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">ReplicatedStorage</span><span class="p">:</span><span class="nf">FindFirstChildOfClass</span><span class="p">(</span><span class="s2">&quot;RemoteEvent&quot;</span><span class="p">)</span>
