@@ -1680,7 +1680,7 @@ file.close() # закрытие файла
     + - запись/чтение (r+, w+)
     x - вызывает ошибку, если файл существует,  иначе создает файл и открывает его на запись
 
-- with file open(&#39;name.txt&#39;, &#39;w&#39;, encoding=&#39;utf-8&#39;):
+- with open(&#39;name.txt&#39;, &#39;w&#39;, encoding=&#39;utf-8&#39;) as file:
     file.write(&#39;hello world&#39;)
 
 https://metanit.com/python/tutorial/4.1.php
