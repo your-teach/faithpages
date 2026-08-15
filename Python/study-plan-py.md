@@ -1038,7 +1038,7 @@ raise BaseException("Свое описание ошибки") from err
         + - запись/чтение (r+, w+)
         x - вызывает ошибку, если файл существует,  иначе создает файл и открывает его на запись
 
-    - with file open('name.txt', 'w', encoding='utf-8'):
+    - with open('name.txt', 'w', encoding='utf-8') as file:
         file.write('hello world')
 
     https://metanit.com/python/tutorial/4.1.php
