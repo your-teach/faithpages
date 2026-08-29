@@ -1181,7 +1181,66 @@ if file_path.exists():
 
 ## Аннотации
 
-    https://clck.ru/339CnS
+
+
+# Аннотации
+```python
+price: int = 5
+title: str
+
+def indent_right(s: str, width: int) -> str:
+    """Фукнция которая добавляет пробелы в начале строки,
+    если она короче width
+    Args:
+        s (str): Принимается строка.
+        width (int): Минимальная ширина итоговой строки.
+    
+    Returns:
+        str: Строка, дополненная пробелами слева.
+    
+    Raises:
+        ValueError: Если width имеет отрицательное значение.
+        
+    Examples:
+        >>> indent_right("test", 6)
+        '  test'"""
+    if width < 0:
+        raise ValueError("Ширина не может быть отрицательной")
+    return " " * (max(0, width - len(s))) + s
+
+print(indent_right("текст", 11))
+
+class Book:
+    """Описание класса"""
+    title: str
+    author: str
+
+    def __init__(self, title: str, author: str) -> None:
+        self.title = title
+        self.author = author
+
+b: Book = Book(title="Фаренгейт 451", author="Бредбери")
+
+
+from typing import Optional, Union
+
+price: Optional[int]
+
+def hundreds(x: Union[int, float]) -> int:
+    return (int(x) // 100) % 10
+
+hundreds(100.0)
+hundreds(100)
+
+# списки
+titles: list[str] = ["Hello", "world"]
+
+items: list = ["hello", 1]
+
+items2: list[str | int] = ["a", 2]
+
+print(items2)
+```
 
 ## Асинхронное программирование async/await
 
