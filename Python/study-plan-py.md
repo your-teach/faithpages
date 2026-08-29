@@ -1123,6 +1123,38 @@ icon_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "qspectrum
 # Упражнения на os: https://www.w3resource.com/python-exercises/os/index.php
 
 
+# модуль pathlib
+from pathlib import Path
+
+# Объединение через слэш
+base = Path("home")
+full_path = base / "music" / "bands" 
+
+# Извлечение компонентов
+file = Path("home/music/led_zeppelin.mp3")
+print(file.name)    # "led_zeppelin.mp3" 
+print(file.stem)    # "led_zeppelin"     
+print(file.suffix)  # ".mp3"             
+print(file.parts)   # ('home', 'music', 'led_zeppelin.mp3') 
+
+# Создание папок
+new_dir = Path("home/music/rock/grunge")
+new_dir.mkdir(parents=True, exist_ok=True) 
+
+# Поиск файлов по маске
+music_dir = Path("home/music")
+# Найти все файлы .mp3 только в этой папке
+mp3_files = list(music_dir.glob("*.mp3"))
+# Найти все файлы .mp3 в этой папке и всех её подпапках
+all_mp3_files = list(music_dir.glob("**/*.mp3"))
+
+# Проверка существования
+file_path = Path("home/music/playlist.mp3")
+if file_path.exists():
+    print("Файл найден!")
+
+
+
 ```  
 
 
