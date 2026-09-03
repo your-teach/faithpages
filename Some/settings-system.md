@@ -61,6 +61,17 @@
 6. `cd lua-5.4.7`
 7. `sudo make macosx install`
 
+## Vscode + Lua на MacOS #v2
+1. Установка brew.  
+ - `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`  
+2. Настройка PATH.  
+ - `echo >> ~/.zprofile`  
+ - `echo 'eval "$(/opt/homebrew/bin/brew shellenv zsh)"' >> ~/.zprofile`  
+ - `eval "$(/opt/homebrew/bin/brew shellenv zsh)"`  
+3. Установка lua.  
+ - `brew install lua`  
+ - `lua -v`  
+
 ## Кодировка файла в vscode.
 - Внизу нажать на utf-8 -> Сохранить в кодировке -> Cyrillic (CP 866)
 
