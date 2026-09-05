@@ -29,7 +29,7 @@
         "terminal.integrated.shellIntegration.enabled": false,
     }
     ```
-6. Создать папку на рабочем столе с файлами main.py theory.py  
+6. Создать папку на рабочем столе с файлами `main.py` `theory.py` 
 
 
 ## Введение.
