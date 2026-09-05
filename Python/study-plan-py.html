@@ -178,6 +178,7 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">План обучения <code class="docutils literal notranslate"><span class="pre">py</span></code></a></li>
+
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Tables/py-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">py</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="Tasks/1.in-out.html">Ввод и вывод</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Tasks/2.strings.html">Строки</a></li>
@@ -456,6 +457,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">План обучения <code class="docutils literal notranslate"><span class="pre">py</span></code></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vs-code-python">Установка Vs Code + Python.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Введение.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Переменные.</a></li>
@@ -499,19 +501,25 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requests-html">Модуль requests-html</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#selenium">Selenium</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Аннотации</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Аннотации</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#async-await">Асинхронное программирование async/await</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Создание телеграм бота</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Создание телеграм бота</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pygame">Pygame</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ursina">Ursina</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re">Регулярные выражения <code class="docutils literal notranslate"><span class="pre">'re'</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Решение проблем:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Дополнить план обучения следующим:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Разное.</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Алгоритмы обработки списков.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">Элементы функционального подхода к программированию.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Решение проблем:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Дополнить план обучения следующим:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Разное.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">Алгоритмы обработки списков.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">Элементы функционального подхода к программированию.</a></li>
 </ul>
 </li>
 </ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -529,43 +537,39 @@ document.write(`
 <ol class="arabic">
 <li><p><a class="reference external" href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a></p></li>
 <li><p><a class="reference external" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></p></li>
-<li><p>RuLang: Шестерёнка -&gt; Command Pallete -&gt; Вводим ‘lang’ -&gt; Configure Display Language -&gt; ‘Русский’</p></li>
 <li><p>Расширение Python</p></li>
 <li><p>Расширение Code Runner</p></li>
-<li><p>Параметры:</p>
-<ul class="simple">
-<li><p>Установить стандартное автосохрание -&gt; Файл -&gt; Автосохранение</p></li>
-<li><p>Изменить шрифт -&gt; editor.fontSize -&gt; 16</p></li>
-<li><p>Code-runner: Save file before run [галочка стоит]</p></li>
-<li><p>Code-runner: Run in terminal [галочка стоит]</p></li>
-</ul>
-</li>
-<li><p>Settings.json<br />
--Очистка консоли:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="s2">&quot;code-runner.executorMap&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;python&quot;</span><span class="p">:</span> <span class="s2">&quot;clear; python -u&quot;</span> <span class="p">}</span>
+<li><p>Settings.json</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"files.autoSave"</span><span class="p">:</span><span class="w"> </span><span class="s2">"afterDelay"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"editor.fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"code-runner.runInTerminal"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"code-runner.saveFileBeforeRun"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"chat.disableAIFeatures"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"editor.quickSuggestions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"other"</span><span class="p">:</span><span class="w"> </span><span class="s2">"off"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"comments"</span><span class="p">:</span><span class="w"> </span><span class="s2">"off"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"strings"</span><span class="p">:</span><span class="w"> </span><span class="s2">"off"</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"editor.suggestOnTriggerCharacters"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"editor.parameterHints.enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"editor.inlineSuggest.enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"editor.tabCompletion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"off"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"editor.acceptSuggestionOnEnter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"off"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"editor.snippetSuggestions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"none"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"editor.hover.enabled"</span><span class="p">:</span><span class="w"> </span><span class="s2">"off"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"terminal.integrated.suggest.enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"terminal.integrated.shellIntegration.enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </li>
-<li><p>Создать папку на рабочем столе -&gt; Открываем её в Vscode -&gt; Далее создаем два файла -&gt; <a class="reference external" href="http://main.py">main.py</a> <a class="reference external" href="http://theory.py">theory.py</a></p></li>
-<li><p>Выключить Ai chat и прочее в настройках: Chat: Disable Ai Freatures</p></li>
-<li><p>Выключить подсказки в vs code:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;editor.quickSuggestions&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">&quot;other&quot;</span><span class="p">:</span> <span class="s2">&quot;off&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;comments&quot;</span><span class="p">:</span> <span class="s2">&quot;off&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;strings&quot;</span><span class="p">:</span> <span class="s2">&quot;off&quot;</span>
-<span class="p">},</span>
-<span class="s2">&quot;editor.suggestOnTriggerCharacters&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
-<span class="s2">&quot;editor.parameterHints.enabled&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
-<span class="s2">&quot;editor.hover.enabled&quot;</span><span class="p">:</span> <span class="n">false</span>
-</pre></div>
-</div>
-</li>
+<li><p>Создать папку на рабочем столе с файлами <a class="reference external" href="http://main.py">main.py</a> <a class="reference external" href="http://theory.py">theory.py</a></p></li>
 </ol>
 </section>
 <section id="id1">
 <h2>Введение.<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print(&quot;Hello World&quot;)
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>print("Hello World")
 Что такое комментарии.
 </pre></div>
 </div>
@@ -575,7 +579,7 @@ document.write(`
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Зачем они нужны, как мы бы жили без них.
 -Оператор присваивания; Каждый символ в программировании важен, в том числе пробел.
 -Представляем, что переменная это коробка в которую мы можем поместить только одно значение.
-    name = &#39;Ivan&#39;
+    name = 'Ivan'
 -Как можно и как нельзя создавать переменные.
     -Название переменной желательно должно соответствовать ее содержанию.
     -Можно: 
@@ -590,9 +594,9 @@ document.write(`
         спец символы !@#
 -Программа читает код каждую строку поочереди.
 -По этому, одна и та же переменная может иметь различные значения в разных частях кода:
-    a = &#39;one&#39;
+    a = 'one'
     print(a)
-    a = &#39;two&#39;
+    a = 'two'
     print(a)
 -Чувствительность к верхнему и нижнему регистру:
     a = 0
@@ -608,7 +612,7 @@ document.write(`
 
 
 -Типы данных или Типы переменных.
-- str - СТРОКИ - определяются кавычками &quot;_&quot; или &#39;_&#39;
+- str - СТРОКИ - определяются кавычками "_" или '_'
 - int - ЧИСЛА - только цифры, без пробелов и кавычек.
 - bool - ЛОГИКА -  логическое значение, может содержать True/False (обязательно писать с большой буквы)
 
@@ -617,7 +621,7 @@ document.write(`
 -Каждый тип можно представить в виде комнаты со своими правилами.
 -Примеры.
     К числам можно применять знак минус, а к строкам и логике - нет.
-    Сравнение 10 и &#39;10&#39;
+    Сравнение 10 и '10'
 -type() - функция показывающая тип переменной
 На самом деле почти всё имеет свой тип. Остальные типы данных будем проходить на следующих уроках.
 -Функции для изменения типов:
@@ -630,7 +634,7 @@ document.write(`
 </section>
 <section id="id3">
 <h2>Ввод/Вывод.<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-input(&#39;text&#39;)
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-input('text')
 -print(end=, sep=)
 </pre></div>
 </div>
@@ -638,7 +642,7 @@ document.write(`
 <section id="id4">
 <h2>Арифметические операторы и операции.<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- (+ - * / // % **)
-- минус &quot;-&quot; меняет знак числа на противоположный
+- минус "-" меняет знак числа на противоположный
 - Функции.
     abs(x) - вычисляет модуль числа x
     round(x, y) - округляет x до ближайшего целого. y - максимальное кол цифр после запятой
@@ -694,21 +698,21 @@ document.write(`
 </section>
 <section id="id7">
 <h2>Строки.<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Есть два вида кавычек &quot;text&quot; и &#39;text&#39;
--&quot;&quot;&quot;Многострочные строки&quot;&quot;&quot;, &#39;&#39;&#39;Многострочные строки, пример 2&#39;&#39;&#39;
--Перевод строки \n: &#39;hello\nworld&#39;
--Пустая строка: &quot;&quot;
--Конкатенация или cоединение строк: &#39;str1&#39; + &#39;str2&#39;; &#39;str1&#39; + &#39; &#39; + &#39;str2&#39;
--Умножение строк: &#39;str&#39; * 10
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Есть два вида кавычек "text" и 'text'
+-"""Многострочные строки""", '''Многострочные строки, пример 2'''
+-Перевод строки \n: 'hello\nworld'
+-Пустая строка: ""
+-Конкатенация или cоединение строк: 'str1' + 'str2'; 'str1' + ' ' + 'str2'
+-Умножение строк: 'str' * 10
 -Проверка (не)наличия в строке той или иной подстроки:
-    &#39;a&#39; in &#39;abc&#39;
-    &#39;x&#39; not in &#39;abc&#39;
+    'a' in 'abc'
+    'x' not in 'abc'
 -Форматирование строки:
-    platypus = &quot;Алекс&quot;
-    pig = &quot;Пепе&quot;
-    &quot;Утконос %s шел мимо поля&quot; % platypus
-    &quot;Утконос %s шел мимо поля и встретил свинку %s&quot; % (platypus, pig)
-    f&quot;Утконос {platypus} шел мимо поля и встретил свинку {pig}&quot;
+    platypus = "Алекс"
+    pig = "Пепе"
+    "Утконос %s шел мимо поля" % platypus
+    "Утконос %s шел мимо поля и встретил свинку %s" % (platypus, pig)
+    f"Утконос {platypus} шел мимо поля и встретил свинку {pig}"
 
 -Индексы, тип str, str[-1]
 -Cрезы [5:10] [0:-1] [start:stop:step]
@@ -716,33 +720,33 @@ document.write(`
 -len(str)
 -ord(), id(), chr()
 -Сравнение строк с помощью условных операторов:
-    &quot;ABC&quot; != &#39;abc&#39;; (пример с логином и паролем)
-    &#39;a&#39; &lt; &#39;b&#39; (разобрать, почему это True)
+    "ABC" != 'abc'; (пример с логином и паролем)
+    'a' &lt; 'b' (разобрать, почему это True)
 -Изменение строки, добавление/удаление символов в конце/начале/середине.
-    msg = &quot;Hello World!&quot;
-    newmsg = msg[:6]+&quot;w&quot;+msg[7:9]+msg[10:]
+    msg = "Hello World!"
+    newmsg = msg[:6]+"w"+msg[7:9]+msg[10:]
 
 
--Что такое методы, как они работают, &quot;возвращаемые и невозвращаемые&quot;.
+-Что такое методы, как они работают, "возвращаемые и невозвращаемые".
 -Методы строк. 
     str.upper() - буквы становятся большими
     str.lower() - буквы становятся маленькими
-    str.count(&#39;ra&#39;, start, stop) - посчитать сколько вхождений &#39;ra&#39; (start, stop - можно использовать срезы)
-    str.find(&#39;a&#39;, start, stop) - находит индекс первого &#39;a&#39;, слева направо. возвращает -1 если буквы нет
+    str.count('ra', start, stop) - посчитать сколько вхождений 'ra' (start, stop - можно использовать срезы)
+    str.find('a', start, stop) - находит индекс первого 'a', слева направо. возвращает -1 если буквы нет
     str.rfind() - работает так же как find, но начинает поиск справа
-    str.index(&#39;a&#39;) - аналог find, возвращает ошибку если буква не найдена
-    str.replace(&#39;a&#39;, &#39;b&#39;) - меняет все &#39;a&#39; на &#39;b&#39;
-    str.replace(&#39;a&#39;, &#39;b&#39;, amount) - меняет все &#39;a&#39; на &#39;b&#39;, amount - максимальное количество замен
+    str.index('a') - аналог find, возвращает ошибку если буква не найдена
+    str.replace('a', 'b') - меняет все 'a' на 'b'
+    str.replace('a', 'b', amount) - меняет все 'a' на 'b', amount - максимальное количество замен
     str.isalpha() - возвращает True, если все символы являются буквами, иначе False.
     str.isdigit() - возвращает True, если все символы являются цифрами, иначе False.
-    str.rjust(10, &#39;!&#39;) - добавляет символы слева строки, если индексов меньше 10.
+    str.rjust(10, '!') - добавляет символы слева строки, если индексов меньше 10.
     str.ljust() - тоже самое что rjust, только справа.
     str.split() - разбивает строку в местах где есть пробелы, на выходе получаем список.
-    str.split(&#39;-&#39;) - аналогично. разбивает строку в местах где есть символ &#39;-&#39;. Вместо &#39;-&#39; можно использовать любой другой символ. 
+    str.split('-') - аналогично. разбивает строку в местах где есть символ '-'. Вместо '-' можно использовать любой другой символ. 
     str.strip() - удаляет пробелы и переносы строк в начале и конце строки.
-    str.endswith(&quot;.pdf&quot;) - возвращает True, если строка заканчивается на &quot;.pdf&quot;, и False в противном случае
+    str.endswith(".pdf") - возвращает True, если строка заканчивается на ".pdf", и False в противном случае
 
-    &#39;...&#39;.join(list) - соединяет все элементы списка в строку, между элементами ставится &quot;...&quot; (важно, чтобы в list были только элементы с типом str)
+    '...'.join(list) - соединяет все элементы списка в строку, между элементами ставится "..." (важно, чтобы в list были только элементы с типом str)
 
     str.isupper() - возвращает True, если все буквы в строке верхнего регистра.
     str.islower() - возвращает True, если все буквы в строке нижнего регистра.
@@ -758,18 +762,18 @@ document.write(`
 -Наличие тока для включения лампочки.
     tok = False
     if tok == True:
-        print(&#39;Лампа включена&#39;)
+        print('Лампа включена')
 -Неплохой пример, показывающий поэтапность действий, и то что при первом срабатывании условия оно останавливается.
     temp = int(input())
     if temp &gt; 10:
-        print(&#39;Погода атас, бежим гулять!&#39;)
+        print('Погода атас, бежим гулять!')
     elif temp &gt; 0:
-        print(&#39;Идем гулять, но нужно взять теплые вещи!&#39;)
+        print('Идем гулять, но нужно взять теплые вещи!')
     elif temp &lt; 0:
-        print(&#39;Остаемся дома и смотрим кино&#39;)
+        print('Остаемся дома и смотрим кино')
     else:
-        print(&#39;Ого, нулевая температура&#39;)
--одиночные проверки, if var &gt; 5: print(&#39;hello&#39;)
+        print('Ого, нулевая температура')
+-одиночные проверки, if var &gt; 5: print('hello')
 -сравнение строк
 -and, or и not (снова повторить)
 -пример: входит ли число в диапазон чисел от 0 до 10
@@ -780,15 +784,15 @@ document.write(`
 -Как найти четное число:
     n = int(input())
     if n % 2 == 0:
-        print(&#39;число четное&#39;)
+        print('число четное')
     else:
-        print(&#39;число не четное&#39;)
+        print('число не четное')
 -Является ли переменная строкой:
-    s = &#39;took-took&#39;
+    s = 'took-took'
     if type(s) == str:
-        print(&#39;да&#39;)
+        print('да')
     else:
-        print(&#39;нет&#39;)
+        print('нет')
 </pre></div>
 </div>
 </section>
@@ -801,21 +805,21 @@ document.write(`
 -добавление в список lst.append()
 -удаление из списка lst.remove()
 -удаление элемента списка по индексу del lst[1]
--заменить элемент lst[0] = &#39;new&#39;
+-заменить элемент lst[0] = 'new'
 -срезы [5:10] [0:-1] [start:stop:step] [::-1]
 -соединение списков lst = [1,2,3] + [4,5,6]
 
 
 -положить элемент в середину списка с помощью соединения
-    lst = [&#39;a&#39;,&#39;b&#39;,&#39;d&#39;]
-    lst = lst[:2] + [&#39;c&#39;] + lst[2:]
+    lst = ['a','b','d']
+    lst = lst[:2] + ['c'] + lst[2:]
     print(lst)
 -длина списка функцией len()
 -создание пустого списка 
 -быстрое создание большого списка с помощью умножения lst = [0]*100
 -список может содержать любой другой тип данных
 -найти элемент списка в списке list[0][0]
--&#39;abc&#39; in lst
+-'abc' in lst
 -функция list(), например переводит строку в список
 -функции max(lst) min(lst)
 -сумма элементов sum(lst)
@@ -837,8 +841,8 @@ document.write(`
 
 sorted(lst) - сортировка по возрастанию
 sorted(lst, reverse=True) - сортировка по убыванию
-&#39;&#39;.join(line) - соединяет все элементы списка в одну строку (важно, чтобы в list были только элементы с типом str)
-&#39;-&#39;.join(list) - тоже самое, только между элементами ставится &quot;-&quot;
+''.join(line) - соединяет все элементы списка в одну строку (важно, чтобы в list были только элементы с типом str)
+'-'.join(list) - тоже самое, только между элементами ставится "-"
 del list[0] - удаление элемента по индексу
 </pre></div>
 </div>
@@ -855,7 +859,7 @@ del list[0] - удаление элемента по индексу
     -перебрать цифры от 50 до 100
 -for
     -имеет собственную переменную; перебирает элементы
-    -range(start, stop, step) - создает расстояние между двумя цифрами &quot;start&quot; и &quot;stop&quot;, с указанным шагом &quot;step&quot;;  range(10,0,-1)
+    -range(start, stop, step) - создает расстояние между двумя цифрами "start" и "stop", с указанным шагом "step";  range(10,0,-1)
     -с помощью for можно перебирать элементы списка или строки
         пример: изменение всех элементов списка
 -break, continue, else
@@ -896,7 +900,7 @@ del list[0] - удаление элемента по индексу
 -Список только из четных чисел  [x**2 for x in range(N) if x % 2 != 0]
 -Простой список из очереди цифр
 -Выборка слов состоящих максимум из 7 букв:
-    cities = [&quot;Москва&quot;, &quot;Тверь&quot;, &quot;Рязань&quot;, &quot;Ярославль&quot;, &quot;Владимир&quot;]
+    cities = ["Москва", "Тверь", "Рязань", "Ярославль", "Владимир"]
     A = [city for city in cities if len(city) &lt; 7]
     print(A)
 -Вложенные генераторы списков
@@ -917,10 +921,10 @@ del list[0] - удаление элемента по индексу
 -Создание кортежа:
     new_tpl = tuple()
     new_tpl = ()
-    new_tpl = (&#39;a&#39;)   - не получится
-    new_tpl = (&#39;a&#39;,)
-    new_tpl = &#39;a&#39;,
--Разбить строку на кортеж: tuple(&#39;str&#39;)
+    new_tpl = ('a')   - не получится
+    new_tpl = ('a',)
+    new_tpl = 'a',
+-Разбить строку на кортеж: tuple('str')
 -Индексы и срезы
 -Конкатенация, умножение
 -Операции in/not in
@@ -937,23 +941,23 @@ del list[0] - удаление элемента по индексу
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Тип dict.
 -Похожи на списки, только нужно самостоятельно создавать индексы для элементов. Это называется ключ:значение. В списках мы находили значение по индексу, а здесь по самостоятельно созданному ключу.
 -{Ключ:значение}
--Создание словаря: d = {&#39;key1&#39;:&#39;value1&#39;, &#39;key2&#39;:&#39;value2&#39;, &#39;key3&#39;:&#39;value3&#39;}  
--Найти значение по ключу: d[&#39;key1&#39;]
--Добавить новый ключ: d[&#39;new_key&#39;] = &#39;new_value&#39;
--Заменить значение по ключу: d[&#39;key2&#39;] = &#39;Cyan&#39;
--Удалить ключ: del d[&#39;key3&#39;]
+-Создание словаря: d = {'key1':'value1', 'key2':'value2', 'key3':'value3'}  
+-Найти значение по ключу: d['key1']
+-Добавить новый ключ: d['new_key'] = 'new_value'
+-Заменить значение по ключу: d['key2'] = 'Cyan'
+-Удалить ключ: del d['key3']
 
 -Названия ключей могут быть: int, str, bool, tuple или любой другой неизменяемый тип данных; (например, list - изменяемый). У значений нет орграничений.
 -Названия ключей уникальны, если создать два одинаковых ключа, то будет работать последний.
 -Функция-конструктор dict() 
-    d2 = dict(house = &quot;дом&quot;, car = &quot;машина&quot;, tree = &quot;дерево&quot;, road = &quot;дорога&quot;, river = &quot;река&quot;)
-        lst = [[2, &quot;неудовлетворительно&quot;], [3, &quot;удовлетворительно&quot;], [4, &quot;хорошо&quot;], [5, &quot;отлично&quot;]]
+    d2 = dict(house = "дом", car = "машина", tree = "дерево", road = "дорога", river = "река")
+        lst = [[2, "неудовлетворительно"], [3, "удовлетворительно"], [4, "хорошо"], [5, "отлично"]]
         d3 = dict(lst)
 -dict.fromkeys() - Возвращает словарь, сформированный из указанной последовательности(например, из списка)
-    a = dict.fromkeys([&quot;+7&quot;, &quot;+6&quot;, &quot;+5&quot;, &quot;+4&quot;])
-    a = dict.fromkeys([&quot;+7&quot;, &quot;+6&quot;, &quot;+5&quot;, &quot;+4&quot;], &quot;value&quot;)
+    a = dict.fromkeys(["+7", "+6", "+5", "+4"])
+    a = dict.fromkeys(["+7", "+6", "+5", "+4"], "value")
 -После удаления несуществующего ключа возникнет ошибка.
--Проверка существует ли определенный ключ в словаре: &#39;abc&#39; in d; или наоборот: &#39;abc&#39; not in d
+-Проверка существует ли определенный ключ в словаре: 'abc' in d; или наоборот: 'abc' not in d
 -Пустой словарь d = {}; d = dict()
 -len(d)
 -Словарь можно перебрать через цикл for
@@ -966,10 +970,10 @@ del list[0] - удаление элемента по индексу
     dict.clear() - Удаление всех записей
     dict.copy() - Создание копии словаря
     dict.get(key) - Позволяет получать значение словаря по ключу (при указании неверного ключа не возникает ошибки, а выдается по умолчанию значение None)
-    dict.get(&quot;Несуществующий_ключ&quot;, False) - При ошибке будет выводится False
+    dict.get("Несуществующий_ключ", False) - При ошибке будет выводится False
     dict.setdefault(key[, default]) - Возвращает значение ключа key и если его нет, то добавляет его в словарь со значением None, либо со значением default, если оно указано
     dict.pop(key) - Удаляет указанный ключ и возвращает его значение
-    dict.pop(&quot;abc&quot;, False) - Здесь возвратится False. Если же ключ присутствует, то возвращается его значение.
+    dict.pop("abc", False) - Здесь возвратится False. Если же ключ присутствует, то возвращается его значение.
     dict.popitem() - Удаляет и возвращает последний ключ:значение в виде кортежа (key, value)
     dict.keys() - Возвращает коллекцию ключей (Удобно использовать в цикле for)
     dict.values() - Возвращает коллекцию из значений словаря (Удобно использовать в цикле for)
@@ -977,8 +981,8 @@ del list[0] - удаление элемента по индексу
     dict.update({key:value}) - Позволяет дополнить словарь новыми значениями, или обновить существующие ключи с новыми значениями
 
     dict.fromkeys() - Возвращает словарь, сформированный из указанной последовательности(например, из списка)
-        a = dict.fromkeys([&quot;+7&quot;, &quot;+6&quot;, &quot;+5&quot;, &quot;+4&quot;])
-        a = dict.fromkeys([&quot;+7&quot;, &quot;+6&quot;, &quot;+5&quot;, &quot;+4&quot;], &quot;value&quot;)
+        a = dict.fromkeys(["+7", "+6", "+5", "+4"])
+        a = dict.fromkeys(["+7", "+6", "+5", "+4"], "value")
 </pre></div>
 </div>
 </section>
@@ -986,12 +990,12 @@ del list[0] - удаление элемента по индексу
 <h2>Множества.<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Тип set
 -Множество ? это неупорядоченная коллекция уникальных элементов.
--Пример: a = {1, 2, 3, &quot;hello&quot;}
--Повторяющиеся значения будут проигнорированы: a = {1,2,3,&quot;hello&quot;, 2,3, &quot;hello&quot;}
+-Пример: a = {1, 2, 3, "hello"}
+-Повторяющиеся значения будут проигнорированы: a = {1,2,3,"hello", 2,3, "hello"}
 -Можно использовать только неизменяемые типы: str, int, tuple
 -Функция set() позволяет создать множество:
     a = set()
-    b=set(&quot;hello world!&quot;)
+    b=set("hello world!")
     c=set([1,1,2,3,5,3,2,1])
     d=set(range(7))  - или даже функцию range()
 -Невозможно создать множество с помощью b = {} - это будет словарь
@@ -1034,7 +1038,7 @@ del list[0] - удаление элемента по индексу
 -return - Возвращает значение и завершает функцию.
 -Присвоить возвращаемые значения функции переменной     a = func(x,y)
 -Несколько возвращаемых значений в виде кортежа; или так:   a,b = func(x,y)
--Что значит &quot;Функция возвращает значение&quot;.
+-Что значит "Функция возвращает значение".
 -Значения аргументов по умолчанию   func(x=0, y=0)
 
 -Условия и циклы внутри функций.
@@ -1043,11 +1047,11 @@ del list[0] - удаление элемента по индексу
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Объявление функции.</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">():</span> 
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Помахать рукой&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Подойти к человеку&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Пожать руку&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Приветствие:&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Здравствуйте, человек!&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Помахать рукой'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Подойти к человеку'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Пожать руку'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Приветствие:'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Здравствуйте, человек!'</span><span class="p">)</span>
 <span class="c1"># Конец функции.</span>
 
 <span class="n">func</span><span class="p">()</span> <span class="c1"># Запуск функции</span>
@@ -1056,14 +1060,14 @@ del list[0] - удаление элемента по индексу
 
 <span class="c1"># Функция с аргументами</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="n">name</span><span class="p">):</span> <span class="c1"># Можно создавать неограниченное кол-во аргументов</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Помахать рукой&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Подойти к &#39;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Пожать руку&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Приветствие:&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Здравствуйте, &#39;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Помахать рукой'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Подойти к '</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Пожать руку'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Приветствие:'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Здравствуйте, '</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
 
-<span class="n">func</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Федор&#39;</span><span class="p">)</span>
-<span class="n">func</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Майя&#39;</span><span class="p">)</span>
+<span class="n">func</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Федор'</span><span class="p">)</span>
+<span class="n">func</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Майя'</span><span class="p">)</span>
 
 <span class="c1"># Пример функции, которая имеет два аргумента в виде чисел, и выводит их сумму</span>
 <span class="c1"># func() # Нельзя вызывать функцию до её объявления.</span>
@@ -1073,7 +1077,7 @@ del list[0] - удаление элемента по индексу
 <span class="n">summa</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="c1"># Данная функция вернет None, и является</span>
-<span class="c1"># &quot;Невозвращаемой функцией&quot;</span>
+<span class="c1"># "Невозвращаемой функцией"</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">summa</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> 
 
 
@@ -1086,36 +1090,36 @@ del list[0] - удаление элемента по индексу
 <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="c1"># 35</span>
 
 <span class="c1"># Локальная и глобальная переменные</span>
-<span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;глобальная переменная&#39;</span> <span class="c1"># работает по всей площади скрипта</span>
+<span class="n">variable</span> <span class="o">=</span> <span class="s1">'глобальная переменная'</span> <span class="c1"># работает по всей площади скрипта</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">example</span><span class="p">():</span>
-    <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;Text&#39;</span> <span class="c1"># локальная переменная, работает только внутри функции, где была создана</span>
+    <span class="n">variable</span> <span class="o">=</span> <span class="s1">'Text'</span> <span class="c1"># локальная переменная, работает только внутри функции, где была создана</span>
 
 <span class="c1"># Вызвать глобальную переменную внутри функции</span>
-<span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;глобальная переменная&#39;</span>
+<span class="n">variable</span> <span class="o">=</span> <span class="s1">'глобальная переменная'</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">example</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="c1"># глобальную переменную, функция спокойно видит</span>
 <span class="n">example</span><span class="p">()</span>
 
 <span class="c1"># Попытка вызвать переменную функции, вне её</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">example</span><span class="p">():</span>
-    <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;переменная&#39;</span>
+    <span class="n">variable</span> <span class="o">=</span> <span class="s1">'переменная'</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span>
 <span class="c1"># print(variable) # ошибка; не существует вне функции</span>
 
 <span class="c1"># У аргумента приоритет выше чем у глобальной переменной</span>
-<span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;глобальная переменная&#39;</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">example</span><span class="p">(</span><span class="n">variable</span><span class="p">):</span> <span class="c1"># на этой строке variable - это аргумент, не путать с &#39;глобальной переменной&#39;</span>
+<span class="n">variable</span> <span class="o">=</span> <span class="s1">'глобальная переменная'</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">example</span><span class="p">(</span><span class="n">variable</span><span class="p">):</span> <span class="c1"># на этой строке variable - это аргумент, не путать с 'глобальной переменной'</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="c1"># выведется аргумент</span>
-<span class="n">example</span><span class="p">(</span><span class="s1">&#39;содержимое аргумента&#39;</span><span class="p">)</span> <span class="c1"># &#39;содержимое аргумента&#39;</span>
+<span class="n">example</span><span class="p">(</span><span class="s1">'содержимое аргумента'</span><span class="p">)</span> <span class="c1"># 'содержимое аргумента'</span>
 
 <span class="c1"># Попытка изменить глобальную переменную внутри функции</span>
-<span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;глобальная переменная&#39;</span>
+<span class="n">variable</span> <span class="o">=</span> <span class="s1">'глобальная переменная'</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">example</span><span class="p">():</span>
     <span class="c1"># print(variable) # ошибка; (!Не факт, что нужно показывать данную строчку как пример!) </span>
-    <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;новое значение&#39;</span> <span class="c1"># здесь variable - новая локальная переменная</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="c1"># &#39;новое значение&#39;</span>
+    <span class="n">variable</span> <span class="o">=</span> <span class="s1">'новое значение'</span> <span class="c1"># здесь variable - новая локальная переменная</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="c1"># 'новое значение'</span>
 <span class="n">example</span><span class="p">()</span> 
-<span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="c1"># &#39;глобальная переменная&#39;; изменение не сохранилось</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span> <span class="c1"># 'глобальная переменная'; изменение не сохранилось</span>
 
 
 <span class="c1"># Чтобы изменять глобальную переменную внутри функции, необходимо ее глобализировать</span>
@@ -1140,7 +1144,7 @@ del list[0] - удаление элемента по индексу
 <span class="k">def</span><span class="w"> </span><span class="nf">def_value</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span>
 
-<span class="n">example</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="s1">&#39;Text&#39;</span><span class="p">)</span> <span class="c1"># &#39;Text&#39;</span>
+<span class="n">example</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="s1">'Text'</span><span class="p">)</span> <span class="c1"># 'Text'</span>
 <span class="n">example</span><span class="p">()</span> <span class="c1"># None</span>
 
 <span class="c1"># Передаем ссылку на функцию другой переменной</span>
@@ -1214,7 +1218,7 @@ del list[0] - удаление элемента по индексу
     <span class="c1"># Создать объект времени, в котором будет храниться 3 часа</span>
     <span class="n">three_hour</span> <span class="o">=</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 
-    <span class="c1"># Вычитаем из объекта времени &quot;now&quot; 3 часа</span>
+    <span class="c1"># Вычитаем из объекта времени "now" 3 часа</span>
     <span class="n">edit_time</span> <span class="o">=</span> <span class="n">now</span> <span class="o">-</span> <span class="n">three_hour</span>
 
     <span class="c1"># Создать фиксированную дату </span>
@@ -1227,11 +1231,11 @@ del list[0] - удаление элемента по индексу
 
     <span class="c1"># Форматируем объект даты в строку, с гибкими настройками</span>
     <span class="n">s</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span>
-            <span class="n">now</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%d</span><span class="s2">.%m.%Y | %H:%M:%S&quot;</span><span class="p">)</span>
+            <span class="n">now</span><span class="p">,</span> <span class="s2">"</span><span class="si">%d</span><span class="s2">.%m.%Y | %H:%M:%S"</span><span class="p">)</span>
 
     <span class="c1"># Форматируем строку в объект datetime</span>
     <span class="n">t</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span>
-            <span class="n">s</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">%d</span><span class="s2">.%m.%Y | %H:%M:%S&quot;</span><span class="p">)</span>
+            <span class="n">s</span><span class="p">,</span> <span class="s2">"</span><span class="si">%d</span><span class="s2">.%m.%Y | %H:%M:%S"</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="toggle docutils container">
@@ -1329,7 +1333,7 @@ del list[0] - удаление элемента по индексу
 <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">():</span>
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello world&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'hello world'</span><span class="p">)</span>
     <span class="n">func</span><span class="p">()</span>
 
 <span class="n">func</span><span class="p">()</span>
@@ -1338,7 +1342,7 @@ del list[0] - удаление элемента по индексу
 <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="n">score</span><span class="p">):</span>
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;score:&quot;</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"score:"</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">score</span><span class="p">:</span>
         <span class="n">func</span><span class="p">(</span><span class="n">score</span><span class="o">=</span><span class="n">score</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 
@@ -1354,7 +1358,7 @@ del list[0] - удаление элемента по индексу
 
     <span class="k">return</span> <span class="kc">False</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">is_palindrome</span><span class="p">(</span><span class="s2">&quot;кабак&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">is_palindrome</span><span class="p">(</span><span class="s2">"кабак"</span><span class="p">))</span>
 </pre></div>
 </div>
 </section>
@@ -1362,10 +1366,10 @@ del list[0] - удаление элемента по индексу
 <h2>Коллбэк функция<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Коллбэк это аргумент или переменная которая может принимать функции и вдальнейшем она вызывается</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">welcome</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Привет </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Привет </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="n">name</span><span class="p">)</span>
 
 <span class="n">dublicate</span> <span class="o">=</span> <span class="n">welcome</span>
-<span class="n">dublicate</span><span class="p">(</span><span class="s1">&#39;Имя&#39;</span><span class="p">)</span>
+<span class="n">dublicate</span><span class="p">(</span><span class="s1">'Имя'</span><span class="p">)</span>
 
 <span class="c1"># Идеальный пример callback-функции</span>
 <span class="c1"># time_spent функция считает время работы функции</span>
@@ -1383,7 +1387,7 @@ del list[0] - удаление элемента по индексу
 <span class="c1"># Можно еще такой пример привести и заодно разобрать requests</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">connection</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://soundcloud.com&quot;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">"https://soundcloud.com"</span>
     <span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
 
@@ -1397,17 +1401,17 @@ del list[0] - удаление элемента по индексу
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 <span class="c1"># r = s(1, 2)</span>
 
-<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="k">lambda</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;lambda&#39;</span><span class="p">)]</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="k">lambda</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">'lambda'</span><span class="p">)]</span>
 <span class="c1"># a[3]()</span>
 <span class="c1"># print(a)</span>
 
 <span class="c1"># Лямбду можно оиспользовать при сортировки словаря:</span>
-<span class="n">array</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;1.01&quot;</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
-         <span class="s2">&quot;6.41&quot;</span><span class="p">:</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-         <span class="s2">&quot;-5.49&quot;</span><span class="p">:</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
-         <span class="s2">&quot;7.09&quot;</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
-         <span class="s2">&quot;9.09&quot;</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-         <span class="s2">&quot;3.09&quot;</span><span class="p">:</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">]}</span>
+<span class="n">array</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"1.01"</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="s2">"a"</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+         <span class="s2">"6.41"</span><span class="p">:</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+         <span class="s2">"-5.49"</span><span class="p">:</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+         <span class="s2">"7.09"</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="s2">"d"</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
+         <span class="s2">"9.09"</span><span class="p">:</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="s2">"f"</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+         <span class="s2">"3.09"</span><span class="p">:</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="s2">"e"</span><span class="p">,</span> <span class="mi">4</span><span class="p">]}</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
@@ -1426,10 +1430,10 @@ del list[0] - удаление элемента по индексу
 <span class="c1"># map</span>
 <span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="o">-</span><span class="mi">30</span><span class="p">,</span> <span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">]</span>
 <span class="n">lst2</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">lst</span><span class="p">)</span> <span class="c1"># перевели все значения списка в строки</span>
-<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lst2</span><span class="p">)</span> <span class="c1"># объединили все значения списка в сплошную строку, итог: &quot;102030-30-20-10&quot;</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">""</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lst2</span><span class="p">)</span> <span class="c1"># объединили все значения списка в сплошную строку, итог: "102030-30-20-10"</span>
 <span class="c1"># map вместе с лябмдой</span>
-<span class="n">lst3</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;|</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">|&quot;</span><span class="p">,</span> <span class="n">lst</span><span class="p">)</span>
-<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lst3</span><span class="p">)</span>
+<span class="n">lst3</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">"|</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">|"</span><span class="p">,</span> <span class="n">lst</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">""</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lst3</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1475,7 +1479,7 @@ return a</p>
 -Правильные примеры:
     s = lambda a: a + 1
     s(1)
-    p = lambda: &quot;hello python&quot;
+    p = lambda: "hello python"
     p()
 </pre></div>
 </div>
@@ -1496,25 +1500,25 @@ return a</p>
     <span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">ZeroDivisionError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Делить на ноль нельзя:&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Делить на ноль нельзя:"</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Введено неправильное значение&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Введено неправильное значение"</span><span class="p">)</span>
 <span class="k">except</span> <span class="p">(</span><span class="ne">NameError</span><span class="p">,</span> <span class="ne">SyntaxError</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Можно создать except одновременно для двух типов ошибок&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Можно создать except одновременно для двух типов ошибок"</span><span class="p">)</span>
 <span class="k">except</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ошибка&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Ошибка'</span><span class="p">)</span>
 <span class="c1"># Нечасто используется (else и finally):</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Выполняется, когда не произошло никаких ошибок&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Выполняется, когда не произошло никаких ошибок"</span><span class="p">)</span>
 <span class="k">finally</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Выполняется абсолютно всегда, в самом конце.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Выполняется абсолютно всегда, в самом конце."</span><span class="p">)</span>
 
 <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="k">assert</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">3</span> <span class="c1"># вызовется ошибка, так как a != 3 это False</span>
-<span class="k">assert</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Свое описание ошибки&quot;</span> <span class="c1"># можно добавить описание ошибки</span>
+<span class="k">assert</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">"Свое описание ошибки"</span> <span class="c1"># можно добавить описание ошибки</span>
 
-<span class="k">raise</span> <span class="ne">BaseException</span><span class="p">(</span><span class="s2">&quot;Свое описание ошибки&quot;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">err</span>
-<span class="c1"># err.args = (&quot;Мое описание ошибки&quot;,) # При этом err.__cause__ будет всегда возвращать дефолтное описание ошибки</span>
+<span class="k">raise</span> <span class="ne">BaseException</span><span class="p">(</span><span class="s2">"Свое описание ошибки"</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">err</span>
+<span class="c1"># err.args = ("Мое описание ошибки",) # При этом err.__cause__ будет всегда возвращать дефолтное описание ошибки</span>
 <span class="c1"># raise # Поднимает изначальную ошибку, удобно использовать если надо в except снова вызвать исходную ошибку</span>
 </pre></div>
 </div>
@@ -1529,7 +1533,7 @@ def detect(func):
         try:
             return func(*args, **kwargs)
         except BaseException as err:
-            print(f&#39;Ошибка в функции {func.__name__}: {err}&#39;)
+            print(f'Ошибка в функции {func.__name__}: {err}')
             return
     return updatefunc
 
@@ -1545,7 +1549,7 @@ def test2(text):
     print(res)
 
 test(1, 0) # Ошибка
-test2(&#39;privet&#39;)
+test2('privet')
 
 # Еще пример таймера
 import time
@@ -1652,17 +1656,17 @@ def test(txt: str):
     print(sum(b))
     lst = (x for x in range(1000000000))
     for i in lst:
-        print(i, end=&quot;&quot;)
+        print(i, end="")
         if i &gt; 100: break
 </pre></div>
 </div>
 </section>
 <section id="id24">
 <h2>Работа с файлами.<a class="headerlink" href="#id24" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>file = open(&#39;text.txt, &#39;w&#39;)
-file.write(&#39;hey&#39;)
-file.writelines([&#39;hey&#39;,&#39;hey2]) # heyhey2 (непонятно зачем нужен)
-file = open(&#39;text.txt, &#39;r&#39;)
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>file = open('text.txt, 'w')
+file.write('hey')
+file.writelines(['hey','hey2]) # heyhey2 (непонятно зачем нужен)
+file = open('text.txt, 'r')
 file.read() # читает весь файл
 file.readline() # при каждом вызове читаем следующую строчку
 file.readlines() # список со всеми строками
@@ -1670,7 +1674,7 @@ file.readlines() # список со всеми строками
     for line in file:
         print(line)
 file.close() # закрытие файла
--Зачастую надо дописывать в open -&gt; encoding=&#39;utf-8&#39;
+-Зачастую надо дописывать в open -&gt; encoding='utf-8'
 -Обозначения:
     r - чтение
     w - запись/перезапись (создается файл, если не существует)
@@ -1680,8 +1684,8 @@ file.close() # закрытие файла
     + - запись/чтение (r+, w+)
     x - вызывает ошибку, если файл существует,  иначе создает файл и открывает его на запись
 
-- with open(&#39;name.txt&#39;, &#39;w&#39;, encoding=&#39;utf-8&#39;) as file:
-    file.write(&#39;hello world&#39;)
+- with open('name.txt', 'w', encoding='utf-8') as file:
+    file.write('hello world')
 
 https://metanit.com/python/tutorial/4.1.php
 https://docs-python.ru/tutorial/vstroennye-funktsii-interpretatora-python/funktsija-open/
@@ -1694,20 +1698,20 @@ https://letpy.com/handbook/builtins/open/
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 
 <span class="c1"># Прочитать файл data.json</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.json&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'data.json'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span> <span class="c1"># Перевести содержимое файла в dict</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
 
 <span class="c1"># Записать dict в data.json</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;1234&quot;</span><span class="p">:</span> <span class="s2">&quot;ASDFG&quot;</span><span class="p">}</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.json&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"1234"</span><span class="p">:</span> <span class="s2">"ASDFG"</span><span class="p">}</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'data.json'</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="c1"># Перевести dict в str</span>
     <span class="c1"># result = json.dumps(data, ensure_ascii=False) # если есть абракадабра после записи</span>
     <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="c1"># Записать в файл</span>
 
 <span class="c1"># Еще неплохой способ</span>
 <span class="c1"># indent=4 - автоматически выравнивает json</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;myfile.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"myfile.json"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
     <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">file</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1718,7 +1722,7 @@ https://letpy.com/handbook/builtins/open/
 
 <span class="c1"># Работа с папками.</span>
 <span class="c1"># Посмотреть все файлы папки и подпапки по пути path</span>
-<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;C:\HOME\PROG\web&quot;</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s2">"C:\HOME\PROG\web"</span>
 <span class="n">result</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 
@@ -1727,38 +1731,38 @@ https://letpy.com/handbook/builtins/open/
 <span class="nb">print</span><span class="p">(</span><span class="n">files</span><span class="p">)</span>
 
 <span class="c1"># Создание папки (если уже существует будет ошибка)</span>
-<span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s2">&quot;NEW&quot;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s2">"NEW"</span><span class="p">)</span>
 
 <span class="c1"># Создание папки (если существует, то ошибки не будет)</span>
-<span class="c1"># Без &quot;exist_ok=True&quot; выйдет ошибка</span>
-<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">&quot;FOLDER&quot;</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># Без "exist_ok=True" выйдет ошибка</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">"FOLDER"</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># Проверить существует ли папка или файл</span>
-<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;folder/or/file&quot;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">"folder/or/file"</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="c1"># имя системы</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">)</span>
-<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;NEW VARIABLE&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;123&quot;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"NEW VARIABLE"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"123"</span>
 
 <span class="c1"># Удаление папки (Если папки не существует, будет ошибка)</span>
-<span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="s2">&quot;NEW&quot;</span><span class="p">)</span>
-<span class="n">os</span><span class="o">.</span><span class="n">removedirs</span><span class="p">(</span><span class="s2">&quot;NEW&quot;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="s2">"NEW"</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">removedirs</span><span class="p">(</span><span class="s2">"NEW"</span><span class="p">)</span>
 
 <span class="c1"># Переименовать файл или папку</span>
-<span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s2">&quot;NEW&quot;</span><span class="p">,</span> <span class="s2">&quot;FOLDER&quot;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s2">"NEW"</span><span class="p">,</span> <span class="s2">"FOLDER"</span><span class="p">)</span>
 
 <span class="c1"># Другое.</span>
 <span class="c1"># Исполняет команду в консоле, например cmd (если система windows)</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;dir&quot;</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">"dir"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 
 <span class="c1"># Домашняя директория</span>
-<span class="n">homepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s2">&quot;~&quot;</span><span class="p">)</span>
+<span class="n">homepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s2">"~"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">homepath</span><span class="p">)</span>
 
 <span class="c1"># Еще можно разобрать</span>
-<span class="n">icon_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)),</span> <span class="s2">&quot;qspectrumanalyzer.svg&quot;</span><span class="p">)</span>
+<span class="n">icon_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)),</span> <span class="s2">"qspectrumanalyzer.svg"</span><span class="p">)</span>
 <span class="c1"># os.path.join</span>
 <span class="c1"># os.path.dirname</span>
 <span class="c1"># os.path.realpath</span>
@@ -1767,13 +1771,45 @@ https://letpy.com/handbook/builtins/open/
 <span class="c1"># Упражнения на os: https://www.w3resource.com/python-exercises/os/index.php</span>
 
 
+<span class="c1"># модуль pathlib</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+
+<span class="c1"># Объединение через слэш</span>
+<span class="n">base</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">"home"</span><span class="p">)</span>
+<span class="n">full_path</span> <span class="o">=</span> <span class="n">base</span> <span class="o">/</span> <span class="s2">"music"</span> <span class="o">/</span> <span class="s2">"bands"</span> 
+
+<span class="c1"># Извлечение компонентов</span>
+<span class="n">file</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">"home/music/led_zeppelin.mp3"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>    <span class="c1"># "led_zeppelin.mp3" </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">stem</span><span class="p">)</span>    <span class="c1"># "led_zeppelin"     </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">suffix</span><span class="p">)</span>  <span class="c1"># ".mp3"             </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">parts</span><span class="p">)</span>   <span class="c1"># ('home', 'music', 'led_zeppelin.mp3') </span>
+
+<span class="c1"># Создание папок</span>
+<span class="n">new_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">"home/music/rock/grunge"</span><span class="p">)</span>
+<span class="n">new_dir</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
+
+<span class="c1"># Поиск файлов по маске</span>
+<span class="n">music_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">"home/music"</span><span class="p">)</span>
+<span class="c1"># Найти все файлы .mp3 только в этой папке</span>
+<span class="n">mp3_files</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">music_dir</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">"*.mp3"</span><span class="p">))</span>
+<span class="c1"># Найти все файлы .mp3 в этой папке и всех её подпапках</span>
+<span class="n">all_mp3_files</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">music_dir</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">"**/*.mp3"</span><span class="p">))</span>
+
+<span class="c1"># Проверка существования</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">"home/music/playlist.mp3"</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">file_path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Файл найден!"</span><span class="p">)</span>
+
+
+
 </pre></div>
 </div>
 </section>
 <section id="id25">
 <h2>Перемещение файлов.<a class="headerlink" href="#id25" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import shutil
-shutil.move(&quot;path/to/current/file.foo&quot;, &quot;path/to/new/destination/for/file.foo&quot;)
+shutil.move("path/to/current/file.foo", "path/to/new/destination/for/file.foo")
 </pre></div>
 </div>
 </section>
@@ -1810,10 +1846,67 @@ shutil.move(&quot;path/to/current/file.foo&quot;, &quot;path/to/new/destination/
 </section>
 <section id="id26">
 <h2>Аннотации<a class="headerlink" href="#id26" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>https://clck.ru/339CnS
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id27">
+<h1>Аннотации<a class="headerlink" href="#id27" title="Link to this heading">#</a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">price</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">title</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">indent_right</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Фукнция которая добавляет пробелы в начале строки,</span>
+<span class="sd">    если она короче width</span>
+<span class="sd">    Args:</span>
+<span class="sd">        s (str): Принимается строка.</span>
+<span class="sd">        width (int): Минимальная ширина итоговой строки.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        str: Строка, дополненная пробелами слева.</span>
+<span class="sd">    </span>
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: Если width имеет отрицательное значение.</span>
+<span class="sd">        </span>
+<span class="sd">    Examples:</span>
+<span class="sd">        &gt;&gt;&gt; indent_right("test", 6)</span>
+<span class="sd">        '  test'"""</span>
+    <span class="k">if</span> <span class="n">width</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Ширина не может быть отрицательной"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s2">" "</span> <span class="o">*</span> <span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">width</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)))</span> <span class="o">+</span> <span class="n">s</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">indent_right</span><span class="p">(</span><span class="s2">"текст"</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Book</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Описание класса"""</span>
+    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">author</span><span class="p">:</span> <span class="nb">str</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">author</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">author</span> <span class="o">=</span> <span class="n">author</span>
+
+<span class="n">b</span><span class="p">:</span> <span class="n">Book</span> <span class="o">=</span> <span class="n">Book</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"Фаренгейт 451"</span><span class="p">,</span> <span class="n">author</span><span class="o">=</span><span class="s2">"Бредбери"</span><span class="p">)</span>
+
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span>
+
+<span class="n">price</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">hundreds</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">return</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">//</span> <span class="mi">100</span><span class="p">)</span> <span class="o">%</span> <span class="mi">10</span>
+
+<span class="n">hundreds</span><span class="p">(</span><span class="mf">100.0</span><span class="p">)</span>
+<span class="n">hundreds</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># списки</span>
+<span class="n">titles</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Hello"</span><span class="p">,</span> <span class="s2">"world"</span><span class="p">]</span>
+
+<span class="n">items</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"hello"</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="n">items2</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"a"</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">items2</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
 <section id="async-await">
 <h2>Асинхронное программирование async/await<a class="headerlink" href="#async-await" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1. https://habr.com/ru/articles/667630
@@ -1821,8 +1914,8 @@ shutil.move(&quot;path/to/current/file.foo&quot;, &quot;path/to/new/destination/
 </pre></div>
 </div>
 </section>
-<section id="id27">
-<h2>Создание телеграм бота<a class="headerlink" href="#id27" title="Link to this heading">#</a></h2>
+<section id="id28">
+<h2>Создание телеграм бота<a class="headerlink" href="#id28" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>https://github.com/python-telegram-bot/python-telegram-bot
 Просто начать с echo-бота, а там как пойдет
 </pre></div>
@@ -1846,34 +1939,34 @@ shutil.move(&quot;path/to/current/file.foo&quot;, &quot;path/to/new/destination/
 </pre></div>
 </div>
 </section>
-<section id="id28">
-<h2>Решение проблем:<a class="headerlink" href="#id28" title="Link to this heading">#</a></h2>
+<section id="id29">
+<h2>Решение проблем:<a class="headerlink" href="#id29" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-https://otvet.mail.ru/question/218478491 - Visual Studio Code не понимает русский язык в пути к файлу
 -https://ru.stackoverflow.com/questions/1095365/%d0%9a%d0%b0%d0%ba-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d1%82%d1%8c-pip-%d0%b4%d0%bb%d1%8f-%d1%80%d0%b0%d0%b7%d0%bd%d1%8b%d1%85-%d0%b2%d0%b5%d1%80%d1%81%d0%b8%d0%b9-python - Как использовать pip для разных версий python?
 </pre></div>
 </div>
 </section>
-<section id="id29">
-<h2>Дополнить план обучения следующим:<a class="headerlink" href="#id29" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- ComputerVision (Очень много можно придумать тем для выявления разного всего, и может быть создания масок типа &quot;Очки&quot; и пр.)
+<section id="id30">
+<h2>Дополнить план обучения следующим:<a class="headerlink" href="#id30" title="Link to this heading">#</a></h2>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- ComputerVision (Очень много можно придумать тем для выявления разного всего, и может быть создания масок типа "Очки" и пр.)
 - Парсинг с помощью Selenium
 - Создание сайта с помощью Flask (фронтенд) и может быть еще Django (бэкенд)
 - Создание оконных приложений с помощью wxPython
 - enumerate()
-- Что такое: if __name__ == &quot;__main__&quot;
+- Что такое: if __name__ == "__main__"
 </pre></div>
 </div>
 </section>
-<section id="id30">
-<h2>Разное.<a class="headerlink" href="#id30" title="Link to this heading">#</a></h2>
 <section id="id31">
-<h3>Алгоритмы обработки списков.<a class="headerlink" href="#id31" title="Link to this heading">#</a></h3>
+<h2>Разное.<a class="headerlink" href="#id31" title="Link to this heading">#</a></h2>
+<section id="id32">
+<h3>Алгоритмы обработки списков.<a class="headerlink" href="#id32" title="Link to this heading">#</a></h3>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Видео https://youtu.be/gMM7632kTkI?t=267 (4:27)
 </pre></div>
 </div>
 </section>
-<section id="id32">
-<h3>Элементы функционального подхода к программированию.<a class="headerlink" href="#id32" title="Link to this heading">#</a></h3>
+<section id="id33">
+<h3>Элементы функционального подхода к программированию.<a class="headerlink" href="#id33" title="Link to this heading">#</a></h3>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>https://clck.ru/333qU6
 </pre></div>
 </div>
@@ -1945,6 +2038,7 @@ shutil.move(&quot;path/to/current/file.foo&quot;, &quot;path/to/new/destination/
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">План обучения <code class="docutils literal notranslate"><span class="pre">py</span></code></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vs-code-python">Установка Vs Code + Python.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Введение.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Переменные.</a></li>
@@ -1988,19 +2082,25 @@ shutil.move(&quot;path/to/current/file.foo&quot;, &quot;path/to/new/destination/
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requests-html">Модуль requests-html</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#selenium">Selenium</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Аннотации</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Аннотации</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#async-await">Асинхронное программирование async/await</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Создание телеграм бота</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Создание телеграм бота</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pygame">Pygame</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ursina">Ursina</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re">Регулярные выражения <code class="docutils literal notranslate"><span class="pre">'re'</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Решение проблем:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Дополнить план обучения следующим:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Разное.</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Алгоритмы обработки списков.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">Элементы функционального подхода к программированию.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Решение проблем:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Дополнить план обучения следующим:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Разное.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">Алгоритмы обработки списков.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">Элементы функционального подхода к программированию.</a></li>
 </ul>
 </li>
 </ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>

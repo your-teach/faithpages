@@ -178,6 +178,7 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Python/study-plan-py.html">План обучения <code class="docutils literal notranslate"><span class="pre">py</span></code></a></li>
+
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Tables/py-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">py</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Python/Tasks/1.in-out.html">Ввод и вывод</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Python/Tasks/2.strings.html">Строки</a></li>
@@ -460,6 +461,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#powershell">Проблема заглавных букв в Powershell</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">При запуске выдает “Python”.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vscode-lua-macos">VScode + Lua на MacOs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vscode-lua-macos-v2">Vscode + Lua на MacOS #v2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vscode">Кодировка файла в vscode.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda">Conda в терминале</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pip">Если pip недоступен</a></li>
@@ -551,8 +553,8 @@ document.write(`
 - <code class="docutils literal notranslate"><span class="pre">C:\Users\Username\AppData\Local\Programs\Python\Python310\</span></code></p></li>
 <li><p>Второе решение:<br />
 В settings.json вписать следующее:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;code-runner.executorMap&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;python&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&amp; PATH&quot;</span><span class="w"> </span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">"code-runner.executorMap"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"python"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&amp; PATH"</span><span class="w"> </span>
 <span class="p">}</span>
 <span class="c1">// PATH:</span>
 <span class="c1">// C:/Users/Username/AppData/Local/Programs/Python/Python312/python.exe</span>
@@ -579,6 +581,30 @@ document.write(`
 <li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">lua-5.4.7</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">make</span> <span class="pre">macosx</span> <span class="pre">install</span></code></p></li>
 </ol>
+</section>
+<section id="vscode-lua-macos-v2">
+<h2>Vscode + Lua на MacOS #v2<a class="headerlink" href="#vscode-lua-macos-v2" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Установка brew.</p></li>
+</ol>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">/bin/bash</span> <span class="pre">-c</span> <span class="pre">&quot;$(curl</span> <span class="pre">-fsSL</span> <span class="pre">https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</span></code></p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Настройка PATH.</p></li>
+</ol>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">&gt;&gt;</span> <span class="pre">~/.zprofile</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">'eval</span> <span class="pre">&quot;$(/opt/homebrew/bin/brew</span> <span class="pre">shellenv</span> <span class="pre">zsh)&quot;'</span> <span class="pre">&gt;&gt;</span> <span class="pre">~/.zprofile</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eval</span> <span class="pre">&quot;$(/opt/homebrew/bin/brew</span> <span class="pre">shellenv</span> <span class="pre">zsh)&quot;</span></code></p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Установка lua.</p></li>
+</ol>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">lua</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lua</span> <span class="pre">-v</span></code></p></li>
+</ul>
 </section>
 <section id="vscode">
 <h2>Кодировка файла в vscode.<a class="headerlink" href="#vscode" title="Link to this heading">#</a></h2>
@@ -629,8 +655,8 @@ document.write(`
 <span class="n">data</span> <span class="o">=</span> <span class="n">load_dotenv</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="c1"># True если в файле .env что-то есть</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;login&quot;</span><span class="p">])</span> <span class="c1"># qwerty</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;pass&quot;</span><span class="p">])</span> <span class="c1"># 12345</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"login"</span><span class="p">])</span> <span class="c1"># qwerty</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"pass"</span><span class="p">])</span> <span class="c1"># 12345</span>
 </pre></div>
 </div>
 </section>
@@ -641,7 +667,7 @@ document.write(`
 </pre></div>
 </div>
 <p>Создание постоянной переменной среды (изменения происходят после перезапуска терминала):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setx</span> <span class="n">my_login</span> <span class="s2">&quot;54321&quot;</span> <span class="o">/</span><span class="n">M</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setx</span> <span class="n">my_login</span> <span class="s2">"54321"</span> <span class="o">/</span><span class="n">M</span>
 </pre></div>
 </div>
 <p>Проверка переменной:</p>
@@ -653,23 +679,23 @@ document.write(`
 </pre></div>
 </div>
 <p>Как удалить постоянную переменную непонятно, следующая команда оставляет переменную в списке (изменения происходят после перезапуска терминала):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setx</span> <span class="n">my_login</span> <span class="s2">&quot;&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setx</span> <span class="n">my_login</span> <span class="s2">""</span>
 </pre></div>
 </div>
 <p>Использование переменной среды в коде Python:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;my_login&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"my_login"</span><span class="p">))</span>
 </pre></div>
 </div>
 </section>
 <section id="visual-studio-code-settings-json">
 <h4>Через настройки visual studio code, settings.json:<a class="headerlink" href="#visual-studio-code-settings-json" title="Link to this heading">#</a></h4>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;terminal.integrated.env.windows&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;MYLOGIN&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;qwerty&quot;</span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">"terminal.integrated.env.windows"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"MYLOGIN"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qwerty"</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;MYLOGIN&quot;</span><span class="p">))</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"MYLOGIN"</span><span class="p">))</span>
 </pre></div>
 </div>
 </section>
@@ -677,7 +703,7 @@ document.write(`
 <section id="linux">
 <h3>Linux<a class="headerlink" href="#linux" title="Link to this heading">#</a></h3>
 <p>Создание временной переменной через терминал:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">TEST_VAR</span><span class="o">=</span><span class="s2">&quot;Hello World!&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">TEST_VAR</span><span class="o">=</span><span class="s2">"Hello World!"</span>
 </pre></div>
 </div>
 <p>Применить изменение:</p>
@@ -695,12 +721,12 @@ document.write(`
 </ul>
 <p>Для /etc/environment:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">nano</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">environment</span>
-<span class="n">VARIABLE_NAME</span><span class="o">=</span><span class="s2">&quot;value&quot;</span>
+<span class="n">VARIABLE_NAME</span><span class="o">=</span><span class="s2">"value"</span>
 </pre></div>
 </div>
 <p>Для .bashrc (или .zshrc):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nano</span> <span class="o">~/.</span><span class="n">bashrc</span> <span class="p">(</span><span class="n">или</span> <span class="n">nano</span> <span class="o">~/.</span><span class="n">zshrc</span><span class="p">)</span>
-<span class="n">export</span> <span class="n">VARIABLE_NAME</span><span class="o">=</span><span class="s2">&quot;value&quot;</span>
+<span class="n">export</span> <span class="n">VARIABLE_NAME</span><span class="o">=</span><span class="s2">"value"</span>
 </pre></div>
 </div>
 <p>Сохранение изменений:</p>
@@ -716,13 +742,13 @@ document.write(`
 <h3>MacOS<a class="headerlink" href="#macos" title="Link to this heading">#</a></h3>
 <p>macOS обычно использует Bash или Zsh (узнать оболочку echo $SHELL)</p>
 <p>Временная переменная:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">MY_VARIABLE</span><span class="o">=</span><span class="s2">&quot;my_value&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">MY_VARIABLE</span><span class="o">=</span><span class="s2">"my_value"</span>
 </pre></div>
 </div>
 <p>Постоянная переменная:<br />
 Добавить через nano в файл ~/.bash_profile или ~/.zshrc
 следующую строку</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">MY_VARIABLE</span><span class="o">=</span><span class="s2">&quot;my_value&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">MY_VARIABLE</span><span class="o">=</span><span class="s2">"my_value"</span>
 </pre></div>
 </div>
 <p>Применить изменение:</p>
@@ -775,7 +801,7 @@ document.write(`
 <section id="c-csr">
 <h4>c. Создать запрос на подпись сертификата (CSR)<a class="headerlink" href="#c-csr" title="Link to this heading">#</a></h4>
 <p>При создании CSR нужно указать Common Name (CN) как <code class="docutils literal notranslate"><span class="pre">localhost</span></code> или <code class="docutils literal notranslate"><span class="pre">127.0.0.1</span></code>. Пример команды:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>openssl<span class="w"> </span>req<span class="w"> </span>-new<span class="w"> </span>-key<span class="w"> </span>server.key<span class="w"> </span>-out<span class="w"> </span>server.csr<span class="w"> </span>-subj<span class="w"> </span><span class="s2">&quot;/CN=localhost&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>openssl<span class="w"> </span>req<span class="w"> </span>-new<span class="w"> </span>-key<span class="w"> </span>server.key<span class="w"> </span>-out<span class="w"> </span>server.csr<span class="w"> </span>-subj<span class="w"> </span><span class="s2">"/CN=localhost"</span>
 </pre></div>
 </div>
 <p>Здесь мы используем <code class="docutils literal notranslate"><span class="pre">-subj</span></code> чтобы не вводить данные интерактивно 26.</p>
@@ -880,6 +906,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#powershell">Проблема заглавных букв в Powershell</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">При запуске выдает “Python”.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vscode-lua-macos">VScode + Lua на MacOs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vscode-lua-macos-v2">Vscode + Lua на MacOS #v2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vscode">Кодировка файла в vscode.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda">Conda в терминале</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pip">Если pip недоступен</a></li>

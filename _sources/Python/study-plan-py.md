@@ -3,33 +3,34 @@
 ## Установка Vs Code + Python.
 1. https://code.visualstudio.com/download
 2. https://www.python.org/downloads/
-3. RuLang: Шестерёнка -> Command Pallete -> Вводим 'lang' -> Configure Display Language -> 'Русский'
-4. Расширение Python 
-5. Расширение Code Runner 
-6. Параметры:
-    - Установить стандартное автосохрание -> Файл -> Автосохранение
-    - Изменить шрифт -> editor.fontSize -> 16
-    - Code-runner: Save file before run [галочка стоит]
-    - Code-runner: Run in terminal [галочка стоит]
-7. Settings.json  
-    -Очистка консоли:
+3. Расширение Python 
+4. Расширение Code Runner 
+5. Settings.json  
+    ```json
+    {
+        "files.autoSave": "afterDelay",
+        "editor.fontSize": 18,
+        "code-runner.runInTerminal": true,
+        "code-runner.saveFileBeforeRun": true,
+        "chat.disableAIFeatures": true,
+        "editor.quickSuggestions": {
+            "other": "off",
+            "comments": "off",
+            "strings": "off"
+        },
+        "editor.suggestOnTriggerCharacters": false,
+        "editor.parameterHints.enabled": false,
+        "editor.inlineSuggest.enabled": false,
+        "editor.tabCompletion": "off",
+        "editor.acceptSuggestionOnEnter": "off",
+        "editor.snippetSuggestions": "none",
+        "editor.hover.enabled": "off",
+        "terminal.integrated.suggest.enabled": false,
+        "terminal.integrated.shellIntegration.enabled": false,
+    }
     ```
-        "code-runner.executorMap": {
-            "python": "clear; python -u" }
-    ```
-8. Создать папку на рабочем столе -> Открываем её в Vscode -> Далее создаем два файла -> main.py theory.py  
-9. Выключить Ai chat и прочее в настройках: Chat: Disable Ai Freatures  
-10. Выключить подсказки в vs code:  
-    ```
-    "editor.quickSuggestions": {
-        "other": "off",
-        "comments": "off",
-        "strings": "off"
-    },
-    "editor.suggestOnTriggerCharacters": false,
-    "editor.parameterHints.enabled": false,
-    "editor.hover.enabled": false
-    ```
+6. Создать папку на рабочем столе с файлами main.py theory.py  
+
 
 ## Введение.
 
@@ -1123,6 +1124,38 @@ icon_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "qspectrum
 # Упражнения на os: https://www.w3resource.com/python-exercises/os/index.php
 
 
+# модуль pathlib
+from pathlib import Path
+
+# Объединение через слэш
+base = Path("home")
+full_path = base / "music" / "bands" 
+
+# Извлечение компонентов
+file = Path("home/music/led_zeppelin.mp3")
+print(file.name)    # "led_zeppelin.mp3" 
+print(file.stem)    # "led_zeppelin"     
+print(file.suffix)  # ".mp3"             
+print(file.parts)   # ('home', 'music', 'led_zeppelin.mp3') 
+
+# Создание папок
+new_dir = Path("home/music/rock/grunge")
+new_dir.mkdir(parents=True, exist_ok=True) 
+
+# Поиск файлов по маске
+music_dir = Path("home/music")
+# Найти все файлы .mp3 только в этой папке
+mp3_files = list(music_dir.glob("*.mp3"))
+# Найти все файлы .mp3 в этой папке и всех её подпапках
+all_mp3_files = list(music_dir.glob("**/*.mp3"))
+
+# Проверка существования
+file_path = Path("home/music/playlist.mp3")
+if file_path.exists():
+    print("Файл найден!")
+
+
+
 ```  
 
 
@@ -1149,7 +1182,66 @@ icon_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "qspectrum
 
 ## Аннотации
 
-    https://clck.ru/339CnS
+
+
+# Аннотации
+```python
+price: int = 5
+title: str
+
+def indent_right(s: str, width: int) -> str:
+    """Фукнция которая добавляет пробелы в начале строки,
+    если она короче width
+    Args:
+        s (str): Принимается строка.
+        width (int): Минимальная ширина итоговой строки.
+    
+    Returns:
+        str: Строка, дополненная пробелами слева.
+    
+    Raises:
+        ValueError: Если width имеет отрицательное значение.
+        
+    Examples:
+        >>> indent_right("test", 6)
+        '  test'"""
+    if width < 0:
+        raise ValueError("Ширина не может быть отрицательной")
+    return " " * (max(0, width - len(s))) + s
+
+print(indent_right("текст", 11))
+
+class Book:
+    """Описание класса"""
+    title: str
+    author: str
+
+    def __init__(self, title: str, author: str) -> None:
+        self.title = title
+        self.author = author
+
+b: Book = Book(title="Фаренгейт 451", author="Бредбери")
+
+
+from typing import Optional, Union
+
+price: Optional[int]
+
+def hundreds(x: Union[int, float]) -> int:
+    return (int(x) // 100) % 10
+
+hundreds(100.0)
+hundreds(100)
+
+# списки
+titles: list[str] = ["Hello", "world"]
+
+items: list = ["hello", 1]
+
+items2: list[str | int] = ["a", 2]
+
+print(items2)
+```
 
 ## Асинхронное программирование async/await
 

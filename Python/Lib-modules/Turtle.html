@@ -178,6 +178,7 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../study-plan-py.html">План обучения <code class="docutils literal notranslate"><span class="pre">py</span></code></a></li>
+
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../Tables/py-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">py</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Tasks/1.in-out.html">Ввод и вывод</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tasks/2.strings.html">Строки</a></li>
@@ -567,7 +568,7 @@ document.write(`
 <p><img alt="" src="../../_images/pacman.png" /></p>
 <div class="toggle docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">turtle</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="n">color</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">)</span>
+<span class="n">color</span><span class="p">(</span><span class="s1">'black'</span><span class="p">,</span> <span class="s1">'yellow'</span><span class="p">)</span>
 <span class="n">speed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">up</span><span class="p">()</span>
 <span class="n">backward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
@@ -589,7 +590,7 @@ document.write(`
 <h2>Солнце<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
 <p><img alt="" src="../../_images/sun.png" /></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">turtle</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="n">color</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">)</span>
+<span class="n">color</span><span class="p">(</span><span class="s1">'red'</span><span class="p">,</span> <span class="s1">'yellow'</span><span class="p">)</span>
 <span class="n">begin_fill</span><span class="p">()</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">forward</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
@@ -605,9 +606,9 @@ document.write(`
 <h2>Солнце-мандала<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
 <p><img alt="" src="../../_images/sun-mandala.png" /></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">turtle</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="n">bgcolor</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">bgcolor</span><span class="p">(</span><span class="s1">'black'</span><span class="p">)</span>
 <span class="n">t</span> <span class="o">=</span> <span class="n">Pen</span><span class="p">()</span>
-<span class="n">t</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">'orange'</span><span class="p">,</span> <span class="s1">'yellow'</span><span class="p">)</span>
 <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">score</span> <span class="o">+=</span> <span class="mi">10</span>
@@ -620,11 +621,11 @@ document.write(`
 <h2>Солнце-мандала 2<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
 <p><img alt="" src="../../_images/sun-mandala2.png" /></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">turtle</span>
-<span class="n">turtle</span><span class="o">.</span><span class="n">bgcolor</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">bgcolor</span><span class="p">(</span><span class="s2">"black"</span><span class="p">)</span>
 <span class="n">t</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Pen</span><span class="p">()</span>
 <span class="n">turtle</span><span class="o">.</span><span class="n">tracer</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">turtle</span><span class="o">.</span><span class="n">delay</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">t</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;orange&#39;</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">'orange'</span><span class="p">)</span>
 <span class="n">go</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="p">):</span>
     <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">go</span><span class="p">)</span>
@@ -656,7 +657,7 @@ document.write(`
 <span class="kn">import</span><span class="w"> </span><span class="nn">turtle</span>
 
 <span class="n">turtle</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="mi">700</span><span class="p">)</span>
-<span class="n">turtle</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Spiral&quot;</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Spiral"</span><span class="p">)</span>
 <span class="n">turtle</span><span class="o">.</span><span class="n">speed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">turtle</span><span class="o">.</span><span class="n">hideturtle</span><span class="p">()</span>
 <span class="n">n</span><span class="o">=</span><span class="mi">200</span>
@@ -674,9 +675,9 @@ document.write(`
 <h2>Бактерия<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
 <p><img alt="" src="../../_images/bacteria.png" /></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">turtle</span>
-<span class="n">turtle</span><span class="o">.</span><span class="n">bgcolor</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">turtle</span><span class="o">.</span><span class="n">bgcolor</span><span class="p">(</span><span class="s1">'black'</span><span class="p">)</span>
 <span class="n">pen</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Pen</span><span class="p">()</span>
-<span class="n">pen</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">pen</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s1">'green'</span><span class="p">)</span>
 <span class="n">pen</span><span class="o">.</span><span class="n">speed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">f</span> <span class="o">=</span> <span class="n">l</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="k">while</span> <span class="n">l</span> <span class="o">&lt;=</span> <span class="mi">190</span><span class="p">:</span>
@@ -763,8 +764,8 @@ window.update()</p>
 <span class="n">ball</span><span class="o">.</span><span class="n">penup</span><span class="p">()</span>
 <span class="n">ball</span><span class="o">.</span><span class="n">setx</span><span class="p">(</span><span class="o">-</span><span class="mi">600</span><span class="p">)</span>
 <span class="n">ball</span><span class="o">.</span><span class="n">sety</span><span class="p">(</span><span class="o">-</span><span class="mi">300</span><span class="p">)</span>
-<span class="n">ball</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
-<span class="n">ball</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="s2">&quot;circle&quot;</span><span class="p">)</span>
+<span class="n">ball</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s2">"green"</span><span class="p">)</span>
+<span class="n">ball</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="s2">"circle"</span><span class="p">)</span>
 <span class="n">ball</span><span class="o">.</span><span class="n">sety</span><span class="p">(</span><span class="n">ball</span><span class="o">.</span><span class="n">ycor</span><span class="p">()</span> <span class="o">+</span> <span class="n">y_velocity</span><span class="p">)</span>
 <span class="n">ball</span><span class="o">.</span><span class="n">pendown</span><span class="p">()</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>

@@ -178,6 +178,7 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../study-plan-py.html">План обучения <code class="docutils literal notranslate"><span class="pre">py</span></code></a></li>
+
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../Tables/py-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">py</span></code></a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="1.in-out.html">Ввод и вывод</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.strings.html">Строки</a></li>
@@ -495,15 +496,15 @@ Complex is better than complicated.
 </pre></div>
 </div>
 <div class="toggle docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;text.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'text.txt'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span>
 <span class="n">letters</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">words</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">lines</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
-    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
-    <span class="n">letters</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">line</span><span class="p">))</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"."</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">" "</span><span class="p">)</span>
+    <span class="n">letters</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="s2">""</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">line</span><span class="p">))</span>
     <span class="n">words</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
     <span class="n">lines</span> <span class="o">+=</span> <span class="mi">1</span>
     
@@ -545,22 +546,22 @@ Complex is better than complicated.
 </div>
 <p>Ожидаемый результат содержимого Json файла:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Какой ты дачник?&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;questions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;Дача нужна для того, чтобы..&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Выращивать свои овощи и фрукты&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Тусоваться&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;3&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Каждый день уходить в лес&quot;</span>
+<span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Какой ты дачник?"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"questions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"Дача нужна для того, чтобы.."</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Выращивать свои овощи и фрукты"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Тусоваться"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"3"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Каждый день уходить в лес"</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;Что надо сажать в первую очередь?&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Кабачки&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Баклажаны&quot;</span>
+<span class="w">        </span><span class="nt">"Что надо сажать в первую очередь?"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Кабачки"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Баклажаны"</span>
 <span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;Что полезнее?&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Петрушка&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Укроп&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;3&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Рукола&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;4&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Зелёный лук&quot;</span>
+<span class="w">        </span><span class="nt">"Что полезнее?"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Петрушка"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Укроп"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"3"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Рукола"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"4"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Зелёный лук"</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
@@ -571,28 +572,28 @@ Complex is better than complicated.
 <div class="toggle docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 
-<span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Введите имя теста: &quot;</span><span class="p">)</span>
+<span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Введите имя теста: "</span><span class="p">)</span>
 
 <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">questions</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="n">quest</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Введите вопрос №</span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s2"> (остановиться - stop): &quot;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">quest</span> <span class="o">==</span> <span class="s2">&quot;stop&quot;</span><span class="p">:</span>
+    <span class="n">quest</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Введите вопрос №</span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s2"> (остановиться - stop): "</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">quest</span> <span class="o">==</span> <span class="s2">"stop"</span><span class="p">:</span>
         <span class="k">break</span>
     <span class="n">questions</span><span class="p">[</span><span class="n">quest</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">count_ans</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
         <span class="n">count_ans</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="n">answer</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Введите ответ №</span><span class="si">{</span><span class="n">count_ans</span><span class="si">}</span><span class="s2"> (остановиться - stop): &quot;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">answer</span> <span class="o">==</span> <span class="s2">&quot;stop&quot;</span><span class="p">:</span>
+        <span class="n">answer</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Введите ответ №</span><span class="si">{</span><span class="n">count_ans</span><span class="si">}</span><span class="s2"> (остановиться - stop): "</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">answer</span> <span class="o">==</span> <span class="s2">"stop"</span><span class="p">:</span>
             <span class="k">break</span>
         <span class="n">questions</span><span class="p">[</span><span class="n">quest</span><span class="p">][</span><span class="n">count_ans</span><span class="p">]</span> <span class="o">=</span> <span class="n">answer</span>
 
-<span class="n">test</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
-        <span class="s2">&quot;questions&quot;</span><span class="p">:</span> <span class="n">questions</span><span class="p">}</span>
+<span class="n">test</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"name"</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+        <span class="s2">"questions"</span><span class="p">:</span> <span class="n">questions</span><span class="p">}</span>
 
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"test.json"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
@@ -608,15 +609,17 @@ Complex is better than complicated.
 Если папка существует - ничего не делаем.</p>
 <div class="toggle docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 
-<span class="n">mypath</span> <span class="o">=</span> <span class="s2">&quot;/home/music/bands/&quot;</span>
+<span class="n">mypath</span> <span class="o">=</span> <span class="s2">"/home/music/bands/"</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">open_path</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
-    <span class="n">parts</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+    <span class="n">parts</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">mypath</span><span class="p">)</span><span class="o">.</span><span class="n">parts</span>
+
     <span class="n">snake_path</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">parts</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">part</span><span class="p">:</span>
             <span class="n">snake_path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">part</span><span class="p">)</span>
-            <span class="n">p</span> <span class="o">=</span> <span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">snake_path</span><span class="p">)</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="s2">"/"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">snake_path</span><span class="p">)</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
                 <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 

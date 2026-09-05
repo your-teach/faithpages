@@ -178,6 +178,7 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Python/study-plan-py.html">План обучения <code class="docutils literal notranslate"><span class="pre">py</span></code></a></li>
+
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Tables/py-tasks-table.html">Упражнения <code class="docutils literal notranslate"><span class="pre">py</span></code></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Python/Tasks/1.in-out.html">Ввод и вывод</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Python/Tasks/2.strings.html">Строки</a></li>
@@ -499,38 +500,51 @@ document.write(`
 <section id="vs-code-lua">
 <h2>Установка Vs Code + Lua<a class="headerlink" href="#vs-code-lua" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=X6BqMZyzAs4">https://www.youtube.com/watch?v=X6BqMZyzAs4</a></p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1. https://code.visualstudio.com/download
-2. https://github.com/rjpcomputing/luaforwindows/releases
-3. RuLang: Шестерёнка -&gt; Command Pallete -&gt; Вводим &#39;lang&#39; -&gt; Configure Display Language -&gt; &#39;Русский&#39;
-4. Расширение Lua (sumneko)
-5. Расширение Code Runner
-6. Параметры:
-    - Установить стандартное автосохрание -&gt; Файл -&gt; Автосохранение
-    - Изменить шрифт -&gt; editor.fontSize -&gt; 16
-    - Code-runner: Save file before run [галочка стоит]
-    - Code-runner: Run in terminal [галочка стоит]
-7. Открывать в кодировке cp866, как должен выглядеть файл Settings.json:
-    ```json
-        {
-            &quot;code-runner.runInTerminal&quot;: true,
-            &quot;code-runner.saveFileBeforeRun&quot;: true,
-            &quot;editor.fontSize&quot;: 17,
-            &quot;[lua]&quot;: {
-                        &quot;files.encoding&quot;: &quot;cp866&quot;
-                    }
-        }
-    ```
-8. Создать папку на рабочем столе -&gt; Открываем её в Vscode -&gt; Далее создаем два файла -&gt; main.lua/py theory.lua/py
-9. Выключить Ai chat и прочее в настройках: Chat: Disable Ai Freatures
-10. Выключить предупреждение об local
-    -создать папку .vscode с содержимым:
-        {
-            &quot;Lua.diagnostics.disable&quot;: [
-                &quot;lowercase-global&quot;
-            ]
-        }
+<ol class="arabic">
+<li><p><a class="reference external" href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a></p></li>
+<li><p><a class="github reference external" href="https://github.com/rjpcomputing/luaforwindows/releases">rjpcomputing/luaforwindows</a></p></li>
+<li><p>Расширение Lua (sumneko)</p></li>
+<li><p>Расширение Code Runner</p></li>
+<li><p>Settings.json:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"files.autoSave"</span><span class="p">:</span><span class="w"> </span><span class="s2">"afterDelay"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"editor.fontSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"code-runner.runInTerminal"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"code-runner.saveFileBeforeRun"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"chat.disableAIFeatures"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"[lua]"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"files.encoding"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cp866"</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"editor.quickSuggestions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"other"</span><span class="p">:</span><span class="w"> </span><span class="s2">"off"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"comments"</span><span class="p">:</span><span class="w"> </span><span class="s2">"off"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"strings"</span><span class="p">:</span><span class="w"> </span><span class="s2">"off"</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"editor.suggestOnTriggerCharacters"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"editor.parameterHints.enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"editor.inlineSuggest.enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"editor.tabCompletion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"off"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"editor.acceptSuggestionOnEnter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"off"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"editor.snippetSuggestions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"none"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"editor.hover.enabled"</span><span class="p">:</span><span class="w"> </span><span class="s2">"off"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"terminal.integrated.suggest.enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"terminal.integrated.shellIntegration.enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Lua.completion.enable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Lua.completion.autoRequire"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Lua.completion.callSnippet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Disable"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Lua.completion.keywordSnippet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Disable"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Lua.hint.enable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Lua.hint.paramType"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Lua.hint.setType"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Lua.hover.enable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Lua.workspace.checkThirdParty"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="p">}</span>
 </pre></div>
 </div>
+</li>
+<li><p>Создать папку на рабочем столе с файлами main.lua theory.lua</p></li>
+<li><p>Добавить в файл theroy.lua <code class="docutils literal notranslate"><span class="pre">---&#64;diagnostic</span> <span class="pre">disable</span></code></p></li>
+</ol>
 <p><a class="reference external" href="https://cronos.ru/kb-cronospro-lua.html">https://cronos.ru/kb-cronospro-lua.html</a>
 <a class="reference external" href="https://user.su/lua/index.php?id=36">https://user.su/lua/index.php?id=36</a>
 <a class="reference external" href="https://ru.wikibooks.org/wiki/Lua/%D0%A2%D0%B8%D0%BF%D1%8B_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85">https://ru.wikibooks.org/wiki/Lua/Типы_данных</a></p>
@@ -538,7 +552,7 @@ document.write(`
 <section id="id1">
 <h2>Введение.<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Команда, с которой по традиции начинается обучение языка программирования.
-    print(&quot;Hello World&quot;)
+    print("Hello World")
 -Что такое комментарии. --
 </pre></div>
 </div>
@@ -548,7 +562,7 @@ document.write(`
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Зачем они нужны, как мы бы жили без них.
 -Представляем, что переменная это коробка в которую мы можем поместить только одно значение.
 -Оператор присваивания:
-    name = &#39;Ivan&#39;
+    name = 'Ivan'
 -Как можно и как нельзя называть переменные:
     -Название переменной желательно должно соответствовать ее содержанию.
     -Можно: 
@@ -562,14 +576,14 @@ document.write(`
         использовать название команд
         спец символы !@#
 -Одна и та же переменная может иметь разные значения в разных частях кода:
-    a = &#39;one&#39;
+    a = 'one'
     print(a)
-    a = &#39;two&#39;
+    a = 'two'
     print(a)
     -это обозначает, что Lua читает строки поочереди следуя их нумерации.
 -Чувствительность к верхнему и нижнему регистру:
-    a = &#39;one&#39;
-    A = &#39;two&#39;
+    a = 'one'
+    A = 'two'
 -Как поместить значение переменной в другую переменную:
     a = 42
     b = a
@@ -590,7 +604,7 @@ document.write(`
 </section>
 <section id="id3">
 <h2>Типы данных.<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Можно говорить: &quot;Типы данных&quot; или &quot;Типы переменных&quot;
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Можно говорить: "Типы данных" или "Типы переменных"
     string - СТРОКИ
     number - ЧИСЛА
     boolean - ЛОГИКА (true/false)
@@ -599,7 +613,7 @@ document.write(`
     Это каждого типа есть свои правила.
     К числам можно применять знак плюс, а к строкам и логике - нет.
 -Примеры:
-    a = &#39;text 123&#39; -- string    (Самое главное правило - наличие кавычек)
+    a = 'text 123' -- string    (Самое главное правило - наличие кавычек)
     b = 42 -- number    (Самое главное правило - наличие только цифр, без пробелов)
     c = true -- boolean     (Только true или false)
 -type() - Команда, которая выдает тип переменной.
@@ -631,27 +645,27 @@ i = i + 1 -- увеличить переменную на единицу
 </section>
 <section id="id6">
 <h2>Строки.<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>s = &quot;Двойные кавычки&quot;
-s = &#39;Одинарные кавычки&#39;
--- print(&quot;&#39;Arrival&#39; is good cinema&quot;) -- Кавычки в строке
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>s = "Двойные кавычки"
+s = 'Одинарные кавычки'
+-- print("'Arrival' is good cinema") -- Кавычки в строке
 s = [[ long
             long
                     lines]]
-s = &#39;текст&#39;
+s = 'текст'
 l = #s -- Находим длину строки в байтах
 l = string.len(s) -- Работает точно так же, как #. Так что в ней нет смысла.
 l = utf8.len(s) -- Более точный подсчет длины строки
-a = &#39;Hello&#39;
-b = &#39;World&#39;
+a = 'Hello'
+b = 'World'
 s = a..b -- Оператор .. соединяет строки
-s = &#39;one\ntwo&#39; -- Экранирование, перевод строки на новую
+s = 'one\ntwo' -- Экранирование, перевод строки на новую
 
 Срезы строк.
-    text = &#39;my string variable&#39;
-    result = text:sub(4,9) -- находим символы с 4 по 9, &#39;string&#39;
-    result = text:sub(1,1) -- находим первый символ строки, &#39;m&#39;
+    text = 'my string variable'
+    result = text:sub(4,9) -- находим символы с 4 по 9, 'string'
+    result = text:sub(1,1) -- находим первый символ строки, 'm'
 Методы строк.
-    string.find(var, &#39;кс&#39;) - возвращает индекс первого найденного &#39;кс&#39;, иначе nil
+    string.find(var, 'кс') - возвращает индекс первого найденного 'кс', иначе nil
     Остальные методы строк https://quikluacsharp.ru/2015/03/21/funktsii-raboty-so-strokami-v-qlua-lua/
 </pre></div>
 </div>
@@ -667,9 +681,9 @@ s = &#39;one\ntwo&#39; -- Экранирование, перевод строк�
 
 a = 0 &lt; 1 -- true
 b = 0 == 1 -- false
-c = &#39;abc&#39; == &#39;abc&#39; -- true
-d = &#39;a&#39; &lt; &#39;b&#39; -- true
-e = &#39;!&#39; &gt; &#39;?&#39; -- false
+c = 'abc' == 'abc' -- true
+d = 'a' &lt; 'b' -- true
+e = '!' &gt; '?' -- false
 f = true == false -- false
 </pre></div>
 </div>
@@ -741,18 +755,18 @@ f = true == false -- false
     -tonumber(var) - переводит переменную var в число
     -tostring(var) - переводит переменную var в строку
 -Не забываем с помощью type() проверять тип переменной.
--Знаки &#39;..&#39; и &#39;+&#39; автоматически меняют тип значений.
+-Знаки '..' и '+' автоматически меняют тип значений.
 -Устное задание.
     Назвать типы переменных каждого из следующих выражений, number/string/boolean:
-        -- word = &#39;Programming&#39;
+        -- word = 'Programming'
         -- a = 101
-        -- b = &#39;42&#39;
+        -- b = '42'
         -- c = text -- nil
-        -- d = &#39;2&#39; + 2
-        -- e = 0..&#39;1&#39; -- ошибка
+        -- d = '2' + 2
+        -- e = 0..'1' -- ошибка
         -- f = true
-        -- g = &#39;false&#39;
-        -- р = &#39;-99&#39;..1
+        -- g = 'false'
+        -- р = '-99'..1
 </pre></div>
 </div>
 </section>
@@ -762,34 +776,34 @@ f = true == false -- false
 <p>-Самый простой пример</p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
 <span class="kr">if</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="kr">then</span><span class="w"> </span><span class="c1">-- или n &gt; 0</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;число равно 5&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"число равно 5"</span><span class="p">)</span>
 <span class="kr">end</span>
 </pre></div>
 </div>
 <p>-Температура на улице</p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
 <span class="kr">if</span><span class="w"> </span><span class="nv">temp</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="kr">then</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Погода супер, идем гулять&#39;</span><span class="p">)</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;.....&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">'Погода супер, идем гулять'</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">'.....'</span><span class="p">)</span>
 <span class="kr">elseif</span><span class="w"> </span><span class="nv">temp</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kr">then</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Идем гулять, но оденемся потеплее&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">'Идем гулять, но оденемся потеплее'</span><span class="p">)</span>
 <span class="kr">elseif</span><span class="w"> </span><span class="nv">temp</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kr">then</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Лучше остаться дома, посмотреть кино&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">'Лучше остаться дома, посмотреть кино'</span><span class="p">)</span>
 <span class="kr">else</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ого, температура ровно ноль&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">'Ого, температура ровно ноль'</span><span class="p">)</span>
 <span class="kr">end</span>
 </pre></div>
 </div>
 <p>-Комнаты</p>
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;blue&#39;</span>
-<span class="kr">if</span><span class="w"> </span><span class="nv">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;blue&#39;</span><span class="w"> </span><span class="kr">then</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Синия комната&#39;</span><span class="p">)</span>
-<span class="kr">elseif</span><span class="w"> </span><span class="nv">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;red&#39;</span><span class="w"> </span><span class="kr">then</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Красная комната&#39;</span><span class="p">)</span>
-<span class="kr">elseif</span><span class="w"> </span><span class="nv">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;green&#39;</span><span class="w"> </span><span class="kr">then</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Зеленая комната&#39;</span><span class="p">)</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'blue'</span>
+<span class="kr">if</span><span class="w"> </span><span class="nv">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'blue'</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">'Синия комната'</span><span class="p">)</span>
+<span class="kr">elseif</span><span class="w"> </span><span class="nv">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'red'</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">'Красная комната'</span><span class="p">)</span>
+<span class="kr">elseif</span><span class="w"> </span><span class="nv">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'green'</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">'Зеленая комната'</span><span class="p">)</span>
 <span class="kr">else</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Запасная комната&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">'Запасная комната'</span><span class="p">)</span>
 <span class="kr">end</span>
 </pre></div>
 </div>
@@ -802,18 +816,18 @@ f = true == false -- false
 <p>-Как найти четное число.</p>
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.read</span><span class="p">()</span>
 <span class="kr">if</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kr">then</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;четное&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"четное"</span><span class="p">)</span>
 <span class="kr">else</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;нечетное&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"нечетное"</span><span class="p">)</span>
 <span class="kr">end</span>
 </pre></div>
 </div>
 <p>-Является ли переменная строкой:</p>
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;tick&#39;</span>
-<span class="kr">if</span><span class="w"> </span><span class="nb">type</span><span class="p">(</span><span class="nv">s</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;string&#39;</span><span class="w"> </span><span class="kr">then</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;да&#39;</span><span class="p">)</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'tick'</span>
+<span class="kr">if</span><span class="w"> </span><span class="nb">type</span><span class="p">(</span><span class="nv">s</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'string'</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">'да'</span><span class="p">)</span>
 <span class="kr">else</span><span class="w"> </span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;нет&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">'нет'</span><span class="p">)</span>
 <span class="kr">end</span>
 </pre></div>
 </div>
@@ -829,19 +843,19 @@ f = true == false -- false
 <section id="id12">
 <h2>Таблицы.<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Если в переменную необходимо положить несколько значений, то здесь нам помогут таблицы.
-    animals = {&#39;Cat&#39;, &#39;Dog&#39;, &#39;Pig&#39;, &#39;Horse&#39;}
+    animals = {'Cat', 'Dog', 'Pig', 'Horse'}
     print(animals[1]) -- Выводим первое значение таблицы
     print(animals[6]) -- Выведет nil
     print(#animals) -- Длина таблицы
-    animals[5] = &#39;Cow&#39; -- Положить на 4-е место &#39;Cow&#39;
-    animals[1] = &#39;Kitty Cat&#39; -- Заменить 1-е значение на &#39;Kitty Cat&#39;
+    animals[5] = 'Cow' -- Положить на 4-е место 'Cow'
+    animals[1] = 'Kitty Cat' -- Заменить 1-е значение на 'Kitty Cat'
     print(animals[5])
     animals[100] = 100 -- Здесь таблица превратится в разряженную (не будет показываться точная длина)
     t = {} -- пустая таблица
 -Добавить элемент в конец таблицы:
-    t = {&#39;a&#39;, &#39;b&#39;, &#39;c&#39;}
+    t = {'a', 'b', 'c'}
     l = #t
-    t[l + 1] = &#39;d&#39;
+    t[l + 1] = 'd'
 -Таблицы в таблице
     t = {
         {101, 102, 103},
@@ -851,19 +865,19 @@ f = true == false -- false
     print(t[1][3]) -- находим первую таблицу [1], далее третий элемент в таблице [3]
 
 -Использование таблицы как словаря (Ключ=Значение).
-    t = {[&#39;one&#39;] = 1, two = 2}
-    print(t[&#39;one&#39;]) -- выводим элемент с ключем &#39;one&#39;
+    t = {['one'] = 1, two = 2}
+    print(t['one']) -- выводим элемент с ключем 'one'
     print(t.one) -- Тоже самое что вывод выше
 
     t.three = 3 -- Добавим в таблицу three = 3
     t:four = 4 -- Второй вариант, four = 4
-    t[&#39;five&#39;] = 5 -- Третий вариант
+    t['five'] = 5 -- Третий вариант
 
 -Методы таблиц.
-    t = {&#39;c&#39;, &#39;b&#39;, &#39;a&#39;}
+    t = {'c', 'b', 'a'}
     table.sort(t) -- Сортирует таблицу по возрастанию
-    table.insert(t, &#39;e&#39;) -- положить &#39;e&#39; в конец таблицы
-    table.insert(t, 1, &#39;e&#39;) -- сдвинуть таблицу, и положить &#39;e&#39; на первое место 
+    table.insert(t, 'e') -- положить 'e' в конец таблицы
+    table.insert(t, 1, 'e') -- сдвинуть таблицу, и положить 'e' на первое место 
     table.remove(t, 1) -- Удаление элемента под номером 1, из таблицы t
     print(t[1])
 </pre></div>
@@ -874,9 +888,9 @@ f = true == false -- false
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>--while
     --Циклы нужны для того, чтобы не писать один кусочек кода много раз вручную.
     --Повторение кода с интервалом
-    local socket = require &#39;socket&#39;
+    local socket = require 'socket'
     while true do
-        print(&quot;Какой-то код, который нужно бесконечно повторять с интервалом в 5 секунд&quot;)
+        print("Какой-то код, который нужно бесконечно повторять с интервалом в 5 секунд")
         socket.sleep(5)
     end
     --Цикл, который выводит числа от 1 до 10
@@ -899,17 +913,17 @@ f = true == false -- false
     -Можно использовать условия внутри циклов.
     -Цикл, который выводит каждую букву отдельно:
         i = 0
-        text = &#39;hello world&#39;
+        text = 'hello world'
         while i &lt; #text do
             i = i + 1
             print(text:sub(i,i))
         end
-    -Аналогичный цикл, но который пропускает все буквы &#39;o&#39;
+    -Аналогичный цикл, но который пропускает все буквы 'o'
         i = 0
-        text = &#39;hello world&#39;
+        text = 'hello world'
         while i &lt; #text do
             i = i + 1
-            if text:sub(i,i) ~= &#39;o&#39; then
+            if text:sub(i,i) ~= 'o' then
                 print(text:sub(i,i))
             end
         end
@@ -930,12 +944,12 @@ f = true == false -- false
         end
     -С помощью for и специальной функции pairs или ipairs можно перебрать таблицу.
     -ipairs для простых таблицы
-        t = {&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;}
+        t = {'a','b','c','d'}
         for k, v in ipairs(t) do
             print(x)
         end
     -pairs для словарей-таблиц
-        y = {[&#39;one&#39;] = 1, [&#39;two&#39;] = 2}
+        y = {['one'] = 1, ['two'] = 2}
         for k, v in pairs(y) do  -- pairs работает с массивами (словари)
             print(k, v)
         end
@@ -947,7 +961,7 @@ f = true == false -- false
 
     -Очень важно: если перебирать таблицу-словарь через цикл for, то порядок элементов будет рандомный
     -Цикл имеет заголовок и тело.
-    -Что значит одно повторение цикла/один круг или другими словами &quot;Итерация&quot;.
+    -Что значит одно повторение цикла/один круг или другими словами "Итерация".
 </pre></div>
 </div>
 </section>
@@ -959,21 +973,21 @@ f = true == false -- false
 <span class="c1">-- Простой пример создания функции:</span>
 
 <span class="kr">function</span><span class="w"> </span><span class="nf">robot</span><span class="p">()</span><span class="w"> </span><span class="c1">-- объявление функции</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Приветствие робота:&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Здравствуйте, человек!&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"Приветствие робота:"</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"Здравствуйте, человек!"</span><span class="p">)</span>
 <span class="kr">end</span>
 
 <span class="nf">robot</span><span class="p">()</span><span class="w"> </span><span class="c1">-- вызов функции</span>
 
 <span class="c1">-- Функция с аргументами</span>
 <span class="kr">function</span><span class="w"> </span><span class="nf">robot2</span><span class="p">(</span><span class="nv">name</span><span class="p">,</span><span class="w"> </span><span class="nv">age</span><span class="p">)</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Приветствие робота:&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Здравствуйте, &quot;</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nv">name</span><span class="p">)</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Я знаю что вам &quot;</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nv">age</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="s2">&quot; лет&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"Приветствие робота:"</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"Здравствуйте, "</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nv">name</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"Я знаю что вам "</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nv">age</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="s2">" лет"</span><span class="p">)</span>
 <span class="kr">end</span>
 
-<span class="nf">robot2</span><span class="p">(</span><span class="s2">&quot;Федор&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">28</span><span class="p">)</span>
-<span class="nf">robot2</span><span class="p">(</span><span class="s2">&quot;Georg&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">)</span>
+<span class="nf">robot2</span><span class="p">(</span><span class="s2">"Федор"</span><span class="p">,</span><span class="w"> </span><span class="mi">28</span><span class="p">)</span>
+<span class="nf">robot2</span><span class="p">(</span><span class="s2">"Georg"</span><span class="p">,</span><span class="w"> </span><span class="mi">11</span><span class="p">)</span>
 
 
 <span class="c1">-- Возвращаемая функция (return)</span>
@@ -985,20 +999,20 @@ f = true == false -- false
 <span class="nv">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">summa</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="c1">-- место запуска функции</span>
 <span class="nb">print</span><span class="p">(</span><span class="nv">r</span><span class="p">)</span>
 
-<span class="c1">-- Функции, которые не имею return, возвращают nil, и называеются &quot;невозвращаемыми&quot;</span>
+<span class="c1">-- Функции, которые не имею return, возвращают nil, и называеются "невозвращаемыми"</span>
 <span class="nv">r3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">robot</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="nv">r3</span><span class="p">)</span><span class="w"> </span><span class="c1">-- nil</span>
 
 <span class="c1">-- Альтернативный способ создания функции</span>
 <span class="nv">one</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">()</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Функция one&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">'Функция one'</span><span class="p">)</span>
 <span class="kr">end</span>
 <span class="nf">one</span><span class="p">()</span>
 
 <span class="c1">-- Функции могут хранится в таблицах</span>
 <span class="nv">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
 <span class="nv">t</span><span class="p">.</span><span class="py">three</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">()</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;functioin in table&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">'functioin in table'</span><span class="p">)</span>
 <span class="kr">end</span>
 
 <span class="nv">t</span><span class="p">.</span><span class="nf">three</span><span class="p">()</span>
@@ -1008,13 +1022,13 @@ f = true == false -- false
 </section>
 <section id="id15">
 <h2>Запись и чтение файла.<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- &quot;r&quot; - чтение</span>
-<span class="c1">-- &quot;w&quot; - перезапись</span>
-<span class="c1">-- &quot;a&quot; - дозапить</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- "r" - чтение</span>
+<span class="c1">-- "w" - перезапись</span>
+<span class="c1">-- "a" - дозапить</span>
 
-<span class="kd">local</span><span class="w"> </span><span class="nv">filepath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">HOME</span><span class="se">\\</span><span class="s2">PROG</span><span class="se">\\</span><span class="s2">text.txt&quot;</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">filepath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"C:</span><span class="se">\\</span><span class="s2">HOME</span><span class="se">\\</span><span class="s2">PROG</span><span class="se">\\</span><span class="s2">text.txt"</span>
 <span class="c1">-- Чтение</span>
-<span class="kd">local</span><span class="w"> </span><span class="nv">fileread</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.open</span><span class="p">(</span><span class="nv">filepath</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">fileread</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.open</span><span class="p">(</span><span class="nv">filepath</span><span class="p">,</span><span class="w"> </span><span class="s2">"r"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="nv">fileread</span><span class="p">:</span><span class="nf">read</span><span class="p">())</span><span class="w"> </span><span class="c1">-- прочитать первую строку</span>
 <span class="nb">print</span><span class="p">(</span><span class="nv">fileread</span><span class="p">:</span><span class="nf">read</span><span class="p">())</span><span class="w"> </span><span class="c1">-- прочитать вторую строку</span>
 <span class="c1">-- Чтение всех строк файла через цикл</span>
@@ -1022,12 +1036,12 @@ f = true == false -- false
 <span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">line</span><span class="p">)</span>
 <span class="kr">end</span>
 <span class="c1">-- Перезапись</span>
-<span class="kd">local</span><span class="w"> </span><span class="nv">filewrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.open</span><span class="p">(</span><span class="nv">filepath</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
-<span class="nv">filewrite</span><span class="p">:</span><span class="nf">write</span><span class="p">(</span><span class="s2">&quot;new data&quot;</span><span class="p">)</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">filewrite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.open</span><span class="p">(</span><span class="nv">filepath</span><span class="p">,</span><span class="w"> </span><span class="s2">"w"</span><span class="p">)</span>
+<span class="nv">filewrite</span><span class="p">:</span><span class="nf">write</span><span class="p">(</span><span class="s2">"new data"</span><span class="p">)</span>
 <span class="nv">filewrite</span><span class="p">:</span><span class="nf">close</span><span class="p">()</span>
 <span class="c1">-- Дозапись (перед записью, файл очищается)</span>
-<span class="kd">local</span><span class="w"> </span><span class="nv">filewrite2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.open</span><span class="p">(</span><span class="nv">filepath</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
-<span class="nv">filewrite2</span><span class="p">:</span><span class="nf">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">add in file&quot;</span><span class="p">)</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">filewrite2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.open</span><span class="p">(</span><span class="nv">filepath</span><span class="p">,</span><span class="w"> </span><span class="s2">"a"</span><span class="p">)</span>
+<span class="nv">filewrite2</span><span class="p">:</span><span class="nf">write</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">add in file"</span><span class="p">)</span>
 <span class="nv">filewrite2</span><span class="p">:</span><span class="nf">close</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1037,7 +1051,7 @@ f = true == false -- false
 <h2>Модули<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
 <section id="id17">
 <h3>Импорт модуля<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span><span class="w"> </span><span class="nv">socket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="w"> </span><span class="s1">&#39;socket&#39;</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span><span class="w"> </span><span class="nv">socket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="w"> </span><span class="s1">'socket'</span>
 <span class="nv">socket</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1048,10 +1062,10 @@ f = true == false -- false
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span><span class="w"> </span><span class="nv">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
 
 <span class="kr">function</span><span class="w"> </span><span class="nc">items</span><span class="p">.</span><span class="nf">congrats</span><span class="p">()</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Congratulations!!!&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"Congratulations!!!"</span><span class="p">)</span>
 <span class="kr">end</span>
 
-<span class="nv">items</span><span class="p">.</span><span class="py">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Storm&#39;</span>
+<span class="nv">items</span><span class="p">.</span><span class="py">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Storm'</span>
 <span class="nv">items</span><span class="p">.</span><span class="py">health</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">790</span>
 <span class="nv">items</span><span class="p">.</span><span class="py">mana</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">540</span>
 
@@ -1059,7 +1073,7 @@ f = true == false -- false
 </pre></div>
 </div>
 <p>Файл импорта</p>
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span><span class="w"> </span><span class="nv">module</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="w"> </span><span class="s1">&#39;module&#39;</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kd">local</span><span class="w"> </span><span class="nv">module</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="w"> </span><span class="s1">'module'</span>
 <span class="nv">module</span><span class="p">.</span><span class="nf">congrats</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="nv">module</span><span class="p">.</span><span class="py">name</span><span class="p">)</span>
 </pre></div>
@@ -1068,15 +1082,15 @@ f = true == false -- false
 <section id="id19">
 <h3>Старый способ создания модуля<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
 <p>Файл модуля</p>
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nf">module</span><span class="p">(</span><span class="s2">&quot;mymodule&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">package</span><span class="p">.</span><span class="py">seeall</span><span class="p">)</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nf">module</span><span class="p">(</span><span class="s2">"mymodule"</span><span class="p">,</span><span class="w"> </span><span class="nv">package</span><span class="p">.</span><span class="py">seeall</span><span class="p">)</span>
 
-<span class="kr">function</span><span class="w"> </span><span class="nf">foo</span><span class="p">()</span><span class="w"> </span><span class="c1">-- create it as if it&#39;s a global function</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+<span class="kr">function</span><span class="w"> </span><span class="nf">foo</span><span class="p">()</span><span class="w"> </span><span class="c1">-- create it as if it's a global function</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"Hello World!"</span><span class="p">)</span>
 <span class="kr">end</span>
 </pre></div>
 </div>
 <p>Файл импорта</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">require</span> <span class="s2">&quot;mymodule&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">require</span> <span class="s2">"mymodule"</span>
 <span class="n">mymodule</span><span class="o">.</span><span class="n">foo</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1092,13 +1106,13 @@ f = true == false -- false
 <div class="toggle docutils container">
 <div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- сортировка по убыванию</span>
 <span class="kd">local</span><span class="w"> </span><span class="nv">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">}</span>
-<span class="nf">log</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;clear&quot;</span><span class="p">)</span><span class="w"> </span><span class="nf">log</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;mode compact&quot;</span><span class="p">)</span>
-<span class="nf">log</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;Массив до сортировки:&quot;</span><span class="p">)</span>
+<span class="nf">log</span><span class="w"> </span><span class="p">(</span><span class="s2">"clear"</span><span class="p">)</span><span class="w"> </span><span class="nf">log</span><span class="w"> </span><span class="p">(</span><span class="s2">"mode compact"</span><span class="p">)</span>
+<span class="nf">log</span><span class="w"> </span><span class="p">(</span><span class="s2">"Массив до сортировки:"</span><span class="p">)</span>
 <span class="kr">for</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">#</span><span class="nv">arr</span><span class="w"> </span><span class="kr">do</span>
 <span class="w">    </span><span class="nf">log</span><span class="w"> </span><span class="p">(</span><span class="nv">arr</span><span class="p">[</span><span class="nv">i</span><span class="p">])</span>
 <span class="kr">end</span>
 <span class="nb">table.sort</span><span class="w"> </span><span class="p">(</span><span class="nv">arr</span><span class="p">,</span><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="p">(</span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="nv">b</span><span class="p">)</span><span class="w"> </span><span class="kr">return</span><span class="w"> </span><span class="p">(</span><span class="nv">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nv">b</span><span class="p">)</span><span class="w"> </span><span class="kr">end</span><span class="p">)</span>
-<span class="nf">log</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;Массив после сортировки:&quot;</span><span class="p">)</span>
+<span class="nf">log</span><span class="w"> </span><span class="p">(</span><span class="s2">"Массив после сортировки:"</span><span class="p">)</span>
 <span class="kr">for</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">#</span><span class="nv">arr</span><span class="w"> </span><span class="kr">do</span>
 <span class="w">    </span><span class="nf">log</span><span class="w"> </span><span class="p">(</span><span class="nv">arr</span><span class="p">[</span><span class="nv">i</span><span class="p">])</span>
 <span class="kr">end</span>
