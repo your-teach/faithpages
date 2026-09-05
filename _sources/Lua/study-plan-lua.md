@@ -43,7 +43,7 @@ https://www.youtube.com/watch?v=X6BqMZyzAs4
     }
     ```
 6. Создать папку на рабочем столе с файлами main.lua theory.lua
-7. Добавить в файл theroy.lua `---@diagnostic disable`
+7. Добавить в файл theory.lua `---@diagnostic disable`
     
 https://cronos.ru/kb-cronospro-lua.html
 https://user.su/lua/index.php?id=36
