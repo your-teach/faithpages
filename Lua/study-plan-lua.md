@@ -2,36 +2,48 @@
 ## Установка Vs Code + Lua 
 https://www.youtube.com/watch?v=X6BqMZyzAs4
 
-    1. https://code.visualstudio.com/download
-    2. https://github.com/rjpcomputing/luaforwindows/releases
-    3. RuLang: Шестерёнка -> Command Pallete -> Вводим 'lang' -> Configure Display Language -> 'Русский'
-    4. Расширение Lua (sumneko)
-    5. Расширение Code Runner
-    6. Параметры:
-        - Установить стандартное автосохрание -> Файл -> Автосохранение
-        - Изменить шрифт -> editor.fontSize -> 16
-        - Code-runner: Save file before run [галочка стоит]
-        - Code-runner: Run in terminal [галочка стоит]
-    7. Открывать в кодировке cp866, как должен выглядеть файл Settings.json:
-        ```json
-            {
-                "code-runner.runInTerminal": true,
-                "code-runner.saveFileBeforeRun": true,
-                "editor.fontSize": 17,
-                "[lua]": {
-                            "files.encoding": "cp866"
-                        }
-            }
-        ```
-    8. Создать папку на рабочем столе -> Открываем её в Vscode -> Далее создаем два файла -> main.lua/py theory.lua/py
-    9. Выключить Ai chat и прочее в настройках: Chat: Disable Ai Freatures
-    10. Выключить предупреждение об local
-        -создать папку .vscode с содержимым:
-            {
-                "Lua.diagnostics.disable": [
-                    "lowercase-global"
-                ]
-            }
+1. https://code.visualstudio.com/download
+2. https://github.com/rjpcomputing/luaforwindows/releases
+3. Расширение Lua (sumneko)
+4. Расширение Code Runner
+5. Settings.json:
+    ```json
+    {
+        "files.autoSave": "afterDelay",
+        "editor.fontSize": 18,
+        "code-runner.runInTerminal": true,
+        "code-runner.saveFileBeforeRun": true,
+        "chat.disableAIFeatures": true,
+        "[lua]": {
+                    "files.encoding": "cp866"
+                },
+        "editor.quickSuggestions": {
+            "other": "off",
+            "comments": "off",
+            "strings": "off"
+        },
+        "editor.suggestOnTriggerCharacters": false,
+        "editor.parameterHints.enabled": false,
+        "editor.inlineSuggest.enabled": false,
+        "editor.tabCompletion": "off",
+        "editor.acceptSuggestionOnEnter": "off",
+        "editor.snippetSuggestions": "none",
+        "editor.hover.enabled": "off",
+        "terminal.integrated.suggest.enabled": false,
+        "terminal.integrated.shellIntegration.enabled": false,
+        "Lua.completion.enable": false,
+        "Lua.completion.autoRequire": false,
+        "Lua.completion.callSnippet": "Disable",
+        "Lua.completion.keywordSnippet": "Disable",
+        "Lua.hint.enable": false,
+        "Lua.hint.paramType": false,
+        "Lua.hint.setType": false,
+        "Lua.hover.enable": false,
+        "Lua.workspace.checkThirdParty": false
+    }
+    ```
+6. Создать папку на рабочем столе с файлами main.lua theory.lua
+7. Добавить в файл theroy.lua `---@diagnostic disable`
     
 https://cronos.ru/kb-cronospro-lua.html
 https://user.su/lua/index.php?id=36

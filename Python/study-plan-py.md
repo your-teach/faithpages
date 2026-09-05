@@ -3,33 +3,34 @@
 ## Установка Vs Code + Python.
 1. https://code.visualstudio.com/download
 2. https://www.python.org/downloads/
-3. RuLang: Шестерёнка -> Command Pallete -> Вводим 'lang' -> Configure Display Language -> 'Русский'
-4. Расширение Python 
-5. Расширение Code Runner 
-6. Параметры:
-    - Установить стандартное автосохрание -> Файл -> Автосохранение
-    - Изменить шрифт -> editor.fontSize -> 16
-    - Code-runner: Save file before run [галочка стоит]
-    - Code-runner: Run in terminal [галочка стоит]
-7. Settings.json  
-    -Очистка консоли:
+3. Расширение Python 
+4. Расширение Code Runner 
+5. Settings.json  
+    ```json
+    {
+        "files.autoSave": "afterDelay",
+        "editor.fontSize": 18,
+        "code-runner.runInTerminal": true,
+        "code-runner.saveFileBeforeRun": true,
+        "chat.disableAIFeatures": true,
+        "editor.quickSuggestions": {
+            "other": "off",
+            "comments": "off",
+            "strings": "off"
+        },
+        "editor.suggestOnTriggerCharacters": false,
+        "editor.parameterHints.enabled": false,
+        "editor.inlineSuggest.enabled": false,
+        "editor.tabCompletion": "off",
+        "editor.acceptSuggestionOnEnter": "off",
+        "editor.snippetSuggestions": "none",
+        "editor.hover.enabled": "off",
+        "terminal.integrated.suggest.enabled": false,
+        "terminal.integrated.shellIntegration.enabled": false,
+    }
     ```
-        "code-runner.executorMap": {
-            "python": "clear; python -u" }
-    ```
-8. Создать папку на рабочем столе -> Открываем её в Vscode -> Далее создаем два файла -> main.py theory.py  
-9. Выключить Ai chat и прочее в настройках: Chat: Disable Ai Freatures  
-10. Выключить подсказки в vs code:  
-    ```
-    "editor.quickSuggestions": {
-        "other": "off",
-        "comments": "off",
-        "strings": "off"
-    },
-    "editor.suggestOnTriggerCharacters": false,
-    "editor.parameterHints.enabled": false,
-    "editor.hover.enabled": false
-    ```
+6. Создать папку на рабочем столе с файлами main.py theory.py  
+
 
 ## Введение.
 
