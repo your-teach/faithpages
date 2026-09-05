@@ -6,9 +6,11 @@ https://www.youtube.com/watch?v=X6BqMZyzAs4
 2. https://github.com/rjpcomputing/luaforwindows/releases
 3. Расширение Lua (sumneko)
 4. Расширение Code Runner
-5. Settings.json:
+5. Русский: Шестерёнка -> Command Pallete -> Configure Display Language
+6. Settings.json:
     ```json
     {
+        "workbench.editor.useModal": "off",
         "files.autoSave": "afterDelay",
         "editor.fontSize": 18,
         "code-runner.runInTerminal": true,
@@ -39,11 +41,11 @@ https://www.youtube.com/watch?v=X6BqMZyzAs4
         "Lua.hint.paramType": false,
         "Lua.hint.setType": false,
         "Lua.hover.enable": false,
-        "Lua.workspace.checkThirdParty": false
+        "Lua.workspace.checkThirdParty": false,
     }
     ```
-6. Создать папку на рабочем столе с файлами main.lua theory.lua
-7. Добавить в файл theory.lua `---@diagnostic disable`
+7. Создать папку на рабочем столе с файлами main.lua theory.lua
+8. Добавить в файл theory.lua `---@diagnostic disable`
     
 https://cronos.ru/kb-cronospro-lua.html
 https://user.su/lua/index.php?id=36

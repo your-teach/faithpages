@@ -5,9 +5,11 @@
 2. https://www.python.org/downloads/
 3. Расширение Python 
 4. Расширение Code Runner 
-5. Settings.json  
+5. Русский: Шестерёнка -> Command Pallete -> Configure Display Language
+6. Settings.json  
     ```json
     {
+        "workbench.editor.useModal": "off",
         "files.autoSave": "afterDelay",
         "editor.fontSize": 18,
         "code-runner.runInTerminal": true,
@@ -29,7 +31,7 @@
         "terminal.integrated.shellIntegration.enabled": false,
     }
     ```
-6. Создать папку на рабочем столе с файлами `main.py` `theory.py` 
+7. Создать папку на рабочем столе с файлами `main.py` `theory.py` 
 
 
 ## Введение.
