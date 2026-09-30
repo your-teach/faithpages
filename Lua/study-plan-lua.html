@@ -774,114 +774,97 @@ f = true == false -- false
 </section>
 <section id="id11">
 <h2>Условия.<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
-<p>-if    elseif     else</p>
-<p>-Самый простой пример</p>
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
-<span class="kr">if</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="kr">then</span><span class="w"> </span><span class="c1">-- или n &gt; 0</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"число равно 5"</span><span class="p">)</span>
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- Пример с паролем</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Введите пароль:"</span><span class="p">)</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.read</span><span class="p">()</span>
+<span class="kr">if</span><span class="w"> </span><span class="nv">password</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'qwerty'</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"Все хорошо, пароль верный!"</span><span class="p">)</span>
+<span class="kr">else</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"Пароль неверный"</span><span class="p">)</span>
 <span class="kr">end</span>
-</pre></div>
-</div>
-<p>-Температура на улице</p>
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Введите температуру на улице: "</span><span class="p">)</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
+
+<span class="c1">-- Пример с температурой на улице</span>
+<span class="nv">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nb">io.read</span><span class="p">())</span>
 <span class="kr">if</span><span class="w"> </span><span class="nv">temp</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="kr">then</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">'Погода супер, идем гулять'</span><span class="p">)</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">'.....'</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"Погода хорошая, можно пойти погулять"</span><span class="p">)</span>
 <span class="kr">elseif</span><span class="w"> </span><span class="nv">temp</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kr">then</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">'Идем гулять, но оденемся потеплее'</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"Прохладно, нужно потеплее одеться и пойти гулять"</span><span class="p">)</span>
 <span class="kr">elseif</span><span class="w"> </span><span class="nv">temp</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kr">then</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">'Лучше остаться дома, посмотреть кино'</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"Лучше остать дома и посмотреть кино"</span><span class="p">)</span>
 <span class="kr">else</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">'Ого, температура ровно ноль'</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"Ого, температура ровно 0!"</span><span class="p">)</span>
 <span class="kr">end</span>
-</pre></div>
-</div>
-<p>-Комнаты</p>
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'blue'</span>
-<span class="kr">if</span><span class="w"> </span><span class="nv">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'blue'</span><span class="w"> </span><span class="kr">then</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">'Синия комната'</span><span class="p">)</span>
-<span class="kr">elseif</span><span class="w"> </span><span class="nv">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'red'</span><span class="w"> </span><span class="kr">then</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">'Красная комната'</span><span class="p">)</span>
-<span class="kr">elseif</span><span class="w"> </span><span class="nv">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'green'</span><span class="w"> </span><span class="kr">then</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">'Зеленая комната'</span><span class="p">)</span>
-<span class="kr">else</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">'Запасная комната'</span><span class="p">)</span>
-<span class="kr">end</span>
-</pre></div>
-</div>
-<p>-Что такое заголовок/тело.<br />
--Что такое табуирование, и где находится кнопка TAB.<br />
--if может быть только один и только в начале<br />
--elseif может быть неограниченное количество<br />
--else может быть только один и только в конце<br />
--Вывести “yes”, если число меньше 10, иначе “no”</p>
-<p>-Как найти четное число.</p>
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.read</span><span class="p">()</span>
+
+<span class="c1">-- Найти четное число</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">io.read</span><span class="p">()</span>
 <span class="kr">if</span><span class="w"> </span><span class="nv">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kr">then</span>
 <span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"четное"</span><span class="p">)</span>
 <span class="kr">else</span>
 <span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"нечетное"</span><span class="p">)</span>
 <span class="kr">end</span>
-</pre></div>
-</div>
-<p>-Является ли переменная строкой:</p>
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="nv">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'tick'</span>
-<span class="kr">if</span><span class="w"> </span><span class="nb">type</span><span class="p">(</span><span class="nv">s</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'string'</span><span class="w"> </span><span class="kr">then</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">'да'</span><span class="p">)</span>
-<span class="kr">else</span><span class="w"> </span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">'нет'</span><span class="p">)</span>
+
+<span class="c1">-- Является ли переменная строкой</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'ticktack'</span>
+<span class="kr">if</span><span class="w"> </span><span class="nb">type</span><span class="p">(</span><span class="nv">value</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'string'</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"переменная value - строка"</span><span class="p">)</span>
+<span class="kr">else</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"переменная value - не строка"</span><span class="p">)</span>
 <span class="kr">end</span>
-</pre></div>
-</div>
-<p>-Что такое локальный переменные (local a = ‘hello’)</p>
-<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="kr">if</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="kr">then</span>
-<span class="w">    </span><span class="kd">local</span><span class="w"> </span><span class="nv">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
-<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">c</span><span class="p">)</span><span class="w"> </span><span class="c1">-- true</span>
+
+<span class="c1">-- local нужен чтобы указать, что переменная будет работать только в этой области</span>
+<span class="kr">if</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">    </span><span class="kd">local</span><span class="w"> </span><span class="nv">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"текст"</span><span class="w"> </span><span class="c1">-- эта переменная будет работать только внутри условия</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">c</span><span class="p">)</span>
 <span class="kr">end</span>
-<span class="nb">print</span><span class="p">(</span><span class="nv">c</span><span class="p">)</span><span class="w"> </span><span class="c1">-- nil, так как переменная локальная, и работает только в условии выше</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">c</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="id12">
 <h2>Таблицы.<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-Если в переменную необходимо положить несколько значений, то здесь нам помогут таблицы.
-    animals = {'Cat', 'Dog', 'Pig', 'Horse'}
-    print(animals[1]) -- Выводим первое значение таблицы
-    print(animals[6]) -- Выведет nil
-    print(#animals) -- Длина таблицы
-    animals[5] = 'Cow' -- Положить на 4-е место 'Cow'
-    animals[1] = 'Kitty Cat' -- Заменить 1-е значение на 'Kitty Cat'
-    print(animals[5])
-    animals[100] = 100 -- Здесь таблица превратится в разряженную (не будет показываться точная длина)
-    t = {} -- пустая таблица
--Добавить элемент в конец таблицы:
-    t = {'a', 'b', 'c'}
-    l = #t
-    t[l + 1] = 'd'
--Таблицы в таблице
-    t = {
-        {101, 102, 103},
-        {201, 202, 203},
-        {301, 302, 303}
-    }
-    print(t[1][3]) -- находим первую таблицу [1], далее третий элемент в таблице [3]
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- Если в переменную необходимо положить несколько значений, то здесь нам помогут таблицы.</span>
+<span class="nv">animals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s1">'Cat'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Dog'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Pig'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Horse'</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">animals</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="c1">-- Выводим первое значение таблицы</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">animals</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span><span class="w"> </span><span class="c1">-- Выведет nil</span>
+<span class="nb">print</span><span class="p">(</span><span class="o">#</span><span class="nv">animals</span><span class="p">)</span><span class="w"> </span><span class="c1">-- Длина таблицы</span>
+<span class="nv">animals</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Cow'</span><span class="w"> </span><span class="c1">-- Положить на 4-е место 'Cow'</span>
+<span class="nv">animals</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Kitty Cat'</span><span class="w"> </span><span class="c1">-- Заменить 1-е значение на 'Kitty Cat'</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">animals</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+<span class="nv">animals</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="c1">-- Здесь таблица превратится в разряженную (не будет показываться точная длина)</span>
+<span class="nv">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="c1">-- пустая таблица</span>
 
--Использование таблицы как словаря (Ключ=Значение).
-    t = {['one'] = 1, two = 2}
-    print(t['one']) -- выводим элемент с ключем 'one'
-    print(t.one) -- Тоже самое что вывод выше
+<span class="c1">-- Добавить элемент в конец таблицы:</span>
+<span class="nv">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s1">'a'</span><span class="p">,</span><span class="w"> </span><span class="s1">'b'</span><span class="p">,</span><span class="w"> </span><span class="s1">'c'</span><span class="p">}</span>
+<span class="nv">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">#</span><span class="nv">t</span>
+<span class="nv">t</span><span class="p">[</span><span class="nv">l</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'d'</span>
 
-    t.three = 3 -- Добавим в таблицу three = 3
-    t:four = 4 -- Второй вариант, four = 4
-    t['five'] = 5 -- Третий вариант
+<span class="c1">-- Таблицы в таблице</span>
+<span class="nv">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">{</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">102</span><span class="p">,</span><span class="w"> </span><span class="mi">103</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="mi">201</span><span class="p">,</span><span class="w"> </span><span class="mi">202</span><span class="p">,</span><span class="w"> </span><span class="mi">203</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="mi">301</span><span class="p">,</span><span class="w"> </span><span class="mi">302</span><span class="p">,</span><span class="w"> </span><span class="mi">303</span><span class="p">}</span>
+<span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">t</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">3</span><span class="p">])</span><span class="w"> </span><span class="c1">-- находим первую таблицу [1], далее третий элемент в таблице [3]</span>
 
--Методы таблиц.
-    t = {'c', 'b', 'a'}
-    table.sort(t) -- Сортирует таблицу по возрастанию
-    table.insert(t, 'e') -- положить 'e' в конец таблицы
-    table.insert(t, 1, 'e') -- сдвинуть таблицу, и положить 'e' на первое место 
-    table.remove(t, 1) -- Удаление элемента под номером 1, из таблицы t
-    print(t[1])
+<span class="c1">-- Использование таблицы как словаря (Ключ=Значение).</span>
+<span class="nv">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{[</span><span class="s1">'one'</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nv">two</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">t</span><span class="p">[</span><span class="s1">'one'</span><span class="p">])</span><span class="w"> </span><span class="c1">-- выводим элемент с ключем 'one'</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">t</span><span class="p">.</span><span class="py">one</span><span class="p">)</span><span class="w"> </span><span class="c1">-- Тоже самое что вывод выше</span>
+
+<span class="nv">t</span><span class="p">.</span><span class="py">three</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="c1">-- Добавим в таблицу three = 3</span>
+<span class="nv">t</span><span class="p">:</span><span class="py">four</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="c1">-- Второй вариант, four = 4</span>
+<span class="nv">t</span><span class="p">[</span><span class="s1">'five'</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="c1">-- Третий вариант</span>
+
+<span class="c1">-- Методы таблиц.</span>
+<span class="nv">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s1">'c'</span><span class="p">,</span><span class="w"> </span><span class="s1">'b'</span><span class="p">,</span><span class="w"> </span><span class="s1">'a'</span><span class="p">}</span>
+<span class="nb">table.sort</span><span class="p">(</span><span class="nv">t</span><span class="p">)</span><span class="w"> </span><span class="c1">-- Сортирует таблицу по возрастанию</span>
+<span class="nb">table.insert</span><span class="p">(</span><span class="nv">t</span><span class="p">,</span><span class="w"> </span><span class="s1">'e'</span><span class="p">)</span><span class="w"> </span><span class="c1">-- положить 'e' в конец таблицы</span>
+<span class="nb">table.insert</span><span class="p">(</span><span class="nv">t</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">'e'</span><span class="p">)</span><span class="w"> </span><span class="c1">-- сдвинуть таблицу, и положить 'e' на первое место </span>
+<span class="nb">table.remove</span><span class="p">(</span><span class="nv">t</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="c1">-- Удаление элемента под номером 1, из таблицы t</span>
+<span class="nb">print</span><span class="p">(</span><span class="nv">t</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 </div>
 </section>
