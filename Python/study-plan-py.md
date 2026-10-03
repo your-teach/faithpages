@@ -1184,9 +1184,6 @@ if file_path.exists():
 
 ## Аннотации
 
-
-
-# Аннотации
 ```python
 price: int = 5
 title: str
