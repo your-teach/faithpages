@@ -42,6 +42,7 @@ https://www.youtube.com/watch?v=X6BqMZyzAs4
         "Lua.hint.setType": false,
         "Lua.hover.enable": false,
         "Lua.workspace.checkThirdParty": false,
+        "code-runner.ignoreSelection": true
     }
     ```
 7. Создать папку на рабочем столе с файлами main.lua theory.lua
