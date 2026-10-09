@@ -29,6 +29,7 @@
         "editor.hover.enabled": "off",
         "terminal.integrated.suggest.enabled": false,
         "terminal.integrated.shellIntegration.enabled": false,
+        "code-runner.ignoreSelection": true
     }
     ```
 7. Создать папку на рабочем столе с файлами `main.py` `theory.py` 

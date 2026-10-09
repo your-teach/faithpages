@@ -42,6 +42,7 @@ https://www.youtube.com/watch?v=X6BqMZyzAs4
         "Lua.hint.setType": false,
         "Lua.hover.enable": false,
         "Lua.workspace.checkThirdParty": false,
+        "code-runner.ignoreSelection": true
     }
     ```
 7. Создать папку на рабочем столе с файлами main.lua theory.lua
@@ -281,6 +282,7 @@ animals[1] = 'Kitty Cat' -- Заменить 1-е значение на 'Kitty C
 print(animals[5])
 animals[100] = 100 -- Здесь таблица превратится в разряженную (не будет показываться точная длина)
 t = {} -- пустая таблица
+print(type(animals)) -- table - тип данных любой таблицы
 
 -- Добавить элемент в конец таблицы:
 t = {'a', 'b', 'c'}
