@@ -560,7 +560,13 @@ document.write(`
 </pre></div>
 </div>
 </li>
-<li><p>Создать папку на рабочем столе с файлами <code class="docutils literal notranslate"><span class="pre">main.py</span></code> <code class="docutils literal notranslate"><span class="pre">theory.py</span></code></p></li>
+<li><p>Создать папку на рабочем столе с файлами <code class="docutils literal notranslate"><span class="pre">main.py</span></code> <code class="docutils literal notranslate"><span class="pre">theory.py</span></code></p>
+<div class="toggle docutils container">
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nv">$d</span> <span class="p">=</span> <span class="nb">Join-Path</span> <span class="p">(</span><span class="no">[Environment]</span><span class="p">::</span><span class="n">GetFolderPath</span><span class="p">(</span><span class="s2">"Desktop"</span><span class="p">))</span> <span class="s2">"PythonLessons"</span><span class="p">;</span> <span class="nb">New-Item</span> <span class="n">-ItemType</span> <span class="n">Directory</span> <span class="n">-Path</span> <span class="nv">$d</span> <span class="n">-Force</span><span class="p">;</span> <span class="nb">Out-File</span> <span class="n">-FilePath</span> <span class="s2">"$d\main.py"</span> <span class="n">-InputObject</span> <span class="s2">""</span> <span class="n">-Encoding</span> <span class="n">utf8</span><span class="p">;</span> <span class="nb">Out-File</span> <span class="n">-FilePath</span> <span class="s2">"$d\theory.py"</span> <span class="n">-InputObject</span> <span class="s2">""</span> <span class="n">-Encoding</span> <span class="n">utf8</span><span class="p">;</span> <span class="nb">Out-File</span> <span class="n">-FilePath</span> <span class="s2">"$d\черновик.txt"</span> <span class="n">-InputObject</span> <span class="s2">""</span> <span class="n">-Encoding</span> <span class="n">utf8</span>
+</pre></div>
+</div>
+</div>
+</li>
 </ol>
 </section>
 <section id="id1">
