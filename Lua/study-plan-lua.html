@@ -582,7 +582,13 @@
 </pre></div>
 </div>
 </li>
-<li><p>Создать папку на рабочем столе с файлами main.lua theory.lua</p></li>
+<li><p>Создать папку на рабочем столе с файлами main.lua theory.lua</p>
+<div class="toggle docutils container">
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nv">$d</span> <span class="p">=</span> <span class="nb">Join-Path</span> <span class="p">(</span><span class="no">[Environment]</span><span class="p">::</span><span class="n">GetFolderPath</span><span class="p">(</span><span class="s2">"Desktop"</span><span class="p">))</span> <span class="s2">"LuaLessons"</span><span class="p">;</span> <span class="nb">New-Item</span> <span class="n">-ItemType</span> <span class="n">Directory</span> <span class="n">-Path</span> <span class="nv">$d</span> <span class="n">-Force</span><span class="p">;</span> <span class="no">[System.IO.File]</span><span class="p">::</span><span class="n">WriteAllText</span><span class="p">(</span><span class="s2">"$d\main.lua"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="no">[System.Text.Encoding]</span><span class="p">::</span><span class="n">GetEncoding</span><span class="p">(</span><span class="n">866</span><span class="p">));</span> <span class="no">[System.IO.File]</span><span class="p">::</span><span class="n">WriteAllText</span><span class="p">(</span><span class="s2">"$d\theory.lua"</span><span class="p">,</span> <span class="s2">""</span><span class="p">,</span> <span class="no">[System.Text.Encoding]</span><span class="p">::</span><span class="n">GetEncoding</span><span class="p">(</span><span class="n">866</span><span class="p">));</span> <span class="nb">New-Item</span> <span class="n">-ItemType</span> <span class="n">File</span> <span class="n">-Path</span> <span class="s2">"$d\черновик.txt"</span> <span class="n">-Force</span>
+</pre></div>
+</div>
+</div>
+</li>
 <li><p>Добавить в файл theory.lua <code class="docutils literal notranslate"><span class="pre">---&#64;diagnostic</span> <span class="pre">disable</span></code></p></li>
 </ol>
 <p><a class="reference external" href="https://cronos.ru/kb-cronospro-lua.html">https://cronos.ru/kb-cronospro-lua.html</a>
