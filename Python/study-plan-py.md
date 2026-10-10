@@ -20,6 +20,7 @@
             "comments": "off",
             "strings": "off"
         },
+        "editor.lightbulb.enabled": "off",
         "editor.suggestOnTriggerCharacters": false,
         "editor.parameterHints.enabled": false,
         "editor.inlineSuggest.enabled": false,
