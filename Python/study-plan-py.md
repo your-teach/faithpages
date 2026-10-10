@@ -34,6 +34,12 @@
     }
     ```
 7. Создать папку на рабочем столе с файлами `main.py` `theory.py` 
+    ````{toggle}
+    ```powershell
+    $d = Join-Path ([Environment]::GetFolderPath("Desktop")) "PythonLessons"; New-Item -ItemType Directory -Path $d -Force; Out-File -FilePath "$d\main.py" -InputObject "" -Encoding utf8; Out-File -FilePath "$d\theory.py" -InputObject "" -Encoding utf8; Out-File -FilePath "$d\черновик.txt" -InputObject "" -Encoding utf8
+    ```
+    ````
+
 
 
 ## Введение.
