@@ -21,6 +21,9 @@
             "comments": "off",
             "strings": "off"
         },
+        "editor.wordBasedSuggestions": "off",
+        "editor.suggest.showWords": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
         "editor.lightbulb.enabled": "off",
         "editor.suggestOnTriggerCharacters": false,
         "editor.parameterHints.enabled": false,
@@ -31,7 +34,11 @@
         "editor.hover.enabled": "off",
         "terminal.integrated.suggest.enabled": false,
         "terminal.integrated.shellIntegration.enabled": false,
-        "code-runner.ignoreSelection": true
+        "code-runner.ignoreSelection": true,
+        "editor.autoClosingQuotes": "never",
+        "editor.autoClosingBrackets": "never",
+        "editor.autoClosingDelete": "never",
+        "editor.autoClosingOvertype": "never"
     }
     ```
 7. Создать папку на рабочем столе с файлами `main.py` `theory.py` 
