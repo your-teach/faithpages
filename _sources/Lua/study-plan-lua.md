@@ -25,6 +25,9 @@ https://www.youtube.com/watch?v=X6BqMZyzAs4
             "comments": "off",
             "strings": "off"
         },
+        "editor.wordBasedSuggestions": "off",
+        "editor.suggest.showWords": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
         "editor.lightbulb.enabled": "off",
         "editor.suggestOnTriggerCharacters": false,
         "editor.parameterHints.enabled": false,
@@ -44,7 +47,11 @@ https://www.youtube.com/watch?v=X6BqMZyzAs4
         "Lua.hint.setType": false,
         "Lua.hover.enable": false,
         "Lua.workspace.checkThirdParty": false,
-        "code-runner.ignoreSelection": true
+        "code-runner.ignoreSelection": true,
+        "editor.autoClosingQuotes": "never",
+        "editor.autoClosingBrackets": "never",
+        "editor.autoClosingDelete": "never",
+        "editor.autoClosingOvertype": "never"
     }
     ```
 7. Создать папку на рабочем столе с файлами main.lua theory.lua
