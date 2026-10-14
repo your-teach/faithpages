@@ -886,83 +886,87 @@ f = true == false -- false
 </section>
 <section id="id13">
 <h2>Циклы.<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>--while
-    --Циклы нужны для того, чтобы не писать один кусочек кода много раз вручную.
-    --Повторение кода с интервалом
-    local socket = require 'socket'
-    while true do
-        print("Какой-то код, который нужно бесконечно повторять с интервалом в 5 секунд")
-        socket.sleep(5)
-    end
-    --Цикл, который выводит числа от 1 до 10
-        score = 0
-        while score &lt; 10 do
-            score = score + 1
-            print(score)
-        end
-    --Бесконечный цикл со счетчиком
-    score = 0
-    while true do
-        print(score)
-        score = score + 1
-    end
+<div class="highlight-lua notranslate"><div class="highlight"><pre><span></span><span class="c1">-- for</span>
 
-    -Задание: Написать цикл, который выводит числа от 0 до 3, и прочитать его.
-    -Задание: Написать цикл, который выводит числа от -1 до 1, и прочитать его.
-    -Задание: Написать цикл, который выводит числа от 20 до 10.
+<span class="kr">for</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"Hello world"</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="p">)</span>
+<span class="kr">end</span>
 
-    -Можно использовать условия внутри циклов.
-    -Цикл, который выводит каждую букву отдельно:
-        i = 0
-        text = 'hello world'
-        while i &lt; #text do
-            i = i + 1
-            print(text:sub(i,i))
-        end
-    -Аналогичный цикл, но который пропускает все буквы 'o'
-        i = 0
-        text = 'hello world'
-        while i &lt; #text do
-            i = i + 1
-            if text:sub(i,i) ~= 'o' then
-                print(text:sub(i,i))
-            end
-        end
-    -Задание: Написать цикл, который выводит четные числа от 0 до 100.
-    -break (пример с остановкой бесконечного цикла)
+<span class="c1">-- название переменной x может быть любым другим</span>
+<span class="c1">-- можно выставить значения минусовые, например: x = -3, 3</span>
 
--for
-    -Отличается от while тем, что имеет собственную переменную,
-    эта переменная отличается от привычных нам переменных, тем
-    что она каждое повторение меняет свое значение.
-    -Цикл, который выводит числа от 1 до 10
-        for x = 0, 10 do
-            print(x)
-        end
-    -Тот же цикл, но с шагом 2
-        for x = 0, 10, 2 do
-            print(x)
-        end
-    -С помощью for и специальной функции pairs или ipairs можно перебрать таблицу.
-    -ipairs для простых таблицы
-        t = {'a','b','c','d'}
-        for k, v in ipairs(t) do
-            print(x)
-        end
-    -pairs для словарей-таблиц
-        y = {['one'] = 1, ['two'] = 2}
-        for k, v in pairs(y) do  -- pairs работает с массивами (словари)
-            print(k, v)
-        end
-    -Цикл, который выводит числа в обратном порядке от 10 до 0.
-    for x = 10,0,-1 do
-        print(x)
-    end
-    -Здесь так же можно использовать break
+<span class="c1">-- цикл с шагом (к предыдущему значению прибавляется этот шаг)</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">x</span><span class="p">)</span>
+<span class="kr">end</span>
+<span class="c1">-- по умолчанию стоит шаг 1</span>
 
-    -Очень важно: если перебирать таблицу-словарь через цикл for, то порядок элементов будет рандомный
-    -Цикл имеет заголовок и тело.
-    -Что значит одно повторение цикла/один круг или другими словами "Итерация".
+<span class="c1">-- шаг с отрицательным значением</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">y</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="c1">-- таймер</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">socket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="w"> </span><span class="s1">'socket'</span><span class="w"> </span><span class="c1">-- подключение модуля socket</span>
+
+<span class="kr">for</span><span class="w"> </span><span class="nv">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nv">socket</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"Timer:"</span><span class="p">,</span><span class="w"> </span><span class="nv">t</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="c1">-- перебрать значения таблицы (ipairs)</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">words</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s1">'a'</span><span class="p">,</span><span class="w"> </span><span class="s1">'b'</span><span class="p">,</span><span class="w"> </span><span class="s1">'c'</span><span class="p">,</span><span class="w"> </span><span class="s1">'d'</span><span class="p">}</span>
+
+<span class="kr">for</span><span class="w"> </span><span class="nv">key</span><span class="p">,</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">ipairs</span><span class="p">(</span><span class="nv">words</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"ключ:"</span><span class="p">,</span><span class="w"> </span><span class="nv">key</span><span class="p">,</span><span class="w"> </span><span class="s2">"значение:"</span><span class="p">,</span><span class="w"> </span><span class="nv">value</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="c1">-- перебрать таблицу-словарь (pairs)</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">colors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nv">green</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"зеленый"</span><span class="p">,</span><span class="w"> </span><span class="nv">yellow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"желтый"</span><span class="p">}</span>
+
+<span class="kr">for</span><span class="w"> </span><span class="nv">key</span><span class="p">,</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nb">pairs</span><span class="p">(</span><span class="nv">colors</span><span class="p">)</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"ключ:"</span><span class="p">,</span><span class="w"> </span><span class="nv">key</span><span class="p">,</span><span class="w"> </span><span class="s2">"значение:"</span><span class="p">,</span><span class="w"> </span><span class="nv">value</span><span class="p">)</span>
+<span class="kr">end</span>
+<span class="c1">-- если перебирать таблицу-словарь, то порядок вывода может быть в другом порядке</span>
+
+<span class="c1">-- break преждевременно останавливает цикл</span>
+<span class="kr">for</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">x</span><span class="p">)</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="kr">break</span>
+<span class="w">    </span><span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="c1">-- while</span>
+
+<span class="c1">-- У данного цикла нет собственной переменной</span>
+<span class="c1">-- по этому создаем её</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+
+<span class="kr">while</span><span class="w"> </span><span class="nv">score</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s2">"Счетчик:"</span><span class="p">,</span><span class="w"> </span><span class="nv">score</span><span class="p">)</span>
+<span class="w">    </span><span class="nv">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">score</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<span class="kr">end</span>
+
+<span class="c1">-- Бесконечный цикл while</span>
+<span class="nv">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+
+<span class="kr">while</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">score</span><span class="p">)</span>
+<span class="w">    </span><span class="nv">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">score</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<span class="kr">end</span>
+
+<span class="c1">-- break</span>
+<span class="kd">local</span><span class="w"> </span><span class="nv">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="kr">while</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="kr">do</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">score</span><span class="p">)</span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">score</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="kr">then</span>
+<span class="w">        </span><span class="kr">break</span>
+<span class="w">    </span><span class="kr">end</span>
+<span class="w">    </span><span class="nv">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">score</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<span class="kr">end</span>
+
+<span class="c1">-- итерация - это одно повторение цикла</span>
 </pre></div>
 </div>
 </section>
