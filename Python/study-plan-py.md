@@ -5,7 +5,7 @@
 2. https://www.python.org/downloads/
 3. Расширение Python 
 4. Расширение Code Runner 
-5. Русский: Шестерёнка -> Command Pallete -> Configure Display Language
+5. Русский: Шестерёнка -> Command Pallete -> Configure Display Language  
     `code --install-extension MS-CEINTL.vscode-language-pack-ru; code --locale=ru`
 6. Settings.json  
     ```json
