@@ -54,13 +54,13 @@ https://www.youtube.com/watch?v=X6BqMZyzAs4
         "editor.autoClosingOvertype": "never"
     }
     ```
-7. Создать папку на рабочем столе с файлами main.lua theory.lua
+7. Создать папку на рабочем столе с файлами main.lua theory.lua и добавить `---@diagnostic disable`
     ````{toggle}
     ```powershell
     $d = Join-Path ([Environment]::GetFolderPath("Desktop")) "LuaLessons"; New-Item -ItemType Directory -Path $d -Force; [System.IO.File]::WriteAllText("$d\main.lua", "---@diagnostic disable", [System.Text.Encoding]::GetEncoding(866)); [System.IO.File]::WriteAllText("$d\theory.lua", "", [System.Text.Encoding]::GetEncoding(866)); New-Item -ItemType File -Path "$d\черновик.txt" -Force
     ```
     ````
-8. Добавить в файл theory.lua `---@diagnostic disable`
+8. Добавить в файл theory.lua 
     
 https://cronos.ru/kb-cronospro-lua.html
 https://user.su/lua/index.php?id=36
