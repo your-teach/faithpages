@@ -57,7 +57,7 @@ https://www.youtube.com/watch?v=X6BqMZyzAs4
 7. Создать папку на рабочем столе с файлами main.lua theory.lua
     ````{toggle}
     ```powershell
-    $d = Join-Path ([Environment]::GetFolderPath("Desktop")) "LuaLessons"; New-Item -ItemType Directory -Path $d -Force; [System.IO.File]::WriteAllText("$d\main.lua", "", [System.Text.Encoding]::GetEncoding(866)); [System.IO.File]::WriteAllText("$d\theory.lua", "", [System.Text.Encoding]::GetEncoding(866)); New-Item -ItemType File -Path "$d\черновик.txt" -Force
+    $d = Join-Path ([Environment]::GetFolderPath("Desktop")) "LuaLessons"; New-Item -ItemType Directory -Path $d -Force; [System.IO.File]::WriteAllText("$d\main.lua", "---@diagnostic disable", [System.Text.Encoding]::GetEncoding(866)); [System.IO.File]::WriteAllText("$d\theory.lua", "", [System.Text.Encoding]::GetEncoding(866)); New-Item -ItemType File -Path "$d\черновик.txt" -Force
     ```
     ````
 8. Добавить в файл theory.lua `---@diagnostic disable`
