@@ -27,6 +27,7 @@ https://www.youtube.com/watch?v=X6BqMZyzAs4
         },
         "editor.wordBasedSuggestions": "off",
         "editor.suggest.showWords": false,
+        "Lua.completion.showWord": "Disable",
         "editor.suggest.snippetsPreventQuickSuggestions": false,
         "editor.lightbulb.enabled": "off",
         "editor.suggestOnTriggerCharacters": false,
