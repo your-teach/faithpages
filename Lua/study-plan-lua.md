@@ -362,6 +362,7 @@ for t = 1, 3 do
 end
 
 -- перебрать значения таблицы (ipairs)
+-- upd: можно не показывать пример с ipairs, pairs универсален
 local words = {'a', 'b', 'c', 'd'}
 
 for key, value in ipairs(words) do
