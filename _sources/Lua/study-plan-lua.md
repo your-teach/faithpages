@@ -246,11 +246,10 @@ else
     print("Пароль неверный")
 end
 
-print("Введите температуру на улице: ")
-local temp = tonumber(io.read())
 
 -- Пример с температурой на улице
-temp = tonumber(io.read())
+print("Введите температуру на улице: ")
+local temp = tonumber(io.read())
 if temp > 10 then
     print("Погода хорошая, можно пойти погулять")
 elseif temp > 0 then
