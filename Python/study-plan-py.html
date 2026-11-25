@@ -918,11 +918,18 @@ del list[0] - удаление элемента по индексу
         <span class="k">continue</span> 
     <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
+<span class="c1"># else после цикла, срабатывает всегда, кроме случая когда цикл завершился командой break</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span> <span class="k">break</span> <span class="c1"># если убрать, то else сработает</span>
+<span class="k">else</span><span class="p">:</span> <span class="c1"># не сработает в данном варианте</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"конец цикла"</span><span class="p">)</span>
 
 <span class="c1"># while</span>
 
 <span class="c1"># Работает до тех пор, пока после while значение True</span>
-<span class="c1"># У while нет своей собственной переменой как у for</span>
+
+<span class="c1"># у while нет своей собственной переменой как у for</span>
 
 <span class="c1"># Наглядный пример работы цикла while </span>
 <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
@@ -940,12 +947,12 @@ del list[0] - удаление элемента по индексу
     <span class="nb">print</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
 
 <span class="c1"># Бесконечный цикл-счетчик</span>
-<span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
+<span class="c1"># score = 0</span>
+<span class="c1"># while True:</span>
+<span class="c1">#     score += 1</span>
+<span class="c1">#     print(score)</span>
 
-<span class="c1"># break и continue работают так же и в for</span>
+<span class="c1"># break, continue и else работают так же и в for</span>
 <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -954,6 +961,8 @@ del list[0] - удаление элемента по индексу
     <span class="k">if</span> <span class="n">score</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
         <span class="k">break</span> <span class="c1"># остановка</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'end'</span><span class="p">)</span>
 
 <span class="c1"># итерация - это одно повторение цикла</span>
 </pre></div>

@@ -360,11 +360,18 @@ for x in range(0, 10):
         continue 
     print(x)
 
+# else после цикла, срабатывает всегда, кроме случая когда цикл завершился командой break
+for x in range(0, 10):
+    print(x)
+    if x == 5: break # если убрать, то else сработает
+else: # не сработает в данном варианте
+    print("конец цикла")
 
 # while
 
 # Работает до тех пор, пока после while значение True
-# У while нет своей собственной переменой как у for
+
+# у while нет своей собственной переменой как у for
 
 # Наглядный пример работы цикла while 
 score = 0
@@ -382,12 +389,12 @@ while score < 10:
     print(score)
 
 # Бесконечный цикл-счетчик
-score = 0
-while True:
-    score += 1
-    print(score)
+# score = 0
+# while True:
+#     score += 1
+#     print(score)
 
-# break и continue работают так же и в for
+# break, continue и else работают так же и в for
 score = 0
 while True:
     score += 1
@@ -396,6 +403,8 @@ while True:
     if score > 10:
         break # остановка
     print(score)
+else:
+    print('end')
 
 # итерация - это одно повторение цикла
 ```
