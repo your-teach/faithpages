@@ -394,7 +394,7 @@ while score < 10:
 #     score += 1
 #     print(score)
 
-# break, continue и else работают так же и в for
+# break, continue и else работают так же и в while
 score = 0
 while True:
     score += 1
