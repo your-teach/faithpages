@@ -872,40 +872,126 @@ del list[0] - удаление элемента по индексу
 </section>
 <section id="id12">
 <h2>Циклы.<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-ВАЖНО! Показывать работу циклов примера с мельницей. Расписывать полностью поэтапность действий цикла!
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># циклы</span>
+
+<span class="c1"># for</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s2">"hello world"</span><span class="p">)</span>
+
+<span class="c1"># range(0, 10) - создает диапазон чисел от 0 до 9 (аналог списка)</span>
+<span class="c1"># название переменной i может быть любым другим</span>
+<span class="c1"># можно выставить значения отрицательные например -5, 5</span>
+
+<span class="c1"># цикл с шагом 2 (прям как в срезах)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="c1"># шаг с отрицательным значением</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="c1"># таймер</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Timer:"</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># перебрать список</span>
+<span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
+
+<span class="c1"># перебрать строку</span>
+<span class="n">txt</span> <span class="o">=</span> <span class="s2">"qwerty"</span>
+<span class="k">for</span> <span class="n">lett</span> <span class="ow">in</span> <span class="n">txt</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">lett</span><span class="p">)</span>
+
+<span class="c1"># break - преждевременно останавливает цикл</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">break</span>
+
+<span class="c1"># continue - останавливает данный шаг и переходит к следующему</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">continue</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+
+<span class="c1"># while</span>
+
+<span class="c1"># Работает до тех пор, пока после while значение True</span>
+<span class="c1"># У while нет своей собственной переменой как у for</span>
+
+<span class="c1"># Наглядный пример работы цикла while </span>
+<span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">status</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">while</span> <span class="n">status</span><span class="p">:</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"hello world"</span><span class="p">)</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="n">score</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">score</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="c1"># Короткий пример того же цикла</span>
+<span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">score</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># score = scrore + 1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
+
+<span class="c1"># Бесконечный цикл-счетчик</span>
+<span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
+
+<span class="c1"># break и continue работают так же и в for</span>
+<span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">score</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> 
+        <span class="k">continue</span> <span class="c1"># пропускаем все четные</span>
+    <span class="k">if</span> <span class="n">score</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="k">break</span> <span class="c1"># остановка</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
+
+<span class="c1"># итерация - это одно повторение цикла</span>
+</pre></div>
+</div>
+<div class="toggle docutils container">
+<p>-ВАЖНО! Показывать работу циклов примера с мельницей. Расписывать полностью поэтапность действий цикла!
 -Итерация - это одно повторение цикла.
 -while (заголовок, тело цикла)
-    -работает, когда имеет значение True
+-работает, когда имеет значение True
 -условные операторы в цикле (можно писать все те же самые условия, что и в условном операторе if)
-    -счетчик
-    -перебрать цифры до 100
-    -перебрать цифры от 50 до 100
+-счетчик
+-перебрать цифры до 100
+-перебрать цифры от 50 до 100
 -for
-    -имеет собственную переменную; перебирает элементы
-    -range(start, stop, step) - создает расстояние между двумя цифрами "start" и "stop", с указанным шагом "step";  range(10,0,-1)
-    -с помощью for можно перебирать элементы списка или строки
-        пример: изменение всех элементов списка
+-имеет собственную переменную; перебирает элементы
+-range(start, stop, step) - создает расстояние между двумя цифрами “start” и “stop”, с указанным шагом “step”;  range(10,0,-1)
+-с помощью for можно перебирать элементы списка или строки
+пример: изменение всех элементов списка
 -break, continue, else
-    break - остановка цикла
-    continue - переход на следующую итерацию
-    else - срабатывает после остановки цикла, не работает с break
--сокращения += -= *= /= //= %= **= 
+break - остановка цикла
+continue - переход на следующую итерацию
+else - срабатывает после остановки цикла, не работает с break
+-сокращения += -= *= /= //= %= **=
 -input() внутри циклов
 -10 in range(0,20)
 -вложенные циклы(цикл внутри цикла).
-    # Создание матрицы 5х5:
-        A = []
-        for y in range(5):
-            A.append([])
-            for x in range(5):
-                A[y].append(x)
-        # print(A)
-    # Вывод матрицы:
-        for i in range(5):
-            for j in range(5):
-                print(A[i][j])
-            print()
-</pre></div>
+# Создание матрицы 5х5:
+A = []
+for y in range(5):
+A.append([])
+for x in range(5):
+A[y].append(x)
+# print(A)
+# Вывод матрицы:
+for i in range(5):
+for j in range(5):
+print(A[i][j])
+print()</p>
 </div>
 </section>
 <section id="list-comprehensions">
